@@ -1,111 +1,65 @@
 #[doc = "Register `uart_fifo_config_1` reader"]
-pub struct R(crate::R<UART_FIFO_CONFIG_1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<UART_FIFO_CONFIG_1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<UART_FIFO_CONFIG_1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<UART_FIFO_CONFIG_1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<UartFifoConfig1Spec>;
 #[doc = "Register `uart_fifo_config_1` writer"]
-pub struct W(crate::W<UART_FIFO_CONFIG_1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<UART_FIFO_CONFIG_1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<UART_FIFO_CONFIG_1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<UART_FIFO_CONFIG_1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<UartFifoConfig1Spec>;
 #[doc = "Field `tx_fifo_cnt` reader - "]
-pub type TX_FIFO_CNT_R = crate::FieldReader<u8, u8>;
+pub type TxFifoCntR = crate::FieldReader;
 #[doc = "Field `rx_fifo_cnt` reader - "]
-pub type RX_FIFO_CNT_R = crate::FieldReader<u8, u8>;
+pub type RxFifoCntR = crate::FieldReader;
 #[doc = "Field `tx_fifo_th` reader - "]
-pub type TX_FIFO_TH_R = crate::FieldReader<u8, u8>;
+pub type TxFifoThR = crate::FieldReader;
 #[doc = "Field `tx_fifo_th` writer - "]
-pub type TX_FIFO_TH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, UART_FIFO_CONFIG_1_SPEC, u8, u8, 5, O>;
+pub type TxFifoThW<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `rx_fifo_th` reader - "]
-pub type RX_FIFO_TH_R = crate::FieldReader<u8, u8>;
+pub type RxFifoThR = crate::FieldReader;
 #[doc = "Field `rx_fifo_th` writer - "]
-pub type RX_FIFO_TH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, UART_FIFO_CONFIG_1_SPEC, u8, u8, 5, O>;
+pub type RxFifoThW<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    pub fn tx_fifo_cnt(&self) -> TX_FIFO_CNT_R {
-        TX_FIFO_CNT_R::new((self.bits & 0x3f) as u8)
+    pub fn tx_fifo_cnt(&self) -> TxFifoCntR {
+        TxFifoCntR::new((self.bits & 0x3f) as u8)
     }
     #[doc = "Bits 8:13"]
     #[inline(always)]
-    pub fn rx_fifo_cnt(&self) -> RX_FIFO_CNT_R {
-        RX_FIFO_CNT_R::new(((self.bits >> 8) & 0x3f) as u8)
+    pub fn rx_fifo_cnt(&self) -> RxFifoCntR {
+        RxFifoCntR::new(((self.bits >> 8) & 0x3f) as u8)
     }
     #[doc = "Bits 16:20"]
     #[inline(always)]
-    pub fn tx_fifo_th(&self) -> TX_FIFO_TH_R {
-        TX_FIFO_TH_R::new(((self.bits >> 16) & 0x1f) as u8)
+    pub fn tx_fifo_th(&self) -> TxFifoThR {
+        TxFifoThR::new(((self.bits >> 16) & 0x1f) as u8)
     }
     #[doc = "Bits 24:28"]
     #[inline(always)]
-    pub fn rx_fifo_th(&self) -> RX_FIFO_TH_R {
-        RX_FIFO_TH_R::new(((self.bits >> 24) & 0x1f) as u8)
+    pub fn rx_fifo_th(&self) -> RxFifoThR {
+        RxFifoThR::new(((self.bits >> 24) & 0x1f) as u8)
     }
 }
 impl W {
     #[doc = "Bits 16:20"]
     #[inline(always)]
-    #[must_use]
-    pub fn tx_fifo_th(&mut self) -> TX_FIFO_TH_W<16> {
-        TX_FIFO_TH_W::new(self)
+    pub fn tx_fifo_th(&mut self) -> TxFifoThW<'_, UartFifoConfig1Spec> {
+        TxFifoThW::new(self, 16)
     }
     #[doc = "Bits 24:28"]
     #[inline(always)]
-    #[must_use]
-    pub fn rx_fifo_th(&mut self) -> RX_FIFO_TH_W<24> {
-        RX_FIFO_TH_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn rx_fifo_th(&mut self) -> RxFifoThW<'_, UartFifoConfig1Spec> {
+        RxFifoThW::new(self, 24)
     }
 }
-#[doc = "uart_fifo_config_1.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uart_fifo_config_1](index.html) module"]
-pub struct UART_FIFO_CONFIG_1_SPEC;
-impl crate::RegisterSpec for UART_FIFO_CONFIG_1_SPEC {
+#[doc = "uart_fifo_config_1.\n\nYou can [`read`](crate::Reg::read) this register and get [`uart_fifo_config_1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart_fifo_config_1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct UartFifoConfig1Spec;
+impl crate::RegisterSpec for UartFifoConfig1Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [uart_fifo_config_1::R](R) reader structure"]
-impl crate::Readable for UART_FIFO_CONFIG_1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [uart_fifo_config_1::W](W) writer structure"]
-impl crate::Writable for UART_FIFO_CONFIG_1_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`uart_fifo_config_1::R`](R) reader structure"]
+impl crate::Readable for UartFifoConfig1Spec {}
+#[doc = "`write(|w| ..)` method takes [`uart_fifo_config_1::W`](W) writer structure"]
+impl crate::Writable for UartFifoConfig1Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets uart_fifo_config_1 to value 0x20"]
-impl crate::Resettable for UART_FIFO_CONFIG_1_SPEC {
-    const RESET_VALUE: Self::Ux = 0x20;
+impl crate::Resettable for UartFifoConfig1Spec {
+    const RESET_VALUE: u32 = 0x20;
 }

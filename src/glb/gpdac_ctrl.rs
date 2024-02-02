@@ -1,157 +1,107 @@
 #[doc = "Register `gpdac_ctrl` reader"]
-pub struct R(crate::R<GPDAC_CTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GPDAC_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GPDAC_CTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GPDAC_CTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GpdacCtrlSpec>;
 #[doc = "Register `gpdac_ctrl` writer"]
-pub struct W(crate::W<GPDAC_CTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GPDAC_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GPDAC_CTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GPDAC_CTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GpdacCtrlSpec>;
 #[doc = "Field `gpdaca_rstn_ana` reader - "]
-pub type GPDACA_RSTN_ANA_R = crate::BitReader<bool>;
+pub type GpdacaRstnAnaR = crate::BitReader;
 #[doc = "Field `gpdaca_rstn_ana` writer - "]
-pub type GPDACA_RSTN_ANA_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPDAC_CTRL_SPEC, bool, O>;
+pub type GpdacaRstnAnaW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `gpdacb_rstn_ana` reader - "]
-pub type GPDACB_RSTN_ANA_R = crate::BitReader<bool>;
+pub type GpdacbRstnAnaR = crate::BitReader;
 #[doc = "Field `gpdacb_rstn_ana` writer - "]
-pub type GPDACB_RSTN_ANA_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPDAC_CTRL_SPEC, bool, O>;
+pub type GpdacbRstnAnaW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `gpdac_test_en` reader - "]
-pub type GPDAC_TEST_EN_R = crate::BitReader<bool>;
+pub type GpdacTestEnR = crate::BitReader;
 #[doc = "Field `gpdac_test_en` writer - "]
-pub type GPDAC_TEST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPDAC_CTRL_SPEC, bool, O>;
+pub type GpdacTestEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `gpdac_ref_sel` reader - "]
-pub type GPDAC_REF_SEL_R = crate::BitReader<bool>;
+pub type GpdacRefSelR = crate::BitReader;
 #[doc = "Field `gpdac_ref_sel` writer - "]
-pub type GPDAC_REF_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPDAC_CTRL_SPEC, bool, O>;
+pub type GpdacRefSelW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `gpdac_test_sel` reader - "]
-pub type GPDAC_TEST_SEL_R = crate::FieldReader<u8, u8>;
+pub type GpdacTestSelR = crate::FieldReader;
 #[doc = "Field `gpdac_test_sel` writer - "]
-pub type GPDAC_TEST_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPDAC_CTRL_SPEC, u8, u8, 3, O>;
+pub type GpdacTestSelW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `gpdac_reserved` reader - "]
-pub type GPDAC_RESERVED_R = crate::FieldReader<u8, u8>;
+pub type GpdacReservedR = crate::FieldReader;
 #[doc = "Field `gpdac_reserved` writer - "]
-pub type GPDAC_RESERVED_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPDAC_CTRL_SPEC, u8, u8, 8, O>;
+pub type GpdacReservedW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn gpdaca_rstn_ana(&self) -> GPDACA_RSTN_ANA_R {
-        GPDACA_RSTN_ANA_R::new((self.bits & 1) != 0)
+    pub fn gpdaca_rstn_ana(&self) -> GpdacaRstnAnaR {
+        GpdacaRstnAnaR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn gpdacb_rstn_ana(&self) -> GPDACB_RSTN_ANA_R {
-        GPDACB_RSTN_ANA_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn gpdacb_rstn_ana(&self) -> GpdacbRstnAnaR {
+        GpdacbRstnAnaR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn gpdac_test_en(&self) -> GPDAC_TEST_EN_R {
-        GPDAC_TEST_EN_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn gpdac_test_en(&self) -> GpdacTestEnR {
+        GpdacTestEnR::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn gpdac_ref_sel(&self) -> GPDAC_REF_SEL_R {
-        GPDAC_REF_SEL_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn gpdac_ref_sel(&self) -> GpdacRefSelR {
+        GpdacRefSelR::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bits 9:11"]
     #[inline(always)]
-    pub fn gpdac_test_sel(&self) -> GPDAC_TEST_SEL_R {
-        GPDAC_TEST_SEL_R::new(((self.bits >> 9) & 7) as u8)
+    pub fn gpdac_test_sel(&self) -> GpdacTestSelR {
+        GpdacTestSelR::new(((self.bits >> 9) & 7) as u8)
     }
     #[doc = "Bits 24:31"]
     #[inline(always)]
-    pub fn gpdac_reserved(&self) -> GPDAC_RESERVED_R {
-        GPDAC_RESERVED_R::new(((self.bits >> 24) & 0xff) as u8)
+    pub fn gpdac_reserved(&self) -> GpdacReservedR {
+        GpdacReservedR::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpdaca_rstn_ana(&mut self) -> GPDACA_RSTN_ANA_W<0> {
-        GPDACA_RSTN_ANA_W::new(self)
+    pub fn gpdaca_rstn_ana(&mut self) -> GpdacaRstnAnaW<'_, GpdacCtrlSpec> {
+        GpdacaRstnAnaW::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpdacb_rstn_ana(&mut self) -> GPDACB_RSTN_ANA_W<1> {
-        GPDACB_RSTN_ANA_W::new(self)
+    pub fn gpdacb_rstn_ana(&mut self) -> GpdacbRstnAnaW<'_, GpdacCtrlSpec> {
+        GpdacbRstnAnaW::new(self, 1)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpdac_test_en(&mut self) -> GPDAC_TEST_EN_W<7> {
-        GPDAC_TEST_EN_W::new(self)
+    pub fn gpdac_test_en(&mut self) -> GpdacTestEnW<'_, GpdacCtrlSpec> {
+        GpdacTestEnW::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpdac_ref_sel(&mut self) -> GPDAC_REF_SEL_W<8> {
-        GPDAC_REF_SEL_W::new(self)
+    pub fn gpdac_ref_sel(&mut self) -> GpdacRefSelW<'_, GpdacCtrlSpec> {
+        GpdacRefSelW::new(self, 8)
     }
     #[doc = "Bits 9:11"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpdac_test_sel(&mut self) -> GPDAC_TEST_SEL_W<9> {
-        GPDAC_TEST_SEL_W::new(self)
+    pub fn gpdac_test_sel(&mut self) -> GpdacTestSelW<'_, GpdacCtrlSpec> {
+        GpdacTestSelW::new(self, 9)
     }
     #[doc = "Bits 24:31"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpdac_reserved(&mut self) -> GPDAC_RESERVED_W<24> {
-        GPDAC_RESERVED_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn gpdac_reserved(&mut self) -> GpdacReservedW<'_, GpdacCtrlSpec> {
+        GpdacReservedW::new(self, 24)
     }
 }
-#[doc = "gpdac_ctrl.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpdac_ctrl](index.html) module"]
-pub struct GPDAC_CTRL_SPEC;
-impl crate::RegisterSpec for GPDAC_CTRL_SPEC {
+#[doc = "gpdac_ctrl.\n\nYou can [`read`](crate::Reg::read) this register and get [`gpdac_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpdac_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct GpdacCtrlSpec;
+impl crate::RegisterSpec for GpdacCtrlSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gpdac_ctrl::R](R) reader structure"]
-impl crate::Readable for GPDAC_CTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gpdac_ctrl::W](W) writer structure"]
-impl crate::Writable for GPDAC_CTRL_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`gpdac_ctrl::R`](R) reader structure"]
+impl crate::Readable for GpdacCtrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`gpdac_ctrl::W`](W) writer structure"]
+impl crate::Writable for GpdacCtrlSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets gpdac_ctrl to value 0x03"]
-impl crate::Resettable for GPDAC_CTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x03;
+impl crate::Resettable for GpdacCtrlSpec {
+    const RESET_VALUE: u32 = 0x03;
 }

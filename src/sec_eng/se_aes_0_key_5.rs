@@ -1,81 +1,35 @@
 #[doc = "Register `se_aes_0_key_5` reader"]
-pub struct R(crate::R<SE_AES_0_KEY_5_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SE_AES_0_KEY_5_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SE_AES_0_KEY_5_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SE_AES_0_KEY_5_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SeAes0Key5Spec>;
 #[doc = "Register `se_aes_0_key_5` writer"]
-pub struct W(crate::W<SE_AES_0_KEY_5_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SE_AES_0_KEY_5_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SE_AES_0_KEY_5_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SE_AES_0_KEY_5_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SeAes0Key5Spec>;
 #[doc = "Field `se_aes_0_key_5` reader - "]
-pub type SE_AES_0_KEY_5_R = crate::FieldReader<u32, u32>;
+pub type SeAes0Key5R = crate::FieldReader<u32>;
 #[doc = "Field `se_aes_0_key_5` writer - "]
-pub type SE_AES_0_KEY_5_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SE_AES_0_KEY_5_SPEC, u32, u32, 32, O>;
+pub type SeAes0Key5W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn se_aes_0_key_5(&self) -> SE_AES_0_KEY_5_R {
-        SE_AES_0_KEY_5_R::new(self.bits)
+    pub fn se_aes_0_key_5(&self) -> SeAes0Key5R {
+        SeAes0Key5R::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
-    pub fn se_aes_0_key_5(&mut self) -> SE_AES_0_KEY_5_W<0> {
-        SE_AES_0_KEY_5_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn se_aes_0_key_5(&mut self) -> SeAes0Key5W<'_, SeAes0Key5Spec> {
+        SeAes0Key5W::new(self, 0)
     }
 }
-#[doc = "se_aes_0_key_5.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [se_aes_0_key_5](index.html) module"]
-pub struct SE_AES_0_KEY_5_SPEC;
-impl crate::RegisterSpec for SE_AES_0_KEY_5_SPEC {
+#[doc = "se_aes_0_key_5.\n\nYou can [`read`](crate::Reg::read) this register and get [`se_aes_0_key_5::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`se_aes_0_key_5::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SeAes0Key5Spec;
+impl crate::RegisterSpec for SeAes0Key5Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [se_aes_0_key_5::R](R) reader structure"]
-impl crate::Readable for SE_AES_0_KEY_5_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [se_aes_0_key_5::W](W) writer structure"]
-impl crate::Writable for SE_AES_0_KEY_5_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`se_aes_0_key_5::R`](R) reader structure"]
+impl crate::Readable for SeAes0Key5Spec {}
+#[doc = "`write(|w| ..)` method takes [`se_aes_0_key_5::W`](W) writer structure"]
+impl crate::Writable for SeAes0Key5Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets se_aes_0_key_5 to value 0"]
-impl crate::Resettable for SE_AES_0_KEY_5_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for SeAes0Key5Spec {}

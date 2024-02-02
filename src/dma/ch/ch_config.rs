@@ -1,201 +1,147 @@
 #[doc = "Register `CH_CONFIG` reader"]
-pub struct R(crate::R<CH_CONFIG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CH_CONFIG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CH_CONFIG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CH_CONFIG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<ChConfigSpec>;
 #[doc = "Register `CH_CONFIG` writer"]
-pub struct W(crate::W<CH_CONFIG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CH_CONFIG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CH_CONFIG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CH_CONFIG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<ChConfigSpec>;
 #[doc = "Field `E` reader - "]
-pub type E_R = crate::BitReader<bool>;
+pub type ER = crate::BitReader;
 #[doc = "Field `E` writer - "]
-pub type E_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONFIG_SPEC, bool, O>;
+pub type EW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SrcPeripheral` reader - "]
-pub type SRC_PERIPHERAL_R = crate::FieldReader<u8, u8>;
+pub type SrcPeripheralR = crate::FieldReader;
 #[doc = "Field `SrcPeripheral` writer - "]
-pub type SRC_PERIPHERAL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CH_CONFIG_SPEC, u8, u8, 5, O>;
+pub type SrcPeripheralW<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `DstPeripheral` reader - "]
-pub type DST_PERIPHERAL_R = crate::FieldReader<u8, u8>;
+pub type DstPeripheralR = crate::FieldReader;
 #[doc = "Field `DstPeripheral` writer - "]
-pub type DST_PERIPHERAL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CH_CONFIG_SPEC, u8, u8, 5, O>;
+pub type DstPeripheralW<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `FlowCntrl` reader - "]
-pub type FLOW_CNTRL_R = crate::FieldReader<u8, u8>;
+pub type FlowCntrlR = crate::FieldReader;
 #[doc = "Field `FlowCntrl` writer - "]
-pub type FLOW_CNTRL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH_CONFIG_SPEC, u8, u8, 3, O>;
+pub type FlowCntrlW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `IE` reader - "]
-pub type IE_R = crate::BitReader<bool>;
+pub type IeR = crate::BitReader;
 #[doc = "Field `IE` writer - "]
-pub type IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONFIG_SPEC, bool, O>;
+pub type IeW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ITC` reader - "]
-pub type ITC_R = crate::BitReader<bool>;
+pub type ItcR = crate::BitReader;
 #[doc = "Field `ITC` writer - "]
-pub type ITC_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONFIG_SPEC, bool, O>;
+pub type ItcW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `L` reader - "]
-pub type L_R = crate::BitReader<bool>;
+pub type LR = crate::BitReader;
 #[doc = "Field `L` writer - "]
-pub type L_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONFIG_SPEC, bool, O>;
+pub type LW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `A` reader - "]
-pub type A_R = crate::BitReader<bool>;
+pub type AR = crate::BitReader;
 #[doc = "Field `H` reader - "]
-pub type H_R = crate::BitReader<bool>;
+pub type HR = crate::BitReader;
 #[doc = "Field `H` writer - "]
-pub type H_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONFIG_SPEC, bool, O>;
+pub type HW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LLICounter` reader - "]
-pub type LLICOUNTER_R = crate::FieldReader<u16, u16>;
+pub type LlicounterR = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn e(&self) -> E_R {
-        E_R::new((self.bits & 1) != 0)
+    pub fn e(&self) -> ER {
+        ER::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:5"]
     #[inline(always)]
-    pub fn src_peripheral(&self) -> SRC_PERIPHERAL_R {
-        SRC_PERIPHERAL_R::new(((self.bits >> 1) & 0x1f) as u8)
+    pub fn src_peripheral(&self) -> SrcPeripheralR {
+        SrcPeripheralR::new(((self.bits >> 1) & 0x1f) as u8)
     }
     #[doc = "Bits 6:10"]
     #[inline(always)]
-    pub fn dst_peripheral(&self) -> DST_PERIPHERAL_R {
-        DST_PERIPHERAL_R::new(((self.bits >> 6) & 0x1f) as u8)
+    pub fn dst_peripheral(&self) -> DstPeripheralR {
+        DstPeripheralR::new(((self.bits >> 6) & 0x1f) as u8)
     }
     #[doc = "Bits 11:13"]
     #[inline(always)]
-    pub fn flow_cntrl(&self) -> FLOW_CNTRL_R {
-        FLOW_CNTRL_R::new(((self.bits >> 11) & 7) as u8)
+    pub fn flow_cntrl(&self) -> FlowCntrlR {
+        FlowCntrlR::new(((self.bits >> 11) & 7) as u8)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    pub fn ie(&self) -> IE_R {
-        IE_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn ie(&self) -> IeR {
+        IeR::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    pub fn itc(&self) -> ITC_R {
-        ITC_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn itc(&self) -> ItcR {
+        ItcR::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn l(&self) -> L_R {
-        L_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn l(&self) -> LR {
+        LR::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    pub fn a(&self) -> A_R {
-        A_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn a(&self) -> AR {
+        AR::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    pub fn h(&self) -> H_R {
-        H_R::new(((self.bits >> 18) & 1) != 0)
+    pub fn h(&self) -> HR {
+        HR::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bits 20:29"]
     #[inline(always)]
-    pub fn llicounter(&self) -> LLICOUNTER_R {
-        LLICOUNTER_R::new(((self.bits >> 20) & 0x03ff) as u16)
+    pub fn llicounter(&self) -> LlicounterR {
+        LlicounterR::new(((self.bits >> 20) & 0x03ff) as u16)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn e(&mut self) -> E_W<0> {
-        E_W::new(self)
+    pub fn e(&mut self) -> EW<'_, ChConfigSpec> {
+        EW::new(self, 0)
     }
     #[doc = "Bits 1:5"]
     #[inline(always)]
-    #[must_use]
-    pub fn src_peripheral(&mut self) -> SRC_PERIPHERAL_W<1> {
-        SRC_PERIPHERAL_W::new(self)
+    pub fn src_peripheral(&mut self) -> SrcPeripheralW<'_, ChConfigSpec> {
+        SrcPeripheralW::new(self, 1)
     }
     #[doc = "Bits 6:10"]
     #[inline(always)]
-    #[must_use]
-    pub fn dst_peripheral(&mut self) -> DST_PERIPHERAL_W<6> {
-        DST_PERIPHERAL_W::new(self)
+    pub fn dst_peripheral(&mut self) -> DstPeripheralW<'_, ChConfigSpec> {
+        DstPeripheralW::new(self, 6)
     }
     #[doc = "Bits 11:13"]
     #[inline(always)]
-    #[must_use]
-    pub fn flow_cntrl(&mut self) -> FLOW_CNTRL_W<11> {
-        FLOW_CNTRL_W::new(self)
+    pub fn flow_cntrl(&mut self) -> FlowCntrlW<'_, ChConfigSpec> {
+        FlowCntrlW::new(self, 11)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    #[must_use]
-    pub fn ie(&mut self) -> IE_W<14> {
-        IE_W::new(self)
+    pub fn ie(&mut self) -> IeW<'_, ChConfigSpec> {
+        IeW::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    #[must_use]
-    pub fn itc(&mut self) -> ITC_W<15> {
-        ITC_W::new(self)
+    pub fn itc(&mut self) -> ItcW<'_, ChConfigSpec> {
+        ItcW::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    #[must_use]
-    pub fn l(&mut self) -> L_W<16> {
-        L_W::new(self)
+    pub fn l(&mut self) -> LW<'_, ChConfigSpec> {
+        LW::new(self, 16)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    #[must_use]
-    pub fn h(&mut self) -> H_W<18> {
-        H_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn h(&mut self) -> HW<'_, ChConfigSpec> {
+        HW::new(self, 18)
     }
 }
-#[doc = "DMA channel config\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch_config](index.html) module"]
-pub struct CH_CONFIG_SPEC;
-impl crate::RegisterSpec for CH_CONFIG_SPEC {
+#[doc = "DMA channel config\n\nYou can [`read`](crate::Reg::read) this register and get [`ch_config::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_config::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ChConfigSpec;
+impl crate::RegisterSpec for ChConfigSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ch_config::R](R) reader structure"]
-impl crate::Readable for CH_CONFIG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ch_config::W](W) writer structure"]
-impl crate::Writable for CH_CONFIG_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`ch_config::R`](R) reader structure"]
+impl crate::Readable for ChConfigSpec {}
+#[doc = "`write(|w| ..)` method takes [`ch_config::W`](W) writer structure"]
+impl crate::Writable for ChConfigSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets CH_CONFIG to value 0"]
-impl crate::Resettable for CH_CONFIG_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for ChConfigSpec {}

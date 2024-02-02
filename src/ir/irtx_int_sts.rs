@@ -1,118 +1,72 @@
 #[doc = "Register `irtx_int_sts` reader"]
-pub struct R(crate::R<IRTX_INT_STS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IRTX_INT_STS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IRTX_INT_STS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IRTX_INT_STS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IrtxIntStsSpec>;
 #[doc = "Register `irtx_int_sts` writer"]
-pub struct W(crate::W<IRTX_INT_STS_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IRTX_INT_STS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IRTX_INT_STS_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IRTX_INT_STS_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IrtxIntStsSpec>;
 #[doc = "Field `irtx_end_int` reader - "]
-pub type IRTX_END_INT_R = crate::BitReader<bool>;
+pub type IrtxEndIntR = crate::BitReader;
 #[doc = "Field `cr_irtx_end_mask` reader - "]
-pub type CR_IRTX_END_MASK_R = crate::BitReader<bool>;
+pub type CrIrtxEndMaskR = crate::BitReader;
 #[doc = "Field `cr_irtx_end_mask` writer - "]
-pub type CR_IRTX_END_MASK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IRTX_INT_STS_SPEC, bool, O>;
+pub type CrIrtxEndMaskW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_irtx_end_clr` reader - "]
-pub type CR_IRTX_END_CLR_R = crate::BitReader<bool>;
+pub type CrIrtxEndClrR = crate::BitReader;
 #[doc = "Field `cr_irtx_end_clr` writer - "]
-pub type CR_IRTX_END_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRTX_INT_STS_SPEC, bool, O>;
+pub type CrIrtxEndClrW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_irtx_end_en` reader - "]
-pub type CR_IRTX_END_EN_R = crate::BitReader<bool>;
+pub type CrIrtxEndEnR = crate::BitReader;
 #[doc = "Field `cr_irtx_end_en` writer - "]
-pub type CR_IRTX_END_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRTX_INT_STS_SPEC, bool, O>;
+pub type CrIrtxEndEnW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn irtx_end_int(&self) -> IRTX_END_INT_R {
-        IRTX_END_INT_R::new((self.bits & 1) != 0)
+    pub fn irtx_end_int(&self) -> IrtxEndIntR {
+        IrtxEndIntR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn cr_irtx_end_mask(&self) -> CR_IRTX_END_MASK_R {
-        CR_IRTX_END_MASK_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn cr_irtx_end_mask(&self) -> CrIrtxEndMaskR {
+        CrIrtxEndMaskR::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn cr_irtx_end_clr(&self) -> CR_IRTX_END_CLR_R {
-        CR_IRTX_END_CLR_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn cr_irtx_end_clr(&self) -> CrIrtxEndClrR {
+        CrIrtxEndClrR::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    pub fn cr_irtx_end_en(&self) -> CR_IRTX_END_EN_R {
-        CR_IRTX_END_EN_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn cr_irtx_end_en(&self) -> CrIrtxEndEnR {
+        CrIrtxEndEnR::new(((self.bits >> 24) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irtx_end_mask(&mut self) -> CR_IRTX_END_MASK_W<8> {
-        CR_IRTX_END_MASK_W::new(self)
+    pub fn cr_irtx_end_mask(&mut self) -> CrIrtxEndMaskW<'_, IrtxIntStsSpec> {
+        CrIrtxEndMaskW::new(self, 8)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irtx_end_clr(&mut self) -> CR_IRTX_END_CLR_W<16> {
-        CR_IRTX_END_CLR_W::new(self)
+    pub fn cr_irtx_end_clr(&mut self) -> CrIrtxEndClrW<'_, IrtxIntStsSpec> {
+        CrIrtxEndClrW::new(self, 16)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irtx_end_en(&mut self) -> CR_IRTX_END_EN_W<24> {
-        CR_IRTX_END_EN_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn cr_irtx_end_en(&mut self) -> CrIrtxEndEnW<'_, IrtxIntStsSpec> {
+        CrIrtxEndEnW::new(self, 24)
     }
 }
-#[doc = "irtx_int_sts.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [irtx_int_sts](index.html) module"]
-pub struct IRTX_INT_STS_SPEC;
-impl crate::RegisterSpec for IRTX_INT_STS_SPEC {
+#[doc = "irtx_int_sts.\n\nYou can [`read`](crate::Reg::read) this register and get [`irtx_int_sts::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`irtx_int_sts::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IrtxIntStsSpec;
+impl crate::RegisterSpec for IrtxIntStsSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [irtx_int_sts::R](R) reader structure"]
-impl crate::Readable for IRTX_INT_STS_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [irtx_int_sts::W](W) writer structure"]
-impl crate::Writable for IRTX_INT_STS_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`irtx_int_sts::R`](R) reader structure"]
+impl crate::Readable for IrtxIntStsSpec {}
+#[doc = "`write(|w| ..)` method takes [`irtx_int_sts::W`](W) writer structure"]
+impl crate::Writable for IrtxIntStsSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets irtx_int_sts to value 0x0100_0100"]
-impl crate::Resettable for IRTX_INT_STS_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0100_0100;
+impl crate::Resettable for IrtxIntStsSpec {
+    const RESET_VALUE: u32 = 0x0100_0100;
 }

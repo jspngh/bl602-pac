@@ -1,127 +1,77 @@
 #[doc = "Register `dfe_ctrl_3` reader"]
-pub struct R(crate::R<DFE_CTRL_3_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DFE_CTRL_3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DFE_CTRL_3_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DFE_CTRL_3_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DfeCtrl3Spec>;
 #[doc = "Register `dfe_ctrl_3` writer"]
-pub struct W(crate::W<DFE_CTRL_3_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DFE_CTRL_3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DFE_CTRL_3_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DFE_CTRL_3_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DfeCtrl3Spec>;
 #[doc = "Field `rx_adc_4s_i_val` reader - "]
-pub type RX_ADC_4S_I_VAL_R = crate::FieldReader<u16, u16>;
+pub type RxAdc4sIValR = crate::FieldReader<u16>;
 #[doc = "Field `rx_adc_4s_i_val` writer - "]
-pub type RX_ADC_4S_I_VAL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DFE_CTRL_3_SPEC, u16, u16, 10, O>;
+pub type RxAdc4sIValW<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `rx_adc_4s_i_en` reader - "]
-pub type RX_ADC_4S_I_EN_R = crate::BitReader<bool>;
+pub type RxAdc4sIEnR = crate::BitReader;
 #[doc = "Field `rx_adc_4s_i_en` writer - "]
-pub type RX_ADC_4S_I_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DFE_CTRL_3_SPEC, bool, O>;
+pub type RxAdc4sIEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `rx_adc_4s_q_val` reader - "]
-pub type RX_ADC_4S_Q_VAL_R = crate::FieldReader<u16, u16>;
+pub type RxAdc4sQValR = crate::FieldReader<u16>;
 #[doc = "Field `rx_adc_4s_q_val` writer - "]
-pub type RX_ADC_4S_Q_VAL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DFE_CTRL_3_SPEC, u16, u16, 10, O>;
+pub type RxAdc4sQValW<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `rx_adc_4s_q_en` reader - "]
-pub type RX_ADC_4S_Q_EN_R = crate::BitReader<bool>;
+pub type RxAdc4sQEnR = crate::BitReader;
 #[doc = "Field `rx_adc_4s_q_en` writer - "]
-pub type RX_ADC_4S_Q_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DFE_CTRL_3_SPEC, bool, O>;
+pub type RxAdc4sQEnW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:9"]
     #[inline(always)]
-    pub fn rx_adc_4s_i_val(&self) -> RX_ADC_4S_I_VAL_R {
-        RX_ADC_4S_I_VAL_R::new((self.bits & 0x03ff) as u16)
+    pub fn rx_adc_4s_i_val(&self) -> RxAdc4sIValR {
+        RxAdc4sIValR::new((self.bits & 0x03ff) as u16)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    pub fn rx_adc_4s_i_en(&self) -> RX_ADC_4S_I_EN_R {
-        RX_ADC_4S_I_EN_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn rx_adc_4s_i_en(&self) -> RxAdc4sIEnR {
+        RxAdc4sIEnR::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bits 16:25"]
     #[inline(always)]
-    pub fn rx_adc_4s_q_val(&self) -> RX_ADC_4S_Q_VAL_R {
-        RX_ADC_4S_Q_VAL_R::new(((self.bits >> 16) & 0x03ff) as u16)
+    pub fn rx_adc_4s_q_val(&self) -> RxAdc4sQValR {
+        RxAdc4sQValR::new(((self.bits >> 16) & 0x03ff) as u16)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    pub fn rx_adc_4s_q_en(&self) -> RX_ADC_4S_Q_EN_R {
-        RX_ADC_4S_Q_EN_R::new(((self.bits >> 26) & 1) != 0)
+    pub fn rx_adc_4s_q_en(&self) -> RxAdc4sQEnR {
+        RxAdc4sQEnR::new(((self.bits >> 26) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 0:9"]
     #[inline(always)]
-    #[must_use]
-    pub fn rx_adc_4s_i_val(&mut self) -> RX_ADC_4S_I_VAL_W<0> {
-        RX_ADC_4S_I_VAL_W::new(self)
+    pub fn rx_adc_4s_i_val(&mut self) -> RxAdc4sIValW<'_, DfeCtrl3Spec> {
+        RxAdc4sIValW::new(self, 0)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
-    pub fn rx_adc_4s_i_en(&mut self) -> RX_ADC_4S_I_EN_W<10> {
-        RX_ADC_4S_I_EN_W::new(self)
+    pub fn rx_adc_4s_i_en(&mut self) -> RxAdc4sIEnW<'_, DfeCtrl3Spec> {
+        RxAdc4sIEnW::new(self, 10)
     }
     #[doc = "Bits 16:25"]
     #[inline(always)]
-    #[must_use]
-    pub fn rx_adc_4s_q_val(&mut self) -> RX_ADC_4S_Q_VAL_W<16> {
-        RX_ADC_4S_Q_VAL_W::new(self)
+    pub fn rx_adc_4s_q_val(&mut self) -> RxAdc4sQValW<'_, DfeCtrl3Spec> {
+        RxAdc4sQValW::new(self, 16)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    #[must_use]
-    pub fn rx_adc_4s_q_en(&mut self) -> RX_ADC_4S_Q_EN_W<26> {
-        RX_ADC_4S_Q_EN_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn rx_adc_4s_q_en(&mut self) -> RxAdc4sQEnW<'_, DfeCtrl3Spec> {
+        RxAdc4sQEnW::new(self, 26)
     }
 }
-#[doc = "dfe_ctrl_3.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dfe_ctrl_3](index.html) module"]
-pub struct DFE_CTRL_3_SPEC;
-impl crate::RegisterSpec for DFE_CTRL_3_SPEC {
+#[doc = "dfe_ctrl_3.\n\nYou can [`read`](crate::Reg::read) this register and get [`dfe_ctrl_3::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dfe_ctrl_3::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DfeCtrl3Spec;
+impl crate::RegisterSpec for DfeCtrl3Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dfe_ctrl_3::R](R) reader structure"]
-impl crate::Readable for DFE_CTRL_3_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dfe_ctrl_3::W](W) writer structure"]
-impl crate::Writable for DFE_CTRL_3_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`dfe_ctrl_3::R`](R) reader structure"]
+impl crate::Readable for DfeCtrl3Spec {}
+#[doc = "`write(|w| ..)` method takes [`dfe_ctrl_3::W`](W) writer structure"]
+impl crate::Writable for DfeCtrl3Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets dfe_ctrl_3 to value 0"]
-impl crate::Resettable for DFE_CTRL_3_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for DfeCtrl3Spec {}

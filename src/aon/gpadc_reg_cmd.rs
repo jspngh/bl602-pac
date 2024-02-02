@@ -1,334 +1,261 @@
 #[doc = "Register `gpadc_reg_cmd` reader"]
-pub struct R(crate::R<GPADC_REG_CMD_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GPADC_REG_CMD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GPADC_REG_CMD_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GPADC_REG_CMD_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GpadcRegCmdSpec>;
 #[doc = "Register `gpadc_reg_cmd` writer"]
-pub struct W(crate::W<GPADC_REG_CMD_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GPADC_REG_CMD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GPADC_REG_CMD_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GPADC_REG_CMD_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GpadcRegCmdSpec>;
 #[doc = "Field `gpadc_global_en` reader - "]
-pub type GPADC_GLOBAL_EN_R = crate::BitReader<bool>;
+pub type GpadcGlobalEnR = crate::BitReader;
 #[doc = "Field `gpadc_global_en` writer - "]
-pub type GPADC_GLOBAL_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPADC_REG_CMD_SPEC, bool, O>;
+pub type GpadcGlobalEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `gpadc_conv_start` reader - "]
-pub type GPADC_CONV_START_R = crate::BitReader<bool>;
+pub type GpadcConvStartR = crate::BitReader;
 #[doc = "Field `gpadc_conv_start` writer - "]
-pub type GPADC_CONV_START_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPADC_REG_CMD_SPEC, bool, O>;
+pub type GpadcConvStartW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `gpadc_soft_rst` reader - "]
-pub type GPADC_SOFT_RST_R = crate::BitReader<bool>;
+pub type GpadcSoftRstR = crate::BitReader;
 #[doc = "Field `gpadc_soft_rst` writer - "]
-pub type GPADC_SOFT_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPADC_REG_CMD_SPEC, bool, O>;
+pub type GpadcSoftRstW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `gpadc_neg_sel` reader - "]
-pub type GPADC_NEG_SEL_R = crate::FieldReader<u8, u8>;
+pub type GpadcNegSelR = crate::FieldReader;
 #[doc = "Field `gpadc_neg_sel` writer - "]
-pub type GPADC_NEG_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPADC_REG_CMD_SPEC, u8, u8, 5, O>;
+pub type GpadcNegSelW<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `gpadc_pos_sel` reader - "]
-pub type GPADC_POS_SEL_R = crate::FieldReader<u8, u8>;
+pub type GpadcPosSelR = crate::FieldReader;
 #[doc = "Field `gpadc_pos_sel` writer - "]
-pub type GPADC_POS_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPADC_REG_CMD_SPEC, u8, u8, 5, O>;
+pub type GpadcPosSelW<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `gpadc_neg_gnd` reader - "]
-pub type GPADC_NEG_GND_R = crate::BitReader<bool>;
+pub type GpadcNegGndR = crate::BitReader;
 #[doc = "Field `gpadc_neg_gnd` writer - "]
-pub type GPADC_NEG_GND_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPADC_REG_CMD_SPEC, bool, O>;
+pub type GpadcNegGndW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `gpadc_micbias_en` reader - "]
-pub type GPADC_MICBIAS_EN_R = crate::BitReader<bool>;
+pub type GpadcMicbiasEnR = crate::BitReader;
 #[doc = "Field `gpadc_micbias_en` writer - "]
-pub type GPADC_MICBIAS_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPADC_REG_CMD_SPEC, bool, O>;
+pub type GpadcMicbiasEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `gpadc_micpga_en` reader - "]
-pub type GPADC_MICPGA_EN_R = crate::BitReader<bool>;
+pub type GpadcMicpgaEnR = crate::BitReader;
 #[doc = "Field `gpadc_micpga_en` writer - "]
-pub type GPADC_MICPGA_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPADC_REG_CMD_SPEC, bool, O>;
+pub type GpadcMicpgaEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `gpadc_byp_micboost` reader - "]
-pub type GPADC_BYP_MICBOOST_R = crate::BitReader<bool>;
+pub type GpadcBypMicboostR = crate::BitReader;
 #[doc = "Field `gpadc_byp_micboost` writer - "]
-pub type GPADC_BYP_MICBOOST_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPADC_REG_CMD_SPEC, bool, O>;
+pub type GpadcBypMicboostW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `gpadc_dwa_en` reader - "]
-pub type GPADC_DWA_EN_R = crate::BitReader<bool>;
+pub type GpadcDwaEnR = crate::BitReader;
 #[doc = "Field `gpadc_dwa_en` writer - "]
-pub type GPADC_DWA_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPADC_REG_CMD_SPEC, bool, O>;
+pub type GpadcDwaEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `gpadc_mic2_diff` reader - "]
-pub type GPADC_MIC2_DIFF_R = crate::BitReader<bool>;
+pub type GpadcMic2DiffR = crate::BitReader;
 #[doc = "Field `gpadc_mic2_diff` writer - "]
-pub type GPADC_MIC2_DIFF_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPADC_REG_CMD_SPEC, bool, O>;
+pub type GpadcMic2DiffW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `gpadc_mic1_diff` reader - "]
-pub type GPADC_MIC1_DIFF_R = crate::BitReader<bool>;
+pub type GpadcMic1DiffR = crate::BitReader;
 #[doc = "Field `gpadc_mic1_diff` writer - "]
-pub type GPADC_MIC1_DIFF_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPADC_REG_CMD_SPEC, bool, O>;
+pub type GpadcMic1DiffW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `gpadc_mic_pga2_gain` reader - "]
-pub type GPADC_MIC_PGA2_GAIN_R = crate::FieldReader<u8, u8>;
+pub type GpadcMicPga2GainR = crate::FieldReader;
 #[doc = "Field `gpadc_mic_pga2_gain` writer - "]
-pub type GPADC_MIC_PGA2_GAIN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPADC_REG_CMD_SPEC, u8, u8, 2, O>;
+pub type GpadcMicPga2GainW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `gpadc_micboost_32db_en` reader - "]
-pub type GPADC_MICBOOST_32DB_EN_R = crate::BitReader<bool>;
+pub type GpadcMicboost32dbEnR = crate::BitReader;
 #[doc = "Field `gpadc_micboost_32db_en` writer - "]
-pub type GPADC_MICBOOST_32DB_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPADC_REG_CMD_SPEC, bool, O>;
+pub type GpadcMicboost32dbEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `gpadc_chip_sen_pu` reader - "]
-pub type GPADC_CHIP_SEN_PU_R = crate::BitReader<bool>;
+pub type GpadcChipSenPuR = crate::BitReader;
 #[doc = "Field `gpadc_chip_sen_pu` writer - "]
-pub type GPADC_CHIP_SEN_PU_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPADC_REG_CMD_SPEC, bool, O>;
+pub type GpadcChipSenPuW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `gpadc_sen_sel` reader - "]
-pub type GPADC_SEN_SEL_R = crate::FieldReader<u8, u8>;
+pub type GpadcSenSelR = crate::FieldReader;
 #[doc = "Field `gpadc_sen_sel` writer - "]
-pub type GPADC_SEN_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPADC_REG_CMD_SPEC, u8, u8, 2, O>;
+pub type GpadcSenSelW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `gpadc_sen_test_en` reader - "]
-pub type GPADC_SEN_TEST_EN_R = crate::BitReader<bool>;
+pub type GpadcSenTestEnR = crate::BitReader;
 #[doc = "Field `gpadc_sen_test_en` writer - "]
-pub type GPADC_SEN_TEST_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPADC_REG_CMD_SPEC, bool, O>;
+pub type GpadcSenTestEnW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn gpadc_global_en(&self) -> GPADC_GLOBAL_EN_R {
-        GPADC_GLOBAL_EN_R::new((self.bits & 1) != 0)
+    pub fn gpadc_global_en(&self) -> GpadcGlobalEnR {
+        GpadcGlobalEnR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn gpadc_conv_start(&self) -> GPADC_CONV_START_R {
-        GPADC_CONV_START_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn gpadc_conv_start(&self) -> GpadcConvStartR {
+        GpadcConvStartR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn gpadc_soft_rst(&self) -> GPADC_SOFT_RST_R {
-        GPADC_SOFT_RST_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn gpadc_soft_rst(&self) -> GpadcSoftRstR {
+        GpadcSoftRstR::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bits 3:7"]
     #[inline(always)]
-    pub fn gpadc_neg_sel(&self) -> GPADC_NEG_SEL_R {
-        GPADC_NEG_SEL_R::new(((self.bits >> 3) & 0x1f) as u8)
+    pub fn gpadc_neg_sel(&self) -> GpadcNegSelR {
+        GpadcNegSelR::new(((self.bits >> 3) & 0x1f) as u8)
     }
     #[doc = "Bits 8:12"]
     #[inline(always)]
-    pub fn gpadc_pos_sel(&self) -> GPADC_POS_SEL_R {
-        GPADC_POS_SEL_R::new(((self.bits >> 8) & 0x1f) as u8)
+    pub fn gpadc_pos_sel(&self) -> GpadcPosSelR {
+        GpadcPosSelR::new(((self.bits >> 8) & 0x1f) as u8)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn gpadc_neg_gnd(&self) -> GPADC_NEG_GND_R {
-        GPADC_NEG_GND_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn gpadc_neg_gnd(&self) -> GpadcNegGndR {
+        GpadcNegGndR::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    pub fn gpadc_micbias_en(&self) -> GPADC_MICBIAS_EN_R {
-        GPADC_MICBIAS_EN_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn gpadc_micbias_en(&self) -> GpadcMicbiasEnR {
+        GpadcMicbiasEnR::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    pub fn gpadc_micpga_en(&self) -> GPADC_MICPGA_EN_R {
-        GPADC_MICPGA_EN_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn gpadc_micpga_en(&self) -> GpadcMicpgaEnR {
+        GpadcMicpgaEnR::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn gpadc_byp_micboost(&self) -> GPADC_BYP_MICBOOST_R {
-        GPADC_BYP_MICBOOST_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn gpadc_byp_micboost(&self) -> GpadcBypMicboostR {
+        GpadcBypMicboostR::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    pub fn gpadc_dwa_en(&self) -> GPADC_DWA_EN_R {
-        GPADC_DWA_EN_R::new(((self.bits >> 18) & 1) != 0)
+    pub fn gpadc_dwa_en(&self) -> GpadcDwaEnR {
+        GpadcDwaEnR::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
-    pub fn gpadc_mic2_diff(&self) -> GPADC_MIC2_DIFF_R {
-        GPADC_MIC2_DIFF_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn gpadc_mic2_diff(&self) -> GpadcMic2DiffR {
+        GpadcMic2DiffR::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    pub fn gpadc_mic1_diff(&self) -> GPADC_MIC1_DIFF_R {
-        GPADC_MIC1_DIFF_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn gpadc_mic1_diff(&self) -> GpadcMic1DiffR {
+        GpadcMic1DiffR::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bits 21:22"]
     #[inline(always)]
-    pub fn gpadc_mic_pga2_gain(&self) -> GPADC_MIC_PGA2_GAIN_R {
-        GPADC_MIC_PGA2_GAIN_R::new(((self.bits >> 21) & 3) as u8)
+    pub fn gpadc_mic_pga2_gain(&self) -> GpadcMicPga2GainR {
+        GpadcMicPga2GainR::new(((self.bits >> 21) & 3) as u8)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
-    pub fn gpadc_micboost_32db_en(&self) -> GPADC_MICBOOST_32DB_EN_R {
-        GPADC_MICBOOST_32DB_EN_R::new(((self.bits >> 23) & 1) != 0)
+    pub fn gpadc_micboost_32db_en(&self) -> GpadcMicboost32dbEnR {
+        GpadcMicboost32dbEnR::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    pub fn gpadc_chip_sen_pu(&self) -> GPADC_CHIP_SEN_PU_R {
-        GPADC_CHIP_SEN_PU_R::new(((self.bits >> 27) & 1) != 0)
+    pub fn gpadc_chip_sen_pu(&self) -> GpadcChipSenPuR {
+        GpadcChipSenPuR::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bits 28:29"]
     #[inline(always)]
-    pub fn gpadc_sen_sel(&self) -> GPADC_SEN_SEL_R {
-        GPADC_SEN_SEL_R::new(((self.bits >> 28) & 3) as u8)
+    pub fn gpadc_sen_sel(&self) -> GpadcSenSelR {
+        GpadcSenSelR::new(((self.bits >> 28) & 3) as u8)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    pub fn gpadc_sen_test_en(&self) -> GPADC_SEN_TEST_EN_R {
-        GPADC_SEN_TEST_EN_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn gpadc_sen_test_en(&self) -> GpadcSenTestEnR {
+        GpadcSenTestEnR::new(((self.bits >> 30) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_global_en(&mut self) -> GPADC_GLOBAL_EN_W<0> {
-        GPADC_GLOBAL_EN_W::new(self)
+    pub fn gpadc_global_en(&mut self) -> GpadcGlobalEnW<'_, GpadcRegCmdSpec> {
+        GpadcGlobalEnW::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_conv_start(&mut self) -> GPADC_CONV_START_W<1> {
-        GPADC_CONV_START_W::new(self)
+    pub fn gpadc_conv_start(&mut self) -> GpadcConvStartW<'_, GpadcRegCmdSpec> {
+        GpadcConvStartW::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_soft_rst(&mut self) -> GPADC_SOFT_RST_W<2> {
-        GPADC_SOFT_RST_W::new(self)
+    pub fn gpadc_soft_rst(&mut self) -> GpadcSoftRstW<'_, GpadcRegCmdSpec> {
+        GpadcSoftRstW::new(self, 2)
     }
     #[doc = "Bits 3:7"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_neg_sel(&mut self) -> GPADC_NEG_SEL_W<3> {
-        GPADC_NEG_SEL_W::new(self)
+    pub fn gpadc_neg_sel(&mut self) -> GpadcNegSelW<'_, GpadcRegCmdSpec> {
+        GpadcNegSelW::new(self, 3)
     }
     #[doc = "Bits 8:12"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_pos_sel(&mut self) -> GPADC_POS_SEL_W<8> {
-        GPADC_POS_SEL_W::new(self)
+    pub fn gpadc_pos_sel(&mut self) -> GpadcPosSelW<'_, GpadcRegCmdSpec> {
+        GpadcPosSelW::new(self, 8)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_neg_gnd(&mut self) -> GPADC_NEG_GND_W<13> {
-        GPADC_NEG_GND_W::new(self)
+    pub fn gpadc_neg_gnd(&mut self) -> GpadcNegGndW<'_, GpadcRegCmdSpec> {
+        GpadcNegGndW::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_micbias_en(&mut self) -> GPADC_MICBIAS_EN_W<14> {
-        GPADC_MICBIAS_EN_W::new(self)
+    pub fn gpadc_micbias_en(&mut self) -> GpadcMicbiasEnW<'_, GpadcRegCmdSpec> {
+        GpadcMicbiasEnW::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_micpga_en(&mut self) -> GPADC_MICPGA_EN_W<15> {
-        GPADC_MICPGA_EN_W::new(self)
+    pub fn gpadc_micpga_en(&mut self) -> GpadcMicpgaEnW<'_, GpadcRegCmdSpec> {
+        GpadcMicpgaEnW::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_byp_micboost(&mut self) -> GPADC_BYP_MICBOOST_W<16> {
-        GPADC_BYP_MICBOOST_W::new(self)
+    pub fn gpadc_byp_micboost(&mut self) -> GpadcBypMicboostW<'_, GpadcRegCmdSpec> {
+        GpadcBypMicboostW::new(self, 16)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_dwa_en(&mut self) -> GPADC_DWA_EN_W<18> {
-        GPADC_DWA_EN_W::new(self)
+    pub fn gpadc_dwa_en(&mut self) -> GpadcDwaEnW<'_, GpadcRegCmdSpec> {
+        GpadcDwaEnW::new(self, 18)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_mic2_diff(&mut self) -> GPADC_MIC2_DIFF_W<19> {
-        GPADC_MIC2_DIFF_W::new(self)
+    pub fn gpadc_mic2_diff(&mut self) -> GpadcMic2DiffW<'_, GpadcRegCmdSpec> {
+        GpadcMic2DiffW::new(self, 19)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_mic1_diff(&mut self) -> GPADC_MIC1_DIFF_W<20> {
-        GPADC_MIC1_DIFF_W::new(self)
+    pub fn gpadc_mic1_diff(&mut self) -> GpadcMic1DiffW<'_, GpadcRegCmdSpec> {
+        GpadcMic1DiffW::new(self, 20)
     }
     #[doc = "Bits 21:22"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_mic_pga2_gain(&mut self) -> GPADC_MIC_PGA2_GAIN_W<21> {
-        GPADC_MIC_PGA2_GAIN_W::new(self)
+    pub fn gpadc_mic_pga2_gain(&mut self) -> GpadcMicPga2GainW<'_, GpadcRegCmdSpec> {
+        GpadcMicPga2GainW::new(self, 21)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_micboost_32db_en(&mut self) -> GPADC_MICBOOST_32DB_EN_W<23> {
-        GPADC_MICBOOST_32DB_EN_W::new(self)
+    pub fn gpadc_micboost_32db_en(&mut self) -> GpadcMicboost32dbEnW<'_, GpadcRegCmdSpec> {
+        GpadcMicboost32dbEnW::new(self, 23)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_chip_sen_pu(&mut self) -> GPADC_CHIP_SEN_PU_W<27> {
-        GPADC_CHIP_SEN_PU_W::new(self)
+    pub fn gpadc_chip_sen_pu(&mut self) -> GpadcChipSenPuW<'_, GpadcRegCmdSpec> {
+        GpadcChipSenPuW::new(self, 27)
     }
     #[doc = "Bits 28:29"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_sen_sel(&mut self) -> GPADC_SEN_SEL_W<28> {
-        GPADC_SEN_SEL_W::new(self)
+    pub fn gpadc_sen_sel(&mut self) -> GpadcSenSelW<'_, GpadcRegCmdSpec> {
+        GpadcSenSelW::new(self, 28)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_sen_test_en(&mut self) -> GPADC_SEN_TEST_EN_W<30> {
-        GPADC_SEN_TEST_EN_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn gpadc_sen_test_en(&mut self) -> GpadcSenTestEnW<'_, GpadcRegCmdSpec> {
+        GpadcSenTestEnW::new(self, 30)
     }
 }
-#[doc = "gpadc_reg_cmd.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpadc_reg_cmd](index.html) module"]
-pub struct GPADC_REG_CMD_SPEC;
-impl crate::RegisterSpec for GPADC_REG_CMD_SPEC {
+#[doc = "gpadc_reg_cmd.\n\nYou can [`read`](crate::Reg::read) this register and get [`gpadc_reg_cmd::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpadc_reg_cmd::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct GpadcRegCmdSpec;
+impl crate::RegisterSpec for GpadcRegCmdSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gpadc_reg_cmd::R](R) reader structure"]
-impl crate::Readable for GPADC_REG_CMD_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gpadc_reg_cmd::W](W) writer structure"]
-impl crate::Writable for GPADC_REG_CMD_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`gpadc_reg_cmd::R`](R) reader structure"]
+impl crate::Readable for GpadcRegCmdSpec {}
+#[doc = "`write(|w| ..)` method takes [`gpadc_reg_cmd::W`](W) writer structure"]
+impl crate::Writable for GpadcRegCmdSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets gpadc_reg_cmd to value 0x0f78"]
-impl crate::Resettable for GPADC_REG_CMD_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0f78;
+impl crate::Resettable for GpadcRegCmdSpec {
+    const RESET_VALUE: u32 = 0x0f78;
 }

@@ -1,97 +1,49 @@
 #[doc = "Register `gpdac_dma_config` reader"]
-pub struct R(crate::R<GPDAC_DMA_CONFIG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GPDAC_DMA_CONFIG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GPDAC_DMA_CONFIG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GPDAC_DMA_CONFIG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GpdacDmaConfigSpec>;
 #[doc = "Register `gpdac_dma_config` writer"]
-pub struct W(crate::W<GPDAC_DMA_CONFIG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GPDAC_DMA_CONFIG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GPDAC_DMA_CONFIG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GPDAC_DMA_CONFIG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GpdacDmaConfigSpec>;
 #[doc = "Field `gpdac_dma_tx_en` reader - "]
-pub type GPDAC_DMA_TX_EN_R = crate::BitReader<bool>;
+pub type GpdacDmaTxEnR = crate::BitReader;
 #[doc = "Field `gpdac_dma_tx_en` writer - "]
-pub type GPDAC_DMA_TX_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPDAC_DMA_CONFIG_SPEC, bool, O>;
+pub type GpdacDmaTxEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `gpdac_dma_format` reader - "]
-pub type GPDAC_DMA_FORMAT_R = crate::FieldReader<u8, u8>;
+pub type GpdacDmaFormatR = crate::FieldReader;
 #[doc = "Field `gpdac_dma_format` writer - "]
-pub type GPDAC_DMA_FORMAT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPDAC_DMA_CONFIG_SPEC, u8, u8, 2, O>;
+pub type GpdacDmaFormatW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn gpdac_dma_tx_en(&self) -> GPDAC_DMA_TX_EN_R {
-        GPDAC_DMA_TX_EN_R::new((self.bits & 1) != 0)
+    pub fn gpdac_dma_tx_en(&self) -> GpdacDmaTxEnR {
+        GpdacDmaTxEnR::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
-    pub fn gpdac_dma_format(&self) -> GPDAC_DMA_FORMAT_R {
-        GPDAC_DMA_FORMAT_R::new(((self.bits >> 4) & 3) as u8)
+    pub fn gpdac_dma_format(&self) -> GpdacDmaFormatR {
+        GpdacDmaFormatR::new(((self.bits >> 4) & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpdac_dma_tx_en(&mut self) -> GPDAC_DMA_TX_EN_W<0> {
-        GPDAC_DMA_TX_EN_W::new(self)
+    pub fn gpdac_dma_tx_en(&mut self) -> GpdacDmaTxEnW<'_, GpdacDmaConfigSpec> {
+        GpdacDmaTxEnW::new(self, 0)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpdac_dma_format(&mut self) -> GPDAC_DMA_FORMAT_W<4> {
-        GPDAC_DMA_FORMAT_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn gpdac_dma_format(&mut self) -> GpdacDmaFormatW<'_, GpdacDmaConfigSpec> {
+        GpdacDmaFormatW::new(self, 4)
     }
 }
-#[doc = "gpdac_dma_config.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpdac_dma_config](index.html) module"]
-pub struct GPDAC_DMA_CONFIG_SPEC;
-impl crate::RegisterSpec for GPDAC_DMA_CONFIG_SPEC {
+#[doc = "gpdac_dma_config.\n\nYou can [`read`](crate::Reg::read) this register and get [`gpdac_dma_config::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpdac_dma_config::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct GpdacDmaConfigSpec;
+impl crate::RegisterSpec for GpdacDmaConfigSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gpdac_dma_config::R](R) reader structure"]
-impl crate::Readable for GPDAC_DMA_CONFIG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gpdac_dma_config::W](W) writer structure"]
-impl crate::Writable for GPDAC_DMA_CONFIG_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`gpdac_dma_config::R`](R) reader structure"]
+impl crate::Readable for GpdacDmaConfigSpec {}
+#[doc = "`write(|w| ..)` method takes [`gpdac_dma_config::W`](W) writer structure"]
+impl crate::Writable for GpdacDmaConfigSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets gpdac_dma_config to value 0"]
-impl crate::Resettable for GPDAC_DMA_CONFIG_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for GpdacDmaConfigSpec {}

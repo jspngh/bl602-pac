@@ -1,193 +1,135 @@
 #[doc = "Register `DIG32K_WAKEUP_CTRL` reader"]
-pub struct R(crate::R<DIG32K_WAKEUP_CTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DIG32K_WAKEUP_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DIG32K_WAKEUP_CTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DIG32K_WAKEUP_CTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<Dig32kWakeupCtrlSpec>;
 #[doc = "Register `DIG32K_WAKEUP_CTRL` writer"]
-pub struct W(crate::W<DIG32K_WAKEUP_CTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DIG32K_WAKEUP_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DIG32K_WAKEUP_CTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DIG32K_WAKEUP_CTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<Dig32kWakeupCtrlSpec>;
 #[doc = "Field `dig_32k_div` reader - "]
-pub type DIG_32K_DIV_R = crate::FieldReader<u16, u16>;
+pub type Dig32kDivR = crate::FieldReader<u16>;
 #[doc = "Field `dig_32k_div` writer - "]
-pub type DIG_32K_DIV_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DIG32K_WAKEUP_CTRL_SPEC, u16, u16, 11, O>;
+pub type Dig32kDivW<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `dig_32k_en` reader - "]
-pub type DIG_32K_EN_R = crate::BitReader<bool>;
+pub type Dig32kEnR = crate::BitReader;
 #[doc = "Field `dig_32k_en` writer - "]
-pub type DIG_32K_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DIG32K_WAKEUP_CTRL_SPEC, bool, O>;
+pub type Dig32kEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `dig_32k_comp` reader - "]
-pub type DIG_32K_COMP_R = crate::BitReader<bool>;
+pub type Dig32kCompR = crate::BitReader;
 #[doc = "Field `dig_32k_comp` writer - "]
-pub type DIG_32K_COMP_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DIG32K_WAKEUP_CTRL_SPEC, bool, O>;
+pub type Dig32kCompW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `dig_512k_div` reader - "]
-pub type DIG_512K_DIV_R = crate::FieldReader<u8, u8>;
+pub type Dig512kDivR = crate::FieldReader;
 #[doc = "Field `dig_512k_div` writer - "]
-pub type DIG_512K_DIV_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DIG32K_WAKEUP_CTRL_SPEC, u8, u8, 7, O>;
+pub type Dig512kDivW<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `dig_512k_en` reader - "]
-pub type DIG_512K_EN_R = crate::BitReader<bool>;
+pub type Dig512kEnR = crate::BitReader;
 #[doc = "Field `dig_512k_en` writer - "]
-pub type DIG_512K_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DIG32K_WAKEUP_CTRL_SPEC, bool, O>;
+pub type Dig512kEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `dig_512k_comp` reader - "]
-pub type DIG_512K_COMP_R = crate::BitReader<bool>;
+pub type Dig512kCompR = crate::BitReader;
 #[doc = "Field `dig_512k_comp` writer - "]
-pub type DIG_512K_COMP_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DIG32K_WAKEUP_CTRL_SPEC, bool, O>;
+pub type Dig512kCompW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `dig_clk_src_sel` reader - "]
-pub type DIG_CLK_SRC_SEL_R = crate::BitReader<bool>;
+pub type DigClkSrcSelR = crate::BitReader;
 #[doc = "Field `dig_clk_src_sel` writer - "]
-pub type DIG_CLK_SRC_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DIG32K_WAKEUP_CTRL_SPEC, bool, O>;
+pub type DigClkSrcSelW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `reg_en_platform_wakeup` reader - "]
-pub type REG_EN_PLATFORM_WAKEUP_R = crate::BitReader<bool>;
+pub type RegEnPlatformWakeupR = crate::BitReader;
 #[doc = "Field `reg_en_platform_wakeup` writer - "]
-pub type REG_EN_PLATFORM_WAKEUP_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DIG32K_WAKEUP_CTRL_SPEC, bool, O>;
+pub type RegEnPlatformWakeupW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:10"]
     #[inline(always)]
-    pub fn dig_32k_div(&self) -> DIG_32K_DIV_R {
-        DIG_32K_DIV_R::new((self.bits & 0x07ff) as u16)
+    pub fn dig_32k_div(&self) -> Dig32kDivR {
+        Dig32kDivR::new((self.bits & 0x07ff) as u16)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn dig_32k_en(&self) -> DIG_32K_EN_R {
-        DIG_32K_EN_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn dig_32k_en(&self) -> Dig32kEnR {
+        Dig32kEnR::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn dig_32k_comp(&self) -> DIG_32K_COMP_R {
-        DIG_32K_COMP_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn dig_32k_comp(&self) -> Dig32kCompR {
+        Dig32kCompR::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bits 16:22"]
     #[inline(always)]
-    pub fn dig_512k_div(&self) -> DIG_512K_DIV_R {
-        DIG_512K_DIV_R::new(((self.bits >> 16) & 0x7f) as u8)
+    pub fn dig_512k_div(&self) -> Dig512kDivR {
+        Dig512kDivR::new(((self.bits >> 16) & 0x7f) as u8)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    pub fn dig_512k_en(&self) -> DIG_512K_EN_R {
-        DIG_512K_EN_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn dig_512k_en(&self) -> Dig512kEnR {
+        Dig512kEnR::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
-    pub fn dig_512k_comp(&self) -> DIG_512K_COMP_R {
-        DIG_512K_COMP_R::new(((self.bits >> 25) & 1) != 0)
+    pub fn dig_512k_comp(&self) -> Dig512kCompR {
+        Dig512kCompR::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    pub fn dig_clk_src_sel(&self) -> DIG_CLK_SRC_SEL_R {
-        DIG_CLK_SRC_SEL_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn dig_clk_src_sel(&self) -> DigClkSrcSelR {
+        DigClkSrcSelR::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    pub fn reg_en_platform_wakeup(&self) -> REG_EN_PLATFORM_WAKEUP_R {
-        REG_EN_PLATFORM_WAKEUP_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn reg_en_platform_wakeup(&self) -> RegEnPlatformWakeupR {
+        RegEnPlatformWakeupR::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 0:10"]
     #[inline(always)]
-    #[must_use]
-    pub fn dig_32k_div(&mut self) -> DIG_32K_DIV_W<0> {
-        DIG_32K_DIV_W::new(self)
+    pub fn dig_32k_div(&mut self) -> Dig32kDivW<'_, Dig32kWakeupCtrlSpec> {
+        Dig32kDivW::new(self, 0)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    #[must_use]
-    pub fn dig_32k_en(&mut self) -> DIG_32K_EN_W<12> {
-        DIG_32K_EN_W::new(self)
+    pub fn dig_32k_en(&mut self) -> Dig32kEnW<'_, Dig32kWakeupCtrlSpec> {
+        Dig32kEnW::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    #[must_use]
-    pub fn dig_32k_comp(&mut self) -> DIG_32K_COMP_W<13> {
-        DIG_32K_COMP_W::new(self)
+    pub fn dig_32k_comp(&mut self) -> Dig32kCompW<'_, Dig32kWakeupCtrlSpec> {
+        Dig32kCompW::new(self, 13)
     }
     #[doc = "Bits 16:22"]
     #[inline(always)]
-    #[must_use]
-    pub fn dig_512k_div(&mut self) -> DIG_512K_DIV_W<16> {
-        DIG_512K_DIV_W::new(self)
+    pub fn dig_512k_div(&mut self) -> Dig512kDivW<'_, Dig32kWakeupCtrlSpec> {
+        Dig512kDivW::new(self, 16)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    #[must_use]
-    pub fn dig_512k_en(&mut self) -> DIG_512K_EN_W<24> {
-        DIG_512K_EN_W::new(self)
+    pub fn dig_512k_en(&mut self) -> Dig512kEnW<'_, Dig32kWakeupCtrlSpec> {
+        Dig512kEnW::new(self, 24)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
-    #[must_use]
-    pub fn dig_512k_comp(&mut self) -> DIG_512K_COMP_W<25> {
-        DIG_512K_COMP_W::new(self)
+    pub fn dig_512k_comp(&mut self) -> Dig512kCompW<'_, Dig32kWakeupCtrlSpec> {
+        Dig512kCompW::new(self, 25)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    #[must_use]
-    pub fn dig_clk_src_sel(&mut self) -> DIG_CLK_SRC_SEL_W<28> {
-        DIG_CLK_SRC_SEL_W::new(self)
+    pub fn dig_clk_src_sel(&mut self) -> DigClkSrcSelW<'_, Dig32kWakeupCtrlSpec> {
+        DigClkSrcSelW::new(self, 28)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
-    pub fn reg_en_platform_wakeup(&mut self) -> REG_EN_PLATFORM_WAKEUP_W<31> {
-        REG_EN_PLATFORM_WAKEUP_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn reg_en_platform_wakeup(&mut self) -> RegEnPlatformWakeupW<'_, Dig32kWakeupCtrlSpec> {
+        RegEnPlatformWakeupW::new(self, 31)
     }
 }
-#[doc = "DIG32K_WAKEUP_CTRL.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dig32k_wakeup_ctrl](index.html) module"]
-pub struct DIG32K_WAKEUP_CTRL_SPEC;
-impl crate::RegisterSpec for DIG32K_WAKEUP_CTRL_SPEC {
+#[doc = "DIG32K_WAKEUP_CTRL.\n\nYou can [`read`](crate::Reg::read) this register and get [`dig32k_wakeup_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dig32k_wakeup_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Dig32kWakeupCtrlSpec;
+impl crate::RegisterSpec for Dig32kWakeupCtrlSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dig32k_wakeup_ctrl::R](R) reader structure"]
-impl crate::Readable for DIG32K_WAKEUP_CTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dig32k_wakeup_ctrl::W](W) writer structure"]
-impl crate::Writable for DIG32K_WAKEUP_CTRL_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`dig32k_wakeup_ctrl::R`](R) reader structure"]
+impl crate::Readable for Dig32kWakeupCtrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`dig32k_wakeup_ctrl::W`](W) writer structure"]
+impl crate::Writable for Dig32kWakeupCtrlSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets DIG32K_WAKEUP_CTRL to value 0x033e_13e8"]
-impl crate::Resettable for DIG32K_WAKEUP_CTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x033e_13e8;
+impl crate::Resettable for Dig32kWakeupCtrlSpec {
+    const RESET_VALUE: u32 = 0x033e_13e8;
 }

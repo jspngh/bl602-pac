@@ -1,37 +1,20 @@
 #[doc = "Register `se_sha_0_hash_h_2` reader"]
-pub struct R(crate::R<SE_SHA_0_HASH_H_2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SE_SHA_0_HASH_H_2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SE_SHA_0_HASH_H_2_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SE_SHA_0_HASH_H_2_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SeSha0HashH2Spec>;
 #[doc = "Field `se_sha_0_hash_h_2` reader - "]
-pub type SE_SHA_0_HASH_H_2_R = crate::FieldReader<u32, u32>;
+pub type SeSha0HashH2R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn se_sha_0_hash_h_2(&self) -> SE_SHA_0_HASH_H_2_R {
-        SE_SHA_0_HASH_H_2_R::new(self.bits)
+    pub fn se_sha_0_hash_h_2(&self) -> SeSha0HashH2R {
+        SeSha0HashH2R::new(self.bits)
     }
 }
-#[doc = "se_sha_0_hash_h_2.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [se_sha_0_hash_h_2](index.html) module"]
-pub struct SE_SHA_0_HASH_H_2_SPEC;
-impl crate::RegisterSpec for SE_SHA_0_HASH_H_2_SPEC {
+#[doc = "se_sha_0_hash_h_2.\n\nYou can [`read`](crate::Reg::read) this register and get [`se_sha_0_hash_h_2::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SeSha0HashH2Spec;
+impl crate::RegisterSpec for SeSha0HashH2Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [se_sha_0_hash_h_2::R](R) reader structure"]
-impl crate::Readable for SE_SHA_0_HASH_H_2_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`se_sha_0_hash_h_2::R`](R) reader structure"]
+impl crate::Readable for SeSha0HashH2Spec {}
 #[doc = "`reset()` method sets se_sha_0_hash_h_2 to value 0"]
-impl crate::Resettable for SE_SHA_0_HASH_H_2_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for SeSha0HashH2Spec {}

@@ -1,249 +1,191 @@
 #[doc = "Register `urx_config` reader"]
-pub struct R(crate::R<URX_CONFIG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<URX_CONFIG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<URX_CONFIG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<URX_CONFIG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<UrxConfigSpec>;
 #[doc = "Register `urx_config` writer"]
-pub struct W(crate::W<URX_CONFIG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<URX_CONFIG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<URX_CONFIG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<URX_CONFIG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<UrxConfigSpec>;
 #[doc = "Field `cr_urx_en` reader - "]
-pub type CR_URX_EN_R = crate::BitReader<bool>;
+pub type CrUrxEnR = crate::BitReader;
 #[doc = "Field `cr_urx_en` writer - "]
-pub type CR_URX_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, URX_CONFIG_SPEC, bool, O>;
+pub type CrUrxEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_urx_rts_sw_mode` reader - "]
-pub type CR_URX_RTS_SW_MODE_R = crate::BitReader<bool>;
+pub type CrUrxRtsSwModeR = crate::BitReader;
 #[doc = "Field `cr_urx_rts_sw_mode` writer - "]
-pub type CR_URX_RTS_SW_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, URX_CONFIG_SPEC, bool, O>;
+pub type CrUrxRtsSwModeW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_urx_rts_sw_val` reader - "]
-pub type CR_URX_RTS_SW_VAL_R = crate::BitReader<bool>;
+pub type CrUrxRtsSwValR = crate::BitReader;
 #[doc = "Field `cr_urx_rts_sw_val` writer - "]
-pub type CR_URX_RTS_SW_VAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, URX_CONFIG_SPEC, bool, O>;
+pub type CrUrxRtsSwValW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_urx_abr_en` reader - "]
-pub type CR_URX_ABR_EN_R = crate::BitReader<bool>;
+pub type CrUrxAbrEnR = crate::BitReader;
 #[doc = "Field `cr_urx_abr_en` writer - "]
-pub type CR_URX_ABR_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, URX_CONFIG_SPEC, bool, O>;
+pub type CrUrxAbrEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_urx_prt_en` reader - "]
-pub type CR_URX_PRT_EN_R = crate::BitReader<bool>;
+pub type CrUrxPrtEnR = crate::BitReader;
 #[doc = "Field `cr_urx_prt_en` writer - "]
-pub type CR_URX_PRT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, URX_CONFIG_SPEC, bool, O>;
+pub type CrUrxPrtEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_urx_prt_sel` reader - "]
-pub type CR_URX_PRT_SEL_R = crate::BitReader<bool>;
+pub type CrUrxPrtSelR = crate::BitReader;
 #[doc = "Field `cr_urx_prt_sel` writer - "]
-pub type CR_URX_PRT_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, URX_CONFIG_SPEC, bool, O>;
+pub type CrUrxPrtSelW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_urx_ir_en` reader - "]
-pub type CR_URX_IR_EN_R = crate::BitReader<bool>;
+pub type CrUrxIrEnR = crate::BitReader;
 #[doc = "Field `cr_urx_ir_en` writer - "]
-pub type CR_URX_IR_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, URX_CONFIG_SPEC, bool, O>;
+pub type CrUrxIrEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_urx_ir_inv` reader - "]
-pub type CR_URX_IR_INV_R = crate::BitReader<bool>;
+pub type CrUrxIrInvR = crate::BitReader;
 #[doc = "Field `cr_urx_ir_inv` writer - "]
-pub type CR_URX_IR_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, URX_CONFIG_SPEC, bool, O>;
+pub type CrUrxIrInvW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_urx_bit_cnt_d` reader - "]
-pub type CR_URX_BIT_CNT_D_R = crate::FieldReader<u8, u8>;
+pub type CrUrxBitCntDR = crate::FieldReader;
 #[doc = "Field `cr_urx_bit_cnt_d` writer - "]
-pub type CR_URX_BIT_CNT_D_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, URX_CONFIG_SPEC, u8, u8, 3, O>;
+pub type CrUrxBitCntDW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `cr_urx_deg_en` reader - "]
-pub type CR_URX_DEG_EN_R = crate::BitReader<bool>;
+pub type CrUrxDegEnR = crate::BitReader;
 #[doc = "Field `cr_urx_deg_en` writer - "]
-pub type CR_URX_DEG_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, URX_CONFIG_SPEC, bool, O>;
+pub type CrUrxDegEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_urx_deg_cnt` reader - "]
-pub type CR_URX_DEG_CNT_R = crate::FieldReader<u8, u8>;
+pub type CrUrxDegCntR = crate::FieldReader;
 #[doc = "Field `cr_urx_deg_cnt` writer - "]
-pub type CR_URX_DEG_CNT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, URX_CONFIG_SPEC, u8, u8, 4, O>;
+pub type CrUrxDegCntW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `cr_urx_len` reader - "]
-pub type CR_URX_LEN_R = crate::FieldReader<u16, u16>;
+pub type CrUrxLenR = crate::FieldReader<u16>;
 #[doc = "Field `cr_urx_len` writer - "]
-pub type CR_URX_LEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, URX_CONFIG_SPEC, u16, u16, 16, O>;
+pub type CrUrxLenW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn cr_urx_en(&self) -> CR_URX_EN_R {
-        CR_URX_EN_R::new((self.bits & 1) != 0)
+    pub fn cr_urx_en(&self) -> CrUrxEnR {
+        CrUrxEnR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn cr_urx_rts_sw_mode(&self) -> CR_URX_RTS_SW_MODE_R {
-        CR_URX_RTS_SW_MODE_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn cr_urx_rts_sw_mode(&self) -> CrUrxRtsSwModeR {
+        CrUrxRtsSwModeR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn cr_urx_rts_sw_val(&self) -> CR_URX_RTS_SW_VAL_R {
-        CR_URX_RTS_SW_VAL_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn cr_urx_rts_sw_val(&self) -> CrUrxRtsSwValR {
+        CrUrxRtsSwValR::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn cr_urx_abr_en(&self) -> CR_URX_ABR_EN_R {
-        CR_URX_ABR_EN_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn cr_urx_abr_en(&self) -> CrUrxAbrEnR {
+        CrUrxAbrEnR::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn cr_urx_prt_en(&self) -> CR_URX_PRT_EN_R {
-        CR_URX_PRT_EN_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn cr_urx_prt_en(&self) -> CrUrxPrtEnR {
+        CrUrxPrtEnR::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn cr_urx_prt_sel(&self) -> CR_URX_PRT_SEL_R {
-        CR_URX_PRT_SEL_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn cr_urx_prt_sel(&self) -> CrUrxPrtSelR {
+        CrUrxPrtSelR::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn cr_urx_ir_en(&self) -> CR_URX_IR_EN_R {
-        CR_URX_IR_EN_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn cr_urx_ir_en(&self) -> CrUrxIrEnR {
+        CrUrxIrEnR::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn cr_urx_ir_inv(&self) -> CR_URX_IR_INV_R {
-        CR_URX_IR_INV_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn cr_urx_ir_inv(&self) -> CrUrxIrInvR {
+        CrUrxIrInvR::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bits 8:10"]
     #[inline(always)]
-    pub fn cr_urx_bit_cnt_d(&self) -> CR_URX_BIT_CNT_D_R {
-        CR_URX_BIT_CNT_D_R::new(((self.bits >> 8) & 7) as u8)
+    pub fn cr_urx_bit_cnt_d(&self) -> CrUrxBitCntDR {
+        CrUrxBitCntDR::new(((self.bits >> 8) & 7) as u8)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn cr_urx_deg_en(&self) -> CR_URX_DEG_EN_R {
-        CR_URX_DEG_EN_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn cr_urx_deg_en(&self) -> CrUrxDegEnR {
+        CrUrxDegEnR::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bits 12:15"]
     #[inline(always)]
-    pub fn cr_urx_deg_cnt(&self) -> CR_URX_DEG_CNT_R {
-        CR_URX_DEG_CNT_R::new(((self.bits >> 12) & 0x0f) as u8)
+    pub fn cr_urx_deg_cnt(&self) -> CrUrxDegCntR {
+        CrUrxDegCntR::new(((self.bits >> 12) & 0x0f) as u8)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
-    pub fn cr_urx_len(&self) -> CR_URX_LEN_R {
-        CR_URX_LEN_R::new(((self.bits >> 16) & 0xffff) as u16)
+    pub fn cr_urx_len(&self) -> CrUrxLenR {
+        CrUrxLenR::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_urx_en(&mut self) -> CR_URX_EN_W<0> {
-        CR_URX_EN_W::new(self)
+    pub fn cr_urx_en(&mut self) -> CrUrxEnW<'_, UrxConfigSpec> {
+        CrUrxEnW::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_urx_rts_sw_mode(&mut self) -> CR_URX_RTS_SW_MODE_W<1> {
-        CR_URX_RTS_SW_MODE_W::new(self)
+    pub fn cr_urx_rts_sw_mode(&mut self) -> CrUrxRtsSwModeW<'_, UrxConfigSpec> {
+        CrUrxRtsSwModeW::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_urx_rts_sw_val(&mut self) -> CR_URX_RTS_SW_VAL_W<2> {
-        CR_URX_RTS_SW_VAL_W::new(self)
+    pub fn cr_urx_rts_sw_val(&mut self) -> CrUrxRtsSwValW<'_, UrxConfigSpec> {
+        CrUrxRtsSwValW::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_urx_abr_en(&mut self) -> CR_URX_ABR_EN_W<3> {
-        CR_URX_ABR_EN_W::new(self)
+    pub fn cr_urx_abr_en(&mut self) -> CrUrxAbrEnW<'_, UrxConfigSpec> {
+        CrUrxAbrEnW::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_urx_prt_en(&mut self) -> CR_URX_PRT_EN_W<4> {
-        CR_URX_PRT_EN_W::new(self)
+    pub fn cr_urx_prt_en(&mut self) -> CrUrxPrtEnW<'_, UrxConfigSpec> {
+        CrUrxPrtEnW::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_urx_prt_sel(&mut self) -> CR_URX_PRT_SEL_W<5> {
-        CR_URX_PRT_SEL_W::new(self)
+    pub fn cr_urx_prt_sel(&mut self) -> CrUrxPrtSelW<'_, UrxConfigSpec> {
+        CrUrxPrtSelW::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_urx_ir_en(&mut self) -> CR_URX_IR_EN_W<6> {
-        CR_URX_IR_EN_W::new(self)
+    pub fn cr_urx_ir_en(&mut self) -> CrUrxIrEnW<'_, UrxConfigSpec> {
+        CrUrxIrEnW::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_urx_ir_inv(&mut self) -> CR_URX_IR_INV_W<7> {
-        CR_URX_IR_INV_W::new(self)
+    pub fn cr_urx_ir_inv(&mut self) -> CrUrxIrInvW<'_, UrxConfigSpec> {
+        CrUrxIrInvW::new(self, 7)
     }
     #[doc = "Bits 8:10"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_urx_bit_cnt_d(&mut self) -> CR_URX_BIT_CNT_D_W<8> {
-        CR_URX_BIT_CNT_D_W::new(self)
+    pub fn cr_urx_bit_cnt_d(&mut self) -> CrUrxBitCntDW<'_, UrxConfigSpec> {
+        CrUrxBitCntDW::new(self, 8)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_urx_deg_en(&mut self) -> CR_URX_DEG_EN_W<11> {
-        CR_URX_DEG_EN_W::new(self)
+    pub fn cr_urx_deg_en(&mut self) -> CrUrxDegEnW<'_, UrxConfigSpec> {
+        CrUrxDegEnW::new(self, 11)
     }
     #[doc = "Bits 12:15"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_urx_deg_cnt(&mut self) -> CR_URX_DEG_CNT_W<12> {
-        CR_URX_DEG_CNT_W::new(self)
+    pub fn cr_urx_deg_cnt(&mut self) -> CrUrxDegCntW<'_, UrxConfigSpec> {
+        CrUrxDegCntW::new(self, 12)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_urx_len(&mut self) -> CR_URX_LEN_W<16> {
-        CR_URX_LEN_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn cr_urx_len(&mut self) -> CrUrxLenW<'_, UrxConfigSpec> {
+        CrUrxLenW::new(self, 16)
     }
 }
-#[doc = "urx_config.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [urx_config](index.html) module"]
-pub struct URX_CONFIG_SPEC;
-impl crate::RegisterSpec for URX_CONFIG_SPEC {
+#[doc = "urx_config.\n\nYou can [`read`](crate::Reg::read) this register and get [`urx_config::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`urx_config::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct UrxConfigSpec;
+impl crate::RegisterSpec for UrxConfigSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [urx_config::R](R) reader structure"]
-impl crate::Readable for URX_CONFIG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [urx_config::W](W) writer structure"]
-impl crate::Writable for URX_CONFIG_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`urx_config::R`](R) reader structure"]
+impl crate::Readable for UrxConfigSpec {}
+#[doc = "`write(|w| ..)` method takes [`urx_config::W`](W) writer structure"]
+impl crate::Writable for UrxConfigSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets urx_config to value 0x0700"]
-impl crate::Resettable for URX_CONFIG_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0700;
+impl crate::Resettable for UrxConfigSpec {
+    const RESET_VALUE: u32 = 0x0700;
 }

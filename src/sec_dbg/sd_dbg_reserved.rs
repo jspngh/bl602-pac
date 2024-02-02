@@ -1,81 +1,35 @@
 #[doc = "Register `sd_dbg_reserved` reader"]
-pub struct R(crate::R<SD_DBG_RESERVED_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SD_DBG_RESERVED_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SD_DBG_RESERVED_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SD_DBG_RESERVED_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SdDbgReservedSpec>;
 #[doc = "Register `sd_dbg_reserved` writer"]
-pub struct W(crate::W<SD_DBG_RESERVED_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SD_DBG_RESERVED_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SD_DBG_RESERVED_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SD_DBG_RESERVED_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SdDbgReservedSpec>;
 #[doc = "Field `sd_dbg_reserved` reader - "]
-pub type SD_DBG_RESERVED_R = crate::FieldReader<u32, u32>;
+pub type SdDbgReservedR = crate::FieldReader<u32>;
 #[doc = "Field `sd_dbg_reserved` writer - "]
-pub type SD_DBG_RESERVED_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SD_DBG_RESERVED_SPEC, u32, u32, 32, O>;
+pub type SdDbgReservedW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn sd_dbg_reserved(&self) -> SD_DBG_RESERVED_R {
-        SD_DBG_RESERVED_R::new(self.bits)
+    pub fn sd_dbg_reserved(&self) -> SdDbgReservedR {
+        SdDbgReservedR::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
-    pub fn sd_dbg_reserved(&mut self) -> SD_DBG_RESERVED_W<0> {
-        SD_DBG_RESERVED_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn sd_dbg_reserved(&mut self) -> SdDbgReservedW<'_, SdDbgReservedSpec> {
+        SdDbgReservedW::new(self, 0)
     }
 }
-#[doc = "sd_dbg_reserved.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sd_dbg_reserved](index.html) module"]
-pub struct SD_DBG_RESERVED_SPEC;
-impl crate::RegisterSpec for SD_DBG_RESERVED_SPEC {
+#[doc = "sd_dbg_reserved.\n\nYou can [`read`](crate::Reg::read) this register and get [`sd_dbg_reserved::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sd_dbg_reserved::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SdDbgReservedSpec;
+impl crate::RegisterSpec for SdDbgReservedSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sd_dbg_reserved::R](R) reader structure"]
-impl crate::Readable for SD_DBG_RESERVED_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [sd_dbg_reserved::W](W) writer structure"]
-impl crate::Writable for SD_DBG_RESERVED_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`sd_dbg_reserved::R`](R) reader structure"]
+impl crate::Readable for SdDbgReservedSpec {}
+#[doc = "`write(|w| ..)` method takes [`sd_dbg_reserved::W`](W) writer structure"]
+impl crate::Writable for SdDbgReservedSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets sd_dbg_reserved to value 0"]
-impl crate::Resettable for SD_DBG_RESERVED_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for SdDbgReservedSpec {}

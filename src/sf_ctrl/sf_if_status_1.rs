@@ -1,37 +1,22 @@
 #[doc = "Register `sf_if_status_1` reader"]
-pub struct R(crate::R<SF_IF_STATUS_1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SF_IF_STATUS_1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SF_IF_STATUS_1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SF_IF_STATUS_1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SfIfStatus1Spec>;
 #[doc = "Field `sf_if_status_1` reader - "]
-pub type SF_IF_STATUS_1_R = crate::FieldReader<u32, u32>;
+pub type SfIfStatus1R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn sf_if_status_1(&self) -> SF_IF_STATUS_1_R {
-        SF_IF_STATUS_1_R::new(self.bits)
+    pub fn sf_if_status_1(&self) -> SfIfStatus1R {
+        SfIfStatus1R::new(self.bits)
     }
 }
-#[doc = "sf_if_status_1.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sf_if_status_1](index.html) module"]
-pub struct SF_IF_STATUS_1_SPEC;
-impl crate::RegisterSpec for SF_IF_STATUS_1_SPEC {
+#[doc = "sf_if_status_1.\n\nYou can [`read`](crate::Reg::read) this register and get [`sf_if_status_1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SfIfStatus1Spec;
+impl crate::RegisterSpec for SfIfStatus1Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sf_if_status_1::R](R) reader structure"]
-impl crate::Readable for SF_IF_STATUS_1_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`sf_if_status_1::R`](R) reader structure"]
+impl crate::Readable for SfIfStatus1Spec {}
 #[doc = "`reset()` method sets sf_if_status_1 to value 0x2000_0000"]
-impl crate::Resettable for SF_IF_STATUS_1_SPEC {
-    const RESET_VALUE: Self::Ux = 0x2000_0000;
+impl crate::Resettable for SfIfStatus1Spec {
+    const RESET_VALUE: u32 = 0x2000_0000;
 }

@@ -1,220 +1,163 @@
 #[doc = "Register `sf_if_iahb_3` reader"]
-pub struct R(crate::R<SF_IF_IAHB_3_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SF_IF_IAHB_3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SF_IF_IAHB_3_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SF_IF_IAHB_3_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SfIfIahb3Spec>;
 #[doc = "Register `sf_if_iahb_3` writer"]
-pub struct W(crate::W<SF_IF_IAHB_3_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SF_IF_IAHB_3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SF_IF_IAHB_3_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SF_IF_IAHB_3_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SfIfIahb3Spec>;
 #[doc = "Field `sf_if_2_dmy_byte` reader - "]
-pub type SF_IF_2_DMY_BYTE_R = crate::FieldReader<u8, u8>;
+pub type SfIf2DmyByteR = crate::FieldReader;
 #[doc = "Field `sf_if_2_dmy_byte` writer - "]
-pub type SF_IF_2_DMY_BYTE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SF_IF_IAHB_3_SPEC, u8, u8, 5, O>;
+pub type SfIf2DmyByteW<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `sf_if_2_adr_byte` reader - "]
-pub type SF_IF_2_ADR_BYTE_R = crate::FieldReader<u8, u8>;
+pub type SfIf2AdrByteR = crate::FieldReader;
 #[doc = "Field `sf_if_2_adr_byte` writer - "]
-pub type SF_IF_2_ADR_BYTE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SF_IF_IAHB_3_SPEC, u8, u8, 3, O>;
+pub type SfIf2AdrByteW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `sf_if_2_cmd_byte` reader - "]
-pub type SF_IF_2_CMD_BYTE_R = crate::FieldReader<u8, u8>;
+pub type SfIf2CmdByteR = crate::FieldReader;
 #[doc = "Field `sf_if_2_cmd_byte` writer - "]
-pub type SF_IF_2_CMD_BYTE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SF_IF_IAHB_3_SPEC, u8, u8, 3, O>;
+pub type SfIf2CmdByteW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `sf_if_2_dat_rw` reader - "]
-pub type SF_IF_2_DAT_RW_R = crate::BitReader<bool>;
+pub type SfIf2DatRwR = crate::BitReader;
 #[doc = "Field `sf_if_2_dat_rw` writer - "]
-pub type SF_IF_2_DAT_RW_W<'a, const O: u8> = crate::BitWriter<'a, u32, SF_IF_IAHB_3_SPEC, bool, O>;
+pub type SfIf2DatRwW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `sf_if_2_dat_en` reader - "]
-pub type SF_IF_2_DAT_EN_R = crate::BitReader<bool>;
+pub type SfIf2DatEnR = crate::BitReader;
 #[doc = "Field `sf_if_2_dat_en` writer - "]
-pub type SF_IF_2_DAT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SF_IF_IAHB_3_SPEC, bool, O>;
+pub type SfIf2DatEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `sf_if_2_dmy_en` reader - "]
-pub type SF_IF_2_DMY_EN_R = crate::BitReader<bool>;
+pub type SfIf2DmyEnR = crate::BitReader;
 #[doc = "Field `sf_if_2_dmy_en` writer - "]
-pub type SF_IF_2_DMY_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SF_IF_IAHB_3_SPEC, bool, O>;
+pub type SfIf2DmyEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `sf_if_2_adr_en` reader - "]
-pub type SF_IF_2_ADR_EN_R = crate::BitReader<bool>;
+pub type SfIf2AdrEnR = crate::BitReader;
 #[doc = "Field `sf_if_2_adr_en` writer - "]
-pub type SF_IF_2_ADR_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SF_IF_IAHB_3_SPEC, bool, O>;
+pub type SfIf2AdrEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `sf_if_2_cmd_en` reader - "]
-pub type SF_IF_2_CMD_EN_R = crate::BitReader<bool>;
+pub type SfIf2CmdEnR = crate::BitReader;
 #[doc = "Field `sf_if_2_cmd_en` writer - "]
-pub type SF_IF_2_CMD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SF_IF_IAHB_3_SPEC, bool, O>;
+pub type SfIf2CmdEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `sf_if_2_spi_mode` reader - "]
-pub type SF_IF_2_SPI_MODE_R = crate::FieldReader<u8, u8>;
+pub type SfIf2SpiModeR = crate::FieldReader;
 #[doc = "Field `sf_if_2_spi_mode` writer - "]
-pub type SF_IF_2_SPI_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SF_IF_IAHB_3_SPEC, u8, u8, 3, O>;
+pub type SfIf2SpiModeW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `sf_if_2_qpi_mode_en` reader - "]
-pub type SF_IF_2_QPI_MODE_EN_R = crate::BitReader<bool>;
+pub type SfIf2QpiModeEnR = crate::BitReader;
 #[doc = "Field `sf_if_2_qpi_mode_en` writer - "]
-pub type SF_IF_2_QPI_MODE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SF_IF_IAHB_3_SPEC, bool, O>;
+pub type SfIf2QpiModeEnW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 12:16"]
     #[inline(always)]
-    pub fn sf_if_2_dmy_byte(&self) -> SF_IF_2_DMY_BYTE_R {
-        SF_IF_2_DMY_BYTE_R::new(((self.bits >> 12) & 0x1f) as u8)
+    pub fn sf_if_2_dmy_byte(&self) -> SfIf2DmyByteR {
+        SfIf2DmyByteR::new(((self.bits >> 12) & 0x1f) as u8)
     }
     #[doc = "Bits 17:19"]
     #[inline(always)]
-    pub fn sf_if_2_adr_byte(&self) -> SF_IF_2_ADR_BYTE_R {
-        SF_IF_2_ADR_BYTE_R::new(((self.bits >> 17) & 7) as u8)
+    pub fn sf_if_2_adr_byte(&self) -> SfIf2AdrByteR {
+        SfIf2AdrByteR::new(((self.bits >> 17) & 7) as u8)
     }
     #[doc = "Bits 20:22"]
     #[inline(always)]
-    pub fn sf_if_2_cmd_byte(&self) -> SF_IF_2_CMD_BYTE_R {
-        SF_IF_2_CMD_BYTE_R::new(((self.bits >> 20) & 7) as u8)
+    pub fn sf_if_2_cmd_byte(&self) -> SfIf2CmdByteR {
+        SfIf2CmdByteR::new(((self.bits >> 20) & 7) as u8)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
-    pub fn sf_if_2_dat_rw(&self) -> SF_IF_2_DAT_RW_R {
-        SF_IF_2_DAT_RW_R::new(((self.bits >> 23) & 1) != 0)
+    pub fn sf_if_2_dat_rw(&self) -> SfIf2DatRwR {
+        SfIf2DatRwR::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    pub fn sf_if_2_dat_en(&self) -> SF_IF_2_DAT_EN_R {
-        SF_IF_2_DAT_EN_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn sf_if_2_dat_en(&self) -> SfIf2DatEnR {
+        SfIf2DatEnR::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
-    pub fn sf_if_2_dmy_en(&self) -> SF_IF_2_DMY_EN_R {
-        SF_IF_2_DMY_EN_R::new(((self.bits >> 25) & 1) != 0)
+    pub fn sf_if_2_dmy_en(&self) -> SfIf2DmyEnR {
+        SfIf2DmyEnR::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    pub fn sf_if_2_adr_en(&self) -> SF_IF_2_ADR_EN_R {
-        SF_IF_2_ADR_EN_R::new(((self.bits >> 26) & 1) != 0)
+    pub fn sf_if_2_adr_en(&self) -> SfIf2AdrEnR {
+        SfIf2AdrEnR::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    pub fn sf_if_2_cmd_en(&self) -> SF_IF_2_CMD_EN_R {
-        SF_IF_2_CMD_EN_R::new(((self.bits >> 27) & 1) != 0)
+    pub fn sf_if_2_cmd_en(&self) -> SfIf2CmdEnR {
+        SfIf2CmdEnR::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bits 28:30"]
     #[inline(always)]
-    pub fn sf_if_2_spi_mode(&self) -> SF_IF_2_SPI_MODE_R {
-        SF_IF_2_SPI_MODE_R::new(((self.bits >> 28) & 7) as u8)
+    pub fn sf_if_2_spi_mode(&self) -> SfIf2SpiModeR {
+        SfIf2SpiModeR::new(((self.bits >> 28) & 7) as u8)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    pub fn sf_if_2_qpi_mode_en(&self) -> SF_IF_2_QPI_MODE_EN_R {
-        SF_IF_2_QPI_MODE_EN_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn sf_if_2_qpi_mode_en(&self) -> SfIf2QpiModeEnR {
+        SfIf2QpiModeEnR::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 12:16"]
     #[inline(always)]
-    #[must_use]
-    pub fn sf_if_2_dmy_byte(&mut self) -> SF_IF_2_DMY_BYTE_W<12> {
-        SF_IF_2_DMY_BYTE_W::new(self)
+    pub fn sf_if_2_dmy_byte(&mut self) -> SfIf2DmyByteW<'_, SfIfIahb3Spec> {
+        SfIf2DmyByteW::new(self, 12)
     }
     #[doc = "Bits 17:19"]
     #[inline(always)]
-    #[must_use]
-    pub fn sf_if_2_adr_byte(&mut self) -> SF_IF_2_ADR_BYTE_W<17> {
-        SF_IF_2_ADR_BYTE_W::new(self)
+    pub fn sf_if_2_adr_byte(&mut self) -> SfIf2AdrByteW<'_, SfIfIahb3Spec> {
+        SfIf2AdrByteW::new(self, 17)
     }
     #[doc = "Bits 20:22"]
     #[inline(always)]
-    #[must_use]
-    pub fn sf_if_2_cmd_byte(&mut self) -> SF_IF_2_CMD_BYTE_W<20> {
-        SF_IF_2_CMD_BYTE_W::new(self)
+    pub fn sf_if_2_cmd_byte(&mut self) -> SfIf2CmdByteW<'_, SfIfIahb3Spec> {
+        SfIf2CmdByteW::new(self, 20)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
-    #[must_use]
-    pub fn sf_if_2_dat_rw(&mut self) -> SF_IF_2_DAT_RW_W<23> {
-        SF_IF_2_DAT_RW_W::new(self)
+    pub fn sf_if_2_dat_rw(&mut self) -> SfIf2DatRwW<'_, SfIfIahb3Spec> {
+        SfIf2DatRwW::new(self, 23)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    #[must_use]
-    pub fn sf_if_2_dat_en(&mut self) -> SF_IF_2_DAT_EN_W<24> {
-        SF_IF_2_DAT_EN_W::new(self)
+    pub fn sf_if_2_dat_en(&mut self) -> SfIf2DatEnW<'_, SfIfIahb3Spec> {
+        SfIf2DatEnW::new(self, 24)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
-    #[must_use]
-    pub fn sf_if_2_dmy_en(&mut self) -> SF_IF_2_DMY_EN_W<25> {
-        SF_IF_2_DMY_EN_W::new(self)
+    pub fn sf_if_2_dmy_en(&mut self) -> SfIf2DmyEnW<'_, SfIfIahb3Spec> {
+        SfIf2DmyEnW::new(self, 25)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    #[must_use]
-    pub fn sf_if_2_adr_en(&mut self) -> SF_IF_2_ADR_EN_W<26> {
-        SF_IF_2_ADR_EN_W::new(self)
+    pub fn sf_if_2_adr_en(&mut self) -> SfIf2AdrEnW<'_, SfIfIahb3Spec> {
+        SfIf2AdrEnW::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    #[must_use]
-    pub fn sf_if_2_cmd_en(&mut self) -> SF_IF_2_CMD_EN_W<27> {
-        SF_IF_2_CMD_EN_W::new(self)
+    pub fn sf_if_2_cmd_en(&mut self) -> SfIf2CmdEnW<'_, SfIfIahb3Spec> {
+        SfIf2CmdEnW::new(self, 27)
     }
     #[doc = "Bits 28:30"]
     #[inline(always)]
-    #[must_use]
-    pub fn sf_if_2_spi_mode(&mut self) -> SF_IF_2_SPI_MODE_W<28> {
-        SF_IF_2_SPI_MODE_W::new(self)
+    pub fn sf_if_2_spi_mode(&mut self) -> SfIf2SpiModeW<'_, SfIfIahb3Spec> {
+        SfIf2SpiModeW::new(self, 28)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
-    pub fn sf_if_2_qpi_mode_en(&mut self) -> SF_IF_2_QPI_MODE_EN_W<31> {
-        SF_IF_2_QPI_MODE_EN_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn sf_if_2_qpi_mode_en(&mut self) -> SfIf2QpiModeEnW<'_, SfIfIahb3Spec> {
+        SfIf2QpiModeEnW::new(self, 31)
     }
 }
-#[doc = "sf_if_iahb_3.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sf_if_iahb_3](index.html) module"]
-pub struct SF_IF_IAHB_3_SPEC;
-impl crate::RegisterSpec for SF_IF_IAHB_3_SPEC {
+#[doc = "sf_if_iahb_3.\n\nYou can [`read`](crate::Reg::read) this register and get [`sf_if_iahb_3::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sf_if_iahb_3::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SfIfIahb3Spec;
+impl crate::RegisterSpec for SfIfIahb3Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sf_if_iahb_3::R](R) reader structure"]
-impl crate::Readable for SF_IF_IAHB_3_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [sf_if_iahb_3::W](W) writer structure"]
-impl crate::Writable for SF_IF_IAHB_3_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`sf_if_iahb_3::R`](R) reader structure"]
+impl crate::Readable for SfIfIahb3Spec {}
+#[doc = "`write(|w| ..)` method takes [`sf_if_iahb_3::W`](W) writer structure"]
+impl crate::Writable for SfIfIahb3Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets sf_if_iahb_3 to value 0x8d84_0000"]
-impl crate::Resettable for SF_IF_IAHB_3_SPEC {
-    const RESET_VALUE: Self::Ux = 0x8d84_0000;
+impl crate::Resettable for SfIfIahb3Spec {
+    const RESET_VALUE: u32 = 0x8d84_0000;
 }

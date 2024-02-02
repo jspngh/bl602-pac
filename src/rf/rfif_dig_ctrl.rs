@@ -1,177 +1,119 @@
 #[doc = "Register `rfif_dig_ctrl` reader"]
-pub struct R(crate::R<RFIF_DIG_CTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RFIF_DIG_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RFIF_DIG_CTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RFIF_DIG_CTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RfifDigCtrlSpec>;
 #[doc = "Register `rfif_dig_ctrl` writer"]
-pub struct W(crate::W<RFIF_DIG_CTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<RFIF_DIG_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<RFIF_DIG_CTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<RFIF_DIG_CTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<RfifDigCtrlSpec>;
 #[doc = "Field `test_from_pad_en` reader - "]
-pub type TEST_FROM_PAD_EN_R = crate::BitReader<bool>;
+pub type TestFromPadEnR = crate::BitReader;
 #[doc = "Field `test_from_pad_en` writer - "]
-pub type TEST_FROM_PAD_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RFIF_DIG_CTRL_SPEC, bool, O>;
+pub type TestFromPadEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `test_gc_from_pad_en` reader - "]
-pub type TEST_GC_FROM_PAD_EN_R = crate::BitReader<bool>;
+pub type TestGcFromPadEnR = crate::BitReader;
 #[doc = "Field `test_gc_from_pad_en` writer - "]
-pub type TEST_GC_FROM_PAD_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RFIF_DIG_CTRL_SPEC, bool, O>;
+pub type TestGcFromPadEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `rfckg_rxclk_div2_mode` reader - "]
-pub type RFCKG_RXCLK_DIV2_MODE_R = crate::BitReader<bool>;
+pub type RfckgRxclkDiv2ModeR = crate::BitReader;
 #[doc = "Field `rfckg_rxclk_div2_mode` writer - "]
-pub type RFCKG_RXCLK_DIV2_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RFIF_DIG_CTRL_SPEC, bool, O>;
+pub type RfckgRxclkDiv2ModeW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `rfif_int_lo_unlocked_mask` reader - "]
-pub type RFIF_INT_LO_UNLOCKED_MASK_R = crate::BitReader<bool>;
+pub type RfifIntLoUnlockedMaskR = crate::BitReader;
 #[doc = "Field `rfif_int_lo_unlocked_mask` writer - "]
-pub type RFIF_INT_LO_UNLOCKED_MASK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RFIF_DIG_CTRL_SPEC, bool, O>;
+pub type RfifIntLoUnlockedMaskW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `rfif_ppud_cnt2` reader - "]
-pub type RFIF_PPUD_CNT2_R = crate::FieldReader<u16, u16>;
+pub type RfifPpudCnt2R = crate::FieldReader<u16>;
 #[doc = "Field `rfif_ppud_cnt2` writer - "]
-pub type RFIF_PPUD_CNT2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RFIF_DIG_CTRL_SPEC, u16, u16, 9, O>;
+pub type RfifPpudCnt2W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `rfif_ppud_cnt1` reader - "]
-pub type RFIF_PPUD_CNT1_R = crate::FieldReader<u8, u8>;
+pub type RfifPpudCnt1R = crate::FieldReader;
 #[doc = "Field `rfif_ppud_cnt1` writer - "]
-pub type RFIF_PPUD_CNT1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RFIF_DIG_CTRL_SPEC, u8, u8, 5, O>;
+pub type RfifPpudCnt1W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `rfif_ppud_manaual_en` reader - "]
-pub type RFIF_PPUD_MANAUAL_EN_R = crate::BitReader<bool>;
+pub type RfifPpudManaualEnR = crate::BitReader;
 #[doc = "Field `rfif_ppud_manaual_en` writer - "]
-pub type RFIF_PPUD_MANAUAL_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RFIF_DIG_CTRL_SPEC, bool, O>;
+pub type RfifPpudManaualEnW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn test_from_pad_en(&self) -> TEST_FROM_PAD_EN_R {
-        TEST_FROM_PAD_EN_R::new((self.bits & 1) != 0)
+    pub fn test_from_pad_en(&self) -> TestFromPadEnR {
+        TestFromPadEnR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn test_gc_from_pad_en(&self) -> TEST_GC_FROM_PAD_EN_R {
-        TEST_GC_FROM_PAD_EN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn test_gc_from_pad_en(&self) -> TestGcFromPadEnR {
+        TestGcFromPadEnR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn rfckg_rxclk_div2_mode(&self) -> RFCKG_RXCLK_DIV2_MODE_R {
-        RFCKG_RXCLK_DIV2_MODE_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn rfckg_rxclk_div2_mode(&self) -> RfckgRxclkDiv2ModeR {
+        RfckgRxclkDiv2ModeR::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn rfif_int_lo_unlocked_mask(&self) -> RFIF_INT_LO_UNLOCKED_MASK_R {
-        RFIF_INT_LO_UNLOCKED_MASK_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn rfif_int_lo_unlocked_mask(&self) -> RfifIntLoUnlockedMaskR {
+        RfifIntLoUnlockedMaskR::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 16:24"]
     #[inline(always)]
-    pub fn rfif_ppud_cnt2(&self) -> RFIF_PPUD_CNT2_R {
-        RFIF_PPUD_CNT2_R::new(((self.bits >> 16) & 0x01ff) as u16)
+    pub fn rfif_ppud_cnt2(&self) -> RfifPpudCnt2R {
+        RfifPpudCnt2R::new(((self.bits >> 16) & 0x01ff) as u16)
     }
     #[doc = "Bits 25:29"]
     #[inline(always)]
-    pub fn rfif_ppud_cnt1(&self) -> RFIF_PPUD_CNT1_R {
-        RFIF_PPUD_CNT1_R::new(((self.bits >> 25) & 0x1f) as u8)
+    pub fn rfif_ppud_cnt1(&self) -> RfifPpudCnt1R {
+        RfifPpudCnt1R::new(((self.bits >> 25) & 0x1f) as u8)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    pub fn rfif_ppud_manaual_en(&self) -> RFIF_PPUD_MANAUAL_EN_R {
-        RFIF_PPUD_MANAUAL_EN_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn rfif_ppud_manaual_en(&self) -> RfifPpudManaualEnR {
+        RfifPpudManaualEnR::new(((self.bits >> 30) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn test_from_pad_en(&mut self) -> TEST_FROM_PAD_EN_W<0> {
-        TEST_FROM_PAD_EN_W::new(self)
+    pub fn test_from_pad_en(&mut self) -> TestFromPadEnW<'_, RfifDigCtrlSpec> {
+        TestFromPadEnW::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn test_gc_from_pad_en(&mut self) -> TEST_GC_FROM_PAD_EN_W<1> {
-        TEST_GC_FROM_PAD_EN_W::new(self)
+    pub fn test_gc_from_pad_en(&mut self) -> TestGcFromPadEnW<'_, RfifDigCtrlSpec> {
+        TestGcFromPadEnW::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
-    pub fn rfckg_rxclk_div2_mode(&mut self) -> RFCKG_RXCLK_DIV2_MODE_W<2> {
-        RFCKG_RXCLK_DIV2_MODE_W::new(self)
+    pub fn rfckg_rxclk_div2_mode(&mut self) -> RfckgRxclkDiv2ModeW<'_, RfifDigCtrlSpec> {
+        RfckgRxclkDiv2ModeW::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
-    pub fn rfif_int_lo_unlocked_mask(&mut self) -> RFIF_INT_LO_UNLOCKED_MASK_W<3> {
-        RFIF_INT_LO_UNLOCKED_MASK_W::new(self)
+    pub fn rfif_int_lo_unlocked_mask(&mut self) -> RfifIntLoUnlockedMaskW<'_, RfifDigCtrlSpec> {
+        RfifIntLoUnlockedMaskW::new(self, 3)
     }
     #[doc = "Bits 16:24"]
     #[inline(always)]
-    #[must_use]
-    pub fn rfif_ppud_cnt2(&mut self) -> RFIF_PPUD_CNT2_W<16> {
-        RFIF_PPUD_CNT2_W::new(self)
+    pub fn rfif_ppud_cnt2(&mut self) -> RfifPpudCnt2W<'_, RfifDigCtrlSpec> {
+        RfifPpudCnt2W::new(self, 16)
     }
     #[doc = "Bits 25:29"]
     #[inline(always)]
-    #[must_use]
-    pub fn rfif_ppud_cnt1(&mut self) -> RFIF_PPUD_CNT1_W<25> {
-        RFIF_PPUD_CNT1_W::new(self)
+    pub fn rfif_ppud_cnt1(&mut self) -> RfifPpudCnt1W<'_, RfifDigCtrlSpec> {
+        RfifPpudCnt1W::new(self, 25)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    #[must_use]
-    pub fn rfif_ppud_manaual_en(&mut self) -> RFIF_PPUD_MANAUAL_EN_W<30> {
-        RFIF_PPUD_MANAUAL_EN_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn rfif_ppud_manaual_en(&mut self) -> RfifPpudManaualEnW<'_, RfifDigCtrlSpec> {
+        RfifPpudManaualEnW::new(self, 30)
     }
 }
-#[doc = "rfif_dig_ctrl.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rfif_dig_ctrl](index.html) module"]
-pub struct RFIF_DIG_CTRL_SPEC;
-impl crate::RegisterSpec for RFIF_DIG_CTRL_SPEC {
+#[doc = "rfif_dig_ctrl.\n\nYou can [`read`](crate::Reg::read) this register and get [`rfif_dig_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rfif_dig_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RfifDigCtrlSpec;
+impl crate::RegisterSpec for RfifDigCtrlSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rfif_dig_ctrl::R](R) reader structure"]
-impl crate::Readable for RFIF_DIG_CTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [rfif_dig_ctrl::W](W) writer structure"]
-impl crate::Writable for RFIF_DIG_CTRL_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`rfif_dig_ctrl::R`](R) reader structure"]
+impl crate::Readable for RfifDigCtrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`rfif_dig_ctrl::W`](W) writer structure"]
+impl crate::Writable for RfifDigCtrlSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets rfif_dig_ctrl to value 0"]
-impl crate::Resettable for RFIF_DIG_CTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for RfifDigCtrlSpec {}

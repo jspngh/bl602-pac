@@ -1,198 +1,149 @@
 #[doc = "Register `clk_cfg0` reader"]
-pub struct R(crate::R<CLK_CFG0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CLK_CFG0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CLK_CFG0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CLK_CFG0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<ClkCfg0Spec>;
 #[doc = "Register `clk_cfg0` writer"]
-pub struct W(crate::W<CLK_CFG0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CLK_CFG0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CLK_CFG0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CLK_CFG0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<ClkCfg0Spec>;
 #[doc = "Field `reg_pll_en` reader - PLL enable"]
-pub type REG_PLL_EN_R = crate::BitReader<bool>;
+pub type RegPllEnR = crate::BitReader;
 #[doc = "Field `reg_pll_en` writer - PLL enable"]
-pub type REG_PLL_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CFG0_SPEC, bool, O>;
+pub type RegPllEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `reg_fclk_en` reader - "]
-pub type REG_FCLK_EN_R = crate::BitReader<bool>;
+pub type RegFclkEnR = crate::BitReader;
 #[doc = "Field `reg_fclk_en` writer - "]
-pub type REG_FCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CFG0_SPEC, bool, O>;
+pub type RegFclkEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `reg_hclk_en` reader - MCU clock enable"]
-pub type REG_HCLK_EN_R = crate::BitReader<bool>;
+pub type RegHclkEnR = crate::BitReader;
 #[doc = "Field `reg_hclk_en` writer - MCU clock enable"]
-pub type REG_HCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CFG0_SPEC, bool, O>;
+pub type RegHclkEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `reg_bclk_en` reader - Base clock enable"]
-pub type REG_BCLK_EN_R = crate::BitReader<bool>;
+pub type RegBclkEnR = crate::BitReader;
 #[doc = "Field `reg_bclk_en` writer - Base clock enable"]
-pub type REG_BCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CFG0_SPEC, bool, O>;
+pub type RegBclkEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `reg_pll_sel` reader - PLL clock selection (0: 48MHz, 1: 120MHz, 2: 160MHz and 3: 192MHz)"]
-pub type REG_PLL_SEL_R = crate::FieldReader<u8, u8>;
+pub type RegPllSelR = crate::FieldReader;
 #[doc = "Field `reg_pll_sel` writer - PLL clock selection (0: 48MHz, 1: 120MHz, 2: 160MHz and 3: 192MHz)"]
-pub type REG_PLL_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLK_CFG0_SPEC, u8, u8, 2, O>;
+pub type RegPllSelW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `hbn_root_clk_sel` reader - "]
-pub type HBN_ROOT_CLK_SEL_R = crate::FieldReader<u8, u8>;
+pub type HbnRootClkSelR = crate::FieldReader;
 #[doc = "Field `reg_hclk_div` reader - MCU clock divider"]
-pub type REG_HCLK_DIV_R = crate::FieldReader<u8, u8>;
+pub type RegHclkDivR = crate::FieldReader;
 #[doc = "Field `reg_hclk_div` writer - MCU clock divider"]
-pub type REG_HCLK_DIV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLK_CFG0_SPEC, u8, u8, 8, O>;
+pub type RegHclkDivW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `reg_bclk_div` reader - Base clock divider"]
-pub type REG_BCLK_DIV_R = crate::FieldReader<u8, u8>;
+pub type RegBclkDivR = crate::FieldReader;
 #[doc = "Field `reg_bclk_div` writer - Base clock divider"]
-pub type REG_BCLK_DIV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLK_CFG0_SPEC, u8, u8, 8, O>;
+pub type RegBclkDivW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `fclk_sw_state` reader - "]
-pub type FCLK_SW_STATE_R = crate::FieldReader<u8, u8>;
+pub type FclkSwStateR = crate::FieldReader;
 #[doc = "Field `chip_rdy` reader - "]
-pub type CHIP_RDY_R = crate::BitReader<bool>;
+pub type ChipRdyR = crate::BitReader;
 #[doc = "Field `glb_id` reader - "]
-pub type GLB_ID_R = crate::FieldReader<u8, u8>;
+pub type GlbIdR = crate::FieldReader;
 impl R {
     #[doc = "Bit 0 - PLL enable"]
     #[inline(always)]
-    pub fn reg_pll_en(&self) -> REG_PLL_EN_R {
-        REG_PLL_EN_R::new((self.bits & 1) != 0)
+    pub fn reg_pll_en(&self) -> RegPllEnR {
+        RegPllEnR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn reg_fclk_en(&self) -> REG_FCLK_EN_R {
-        REG_FCLK_EN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn reg_fclk_en(&self) -> RegFclkEnR {
+        RegFclkEnR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - MCU clock enable"]
     #[inline(always)]
-    pub fn reg_hclk_en(&self) -> REG_HCLK_EN_R {
-        REG_HCLK_EN_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn reg_hclk_en(&self) -> RegHclkEnR {
+        RegHclkEnR::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Base clock enable"]
     #[inline(always)]
-    pub fn reg_bclk_en(&self) -> REG_BCLK_EN_R {
-        REG_BCLK_EN_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn reg_bclk_en(&self) -> RegBclkEnR {
+        RegBclkEnR::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:5 - PLL clock selection (0: 48MHz, 1: 120MHz, 2: 160MHz and 3: 192MHz)"]
     #[inline(always)]
-    pub fn reg_pll_sel(&self) -> REG_PLL_SEL_R {
-        REG_PLL_SEL_R::new(((self.bits >> 4) & 3) as u8)
+    pub fn reg_pll_sel(&self) -> RegPllSelR {
+        RegPllSelR::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:7"]
     #[inline(always)]
-    pub fn hbn_root_clk_sel(&self) -> HBN_ROOT_CLK_SEL_R {
-        HBN_ROOT_CLK_SEL_R::new(((self.bits >> 6) & 3) as u8)
+    pub fn hbn_root_clk_sel(&self) -> HbnRootClkSelR {
+        HbnRootClkSelR::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 8:15 - MCU clock divider"]
     #[inline(always)]
-    pub fn reg_hclk_div(&self) -> REG_HCLK_DIV_R {
-        REG_HCLK_DIV_R::new(((self.bits >> 8) & 0xff) as u8)
+    pub fn reg_hclk_div(&self) -> RegHclkDivR {
+        RegHclkDivR::new(((self.bits >> 8) & 0xff) as u8)
     }
     #[doc = "Bits 16:23 - Base clock divider"]
     #[inline(always)]
-    pub fn reg_bclk_div(&self) -> REG_BCLK_DIV_R {
-        REG_BCLK_DIV_R::new(((self.bits >> 16) & 0xff) as u8)
+    pub fn reg_bclk_div(&self) -> RegBclkDivR {
+        RegBclkDivR::new(((self.bits >> 16) & 0xff) as u8)
     }
     #[doc = "Bits 24:26"]
     #[inline(always)]
-    pub fn fclk_sw_state(&self) -> FCLK_SW_STATE_R {
-        FCLK_SW_STATE_R::new(((self.bits >> 24) & 7) as u8)
+    pub fn fclk_sw_state(&self) -> FclkSwStateR {
+        FclkSwStateR::new(((self.bits >> 24) & 7) as u8)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    pub fn chip_rdy(&self) -> CHIP_RDY_R {
-        CHIP_RDY_R::new(((self.bits >> 27) & 1) != 0)
+    pub fn chip_rdy(&self) -> ChipRdyR {
+        ChipRdyR::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bits 28:31"]
     #[inline(always)]
-    pub fn glb_id(&self) -> GLB_ID_R {
-        GLB_ID_R::new(((self.bits >> 28) & 0x0f) as u8)
+    pub fn glb_id(&self) -> GlbIdR {
+        GlbIdR::new(((self.bits >> 28) & 0x0f) as u8)
     }
 }
 impl W {
     #[doc = "Bit 0 - PLL enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn reg_pll_en(&mut self) -> REG_PLL_EN_W<0> {
-        REG_PLL_EN_W::new(self)
+    pub fn reg_pll_en(&mut self) -> RegPllEnW<'_, ClkCfg0Spec> {
+        RegPllEnW::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn reg_fclk_en(&mut self) -> REG_FCLK_EN_W<1> {
-        REG_FCLK_EN_W::new(self)
+    pub fn reg_fclk_en(&mut self) -> RegFclkEnW<'_, ClkCfg0Spec> {
+        RegFclkEnW::new(self, 1)
     }
     #[doc = "Bit 2 - MCU clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn reg_hclk_en(&mut self) -> REG_HCLK_EN_W<2> {
-        REG_HCLK_EN_W::new(self)
+    pub fn reg_hclk_en(&mut self) -> RegHclkEnW<'_, ClkCfg0Spec> {
+        RegHclkEnW::new(self, 2)
     }
     #[doc = "Bit 3 - Base clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn reg_bclk_en(&mut self) -> REG_BCLK_EN_W<3> {
-        REG_BCLK_EN_W::new(self)
+    pub fn reg_bclk_en(&mut self) -> RegBclkEnW<'_, ClkCfg0Spec> {
+        RegBclkEnW::new(self, 3)
     }
     #[doc = "Bits 4:5 - PLL clock selection (0: 48MHz, 1: 120MHz, 2: 160MHz and 3: 192MHz)"]
     #[inline(always)]
-    #[must_use]
-    pub fn reg_pll_sel(&mut self) -> REG_PLL_SEL_W<4> {
-        REG_PLL_SEL_W::new(self)
+    pub fn reg_pll_sel(&mut self) -> RegPllSelW<'_, ClkCfg0Spec> {
+        RegPllSelW::new(self, 4)
     }
     #[doc = "Bits 8:15 - MCU clock divider"]
     #[inline(always)]
-    #[must_use]
-    pub fn reg_hclk_div(&mut self) -> REG_HCLK_DIV_W<8> {
-        REG_HCLK_DIV_W::new(self)
+    pub fn reg_hclk_div(&mut self) -> RegHclkDivW<'_, ClkCfg0Spec> {
+        RegHclkDivW::new(self, 8)
     }
     #[doc = "Bits 16:23 - Base clock divider"]
     #[inline(always)]
-    #[must_use]
-    pub fn reg_bclk_div(&mut self) -> REG_BCLK_DIV_W<16> {
-        REG_BCLK_DIV_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn reg_bclk_div(&mut self) -> RegBclkDivW<'_, ClkCfg0Spec> {
+        RegBclkDivW::new(self, 16)
     }
 }
-#[doc = "Clock configuration for processor and bus\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clk_cfg0](index.html) module"]
-pub struct CLK_CFG0_SPEC;
-impl crate::RegisterSpec for CLK_CFG0_SPEC {
+#[doc = "Clock configuration for processor and bus\n\nYou can [`read`](crate::Reg::read) this register and get [`clk_cfg0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clk_cfg0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ClkCfg0Spec;
+impl crate::RegisterSpec for ClkCfg0Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clk_cfg0::R](R) reader structure"]
-impl crate::Readable for CLK_CFG0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [clk_cfg0::W](W) writer structure"]
-impl crate::Writable for CLK_CFG0_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`clk_cfg0::R`](R) reader structure"]
+impl crate::Readable for ClkCfg0Spec {}
+#[doc = "`write(|w| ..)` method takes [`clk_cfg0::W`](W) writer structure"]
+impl crate::Writable for ClkCfg0Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets clk_cfg0 to value 0x6000_000f"]
-impl crate::Resettable for CLK_CFG0_SPEC {
-    const RESET_VALUE: Self::Ux = 0x6000_000f;
+impl crate::Resettable for ClkCfg0Spec {
+    const RESET_VALUE: u32 = 0x6000_000f;
 }

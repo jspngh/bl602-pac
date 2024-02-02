@@ -1,240 +1,184 @@
 #[doc = "Register `ef_crc_ctrl_0` reader"]
-pub struct R(crate::R<EF_CRC_CTRL_0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<EF_CRC_CTRL_0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<EF_CRC_CTRL_0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<EF_CRC_CTRL_0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<EfCrcCtrl0Spec>;
 #[doc = "Register `ef_crc_ctrl_0` writer"]
-pub struct W(crate::W<EF_CRC_CTRL_0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<EF_CRC_CTRL_0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<EF_CRC_CTRL_0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<EF_CRC_CTRL_0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<EfCrcCtrl0Spec>;
 #[doc = "Field `ef_crc_busy` reader - "]
-pub type EF_CRC_BUSY_R = crate::BitReader<bool>;
+pub type EfCrcBusyR = crate::BitReader;
 #[doc = "Field `ef_crc_trig` reader - "]
-pub type EF_CRC_TRIG_R = crate::BitReader<bool>;
+pub type EfCrcTrigR = crate::BitReader;
 #[doc = "Field `ef_crc_trig` writer - "]
-pub type EF_CRC_TRIG_W<'a, const O: u8> = crate::BitWriter<'a, u32, EF_CRC_CTRL_0_SPEC, bool, O>;
+pub type EfCrcTrigW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ef_crc_en` reader - "]
-pub type EF_CRC_EN_R = crate::BitReader<bool>;
+pub type EfCrcEnR = crate::BitReader;
 #[doc = "Field `ef_crc_en` writer - "]
-pub type EF_CRC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EF_CRC_CTRL_0_SPEC, bool, O>;
+pub type EfCrcEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ef_crc_mode` reader - "]
-pub type EF_CRC_MODE_R = crate::BitReader<bool>;
+pub type EfCrcModeR = crate::BitReader;
 #[doc = "Field `ef_crc_mode` writer - "]
-pub type EF_CRC_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, EF_CRC_CTRL_0_SPEC, bool, O>;
+pub type EfCrcModeW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ef_crc_error` reader - "]
-pub type EF_CRC_ERROR_R = crate::BitReader<bool>;
+pub type EfCrcErrorR = crate::BitReader;
 #[doc = "Field `ef_crc_dout_inv_en` reader - "]
-pub type EF_CRC_DOUT_INV_EN_R = crate::BitReader<bool>;
+pub type EfCrcDoutInvEnR = crate::BitReader;
 #[doc = "Field `ef_crc_dout_inv_en` writer - "]
-pub type EF_CRC_DOUT_INV_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EF_CRC_CTRL_0_SPEC, bool, O>;
+pub type EfCrcDoutInvEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ef_crc_dout_endian` reader - "]
-pub type EF_CRC_DOUT_ENDIAN_R = crate::BitReader<bool>;
+pub type EfCrcDoutEndianR = crate::BitReader;
 #[doc = "Field `ef_crc_dout_endian` writer - "]
-pub type EF_CRC_DOUT_ENDIAN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EF_CRC_CTRL_0_SPEC, bool, O>;
+pub type EfCrcDoutEndianW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ef_crc_din_endian` reader - "]
-pub type EF_CRC_DIN_ENDIAN_R = crate::BitReader<bool>;
+pub type EfCrcDinEndianR = crate::BitReader;
 #[doc = "Field `ef_crc_din_endian` writer - "]
-pub type EF_CRC_DIN_ENDIAN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EF_CRC_CTRL_0_SPEC, bool, O>;
+pub type EfCrcDinEndianW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ef_crc_int` reader - "]
-pub type EF_CRC_INT_R = crate::BitReader<bool>;
+pub type EfCrcIntR = crate::BitReader;
 #[doc = "Field `ef_crc_int_clr` reader - "]
-pub type EF_CRC_INT_CLR_R = crate::BitReader<bool>;
+pub type EfCrcIntClrR = crate::BitReader;
 #[doc = "Field `ef_crc_int_clr` writer - "]
-pub type EF_CRC_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, EF_CRC_CTRL_0_SPEC, bool, O>;
+pub type EfCrcIntClrW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ef_crc_int_set` reader - "]
-pub type EF_CRC_INT_SET_R = crate::BitReader<bool>;
+pub type EfCrcIntSetR = crate::BitReader;
 #[doc = "Field `ef_crc_int_set` writer - "]
-pub type EF_CRC_INT_SET_W<'a, const O: u8> = crate::BitWriter<'a, u32, EF_CRC_CTRL_0_SPEC, bool, O>;
+pub type EfCrcIntSetW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ef_crc_lock` reader - "]
-pub type EF_CRC_LOCK_R = crate::BitReader<bool>;
+pub type EfCrcLockR = crate::BitReader;
 #[doc = "Field `ef_crc_lock` writer - "]
-pub type EF_CRC_LOCK_W<'a, const O: u8> = crate::BitWriter<'a, u32, EF_CRC_CTRL_0_SPEC, bool, O>;
+pub type EfCrcLockW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ef_crc_slp_n` reader - "]
-pub type EF_CRC_SLP_N_R = crate::FieldReader<u16, u16>;
+pub type EfCrcSlpNR = crate::FieldReader<u16>;
 #[doc = "Field `ef_crc_slp_n` writer - "]
-pub type EF_CRC_SLP_N_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, EF_CRC_CTRL_0_SPEC, u16, u16, 16, O>;
+pub type EfCrcSlpNW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn ef_crc_busy(&self) -> EF_CRC_BUSY_R {
-        EF_CRC_BUSY_R::new((self.bits & 1) != 0)
+    pub fn ef_crc_busy(&self) -> EfCrcBusyR {
+        EfCrcBusyR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn ef_crc_trig(&self) -> EF_CRC_TRIG_R {
-        EF_CRC_TRIG_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn ef_crc_trig(&self) -> EfCrcTrigR {
+        EfCrcTrigR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn ef_crc_en(&self) -> EF_CRC_EN_R {
-        EF_CRC_EN_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn ef_crc_en(&self) -> EfCrcEnR {
+        EfCrcEnR::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn ef_crc_mode(&self) -> EF_CRC_MODE_R {
-        EF_CRC_MODE_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn ef_crc_mode(&self) -> EfCrcModeR {
+        EfCrcModeR::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn ef_crc_error(&self) -> EF_CRC_ERROR_R {
-        EF_CRC_ERROR_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn ef_crc_error(&self) -> EfCrcErrorR {
+        EfCrcErrorR::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn ef_crc_dout_inv_en(&self) -> EF_CRC_DOUT_INV_EN_R {
-        EF_CRC_DOUT_INV_EN_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn ef_crc_dout_inv_en(&self) -> EfCrcDoutInvEnR {
+        EfCrcDoutInvEnR::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn ef_crc_dout_endian(&self) -> EF_CRC_DOUT_ENDIAN_R {
-        EF_CRC_DOUT_ENDIAN_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn ef_crc_dout_endian(&self) -> EfCrcDoutEndianR {
+        EfCrcDoutEndianR::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn ef_crc_din_endian(&self) -> EF_CRC_DIN_ENDIAN_R {
-        EF_CRC_DIN_ENDIAN_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn ef_crc_din_endian(&self) -> EfCrcDinEndianR {
+        EfCrcDinEndianR::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn ef_crc_int(&self) -> EF_CRC_INT_R {
-        EF_CRC_INT_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn ef_crc_int(&self) -> EfCrcIntR {
+        EfCrcIntR::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn ef_crc_int_clr(&self) -> EF_CRC_INT_CLR_R {
-        EF_CRC_INT_CLR_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn ef_crc_int_clr(&self) -> EfCrcIntClrR {
+        EfCrcIntClrR::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    pub fn ef_crc_int_set(&self) -> EF_CRC_INT_SET_R {
-        EF_CRC_INT_SET_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn ef_crc_int_set(&self) -> EfCrcIntSetR {
+        EfCrcIntSetR::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn ef_crc_lock(&self) -> EF_CRC_LOCK_R {
-        EF_CRC_LOCK_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn ef_crc_lock(&self) -> EfCrcLockR {
+        EfCrcLockR::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
-    pub fn ef_crc_slp_n(&self) -> EF_CRC_SLP_N_R {
-        EF_CRC_SLP_N_R::new(((self.bits >> 16) & 0xffff) as u16)
+    pub fn ef_crc_slp_n(&self) -> EfCrcSlpNR {
+        EfCrcSlpNR::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
 impl W {
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_crc_trig(&mut self) -> EF_CRC_TRIG_W<1> {
-        EF_CRC_TRIG_W::new(self)
+    pub fn ef_crc_trig(&mut self) -> EfCrcTrigW<'_, EfCrcCtrl0Spec> {
+        EfCrcTrigW::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_crc_en(&mut self) -> EF_CRC_EN_W<2> {
-        EF_CRC_EN_W::new(self)
+    pub fn ef_crc_en(&mut self) -> EfCrcEnW<'_, EfCrcCtrl0Spec> {
+        EfCrcEnW::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_crc_mode(&mut self) -> EF_CRC_MODE_W<3> {
-        EF_CRC_MODE_W::new(self)
+    pub fn ef_crc_mode(&mut self) -> EfCrcModeW<'_, EfCrcCtrl0Spec> {
+        EfCrcModeW::new(self, 3)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_crc_dout_inv_en(&mut self) -> EF_CRC_DOUT_INV_EN_W<5> {
-        EF_CRC_DOUT_INV_EN_W::new(self)
+    pub fn ef_crc_dout_inv_en(&mut self) -> EfCrcDoutInvEnW<'_, EfCrcCtrl0Spec> {
+        EfCrcDoutInvEnW::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_crc_dout_endian(&mut self) -> EF_CRC_DOUT_ENDIAN_W<6> {
-        EF_CRC_DOUT_ENDIAN_W::new(self)
+    pub fn ef_crc_dout_endian(&mut self) -> EfCrcDoutEndianW<'_, EfCrcCtrl0Spec> {
+        EfCrcDoutEndianW::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_crc_din_endian(&mut self) -> EF_CRC_DIN_ENDIAN_W<7> {
-        EF_CRC_DIN_ENDIAN_W::new(self)
+    pub fn ef_crc_din_endian(&mut self) -> EfCrcDinEndianW<'_, EfCrcCtrl0Spec> {
+        EfCrcDinEndianW::new(self, 7)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_crc_int_clr(&mut self) -> EF_CRC_INT_CLR_W<9> {
-        EF_CRC_INT_CLR_W::new(self)
+    pub fn ef_crc_int_clr(&mut self) -> EfCrcIntClrW<'_, EfCrcCtrl0Spec> {
+        EfCrcIntClrW::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_crc_int_set(&mut self) -> EF_CRC_INT_SET_W<10> {
-        EF_CRC_INT_SET_W::new(self)
+    pub fn ef_crc_int_set(&mut self) -> EfCrcIntSetW<'_, EfCrcCtrl0Spec> {
+        EfCrcIntSetW::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_crc_lock(&mut self) -> EF_CRC_LOCK_W<11> {
-        EF_CRC_LOCK_W::new(self)
+    pub fn ef_crc_lock(&mut self) -> EfCrcLockW<'_, EfCrcCtrl0Spec> {
+        EfCrcLockW::new(self, 11)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_crc_slp_n(&mut self) -> EF_CRC_SLP_N_W<16> {
-        EF_CRC_SLP_N_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn ef_crc_slp_n(&mut self) -> EfCrcSlpNW<'_, EfCrcCtrl0Spec> {
+        EfCrcSlpNW::new(self, 16)
     }
 }
-#[doc = "ef_crc_ctrl_0.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ef_crc_ctrl_0](index.html) module"]
-pub struct EF_CRC_CTRL_0_SPEC;
-impl crate::RegisterSpec for EF_CRC_CTRL_0_SPEC {
+#[doc = "ef_crc_ctrl_0.\n\nYou can [`read`](crate::Reg::read) this register and get [`ef_crc_ctrl_0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ef_crc_ctrl_0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct EfCrcCtrl0Spec;
+impl crate::RegisterSpec for EfCrcCtrl0Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ef_crc_ctrl_0::R](R) reader structure"]
-impl crate::Readable for EF_CRC_CTRL_0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ef_crc_ctrl_0::W](W) writer structure"]
-impl crate::Writable for EF_CRC_CTRL_0_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`ef_crc_ctrl_0::R`](R) reader structure"]
+impl crate::Readable for EfCrcCtrl0Spec {}
+#[doc = "`write(|w| ..)` method takes [`ef_crc_ctrl_0::W`](W) writer structure"]
+impl crate::Writable for EfCrcCtrl0Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets ef_crc_ctrl_0 to value 0x00ff_0224"]
-impl crate::Resettable for EF_CRC_CTRL_0_SPEC {
-    const RESET_VALUE: Self::Ux = 0x00ff_0224;
+impl crate::Resettable for EfCrcCtrl0Spec {
+    const RESET_VALUE: u32 = 0x00ff_0224;
 }

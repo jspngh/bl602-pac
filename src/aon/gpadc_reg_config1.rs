@@ -1,225 +1,163 @@
 #[doc = "Register `gpadc_reg_config1` reader"]
-pub struct R(crate::R<GPADC_REG_CONFIG1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GPADC_REG_CONFIG1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GPADC_REG_CONFIG1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GPADC_REG_CONFIG1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GpadcRegConfig1Spec>;
 #[doc = "Register `gpadc_reg_config1` writer"]
-pub struct W(crate::W<GPADC_REG_CONFIG1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GPADC_REG_CONFIG1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GPADC_REG_CONFIG1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GPADC_REG_CONFIG1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GpadcRegConfig1Spec>;
 #[doc = "Field `gpadc_cal_os_en` reader - "]
-pub type GPADC_CAL_OS_EN_R = crate::BitReader<bool>;
+pub type GpadcCalOsEnR = crate::BitReader;
 #[doc = "Field `gpadc_cal_os_en` writer - "]
-pub type GPADC_CAL_OS_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPADC_REG_CONFIG1_SPEC, bool, O>;
+pub type GpadcCalOsEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `gpadc_cont_conv_en` reader - "]
-pub type GPADC_CONT_CONV_EN_R = crate::BitReader<bool>;
+pub type GpadcContConvEnR = crate::BitReader;
 #[doc = "Field `gpadc_cont_conv_en` writer - "]
-pub type GPADC_CONT_CONV_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPADC_REG_CONFIG1_SPEC, bool, O>;
+pub type GpadcContConvEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `gpadc_res_sel` reader - "]
-pub type GPADC_RES_SEL_R = crate::FieldReader<u8, u8>;
+pub type GpadcResSelR = crate::FieldReader;
 #[doc = "Field `gpadc_res_sel` writer - "]
-pub type GPADC_RES_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPADC_REG_CONFIG1_SPEC, u8, u8, 3, O>;
+pub type GpadcResSelW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `gpadc_clk_ana_inv` reader - "]
-pub type GPADC_CLK_ANA_INV_R = crate::BitReader<bool>;
+pub type GpadcClkAnaInvR = crate::BitReader;
 #[doc = "Field `gpadc_clk_ana_inv` writer - "]
-pub type GPADC_CLK_ANA_INV_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPADC_REG_CONFIG1_SPEC, bool, O>;
+pub type GpadcClkAnaInvW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `gpadc_clk_div_ratio` reader - "]
-pub type GPADC_CLK_DIV_RATIO_R = crate::FieldReader<u8, u8>;
+pub type GpadcClkDivRatioR = crate::FieldReader;
 #[doc = "Field `gpadc_clk_div_ratio` writer - "]
-pub type GPADC_CLK_DIV_RATIO_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPADC_REG_CONFIG1_SPEC, u8, u8, 3, O>;
+pub type GpadcClkDivRatioW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `gpadc_scan_length` reader - "]
-pub type GPADC_SCAN_LENGTH_R = crate::FieldReader<u8, u8>;
+pub type GpadcScanLengthR = crate::FieldReader;
 #[doc = "Field `gpadc_scan_length` writer - "]
-pub type GPADC_SCAN_LENGTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPADC_REG_CONFIG1_SPEC, u8, u8, 4, O>;
+pub type GpadcScanLengthW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `gpadc_scan_en` reader - "]
-pub type GPADC_SCAN_EN_R = crate::BitReader<bool>;
+pub type GpadcScanEnR = crate::BitReader;
 #[doc = "Field `gpadc_scan_en` writer - "]
-pub type GPADC_SCAN_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPADC_REG_CONFIG1_SPEC, bool, O>;
+pub type GpadcScanEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `gpadc_dither_en` reader - "]
-pub type GPADC_DITHER_EN_R = crate::BitReader<bool>;
+pub type GpadcDitherEnR = crate::BitReader;
 #[doc = "Field `gpadc_dither_en` writer - "]
-pub type GPADC_DITHER_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPADC_REG_CONFIG1_SPEC, bool, O>;
+pub type GpadcDitherEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `gpadc_v11_sel` reader - "]
-pub type GPADC_V11_SEL_R = crate::FieldReader<u8, u8>;
+pub type GpadcV11SelR = crate::FieldReader;
 #[doc = "Field `gpadc_v11_sel` writer - "]
-pub type GPADC_V11_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPADC_REG_CONFIG1_SPEC, u8, u8, 2, O>;
+pub type GpadcV11SelW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `gpadc_v18_sel` reader - "]
-pub type GPADC_V18_SEL_R = crate::FieldReader<u8, u8>;
+pub type GpadcV18SelR = crate::FieldReader;
 #[doc = "Field `gpadc_v18_sel` writer - "]
-pub type GPADC_V18_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPADC_REG_CONFIG1_SPEC, u8, u8, 2, O>;
+pub type GpadcV18SelW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn gpadc_cal_os_en(&self) -> GPADC_CAL_OS_EN_R {
-        GPADC_CAL_OS_EN_R::new((self.bits & 1) != 0)
+    pub fn gpadc_cal_os_en(&self) -> GpadcCalOsEnR {
+        GpadcCalOsEnR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn gpadc_cont_conv_en(&self) -> GPADC_CONT_CONV_EN_R {
-        GPADC_CONT_CONV_EN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn gpadc_cont_conv_en(&self) -> GpadcContConvEnR {
+        GpadcContConvEnR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 2:4"]
     #[inline(always)]
-    pub fn gpadc_res_sel(&self) -> GPADC_RES_SEL_R {
-        GPADC_RES_SEL_R::new(((self.bits >> 2) & 7) as u8)
+    pub fn gpadc_res_sel(&self) -> GpadcResSelR {
+        GpadcResSelR::new(((self.bits >> 2) & 7) as u8)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    pub fn gpadc_clk_ana_inv(&self) -> GPADC_CLK_ANA_INV_R {
-        GPADC_CLK_ANA_INV_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn gpadc_clk_ana_inv(&self) -> GpadcClkAnaInvR {
+        GpadcClkAnaInvR::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bits 18:20"]
     #[inline(always)]
-    pub fn gpadc_clk_div_ratio(&self) -> GPADC_CLK_DIV_RATIO_R {
-        GPADC_CLK_DIV_RATIO_R::new(((self.bits >> 18) & 7) as u8)
+    pub fn gpadc_clk_div_ratio(&self) -> GpadcClkDivRatioR {
+        GpadcClkDivRatioR::new(((self.bits >> 18) & 7) as u8)
     }
     #[doc = "Bits 21:24"]
     #[inline(always)]
-    pub fn gpadc_scan_length(&self) -> GPADC_SCAN_LENGTH_R {
-        GPADC_SCAN_LENGTH_R::new(((self.bits >> 21) & 0x0f) as u8)
+    pub fn gpadc_scan_length(&self) -> GpadcScanLengthR {
+        GpadcScanLengthR::new(((self.bits >> 21) & 0x0f) as u8)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
-    pub fn gpadc_scan_en(&self) -> GPADC_SCAN_EN_R {
-        GPADC_SCAN_EN_R::new(((self.bits >> 25) & 1) != 0)
+    pub fn gpadc_scan_en(&self) -> GpadcScanEnR {
+        GpadcScanEnR::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    pub fn gpadc_dither_en(&self) -> GPADC_DITHER_EN_R {
-        GPADC_DITHER_EN_R::new(((self.bits >> 26) & 1) != 0)
+    pub fn gpadc_dither_en(&self) -> GpadcDitherEnR {
+        GpadcDitherEnR::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bits 27:28"]
     #[inline(always)]
-    pub fn gpadc_v11_sel(&self) -> GPADC_V11_SEL_R {
-        GPADC_V11_SEL_R::new(((self.bits >> 27) & 3) as u8)
+    pub fn gpadc_v11_sel(&self) -> GpadcV11SelR {
+        GpadcV11SelR::new(((self.bits >> 27) & 3) as u8)
     }
     #[doc = "Bits 29:30"]
     #[inline(always)]
-    pub fn gpadc_v18_sel(&self) -> GPADC_V18_SEL_R {
-        GPADC_V18_SEL_R::new(((self.bits >> 29) & 3) as u8)
+    pub fn gpadc_v18_sel(&self) -> GpadcV18SelR {
+        GpadcV18SelR::new(((self.bits >> 29) & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_cal_os_en(&mut self) -> GPADC_CAL_OS_EN_W<0> {
-        GPADC_CAL_OS_EN_W::new(self)
+    pub fn gpadc_cal_os_en(&mut self) -> GpadcCalOsEnW<'_, GpadcRegConfig1Spec> {
+        GpadcCalOsEnW::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_cont_conv_en(&mut self) -> GPADC_CONT_CONV_EN_W<1> {
-        GPADC_CONT_CONV_EN_W::new(self)
+    pub fn gpadc_cont_conv_en(&mut self) -> GpadcContConvEnW<'_, GpadcRegConfig1Spec> {
+        GpadcContConvEnW::new(self, 1)
     }
     #[doc = "Bits 2:4"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_res_sel(&mut self) -> GPADC_RES_SEL_W<2> {
-        GPADC_RES_SEL_W::new(self)
+    pub fn gpadc_res_sel(&mut self) -> GpadcResSelW<'_, GpadcRegConfig1Spec> {
+        GpadcResSelW::new(self, 2)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_clk_ana_inv(&mut self) -> GPADC_CLK_ANA_INV_W<17> {
-        GPADC_CLK_ANA_INV_W::new(self)
+    pub fn gpadc_clk_ana_inv(&mut self) -> GpadcClkAnaInvW<'_, GpadcRegConfig1Spec> {
+        GpadcClkAnaInvW::new(self, 17)
     }
     #[doc = "Bits 18:20"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_clk_div_ratio(&mut self) -> GPADC_CLK_DIV_RATIO_W<18> {
-        GPADC_CLK_DIV_RATIO_W::new(self)
+    pub fn gpadc_clk_div_ratio(&mut self) -> GpadcClkDivRatioW<'_, GpadcRegConfig1Spec> {
+        GpadcClkDivRatioW::new(self, 18)
     }
     #[doc = "Bits 21:24"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_scan_length(&mut self) -> GPADC_SCAN_LENGTH_W<21> {
-        GPADC_SCAN_LENGTH_W::new(self)
+    pub fn gpadc_scan_length(&mut self) -> GpadcScanLengthW<'_, GpadcRegConfig1Spec> {
+        GpadcScanLengthW::new(self, 21)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_scan_en(&mut self) -> GPADC_SCAN_EN_W<25> {
-        GPADC_SCAN_EN_W::new(self)
+    pub fn gpadc_scan_en(&mut self) -> GpadcScanEnW<'_, GpadcRegConfig1Spec> {
+        GpadcScanEnW::new(self, 25)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_dither_en(&mut self) -> GPADC_DITHER_EN_W<26> {
-        GPADC_DITHER_EN_W::new(self)
+    pub fn gpadc_dither_en(&mut self) -> GpadcDitherEnW<'_, GpadcRegConfig1Spec> {
+        GpadcDitherEnW::new(self, 26)
     }
     #[doc = "Bits 27:28"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_v11_sel(&mut self) -> GPADC_V11_SEL_W<27> {
-        GPADC_V11_SEL_W::new(self)
+    pub fn gpadc_v11_sel(&mut self) -> GpadcV11SelW<'_, GpadcRegConfig1Spec> {
+        GpadcV11SelW::new(self, 27)
     }
     #[doc = "Bits 29:30"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_v18_sel(&mut self) -> GPADC_V18_SEL_W<29> {
-        GPADC_V18_SEL_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn gpadc_v18_sel(&mut self) -> GpadcV18SelW<'_, GpadcRegConfig1Spec> {
+        GpadcV18SelW::new(self, 29)
     }
 }
-#[doc = "gpadc_reg_config1.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpadc_reg_config1](index.html) module"]
-pub struct GPADC_REG_CONFIG1_SPEC;
-impl crate::RegisterSpec for GPADC_REG_CONFIG1_SPEC {
+#[doc = "gpadc_reg_config1.\n\nYou can [`read`](crate::Reg::read) this register and get [`gpadc_reg_config1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpadc_reg_config1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct GpadcRegConfig1Spec;
+impl crate::RegisterSpec for GpadcRegConfig1Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gpadc_reg_config1::R](R) reader structure"]
-impl crate::Readable for GPADC_REG_CONFIG1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gpadc_reg_config1::W](W) writer structure"]
-impl crate::Writable for GPADC_REG_CONFIG1_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`gpadc_reg_config1::R`](R) reader structure"]
+impl crate::Readable for GpadcRegConfig1Spec {}
+#[doc = "`write(|w| ..)` method takes [`gpadc_reg_config1::W`](W) writer structure"]
+impl crate::Writable for GpadcRegConfig1Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets gpadc_reg_config1 to value 0x000c_0002"]
-impl crate::Resettable for GPADC_REG_CONFIG1_SPEC {
-    const RESET_VALUE: Self::Ux = 0x000c_0002;
+impl crate::Resettable for GpadcRegConfig1Spec {
+    const RESET_VALUE: u32 = 0x000c_0002;
 }

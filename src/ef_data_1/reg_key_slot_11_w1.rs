@@ -1,63 +1,23 @@
 #[doc = "Register `reg_key_slot_11_w1` reader"]
-pub struct R(crate::R<REG_KEY_SLOT_11_W1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<REG_KEY_SLOT_11_W1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<REG_KEY_SLOT_11_W1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<REG_KEY_SLOT_11_W1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RegKeySlot11W1Spec>;
 #[doc = "Register `reg_key_slot_11_w1` writer"]
-pub struct W(crate::W<REG_KEY_SLOT_11_W1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<REG_KEY_SLOT_11_W1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+pub type W = crate::W<RegKeySlot11W1Spec>;
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        write!(f, "{}", self.bits())
     }
 }
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<REG_KEY_SLOT_11_W1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<REG_KEY_SLOT_11_W1_SPEC>) -> Self {
-        W(writer)
-    }
-}
-impl W {
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
-    }
-}
-#[doc = "reg_key_slot_11_w1.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [reg_key_slot_11_w1](index.html) module"]
-pub struct REG_KEY_SLOT_11_W1_SPEC;
-impl crate::RegisterSpec for REG_KEY_SLOT_11_W1_SPEC {
+impl W {}
+#[doc = "reg_key_slot_11_w1.\n\nYou can [`read`](crate::Reg::read) this register and get [`reg_key_slot_11_w1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`reg_key_slot_11_w1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RegKeySlot11W1Spec;
+impl crate::RegisterSpec for RegKeySlot11W1Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [reg_key_slot_11_w1::R](R) reader structure"]
-impl crate::Readable for REG_KEY_SLOT_11_W1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [reg_key_slot_11_w1::W](W) writer structure"]
-impl crate::Writable for REG_KEY_SLOT_11_W1_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`reg_key_slot_11_w1::R`](R) reader structure"]
+impl crate::Readable for RegKeySlot11W1Spec {}
+#[doc = "`write(|w| ..)` method takes [`reg_key_slot_11_w1::W`](W) writer structure"]
+impl crate::Writable for RegKeySlot11W1Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets reg_key_slot_11_w1 to value 0"]
-impl crate::Resettable for REG_KEY_SLOT_11_W1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for RegKeySlot11W1Spec {}

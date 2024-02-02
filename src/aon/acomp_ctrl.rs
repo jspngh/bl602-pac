@@ -1,187 +1,135 @@
 #[doc = "Register `acomp_ctrl` reader"]
-pub struct R(crate::R<ACOMP_CTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<ACOMP_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<ACOMP_CTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<ACOMP_CTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<AcompCtrlSpec>;
 #[doc = "Register `acomp_ctrl` writer"]
-pub struct W(crate::W<ACOMP_CTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<ACOMP_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<ACOMP_CTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<ACOMP_CTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<AcompCtrlSpec>;
 #[doc = "Field `acomp1_rstn_ana` reader - "]
-pub type ACOMP1_RSTN_ANA_R = crate::BitReader<bool>;
+pub type Acomp1RstnAnaR = crate::BitReader;
 #[doc = "Field `acomp1_rstn_ana` writer - "]
-pub type ACOMP1_RSTN_ANA_W<'a, const O: u8> = crate::BitWriter<'a, u32, ACOMP_CTRL_SPEC, bool, O>;
+pub type Acomp1RstnAnaW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `acomp0_rstn_ana` reader - "]
-pub type ACOMP0_RSTN_ANA_R = crate::BitReader<bool>;
+pub type Acomp0RstnAnaR = crate::BitReader;
 #[doc = "Field `acomp0_rstn_ana` writer - "]
-pub type ACOMP0_RSTN_ANA_W<'a, const O: u8> = crate::BitWriter<'a, u32, ACOMP_CTRL_SPEC, bool, O>;
+pub type Acomp0RstnAnaW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `acomp1_test_en` reader - "]
-pub type ACOMP1_TEST_EN_R = crate::BitReader<bool>;
+pub type Acomp1TestEnR = crate::BitReader;
 #[doc = "Field `acomp1_test_en` writer - "]
-pub type ACOMP1_TEST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ACOMP_CTRL_SPEC, bool, O>;
+pub type Acomp1TestEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `acomp0_test_en` reader - "]
-pub type ACOMP0_TEST_EN_R = crate::BitReader<bool>;
+pub type Acomp0TestEnR = crate::BitReader;
 #[doc = "Field `acomp0_test_en` writer - "]
-pub type ACOMP0_TEST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ACOMP_CTRL_SPEC, bool, O>;
+pub type Acomp0TestEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `acomp1_test_sel` reader - "]
-pub type ACOMP1_TEST_SEL_R = crate::FieldReader<u8, u8>;
+pub type Acomp1TestSelR = crate::FieldReader;
 #[doc = "Field `acomp1_test_sel` writer - "]
-pub type ACOMP1_TEST_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ACOMP_CTRL_SPEC, u8, u8, 2, O>;
+pub type Acomp1TestSelW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `acomp0_test_sel` reader - "]
-pub type ACOMP0_TEST_SEL_R = crate::FieldReader<u8, u8>;
+pub type Acomp0TestSelR = crate::FieldReader;
 #[doc = "Field `acomp0_test_sel` writer - "]
-pub type ACOMP0_TEST_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ACOMP_CTRL_SPEC, u8, u8, 2, O>;
+pub type Acomp0TestSelW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `acomp1_out_raw` reader - "]
-pub type ACOMP1_OUT_RAW_R = crate::BitReader<bool>;
+pub type Acomp1OutRawR = crate::BitReader;
 #[doc = "Field `acomp0_out_raw` reader - "]
-pub type ACOMP0_OUT_RAW_R = crate::BitReader<bool>;
+pub type Acomp0OutRawR = crate::BitReader;
 #[doc = "Field `acomp_reserved` reader - "]
-pub type ACOMP_RESERVED_R = crate::FieldReader<u8, u8>;
+pub type AcompReservedR = crate::FieldReader;
 #[doc = "Field `acomp_reserved` writer - "]
-pub type ACOMP_RESERVED_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ACOMP_CTRL_SPEC, u8, u8, 8, O>;
+pub type AcompReservedW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn acomp1_rstn_ana(&self) -> ACOMP1_RSTN_ANA_R {
-        ACOMP1_RSTN_ANA_R::new((self.bits & 1) != 0)
+    pub fn acomp1_rstn_ana(&self) -> Acomp1RstnAnaR {
+        Acomp1RstnAnaR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn acomp0_rstn_ana(&self) -> ACOMP0_RSTN_ANA_R {
-        ACOMP0_RSTN_ANA_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn acomp0_rstn_ana(&self) -> Acomp0RstnAnaR {
+        Acomp0RstnAnaR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn acomp1_test_en(&self) -> ACOMP1_TEST_EN_R {
-        ACOMP1_TEST_EN_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn acomp1_test_en(&self) -> Acomp1TestEnR {
+        Acomp1TestEnR::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn acomp0_test_en(&self) -> ACOMP0_TEST_EN_R {
-        ACOMP0_TEST_EN_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn acomp0_test_en(&self) -> Acomp0TestEnR {
+        Acomp0TestEnR::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bits 10:11"]
     #[inline(always)]
-    pub fn acomp1_test_sel(&self) -> ACOMP1_TEST_SEL_R {
-        ACOMP1_TEST_SEL_R::new(((self.bits >> 10) & 3) as u8)
+    pub fn acomp1_test_sel(&self) -> Acomp1TestSelR {
+        Acomp1TestSelR::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
-    pub fn acomp0_test_sel(&self) -> ACOMP0_TEST_SEL_R {
-        ACOMP0_TEST_SEL_R::new(((self.bits >> 12) & 3) as u8)
+    pub fn acomp0_test_sel(&self) -> Acomp0TestSelR {
+        Acomp0TestSelR::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    pub fn acomp1_out_raw(&self) -> ACOMP1_OUT_RAW_R {
-        ACOMP1_OUT_RAW_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn acomp1_out_raw(&self) -> Acomp1OutRawR {
+        Acomp1OutRawR::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
-    pub fn acomp0_out_raw(&self) -> ACOMP0_OUT_RAW_R {
-        ACOMP0_OUT_RAW_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn acomp0_out_raw(&self) -> Acomp0OutRawR {
+        Acomp0OutRawR::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bits 24:31"]
     #[inline(always)]
-    pub fn acomp_reserved(&self) -> ACOMP_RESERVED_R {
-        ACOMP_RESERVED_R::new(((self.bits >> 24) & 0xff) as u8)
+    pub fn acomp_reserved(&self) -> AcompReservedR {
+        AcompReservedR::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn acomp1_rstn_ana(&mut self) -> ACOMP1_RSTN_ANA_W<0> {
-        ACOMP1_RSTN_ANA_W::new(self)
+    pub fn acomp1_rstn_ana(&mut self) -> Acomp1RstnAnaW<'_, AcompCtrlSpec> {
+        Acomp1RstnAnaW::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn acomp0_rstn_ana(&mut self) -> ACOMP0_RSTN_ANA_W<1> {
-        ACOMP0_RSTN_ANA_W::new(self)
+    pub fn acomp0_rstn_ana(&mut self) -> Acomp0RstnAnaW<'_, AcompCtrlSpec> {
+        Acomp0RstnAnaW::new(self, 1)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
-    pub fn acomp1_test_en(&mut self) -> ACOMP1_TEST_EN_W<8> {
-        ACOMP1_TEST_EN_W::new(self)
+    pub fn acomp1_test_en(&mut self) -> Acomp1TestEnW<'_, AcompCtrlSpec> {
+        Acomp1TestEnW::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
-    pub fn acomp0_test_en(&mut self) -> ACOMP0_TEST_EN_W<9> {
-        ACOMP0_TEST_EN_W::new(self)
+    pub fn acomp0_test_en(&mut self) -> Acomp0TestEnW<'_, AcompCtrlSpec> {
+        Acomp0TestEnW::new(self, 9)
     }
     #[doc = "Bits 10:11"]
     #[inline(always)]
-    #[must_use]
-    pub fn acomp1_test_sel(&mut self) -> ACOMP1_TEST_SEL_W<10> {
-        ACOMP1_TEST_SEL_W::new(self)
+    pub fn acomp1_test_sel(&mut self) -> Acomp1TestSelW<'_, AcompCtrlSpec> {
+        Acomp1TestSelW::new(self, 10)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
-    #[must_use]
-    pub fn acomp0_test_sel(&mut self) -> ACOMP0_TEST_SEL_W<12> {
-        ACOMP0_TEST_SEL_W::new(self)
+    pub fn acomp0_test_sel(&mut self) -> Acomp0TestSelW<'_, AcompCtrlSpec> {
+        Acomp0TestSelW::new(self, 12)
     }
     #[doc = "Bits 24:31"]
     #[inline(always)]
-    #[must_use]
-    pub fn acomp_reserved(&mut self) -> ACOMP_RESERVED_W<24> {
-        ACOMP_RESERVED_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn acomp_reserved(&mut self) -> AcompReservedW<'_, AcompCtrlSpec> {
+        AcompReservedW::new(self, 24)
     }
 }
-#[doc = "acomp_ctrl.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [acomp_ctrl](index.html) module"]
-pub struct ACOMP_CTRL_SPEC;
-impl crate::RegisterSpec for ACOMP_CTRL_SPEC {
+#[doc = "acomp_ctrl.\n\nYou can [`read`](crate::Reg::read) this register and get [`acomp_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`acomp_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct AcompCtrlSpec;
+impl crate::RegisterSpec for AcompCtrlSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [acomp_ctrl::R](R) reader structure"]
-impl crate::Readable for ACOMP_CTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [acomp_ctrl::W](W) writer structure"]
-impl crate::Writable for ACOMP_CTRL_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`acomp_ctrl::R`](R) reader structure"]
+impl crate::Readable for AcompCtrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`acomp_ctrl::W`](W) writer structure"]
+impl crate::Writable for AcompCtrlSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets acomp_ctrl to value 0x03"]
-impl crate::Resettable for ACOMP_CTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x03;
+impl crate::Resettable for AcompCtrlSpec {
+    const RESET_VALUE: u32 = 0x03;
 }

@@ -1,161 +1,107 @@
 #[doc = "Register `gpadc_reg_scn_neg2` reader"]
-pub struct R(crate::R<GPADC_REG_SCN_NEG2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GPADC_REG_SCN_NEG2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GPADC_REG_SCN_NEG2_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GPADC_REG_SCN_NEG2_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GpadcRegScnNeg2Spec>;
 #[doc = "Register `gpadc_reg_scn_neg2` writer"]
-pub struct W(crate::W<GPADC_REG_SCN_NEG2_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GPADC_REG_SCN_NEG2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GPADC_REG_SCN_NEG2_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GPADC_REG_SCN_NEG2_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GpadcRegScnNeg2Spec>;
 #[doc = "Field `gpadc_scan_neg_6` reader - "]
-pub type GPADC_SCAN_NEG_6_R = crate::FieldReader<u8, u8>;
+pub type GpadcScanNeg6R = crate::FieldReader;
 #[doc = "Field `gpadc_scan_neg_6` writer - "]
-pub type GPADC_SCAN_NEG_6_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPADC_REG_SCN_NEG2_SPEC, u8, u8, 5, O>;
+pub type GpadcScanNeg6W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `gpadc_scan_neg_7` reader - "]
-pub type GPADC_SCAN_NEG_7_R = crate::FieldReader<u8, u8>;
+pub type GpadcScanNeg7R = crate::FieldReader;
 #[doc = "Field `gpadc_scan_neg_7` writer - "]
-pub type GPADC_SCAN_NEG_7_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPADC_REG_SCN_NEG2_SPEC, u8, u8, 5, O>;
+pub type GpadcScanNeg7W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `gpadc_scan_neg_8` reader - "]
-pub type GPADC_SCAN_NEG_8_R = crate::FieldReader<u8, u8>;
+pub type GpadcScanNeg8R = crate::FieldReader;
 #[doc = "Field `gpadc_scan_neg_8` writer - "]
-pub type GPADC_SCAN_NEG_8_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPADC_REG_SCN_NEG2_SPEC, u8, u8, 5, O>;
+pub type GpadcScanNeg8W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `gpadc_scan_neg_9` reader - "]
-pub type GPADC_SCAN_NEG_9_R = crate::FieldReader<u8, u8>;
+pub type GpadcScanNeg9R = crate::FieldReader;
 #[doc = "Field `gpadc_scan_neg_9` writer - "]
-pub type GPADC_SCAN_NEG_9_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPADC_REG_SCN_NEG2_SPEC, u8, u8, 5, O>;
+pub type GpadcScanNeg9W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `gpadc_scan_neg_10` reader - "]
-pub type GPADC_SCAN_NEG_10_R = crate::FieldReader<u8, u8>;
+pub type GpadcScanNeg10R = crate::FieldReader;
 #[doc = "Field `gpadc_scan_neg_10` writer - "]
-pub type GPADC_SCAN_NEG_10_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPADC_REG_SCN_NEG2_SPEC, u8, u8, 5, O>;
+pub type GpadcScanNeg10W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `gpadc_scan_neg_11` reader - "]
-pub type GPADC_SCAN_NEG_11_R = crate::FieldReader<u8, u8>;
+pub type GpadcScanNeg11R = crate::FieldReader;
 #[doc = "Field `gpadc_scan_neg_11` writer - "]
-pub type GPADC_SCAN_NEG_11_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPADC_REG_SCN_NEG2_SPEC, u8, u8, 5, O>;
+pub type GpadcScanNeg11W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    pub fn gpadc_scan_neg_6(&self) -> GPADC_SCAN_NEG_6_R {
-        GPADC_SCAN_NEG_6_R::new((self.bits & 0x1f) as u8)
+    pub fn gpadc_scan_neg_6(&self) -> GpadcScanNeg6R {
+        GpadcScanNeg6R::new((self.bits & 0x1f) as u8)
     }
     #[doc = "Bits 5:9"]
     #[inline(always)]
-    pub fn gpadc_scan_neg_7(&self) -> GPADC_SCAN_NEG_7_R {
-        GPADC_SCAN_NEG_7_R::new(((self.bits >> 5) & 0x1f) as u8)
+    pub fn gpadc_scan_neg_7(&self) -> GpadcScanNeg7R {
+        GpadcScanNeg7R::new(((self.bits >> 5) & 0x1f) as u8)
     }
     #[doc = "Bits 10:14"]
     #[inline(always)]
-    pub fn gpadc_scan_neg_8(&self) -> GPADC_SCAN_NEG_8_R {
-        GPADC_SCAN_NEG_8_R::new(((self.bits >> 10) & 0x1f) as u8)
+    pub fn gpadc_scan_neg_8(&self) -> GpadcScanNeg8R {
+        GpadcScanNeg8R::new(((self.bits >> 10) & 0x1f) as u8)
     }
     #[doc = "Bits 15:19"]
     #[inline(always)]
-    pub fn gpadc_scan_neg_9(&self) -> GPADC_SCAN_NEG_9_R {
-        GPADC_SCAN_NEG_9_R::new(((self.bits >> 15) & 0x1f) as u8)
+    pub fn gpadc_scan_neg_9(&self) -> GpadcScanNeg9R {
+        GpadcScanNeg9R::new(((self.bits >> 15) & 0x1f) as u8)
     }
     #[doc = "Bits 20:24"]
     #[inline(always)]
-    pub fn gpadc_scan_neg_10(&self) -> GPADC_SCAN_NEG_10_R {
-        GPADC_SCAN_NEG_10_R::new(((self.bits >> 20) & 0x1f) as u8)
+    pub fn gpadc_scan_neg_10(&self) -> GpadcScanNeg10R {
+        GpadcScanNeg10R::new(((self.bits >> 20) & 0x1f) as u8)
     }
     #[doc = "Bits 25:29"]
     #[inline(always)]
-    pub fn gpadc_scan_neg_11(&self) -> GPADC_SCAN_NEG_11_R {
-        GPADC_SCAN_NEG_11_R::new(((self.bits >> 25) & 0x1f) as u8)
+    pub fn gpadc_scan_neg_11(&self) -> GpadcScanNeg11R {
+        GpadcScanNeg11R::new(((self.bits >> 25) & 0x1f) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_scan_neg_6(&mut self) -> GPADC_SCAN_NEG_6_W<0> {
-        GPADC_SCAN_NEG_6_W::new(self)
+    pub fn gpadc_scan_neg_6(&mut self) -> GpadcScanNeg6W<'_, GpadcRegScnNeg2Spec> {
+        GpadcScanNeg6W::new(self, 0)
     }
     #[doc = "Bits 5:9"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_scan_neg_7(&mut self) -> GPADC_SCAN_NEG_7_W<5> {
-        GPADC_SCAN_NEG_7_W::new(self)
+    pub fn gpadc_scan_neg_7(&mut self) -> GpadcScanNeg7W<'_, GpadcRegScnNeg2Spec> {
+        GpadcScanNeg7W::new(self, 5)
     }
     #[doc = "Bits 10:14"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_scan_neg_8(&mut self) -> GPADC_SCAN_NEG_8_W<10> {
-        GPADC_SCAN_NEG_8_W::new(self)
+    pub fn gpadc_scan_neg_8(&mut self) -> GpadcScanNeg8W<'_, GpadcRegScnNeg2Spec> {
+        GpadcScanNeg8W::new(self, 10)
     }
     #[doc = "Bits 15:19"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_scan_neg_9(&mut self) -> GPADC_SCAN_NEG_9_W<15> {
-        GPADC_SCAN_NEG_9_W::new(self)
+    pub fn gpadc_scan_neg_9(&mut self) -> GpadcScanNeg9W<'_, GpadcRegScnNeg2Spec> {
+        GpadcScanNeg9W::new(self, 15)
     }
     #[doc = "Bits 20:24"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_scan_neg_10(&mut self) -> GPADC_SCAN_NEG_10_W<20> {
-        GPADC_SCAN_NEG_10_W::new(self)
+    pub fn gpadc_scan_neg_10(&mut self) -> GpadcScanNeg10W<'_, GpadcRegScnNeg2Spec> {
+        GpadcScanNeg10W::new(self, 20)
     }
     #[doc = "Bits 25:29"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_scan_neg_11(&mut self) -> GPADC_SCAN_NEG_11_W<25> {
-        GPADC_SCAN_NEG_11_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn gpadc_scan_neg_11(&mut self) -> GpadcScanNeg11W<'_, GpadcRegScnNeg2Spec> {
+        GpadcScanNeg11W::new(self, 25)
     }
 }
-#[doc = "adc converation sequence 4\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpadc_reg_scn_neg2](index.html) module"]
-pub struct GPADC_REG_SCN_NEG2_SPEC;
-impl crate::RegisterSpec for GPADC_REG_SCN_NEG2_SPEC {
+#[doc = "adc converation sequence 4\n\nYou can [`read`](crate::Reg::read) this register and get [`gpadc_reg_scn_neg2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpadc_reg_scn_neg2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct GpadcRegScnNeg2Spec;
+impl crate::RegisterSpec for GpadcRegScnNeg2Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gpadc_reg_scn_neg2::R](R) reader structure"]
-impl crate::Readable for GPADC_REG_SCN_NEG2_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gpadc_reg_scn_neg2::W](W) writer structure"]
-impl crate::Writable for GPADC_REG_SCN_NEG2_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`gpadc_reg_scn_neg2::R`](R) reader structure"]
+impl crate::Readable for GpadcRegScnNeg2Spec {}
+#[doc = "`write(|w| ..)` method takes [`gpadc_reg_scn_neg2::W`](W) writer structure"]
+impl crate::Writable for GpadcRegScnNeg2Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets gpadc_reg_scn_neg2 to value 0x1ef7_bdef"]
-impl crate::Resettable for GPADC_REG_SCN_NEG2_SPEC {
-    const RESET_VALUE: Self::Ux = 0x1ef7_bdef;
+impl crate::Resettable for GpadcRegScnNeg2Spec {
+    const RESET_VALUE: u32 = 0x1ef7_bdef;
 }

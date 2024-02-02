@@ -1,81 +1,35 @@
 #[doc = "Register `se_ctrl_reserved_0` reader"]
-pub struct R(crate::R<SE_CTRL_RESERVED_0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SE_CTRL_RESERVED_0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SE_CTRL_RESERVED_0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SE_CTRL_RESERVED_0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SeCtrlReserved0Spec>;
 #[doc = "Register `se_ctrl_reserved_0` writer"]
-pub struct W(crate::W<SE_CTRL_RESERVED_0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SE_CTRL_RESERVED_0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SE_CTRL_RESERVED_0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SE_CTRL_RESERVED_0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SeCtrlReserved0Spec>;
 #[doc = "Field `se_ctrl_reserved_0` reader - "]
-pub type SE_CTRL_RESERVED_0_R = crate::FieldReader<u32, u32>;
+pub type SeCtrlReserved0R = crate::FieldReader<u32>;
 #[doc = "Field `se_ctrl_reserved_0` writer - "]
-pub type SE_CTRL_RESERVED_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SE_CTRL_RESERVED_0_SPEC, u32, u32, 32, O>;
+pub type SeCtrlReserved0W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn se_ctrl_reserved_0(&self) -> SE_CTRL_RESERVED_0_R {
-        SE_CTRL_RESERVED_0_R::new(self.bits)
+    pub fn se_ctrl_reserved_0(&self) -> SeCtrlReserved0R {
+        SeCtrlReserved0R::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
-    pub fn se_ctrl_reserved_0(&mut self) -> SE_CTRL_RESERVED_0_W<0> {
-        SE_CTRL_RESERVED_0_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn se_ctrl_reserved_0(&mut self) -> SeCtrlReserved0W<'_, SeCtrlReserved0Spec> {
+        SeCtrlReserved0W::new(self, 0)
     }
 }
-#[doc = "se_ctrl_reserved_0.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [se_ctrl_reserved_0](index.html) module"]
-pub struct SE_CTRL_RESERVED_0_SPEC;
-impl crate::RegisterSpec for SE_CTRL_RESERVED_0_SPEC {
+#[doc = "se_ctrl_reserved_0.\n\nYou can [`read`](crate::Reg::read) this register and get [`se_ctrl_reserved_0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`se_ctrl_reserved_0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SeCtrlReserved0Spec;
+impl crate::RegisterSpec for SeCtrlReserved0Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [se_ctrl_reserved_0::R](R) reader structure"]
-impl crate::Readable for SE_CTRL_RESERVED_0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [se_ctrl_reserved_0::W](W) writer structure"]
-impl crate::Writable for SE_CTRL_RESERVED_0_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`se_ctrl_reserved_0::R`](R) reader structure"]
+impl crate::Readable for SeCtrlReserved0Spec {}
+#[doc = "`write(|w| ..)` method takes [`se_ctrl_reserved_0::W`](W) writer structure"]
+impl crate::Writable for SeCtrlReserved0Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets se_ctrl_reserved_0 to value 0"]
-impl crate::Resettable for SE_CTRL_RESERVED_0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for SeCtrlReserved0Spec {}

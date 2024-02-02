@@ -1,37 +1,22 @@
 #[doc = "Register `se_aes_0_status` reader"]
-pub struct R(crate::R<SE_AES_0_STATUS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SE_AES_0_STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SE_AES_0_STATUS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SE_AES_0_STATUS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SeAes0StatusSpec>;
 #[doc = "Field `se_aes_0_status` reader - "]
-pub type SE_AES_0_STATUS_R = crate::FieldReader<u32, u32>;
+pub type SeAes0StatusR = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn se_aes_0_status(&self) -> SE_AES_0_STATUS_R {
-        SE_AES_0_STATUS_R::new(self.bits)
+    pub fn se_aes_0_status(&self) -> SeAes0StatusR {
+        SeAes0StatusR::new(self.bits)
     }
 }
-#[doc = "se_aes_0_status.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [se_aes_0_status](index.html) module"]
-pub struct SE_AES_0_STATUS_SPEC;
-impl crate::RegisterSpec for SE_AES_0_STATUS_SPEC {
+#[doc = "se_aes_0_status.\n\nYou can [`read`](crate::Reg::read) this register and get [`se_aes_0_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SeAes0StatusSpec;
+impl crate::RegisterSpec for SeAes0StatusSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [se_aes_0_status::R](R) reader structure"]
-impl crate::Readable for SE_AES_0_STATUS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`se_aes_0_status::R`](R) reader structure"]
+impl crate::Readable for SeAes0StatusSpec {}
 #[doc = "`reset()` method sets se_aes_0_status to value 0x0100"]
-impl crate::Resettable for SE_AES_0_STATUS_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0100;
+impl crate::Resettable for SeAes0StatusSpec {
+    const RESET_VALUE: u32 = 0x0100;
 }

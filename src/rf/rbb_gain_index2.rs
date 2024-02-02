@@ -1,193 +1,133 @@
 #[doc = "Register `rbb_gain_index2` reader"]
-pub struct R(crate::R<RBB_GAIN_INDEX2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RBB_GAIN_INDEX2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RBB_GAIN_INDEX2_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RBB_GAIN_INDEX2_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RbbGainIndex2Spec>;
 #[doc = "Register `rbb_gain_index2` writer"]
-pub struct W(crate::W<RBB_GAIN_INDEX2_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<RBB_GAIN_INDEX2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<RBB_GAIN_INDEX2_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<RBB_GAIN_INDEX2_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<RbbGainIndex2Spec>;
 #[doc = "Field `gain_ctrl4_gc_rbb1` reader - "]
-pub type GAIN_CTRL4_GC_RBB1_R = crate::FieldReader<u8, u8>;
+pub type GainCtrl4GcRbb1R = crate::FieldReader;
 #[doc = "Field `gain_ctrl4_gc_rbb1` writer - "]
-pub type GAIN_CTRL4_GC_RBB1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RBB_GAIN_INDEX2_SPEC, u8, u8, 2, O>;
+pub type GainCtrl4GcRbb1W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `gain_ctrl4_gc_rbb2` reader - "]
-pub type GAIN_CTRL4_GC_RBB2_R = crate::FieldReader<u8, u8>;
+pub type GainCtrl4GcRbb2R = crate::FieldReader;
 #[doc = "Field `gain_ctrl4_gc_rbb2` writer - "]
-pub type GAIN_CTRL4_GC_RBB2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RBB_GAIN_INDEX2_SPEC, u8, u8, 3, O>;
+pub type GainCtrl4GcRbb2W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `gain_ctrl5_gc_rbb1` reader - "]
-pub type GAIN_CTRL5_GC_RBB1_R = crate::FieldReader<u8, u8>;
+pub type GainCtrl5GcRbb1R = crate::FieldReader;
 #[doc = "Field `gain_ctrl5_gc_rbb1` writer - "]
-pub type GAIN_CTRL5_GC_RBB1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RBB_GAIN_INDEX2_SPEC, u8, u8, 2, O>;
+pub type GainCtrl5GcRbb1W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `gain_ctrl5_gc_rbb2` reader - "]
-pub type GAIN_CTRL5_GC_RBB2_R = crate::FieldReader<u8, u8>;
+pub type GainCtrl5GcRbb2R = crate::FieldReader;
 #[doc = "Field `gain_ctrl5_gc_rbb2` writer - "]
-pub type GAIN_CTRL5_GC_RBB2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RBB_GAIN_INDEX2_SPEC, u8, u8, 3, O>;
+pub type GainCtrl5GcRbb2W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `gain_ctrl6_gc_rbb1` reader - "]
-pub type GAIN_CTRL6_GC_RBB1_R = crate::FieldReader<u8, u8>;
+pub type GainCtrl6GcRbb1R = crate::FieldReader;
 #[doc = "Field `gain_ctrl6_gc_rbb1` writer - "]
-pub type GAIN_CTRL6_GC_RBB1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RBB_GAIN_INDEX2_SPEC, u8, u8, 2, O>;
+pub type GainCtrl6GcRbb1W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `gain_ctrl6_gc_rbb2` reader - "]
-pub type GAIN_CTRL6_GC_RBB2_R = crate::FieldReader<u8, u8>;
+pub type GainCtrl6GcRbb2R = crate::FieldReader;
 #[doc = "Field `gain_ctrl6_gc_rbb2` writer - "]
-pub type GAIN_CTRL6_GC_RBB2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RBB_GAIN_INDEX2_SPEC, u8, u8, 3, O>;
+pub type GainCtrl6GcRbb2W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `gain_ctrl7_gc_rbb1` reader - "]
-pub type GAIN_CTRL7_GC_RBB1_R = crate::FieldReader<u8, u8>;
+pub type GainCtrl7GcRbb1R = crate::FieldReader;
 #[doc = "Field `gain_ctrl7_gc_rbb1` writer - "]
-pub type GAIN_CTRL7_GC_RBB1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RBB_GAIN_INDEX2_SPEC, u8, u8, 2, O>;
+pub type GainCtrl7GcRbb1W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `gain_ctrl7_gc_rbb2` reader - "]
-pub type GAIN_CTRL7_GC_RBB2_R = crate::FieldReader<u8, u8>;
+pub type GainCtrl7GcRbb2R = crate::FieldReader;
 #[doc = "Field `gain_ctrl7_gc_rbb2` writer - "]
-pub type GAIN_CTRL7_GC_RBB2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RBB_GAIN_INDEX2_SPEC, u8, u8, 3, O>;
+pub type GainCtrl7GcRbb2W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn gain_ctrl4_gc_rbb1(&self) -> GAIN_CTRL4_GC_RBB1_R {
-        GAIN_CTRL4_GC_RBB1_R::new((self.bits & 3) as u8)
+    pub fn gain_ctrl4_gc_rbb1(&self) -> GainCtrl4GcRbb1R {
+        GainCtrl4GcRbb1R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 4:6"]
     #[inline(always)]
-    pub fn gain_ctrl4_gc_rbb2(&self) -> GAIN_CTRL4_GC_RBB2_R {
-        GAIN_CTRL4_GC_RBB2_R::new(((self.bits >> 4) & 7) as u8)
+    pub fn gain_ctrl4_gc_rbb2(&self) -> GainCtrl4GcRbb2R {
+        GainCtrl4GcRbb2R::new(((self.bits >> 4) & 7) as u8)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
-    pub fn gain_ctrl5_gc_rbb1(&self) -> GAIN_CTRL5_GC_RBB1_R {
-        GAIN_CTRL5_GC_RBB1_R::new(((self.bits >> 8) & 3) as u8)
+    pub fn gain_ctrl5_gc_rbb1(&self) -> GainCtrl5GcRbb1R {
+        GainCtrl5GcRbb1R::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 12:14"]
     #[inline(always)]
-    pub fn gain_ctrl5_gc_rbb2(&self) -> GAIN_CTRL5_GC_RBB2_R {
-        GAIN_CTRL5_GC_RBB2_R::new(((self.bits >> 12) & 7) as u8)
+    pub fn gain_ctrl5_gc_rbb2(&self) -> GainCtrl5GcRbb2R {
+        GainCtrl5GcRbb2R::new(((self.bits >> 12) & 7) as u8)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
-    pub fn gain_ctrl6_gc_rbb1(&self) -> GAIN_CTRL6_GC_RBB1_R {
-        GAIN_CTRL6_GC_RBB1_R::new(((self.bits >> 16) & 3) as u8)
+    pub fn gain_ctrl6_gc_rbb1(&self) -> GainCtrl6GcRbb1R {
+        GainCtrl6GcRbb1R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bits 20:22"]
     #[inline(always)]
-    pub fn gain_ctrl6_gc_rbb2(&self) -> GAIN_CTRL6_GC_RBB2_R {
-        GAIN_CTRL6_GC_RBB2_R::new(((self.bits >> 20) & 7) as u8)
+    pub fn gain_ctrl6_gc_rbb2(&self) -> GainCtrl6GcRbb2R {
+        GainCtrl6GcRbb2R::new(((self.bits >> 20) & 7) as u8)
     }
     #[doc = "Bits 24:25"]
     #[inline(always)]
-    pub fn gain_ctrl7_gc_rbb1(&self) -> GAIN_CTRL7_GC_RBB1_R {
-        GAIN_CTRL7_GC_RBB1_R::new(((self.bits >> 24) & 3) as u8)
+    pub fn gain_ctrl7_gc_rbb1(&self) -> GainCtrl7GcRbb1R {
+        GainCtrl7GcRbb1R::new(((self.bits >> 24) & 3) as u8)
     }
     #[doc = "Bits 28:30"]
     #[inline(always)]
-    pub fn gain_ctrl7_gc_rbb2(&self) -> GAIN_CTRL7_GC_RBB2_R {
-        GAIN_CTRL7_GC_RBB2_R::new(((self.bits >> 28) & 7) as u8)
+    pub fn gain_ctrl7_gc_rbb2(&self) -> GainCtrl7GcRbb2R {
+        GainCtrl7GcRbb2R::new(((self.bits >> 28) & 7) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    #[must_use]
-    pub fn gain_ctrl4_gc_rbb1(&mut self) -> GAIN_CTRL4_GC_RBB1_W<0> {
-        GAIN_CTRL4_GC_RBB1_W::new(self)
+    pub fn gain_ctrl4_gc_rbb1(&mut self) -> GainCtrl4GcRbb1W<'_, RbbGainIndex2Spec> {
+        GainCtrl4GcRbb1W::new(self, 0)
     }
     #[doc = "Bits 4:6"]
     #[inline(always)]
-    #[must_use]
-    pub fn gain_ctrl4_gc_rbb2(&mut self) -> GAIN_CTRL4_GC_RBB2_W<4> {
-        GAIN_CTRL4_GC_RBB2_W::new(self)
+    pub fn gain_ctrl4_gc_rbb2(&mut self) -> GainCtrl4GcRbb2W<'_, RbbGainIndex2Spec> {
+        GainCtrl4GcRbb2W::new(self, 4)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
-    #[must_use]
-    pub fn gain_ctrl5_gc_rbb1(&mut self) -> GAIN_CTRL5_GC_RBB1_W<8> {
-        GAIN_CTRL5_GC_RBB1_W::new(self)
+    pub fn gain_ctrl5_gc_rbb1(&mut self) -> GainCtrl5GcRbb1W<'_, RbbGainIndex2Spec> {
+        GainCtrl5GcRbb1W::new(self, 8)
     }
     #[doc = "Bits 12:14"]
     #[inline(always)]
-    #[must_use]
-    pub fn gain_ctrl5_gc_rbb2(&mut self) -> GAIN_CTRL5_GC_RBB2_W<12> {
-        GAIN_CTRL5_GC_RBB2_W::new(self)
+    pub fn gain_ctrl5_gc_rbb2(&mut self) -> GainCtrl5GcRbb2W<'_, RbbGainIndex2Spec> {
+        GainCtrl5GcRbb2W::new(self, 12)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
-    #[must_use]
-    pub fn gain_ctrl6_gc_rbb1(&mut self) -> GAIN_CTRL6_GC_RBB1_W<16> {
-        GAIN_CTRL6_GC_RBB1_W::new(self)
+    pub fn gain_ctrl6_gc_rbb1(&mut self) -> GainCtrl6GcRbb1W<'_, RbbGainIndex2Spec> {
+        GainCtrl6GcRbb1W::new(self, 16)
     }
     #[doc = "Bits 20:22"]
     #[inline(always)]
-    #[must_use]
-    pub fn gain_ctrl6_gc_rbb2(&mut self) -> GAIN_CTRL6_GC_RBB2_W<20> {
-        GAIN_CTRL6_GC_RBB2_W::new(self)
+    pub fn gain_ctrl6_gc_rbb2(&mut self) -> GainCtrl6GcRbb2W<'_, RbbGainIndex2Spec> {
+        GainCtrl6GcRbb2W::new(self, 20)
     }
     #[doc = "Bits 24:25"]
     #[inline(always)]
-    #[must_use]
-    pub fn gain_ctrl7_gc_rbb1(&mut self) -> GAIN_CTRL7_GC_RBB1_W<24> {
-        GAIN_CTRL7_GC_RBB1_W::new(self)
+    pub fn gain_ctrl7_gc_rbb1(&mut self) -> GainCtrl7GcRbb1W<'_, RbbGainIndex2Spec> {
+        GainCtrl7GcRbb1W::new(self, 24)
     }
     #[doc = "Bits 28:30"]
     #[inline(always)]
-    #[must_use]
-    pub fn gain_ctrl7_gc_rbb2(&mut self) -> GAIN_CTRL7_GC_RBB2_W<28> {
-        GAIN_CTRL7_GC_RBB2_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn gain_ctrl7_gc_rbb2(&mut self) -> GainCtrl7GcRbb2W<'_, RbbGainIndex2Spec> {
+        GainCtrl7GcRbb2W::new(self, 28)
     }
 }
-#[doc = "rbb_gain_index2.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rbb_gain_index2](index.html) module"]
-pub struct RBB_GAIN_INDEX2_SPEC;
-impl crate::RegisterSpec for RBB_GAIN_INDEX2_SPEC {
+#[doc = "rbb_gain_index2.\n\nYou can [`read`](crate::Reg::read) this register and get [`rbb_gain_index2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rbb_gain_index2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RbbGainIndex2Spec;
+impl crate::RegisterSpec for RbbGainIndex2Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rbb_gain_index2::R](R) reader structure"]
-impl crate::Readable for RBB_GAIN_INDEX2_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [rbb_gain_index2::W](W) writer structure"]
-impl crate::Writable for RBB_GAIN_INDEX2_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`rbb_gain_index2::R`](R) reader structure"]
+impl crate::Readable for RbbGainIndex2Spec {}
+#[doc = "`write(|w| ..)` method takes [`rbb_gain_index2::W`](W) writer structure"]
+impl crate::Writable for RbbGainIndex2Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets rbb_gain_index2 to value 0"]
-impl crate::Resettable for RBB_GAIN_INDEX2_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for RbbGainIndex2Spec {}

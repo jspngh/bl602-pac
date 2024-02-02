@@ -1,174 +1,119 @@
 #[doc = "Register `trx_gain_hw` reader"]
-pub struct R(crate::R<TRX_GAIN_HW_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TRX_GAIN_HW_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TRX_GAIN_HW_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TRX_GAIN_HW_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TrxGainHwSpec>;
 #[doc = "Register `trx_gain_hw` writer"]
-pub struct W(crate::W<TRX_GAIN_HW_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TRX_GAIN_HW_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TRX_GAIN_HW_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TRX_GAIN_HW_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<TrxGainHwSpec>;
 #[doc = "Field `gc_lna_hw` reader - "]
-pub type GC_LNA_HW_R = crate::FieldReader<u8, u8>;
+pub type GcLnaHwR = crate::FieldReader;
 #[doc = "Field `gc_lna_hw` writer - "]
-pub type GC_LNA_HW_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TRX_GAIN_HW_SPEC, u8, u8, 3, O>;
+pub type GcLnaHwW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `gc_rmxgm_hw` reader - "]
-pub type GC_RMXGM_HW_R = crate::FieldReader<u8, u8>;
+pub type GcRmxgmHwR = crate::FieldReader;
 #[doc = "Field `gc_rmxgm_hw` writer - "]
-pub type GC_RMXGM_HW_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TRX_GAIN_HW_SPEC, u8, u8, 2, O>;
+pub type GcRmxgmHwW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `gc_rbb1_hw` reader - "]
-pub type GC_RBB1_HW_R = crate::FieldReader<u8, u8>;
+pub type GcRbb1HwR = crate::FieldReader;
 #[doc = "Field `gc_rbb1_hw` writer - "]
-pub type GC_RBB1_HW_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TRX_GAIN_HW_SPEC, u8, u8, 2, O>;
+pub type GcRbb1HwW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `gc_rbb2_hw` reader - "]
-pub type GC_RBB2_HW_R = crate::FieldReader<u8, u8>;
+pub type GcRbb2HwR = crate::FieldReader;
 #[doc = "Field `gc_rbb2_hw` writer - "]
-pub type GC_RBB2_HW_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TRX_GAIN_HW_SPEC, u8, u8, 3, O>;
+pub type GcRbb2HwW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `gc_tmx_hw` reader - "]
-pub type GC_TMX_HW_R = crate::FieldReader<u8, u8>;
+pub type GcTmxHwR = crate::FieldReader;
 #[doc = "Field `gc_tmx_hw` writer - "]
-pub type GC_TMX_HW_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TRX_GAIN_HW_SPEC, u8, u8, 3, O>;
+pub type GcTmxHwW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `gc_tbb_hw` reader - "]
-pub type GC_TBB_HW_R = crate::FieldReader<u8, u8>;
+pub type GcTbbHwR = crate::FieldReader;
 #[doc = "Field `gc_tbb_hw` writer - "]
-pub type GC_TBB_HW_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TRX_GAIN_HW_SPEC, u8, u8, 5, O>;
+pub type GcTbbHwW<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `gc_tbb_boost_hw` reader - "]
-pub type GC_TBB_BOOST_HW_R = crate::FieldReader<u8, u8>;
+pub type GcTbbBoostHwR = crate::FieldReader;
 #[doc = "Field `gc_tbb_boost_hw` writer - "]
-pub type GC_TBB_BOOST_HW_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TRX_GAIN_HW_SPEC, u8, u8, 2, O>;
+pub type GcTbbBoostHwW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
-    pub fn gc_lna_hw(&self) -> GC_LNA_HW_R {
-        GC_LNA_HW_R::new((self.bits & 7) as u8)
+    pub fn gc_lna_hw(&self) -> GcLnaHwR {
+        GcLnaHwR::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
-    pub fn gc_rmxgm_hw(&self) -> GC_RMXGM_HW_R {
-        GC_RMXGM_HW_R::new(((self.bits >> 4) & 3) as u8)
+    pub fn gc_rmxgm_hw(&self) -> GcRmxgmHwR {
+        GcRmxgmHwR::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
-    pub fn gc_rbb1_hw(&self) -> GC_RBB1_HW_R {
-        GC_RBB1_HW_R::new(((self.bits >> 8) & 3) as u8)
+    pub fn gc_rbb1_hw(&self) -> GcRbb1HwR {
+        GcRbb1HwR::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 12:14"]
     #[inline(always)]
-    pub fn gc_rbb2_hw(&self) -> GC_RBB2_HW_R {
-        GC_RBB2_HW_R::new(((self.bits >> 12) & 7) as u8)
+    pub fn gc_rbb2_hw(&self) -> GcRbb2HwR {
+        GcRbb2HwR::new(((self.bits >> 12) & 7) as u8)
     }
     #[doc = "Bits 16:18"]
     #[inline(always)]
-    pub fn gc_tmx_hw(&self) -> GC_TMX_HW_R {
-        GC_TMX_HW_R::new(((self.bits >> 16) & 7) as u8)
+    pub fn gc_tmx_hw(&self) -> GcTmxHwR {
+        GcTmxHwR::new(((self.bits >> 16) & 7) as u8)
     }
     #[doc = "Bits 20:24"]
     #[inline(always)]
-    pub fn gc_tbb_hw(&self) -> GC_TBB_HW_R {
-        GC_TBB_HW_R::new(((self.bits >> 20) & 0x1f) as u8)
+    pub fn gc_tbb_hw(&self) -> GcTbbHwR {
+        GcTbbHwR::new(((self.bits >> 20) & 0x1f) as u8)
     }
     #[doc = "Bits 28:29"]
     #[inline(always)]
-    pub fn gc_tbb_boost_hw(&self) -> GC_TBB_BOOST_HW_R {
-        GC_TBB_BOOST_HW_R::new(((self.bits >> 28) & 3) as u8)
+    pub fn gc_tbb_boost_hw(&self) -> GcTbbBoostHwR {
+        GcTbbBoostHwR::new(((self.bits >> 28) & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
-    #[must_use]
-    pub fn gc_lna_hw(&mut self) -> GC_LNA_HW_W<0> {
-        GC_LNA_HW_W::new(self)
+    pub fn gc_lna_hw(&mut self) -> GcLnaHwW<'_, TrxGainHwSpec> {
+        GcLnaHwW::new(self, 0)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
-    #[must_use]
-    pub fn gc_rmxgm_hw(&mut self) -> GC_RMXGM_HW_W<4> {
-        GC_RMXGM_HW_W::new(self)
+    pub fn gc_rmxgm_hw(&mut self) -> GcRmxgmHwW<'_, TrxGainHwSpec> {
+        GcRmxgmHwW::new(self, 4)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
-    #[must_use]
-    pub fn gc_rbb1_hw(&mut self) -> GC_RBB1_HW_W<8> {
-        GC_RBB1_HW_W::new(self)
+    pub fn gc_rbb1_hw(&mut self) -> GcRbb1HwW<'_, TrxGainHwSpec> {
+        GcRbb1HwW::new(self, 8)
     }
     #[doc = "Bits 12:14"]
     #[inline(always)]
-    #[must_use]
-    pub fn gc_rbb2_hw(&mut self) -> GC_RBB2_HW_W<12> {
-        GC_RBB2_HW_W::new(self)
+    pub fn gc_rbb2_hw(&mut self) -> GcRbb2HwW<'_, TrxGainHwSpec> {
+        GcRbb2HwW::new(self, 12)
     }
     #[doc = "Bits 16:18"]
     #[inline(always)]
-    #[must_use]
-    pub fn gc_tmx_hw(&mut self) -> GC_TMX_HW_W<16> {
-        GC_TMX_HW_W::new(self)
+    pub fn gc_tmx_hw(&mut self) -> GcTmxHwW<'_, TrxGainHwSpec> {
+        GcTmxHwW::new(self, 16)
     }
     #[doc = "Bits 20:24"]
     #[inline(always)]
-    #[must_use]
-    pub fn gc_tbb_hw(&mut self) -> GC_TBB_HW_W<20> {
-        GC_TBB_HW_W::new(self)
+    pub fn gc_tbb_hw(&mut self) -> GcTbbHwW<'_, TrxGainHwSpec> {
+        GcTbbHwW::new(self, 20)
     }
     #[doc = "Bits 28:29"]
     #[inline(always)]
-    #[must_use]
-    pub fn gc_tbb_boost_hw(&mut self) -> GC_TBB_BOOST_HW_W<28> {
-        GC_TBB_BOOST_HW_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn gc_tbb_boost_hw(&mut self) -> GcTbbBoostHwW<'_, TrxGainHwSpec> {
+        GcTbbBoostHwW::new(self, 28)
     }
 }
-#[doc = "trx gain hardware readback\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [trx_gain_hw](index.html) module"]
-pub struct TRX_GAIN_HW_SPEC;
-impl crate::RegisterSpec for TRX_GAIN_HW_SPEC {
+#[doc = "trx gain hardware readback\n\nYou can [`read`](crate::Reg::read) this register and get [`trx_gain_hw::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`trx_gain_hw::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TrxGainHwSpec;
+impl crate::RegisterSpec for TrxGainHwSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [trx_gain_hw::R](R) reader structure"]
-impl crate::Readable for TRX_GAIN_HW_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [trx_gain_hw::W](W) writer structure"]
-impl crate::Writable for TRX_GAIN_HW_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`trx_gain_hw::R`](R) reader structure"]
+impl crate::Readable for TrxGainHwSpec {}
+#[doc = "`write(|w| ..)` method takes [`trx_gain_hw::W`](W) writer structure"]
+impl crate::Writable for TrxGainHwSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets trx_gain_hw to value 0"]
-impl crate::Resettable for TRX_GAIN_HW_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for TrxGainHwSpec {}

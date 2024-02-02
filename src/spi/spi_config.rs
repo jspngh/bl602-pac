@@ -1,233 +1,175 @@
 #[doc = "Register `spi_config` reader"]
-pub struct R(crate::R<SPI_CONFIG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SPI_CONFIG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SPI_CONFIG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SPI_CONFIG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SpiConfigSpec>;
 #[doc = "Register `spi_config` writer"]
-pub struct W(crate::W<SPI_CONFIG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SPI_CONFIG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SPI_CONFIG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SPI_CONFIG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SpiConfigSpec>;
 #[doc = "Field `cr_spi_m_en` reader - "]
-pub type CR_SPI_M_EN_R = crate::BitReader<bool>;
+pub type CrSpiMEnR = crate::BitReader;
 #[doc = "Field `cr_spi_m_en` writer - "]
-pub type CR_SPI_M_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CONFIG_SPEC, bool, O>;
+pub type CrSpiMEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_spi_s_en` reader - "]
-pub type CR_SPI_S_EN_R = crate::BitReader<bool>;
+pub type CrSpiSEnR = crate::BitReader;
 #[doc = "Field `cr_spi_s_en` writer - "]
-pub type CR_SPI_S_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CONFIG_SPEC, bool, O>;
+pub type CrSpiSEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_spi_frame_size` reader - "]
-pub type CR_SPI_FRAME_SIZE_R = crate::FieldReader<u8, u8>;
+pub type CrSpiFrameSizeR = crate::FieldReader;
 #[doc = "Field `cr_spi_frame_size` writer - "]
-pub type CR_SPI_FRAME_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_CONFIG_SPEC, u8, u8, 2, O>;
+pub type CrSpiFrameSizeW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `cr_spi_sclk_pol` reader - "]
-pub type CR_SPI_SCLK_POL_R = crate::BitReader<bool>;
+pub type CrSpiSclkPolR = crate::BitReader;
 #[doc = "Field `cr_spi_sclk_pol` writer - "]
-pub type CR_SPI_SCLK_POL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CONFIG_SPEC, bool, O>;
+pub type CrSpiSclkPolW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_spi_sclk_ph` reader - "]
-pub type CR_SPI_SCLK_PH_R = crate::BitReader<bool>;
+pub type CrSpiSclkPhR = crate::BitReader;
 #[doc = "Field `cr_spi_sclk_ph` writer - "]
-pub type CR_SPI_SCLK_PH_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CONFIG_SPEC, bool, O>;
+pub type CrSpiSclkPhW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_spi_bit_inv` reader - "]
-pub type CR_SPI_BIT_INV_R = crate::BitReader<bool>;
+pub type CrSpiBitInvR = crate::BitReader;
 #[doc = "Field `cr_spi_bit_inv` writer - "]
-pub type CR_SPI_BIT_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CONFIG_SPEC, bool, O>;
+pub type CrSpiBitInvW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_spi_byte_inv` reader - "]
-pub type CR_SPI_BYTE_INV_R = crate::BitReader<bool>;
+pub type CrSpiByteInvR = crate::BitReader;
 #[doc = "Field `cr_spi_byte_inv` writer - "]
-pub type CR_SPI_BYTE_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CONFIG_SPEC, bool, O>;
+pub type CrSpiByteInvW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_spi_rxd_ignr_en` reader - "]
-pub type CR_SPI_RXD_IGNR_EN_R = crate::BitReader<bool>;
+pub type CrSpiRxdIgnrEnR = crate::BitReader;
 #[doc = "Field `cr_spi_rxd_ignr_en` writer - "]
-pub type CR_SPI_RXD_IGNR_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_CONFIG_SPEC, bool, O>;
+pub type CrSpiRxdIgnrEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_spi_m_cont_en` reader - "]
-pub type CR_SPI_M_CONT_EN_R = crate::BitReader<bool>;
+pub type CrSpiMContEnR = crate::BitReader;
 #[doc = "Field `cr_spi_m_cont_en` writer - "]
-pub type CR_SPI_M_CONT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CONFIG_SPEC, bool, O>;
+pub type CrSpiMContEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_spi_deg_en` reader - "]
-pub type CR_SPI_DEG_EN_R = crate::BitReader<bool>;
+pub type CrSpiDegEnR = crate::BitReader;
 #[doc = "Field `cr_spi_deg_en` writer - "]
-pub type CR_SPI_DEG_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CONFIG_SPEC, bool, O>;
+pub type CrSpiDegEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_spi_deg_cnt` reader - "]
-pub type CR_SPI_DEG_CNT_R = crate::FieldReader<u8, u8>;
+pub type CrSpiDegCntR = crate::FieldReader;
 #[doc = "Field `cr_spi_deg_cnt` writer - "]
-pub type CR_SPI_DEG_CNT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_CONFIG_SPEC, u8, u8, 4, O>;
+pub type CrSpiDegCntW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn cr_spi_m_en(&self) -> CR_SPI_M_EN_R {
-        CR_SPI_M_EN_R::new((self.bits & 1) != 0)
+    pub fn cr_spi_m_en(&self) -> CrSpiMEnR {
+        CrSpiMEnR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn cr_spi_s_en(&self) -> CR_SPI_S_EN_R {
-        CR_SPI_S_EN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn cr_spi_s_en(&self) -> CrSpiSEnR {
+        CrSpiSEnR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
-    pub fn cr_spi_frame_size(&self) -> CR_SPI_FRAME_SIZE_R {
-        CR_SPI_FRAME_SIZE_R::new(((self.bits >> 2) & 3) as u8)
+    pub fn cr_spi_frame_size(&self) -> CrSpiFrameSizeR {
+        CrSpiFrameSizeR::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn cr_spi_sclk_pol(&self) -> CR_SPI_SCLK_POL_R {
-        CR_SPI_SCLK_POL_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn cr_spi_sclk_pol(&self) -> CrSpiSclkPolR {
+        CrSpiSclkPolR::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn cr_spi_sclk_ph(&self) -> CR_SPI_SCLK_PH_R {
-        CR_SPI_SCLK_PH_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn cr_spi_sclk_ph(&self) -> CrSpiSclkPhR {
+        CrSpiSclkPhR::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn cr_spi_bit_inv(&self) -> CR_SPI_BIT_INV_R {
-        CR_SPI_BIT_INV_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn cr_spi_bit_inv(&self) -> CrSpiBitInvR {
+        CrSpiBitInvR::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn cr_spi_byte_inv(&self) -> CR_SPI_BYTE_INV_R {
-        CR_SPI_BYTE_INV_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn cr_spi_byte_inv(&self) -> CrSpiByteInvR {
+        CrSpiByteInvR::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn cr_spi_rxd_ignr_en(&self) -> CR_SPI_RXD_IGNR_EN_R {
-        CR_SPI_RXD_IGNR_EN_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn cr_spi_rxd_ignr_en(&self) -> CrSpiRxdIgnrEnR {
+        CrSpiRxdIgnrEnR::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn cr_spi_m_cont_en(&self) -> CR_SPI_M_CONT_EN_R {
-        CR_SPI_M_CONT_EN_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn cr_spi_m_cont_en(&self) -> CrSpiMContEnR {
+        CrSpiMContEnR::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn cr_spi_deg_en(&self) -> CR_SPI_DEG_EN_R {
-        CR_SPI_DEG_EN_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn cr_spi_deg_en(&self) -> CrSpiDegEnR {
+        CrSpiDegEnR::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bits 12:15"]
     #[inline(always)]
-    pub fn cr_spi_deg_cnt(&self) -> CR_SPI_DEG_CNT_R {
-        CR_SPI_DEG_CNT_R::new(((self.bits >> 12) & 0x0f) as u8)
+    pub fn cr_spi_deg_cnt(&self) -> CrSpiDegCntR {
+        CrSpiDegCntR::new(((self.bits >> 12) & 0x0f) as u8)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_spi_m_en(&mut self) -> CR_SPI_M_EN_W<0> {
-        CR_SPI_M_EN_W::new(self)
+    pub fn cr_spi_m_en(&mut self) -> CrSpiMEnW<'_, SpiConfigSpec> {
+        CrSpiMEnW::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_spi_s_en(&mut self) -> CR_SPI_S_EN_W<1> {
-        CR_SPI_S_EN_W::new(self)
+    pub fn cr_spi_s_en(&mut self) -> CrSpiSEnW<'_, SpiConfigSpec> {
+        CrSpiSEnW::new(self, 1)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_spi_frame_size(&mut self) -> CR_SPI_FRAME_SIZE_W<2> {
-        CR_SPI_FRAME_SIZE_W::new(self)
+    pub fn cr_spi_frame_size(&mut self) -> CrSpiFrameSizeW<'_, SpiConfigSpec> {
+        CrSpiFrameSizeW::new(self, 2)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_spi_sclk_pol(&mut self) -> CR_SPI_SCLK_POL_W<4> {
-        CR_SPI_SCLK_POL_W::new(self)
+    pub fn cr_spi_sclk_pol(&mut self) -> CrSpiSclkPolW<'_, SpiConfigSpec> {
+        CrSpiSclkPolW::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_spi_sclk_ph(&mut self) -> CR_SPI_SCLK_PH_W<5> {
-        CR_SPI_SCLK_PH_W::new(self)
+    pub fn cr_spi_sclk_ph(&mut self) -> CrSpiSclkPhW<'_, SpiConfigSpec> {
+        CrSpiSclkPhW::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_spi_bit_inv(&mut self) -> CR_SPI_BIT_INV_W<6> {
-        CR_SPI_BIT_INV_W::new(self)
+    pub fn cr_spi_bit_inv(&mut self) -> CrSpiBitInvW<'_, SpiConfigSpec> {
+        CrSpiBitInvW::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_spi_byte_inv(&mut self) -> CR_SPI_BYTE_INV_W<7> {
-        CR_SPI_BYTE_INV_W::new(self)
+    pub fn cr_spi_byte_inv(&mut self) -> CrSpiByteInvW<'_, SpiConfigSpec> {
+        CrSpiByteInvW::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_spi_rxd_ignr_en(&mut self) -> CR_SPI_RXD_IGNR_EN_W<8> {
-        CR_SPI_RXD_IGNR_EN_W::new(self)
+    pub fn cr_spi_rxd_ignr_en(&mut self) -> CrSpiRxdIgnrEnW<'_, SpiConfigSpec> {
+        CrSpiRxdIgnrEnW::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_spi_m_cont_en(&mut self) -> CR_SPI_M_CONT_EN_W<9> {
-        CR_SPI_M_CONT_EN_W::new(self)
+    pub fn cr_spi_m_cont_en(&mut self) -> CrSpiMContEnW<'_, SpiConfigSpec> {
+        CrSpiMContEnW::new(self, 9)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_spi_deg_en(&mut self) -> CR_SPI_DEG_EN_W<11> {
-        CR_SPI_DEG_EN_W::new(self)
+    pub fn cr_spi_deg_en(&mut self) -> CrSpiDegEnW<'_, SpiConfigSpec> {
+        CrSpiDegEnW::new(self, 11)
     }
     #[doc = "Bits 12:15"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_spi_deg_cnt(&mut self) -> CR_SPI_DEG_CNT_W<12> {
-        CR_SPI_DEG_CNT_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn cr_spi_deg_cnt(&mut self) -> CrSpiDegCntW<'_, SpiConfigSpec> {
+        CrSpiDegCntW::new(self, 12)
     }
 }
-#[doc = "spi_config.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_config](index.html) module"]
-pub struct SPI_CONFIG_SPEC;
-impl crate::RegisterSpec for SPI_CONFIG_SPEC {
+#[doc = "spi_config.\n\nYou can [`read`](crate::Reg::read) this register and get [`spi_config::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi_config::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SpiConfigSpec;
+impl crate::RegisterSpec for SpiConfigSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [spi_config::R](R) reader structure"]
-impl crate::Readable for SPI_CONFIG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [spi_config::W](W) writer structure"]
-impl crate::Writable for SPI_CONFIG_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`spi_config::R`](R) reader structure"]
+impl crate::Readable for SpiConfigSpec {}
+#[doc = "`write(|w| ..)` method takes [`spi_config::W`](W) writer structure"]
+impl crate::Writable for SpiConfigSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets spi_config to value 0"]
-impl crate::Resettable for SPI_CONFIG_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for SpiConfigSpec {}

@@ -1,225 +1,161 @@
 #[doc = "Register `reg_data_1_lock` reader"]
-pub struct R(crate::R<REG_DATA_1_LOCK_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<REG_DATA_1_LOCK_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<REG_DATA_1_LOCK_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<REG_DATA_1_LOCK_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RegData1LockSpec>;
 #[doc = "Register `reg_data_1_lock` writer"]
-pub struct W(crate::W<REG_DATA_1_LOCK_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<REG_DATA_1_LOCK_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<REG_DATA_1_LOCK_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<REG_DATA_1_LOCK_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<RegData1LockSpec>;
 #[doc = "Field `RESERVED_9_0` reader - "]
-pub type RESERVED_9_0_R = crate::FieldReader<u16, u16>;
+pub type Reserved9_0R = crate::FieldReader<u16>;
 #[doc = "Field `RESERVED_9_0` writer - "]
-pub type RESERVED_9_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, REG_DATA_1_LOCK_SPEC, u16, u16, 10, O>;
+pub type Reserved9_0W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `wr_lock_key_slot_6` reader - "]
-pub type WR_LOCK_KEY_SLOT_6_R = crate::BitReader<bool>;
+pub type WrLockKeySlot6R = crate::BitReader;
 #[doc = "Field `wr_lock_key_slot_6` writer - "]
-pub type WR_LOCK_KEY_SLOT_6_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, REG_DATA_1_LOCK_SPEC, bool, O>;
+pub type WrLockKeySlot6W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `wr_lock_key_slot_7` reader - "]
-pub type WR_LOCK_KEY_SLOT_7_R = crate::BitReader<bool>;
+pub type WrLockKeySlot7R = crate::BitReader;
 #[doc = "Field `wr_lock_key_slot_7` writer - "]
-pub type WR_LOCK_KEY_SLOT_7_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, REG_DATA_1_LOCK_SPEC, bool, O>;
+pub type WrLockKeySlot7W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `wr_lock_key_slot_8` reader - "]
-pub type WR_LOCK_KEY_SLOT_8_R = crate::BitReader<bool>;
+pub type WrLockKeySlot8R = crate::BitReader;
 #[doc = "Field `wr_lock_key_slot_8` writer - "]
-pub type WR_LOCK_KEY_SLOT_8_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, REG_DATA_1_LOCK_SPEC, bool, O>;
+pub type WrLockKeySlot8W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `wr_lock_key_slot_9` reader - "]
-pub type WR_LOCK_KEY_SLOT_9_R = crate::BitReader<bool>;
+pub type WrLockKeySlot9R = crate::BitReader;
 #[doc = "Field `wr_lock_key_slot_9` writer - "]
-pub type WR_LOCK_KEY_SLOT_9_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, REG_DATA_1_LOCK_SPEC, bool, O>;
+pub type WrLockKeySlot9W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RESERVED_25_16` reader - "]
-pub type RESERVED_25_16_R = crate::FieldReader<u16, u16>;
+pub type Reserved25_16R = crate::FieldReader<u16>;
 #[doc = "Field `RESERVED_25_16` writer - "]
-pub type RESERVED_25_16_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, REG_DATA_1_LOCK_SPEC, u16, u16, 10, O>;
+pub type Reserved25_16W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `rd_lock_key_slot_6` reader - "]
-pub type RD_LOCK_KEY_SLOT_6_R = crate::BitReader<bool>;
+pub type RdLockKeySlot6R = crate::BitReader;
 #[doc = "Field `rd_lock_key_slot_6` writer - "]
-pub type RD_LOCK_KEY_SLOT_6_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, REG_DATA_1_LOCK_SPEC, bool, O>;
+pub type RdLockKeySlot6W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `rd_lock_key_slot_7` reader - "]
-pub type RD_LOCK_KEY_SLOT_7_R = crate::BitReader<bool>;
+pub type RdLockKeySlot7R = crate::BitReader;
 #[doc = "Field `rd_lock_key_slot_7` writer - "]
-pub type RD_LOCK_KEY_SLOT_7_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, REG_DATA_1_LOCK_SPEC, bool, O>;
+pub type RdLockKeySlot7W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `rd_lock_key_slot_8` reader - "]
-pub type RD_LOCK_KEY_SLOT_8_R = crate::BitReader<bool>;
+pub type RdLockKeySlot8R = crate::BitReader;
 #[doc = "Field `rd_lock_key_slot_8` writer - "]
-pub type RD_LOCK_KEY_SLOT_8_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, REG_DATA_1_LOCK_SPEC, bool, O>;
+pub type RdLockKeySlot8W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `rd_lock_key_slot_9` reader - "]
-pub type RD_LOCK_KEY_SLOT_9_R = crate::BitReader<bool>;
+pub type RdLockKeySlot9R = crate::BitReader;
 #[doc = "Field `rd_lock_key_slot_9` writer - "]
-pub type RD_LOCK_KEY_SLOT_9_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, REG_DATA_1_LOCK_SPEC, bool, O>;
+pub type RdLockKeySlot9W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:9"]
     #[inline(always)]
-    pub fn reserved_9_0(&self) -> RESERVED_9_0_R {
-        RESERVED_9_0_R::new((self.bits & 0x03ff) as u16)
+    pub fn reserved_9_0(&self) -> Reserved9_0R {
+        Reserved9_0R::new((self.bits & 0x03ff) as u16)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    pub fn wr_lock_key_slot_6(&self) -> WR_LOCK_KEY_SLOT_6_R {
-        WR_LOCK_KEY_SLOT_6_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn wr_lock_key_slot_6(&self) -> WrLockKeySlot6R {
+        WrLockKeySlot6R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn wr_lock_key_slot_7(&self) -> WR_LOCK_KEY_SLOT_7_R {
-        WR_LOCK_KEY_SLOT_7_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn wr_lock_key_slot_7(&self) -> WrLockKeySlot7R {
+        WrLockKeySlot7R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn wr_lock_key_slot_8(&self) -> WR_LOCK_KEY_SLOT_8_R {
-        WR_LOCK_KEY_SLOT_8_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn wr_lock_key_slot_8(&self) -> WrLockKeySlot8R {
+        WrLockKeySlot8R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn wr_lock_key_slot_9(&self) -> WR_LOCK_KEY_SLOT_9_R {
-        WR_LOCK_KEY_SLOT_9_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn wr_lock_key_slot_9(&self) -> WrLockKeySlot9R {
+        WrLockKeySlot9R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bits 16:25"]
     #[inline(always)]
-    pub fn reserved_25_16(&self) -> RESERVED_25_16_R {
-        RESERVED_25_16_R::new(((self.bits >> 16) & 0x03ff) as u16)
+    pub fn reserved_25_16(&self) -> Reserved25_16R {
+        Reserved25_16R::new(((self.bits >> 16) & 0x03ff) as u16)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    pub fn rd_lock_key_slot_6(&self) -> RD_LOCK_KEY_SLOT_6_R {
-        RD_LOCK_KEY_SLOT_6_R::new(((self.bits >> 26) & 1) != 0)
+    pub fn rd_lock_key_slot_6(&self) -> RdLockKeySlot6R {
+        RdLockKeySlot6R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    pub fn rd_lock_key_slot_7(&self) -> RD_LOCK_KEY_SLOT_7_R {
-        RD_LOCK_KEY_SLOT_7_R::new(((self.bits >> 27) & 1) != 0)
+    pub fn rd_lock_key_slot_7(&self) -> RdLockKeySlot7R {
+        RdLockKeySlot7R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    pub fn rd_lock_key_slot_8(&self) -> RD_LOCK_KEY_SLOT_8_R {
-        RD_LOCK_KEY_SLOT_8_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn rd_lock_key_slot_8(&self) -> RdLockKeySlot8R {
+        RdLockKeySlot8R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    pub fn rd_lock_key_slot_9(&self) -> RD_LOCK_KEY_SLOT_9_R {
-        RD_LOCK_KEY_SLOT_9_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn rd_lock_key_slot_9(&self) -> RdLockKeySlot9R {
+        RdLockKeySlot9R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 0:9"]
     #[inline(always)]
-    #[must_use]
-    pub fn reserved_9_0(&mut self) -> RESERVED_9_0_W<0> {
-        RESERVED_9_0_W::new(self)
+    pub fn reserved_9_0(&mut self) -> Reserved9_0W<'_, RegData1LockSpec> {
+        Reserved9_0W::new(self, 0)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
-    pub fn wr_lock_key_slot_6(&mut self) -> WR_LOCK_KEY_SLOT_6_W<10> {
-        WR_LOCK_KEY_SLOT_6_W::new(self)
+    pub fn wr_lock_key_slot_6(&mut self) -> WrLockKeySlot6W<'_, RegData1LockSpec> {
+        WrLockKeySlot6W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    #[must_use]
-    pub fn wr_lock_key_slot_7(&mut self) -> WR_LOCK_KEY_SLOT_7_W<11> {
-        WR_LOCK_KEY_SLOT_7_W::new(self)
+    pub fn wr_lock_key_slot_7(&mut self) -> WrLockKeySlot7W<'_, RegData1LockSpec> {
+        WrLockKeySlot7W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    #[must_use]
-    pub fn wr_lock_key_slot_8(&mut self) -> WR_LOCK_KEY_SLOT_8_W<12> {
-        WR_LOCK_KEY_SLOT_8_W::new(self)
+    pub fn wr_lock_key_slot_8(&mut self) -> WrLockKeySlot8W<'_, RegData1LockSpec> {
+        WrLockKeySlot8W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    #[must_use]
-    pub fn wr_lock_key_slot_9(&mut self) -> WR_LOCK_KEY_SLOT_9_W<13> {
-        WR_LOCK_KEY_SLOT_9_W::new(self)
+    pub fn wr_lock_key_slot_9(&mut self) -> WrLockKeySlot9W<'_, RegData1LockSpec> {
+        WrLockKeySlot9W::new(self, 13)
     }
     #[doc = "Bits 16:25"]
     #[inline(always)]
-    #[must_use]
-    pub fn reserved_25_16(&mut self) -> RESERVED_25_16_W<16> {
-        RESERVED_25_16_W::new(self)
+    pub fn reserved_25_16(&mut self) -> Reserved25_16W<'_, RegData1LockSpec> {
+        Reserved25_16W::new(self, 16)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    #[must_use]
-    pub fn rd_lock_key_slot_6(&mut self) -> RD_LOCK_KEY_SLOT_6_W<26> {
-        RD_LOCK_KEY_SLOT_6_W::new(self)
+    pub fn rd_lock_key_slot_6(&mut self) -> RdLockKeySlot6W<'_, RegData1LockSpec> {
+        RdLockKeySlot6W::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    #[must_use]
-    pub fn rd_lock_key_slot_7(&mut self) -> RD_LOCK_KEY_SLOT_7_W<27> {
-        RD_LOCK_KEY_SLOT_7_W::new(self)
+    pub fn rd_lock_key_slot_7(&mut self) -> RdLockKeySlot7W<'_, RegData1LockSpec> {
+        RdLockKeySlot7W::new(self, 27)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    #[must_use]
-    pub fn rd_lock_key_slot_8(&mut self) -> RD_LOCK_KEY_SLOT_8_W<28> {
-        RD_LOCK_KEY_SLOT_8_W::new(self)
+    pub fn rd_lock_key_slot_8(&mut self) -> RdLockKeySlot8W<'_, RegData1LockSpec> {
+        RdLockKeySlot8W::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    #[must_use]
-    pub fn rd_lock_key_slot_9(&mut self) -> RD_LOCK_KEY_SLOT_9_W<29> {
-        RD_LOCK_KEY_SLOT_9_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn rd_lock_key_slot_9(&mut self) -> RdLockKeySlot9W<'_, RegData1LockSpec> {
+        RdLockKeySlot9W::new(self, 29)
     }
 }
-#[doc = "reg_data_1_lock.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [reg_data_1_lock](index.html) module"]
-pub struct REG_DATA_1_LOCK_SPEC;
-impl crate::RegisterSpec for REG_DATA_1_LOCK_SPEC {
+#[doc = "reg_data_1_lock.\n\nYou can [`read`](crate::Reg::read) this register and get [`reg_data_1_lock::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`reg_data_1_lock::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RegData1LockSpec;
+impl crate::RegisterSpec for RegData1LockSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [reg_data_1_lock::R](R) reader structure"]
-impl crate::Readable for REG_DATA_1_LOCK_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [reg_data_1_lock::W](W) writer structure"]
-impl crate::Writable for REG_DATA_1_LOCK_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`reg_data_1_lock::R`](R) reader structure"]
+impl crate::Readable for RegData1LockSpec {}
+#[doc = "`write(|w| ..)` method takes [`reg_data_1_lock::W`](W) writer structure"]
+impl crate::Writable for RegData1LockSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets reg_data_1_lock to value 0"]
-impl crate::Resettable for REG_DATA_1_LOCK_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for RegData1LockSpec {}

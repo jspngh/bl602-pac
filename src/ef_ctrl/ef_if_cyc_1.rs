@@ -1,145 +1,93 @@
 #[doc = "Register `ef_if_cyc_1` reader"]
-pub struct R(crate::R<EF_IF_CYC_1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<EF_IF_CYC_1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<EF_IF_CYC_1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<EF_IF_CYC_1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<EfIfCyc1Spec>;
 #[doc = "Register `ef_if_cyc_1` writer"]
-pub struct W(crate::W<EF_IF_CYC_1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<EF_IF_CYC_1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<EF_IF_CYC_1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<EF_IF_CYC_1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<EfIfCyc1Spec>;
 #[doc = "Field `ef_if_cyc_pi` reader - "]
-pub type EF_IF_CYC_PI_R = crate::FieldReader<u8, u8>;
+pub type EfIfCycPiR = crate::FieldReader;
 #[doc = "Field `ef_if_cyc_pi` writer - "]
-pub type EF_IF_CYC_PI_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, EF_IF_CYC_1_SPEC, u8, u8, 6, O>;
+pub type EfIfCycPiW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `ef_if_cyc_pp` reader - "]
-pub type EF_IF_CYC_PP_R = crate::FieldReader<u8, u8>;
+pub type EfIfCycPpR = crate::FieldReader;
 #[doc = "Field `ef_if_cyc_pp` writer - "]
-pub type EF_IF_CYC_PP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, EF_IF_CYC_1_SPEC, u8, u8, 8, O>;
+pub type EfIfCycPpW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `ef_if_cyc_wr_adr` reader - "]
-pub type EF_IF_CYC_WR_ADR_R = crate::FieldReader<u8, u8>;
+pub type EfIfCycWrAdrR = crate::FieldReader;
 #[doc = "Field `ef_if_cyc_wr_adr` writer - "]
-pub type EF_IF_CYC_WR_ADR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, EF_IF_CYC_1_SPEC, u8, u8, 6, O>;
+pub type EfIfCycWrAdrW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `ef_if_cyc_ps_cs` reader - "]
-pub type EF_IF_CYC_PS_CS_R = crate::FieldReader<u8, u8>;
+pub type EfIfCycPsCsR = crate::FieldReader;
 #[doc = "Field `ef_if_cyc_ps_cs` writer - "]
-pub type EF_IF_CYC_PS_CS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, EF_IF_CYC_1_SPEC, u8, u8, 6, O>;
+pub type EfIfCycPsCsW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `ef_if_cyc_pd_cs_h` reader - "]
-pub type EF_IF_CYC_PD_CS_H_R = crate::FieldReader<u8, u8>;
+pub type EfIfCycPdCsHR = crate::FieldReader;
 #[doc = "Field `ef_if_cyc_pd_cs_h` writer - "]
-pub type EF_IF_CYC_PD_CS_H_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, EF_IF_CYC_1_SPEC, u8, u8, 6, O>;
+pub type EfIfCycPdCsHW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    pub fn ef_if_cyc_pi(&self) -> EF_IF_CYC_PI_R {
-        EF_IF_CYC_PI_R::new((self.bits & 0x3f) as u8)
+    pub fn ef_if_cyc_pi(&self) -> EfIfCycPiR {
+        EfIfCycPiR::new((self.bits & 0x3f) as u8)
     }
     #[doc = "Bits 6:13"]
     #[inline(always)]
-    pub fn ef_if_cyc_pp(&self) -> EF_IF_CYC_PP_R {
-        EF_IF_CYC_PP_R::new(((self.bits >> 6) & 0xff) as u8)
+    pub fn ef_if_cyc_pp(&self) -> EfIfCycPpR {
+        EfIfCycPpR::new(((self.bits >> 6) & 0xff) as u8)
     }
     #[doc = "Bits 14:19"]
     #[inline(always)]
-    pub fn ef_if_cyc_wr_adr(&self) -> EF_IF_CYC_WR_ADR_R {
-        EF_IF_CYC_WR_ADR_R::new(((self.bits >> 14) & 0x3f) as u8)
+    pub fn ef_if_cyc_wr_adr(&self) -> EfIfCycWrAdrR {
+        EfIfCycWrAdrR::new(((self.bits >> 14) & 0x3f) as u8)
     }
     #[doc = "Bits 20:25"]
     #[inline(always)]
-    pub fn ef_if_cyc_ps_cs(&self) -> EF_IF_CYC_PS_CS_R {
-        EF_IF_CYC_PS_CS_R::new(((self.bits >> 20) & 0x3f) as u8)
+    pub fn ef_if_cyc_ps_cs(&self) -> EfIfCycPsCsR {
+        EfIfCycPsCsR::new(((self.bits >> 20) & 0x3f) as u8)
     }
     #[doc = "Bits 26:31"]
     #[inline(always)]
-    pub fn ef_if_cyc_pd_cs_h(&self) -> EF_IF_CYC_PD_CS_H_R {
-        EF_IF_CYC_PD_CS_H_R::new(((self.bits >> 26) & 0x3f) as u8)
+    pub fn ef_if_cyc_pd_cs_h(&self) -> EfIfCycPdCsHR {
+        EfIfCycPdCsHR::new(((self.bits >> 26) & 0x3f) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_if_cyc_pi(&mut self) -> EF_IF_CYC_PI_W<0> {
-        EF_IF_CYC_PI_W::new(self)
+    pub fn ef_if_cyc_pi(&mut self) -> EfIfCycPiW<'_, EfIfCyc1Spec> {
+        EfIfCycPiW::new(self, 0)
     }
     #[doc = "Bits 6:13"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_if_cyc_pp(&mut self) -> EF_IF_CYC_PP_W<6> {
-        EF_IF_CYC_PP_W::new(self)
+    pub fn ef_if_cyc_pp(&mut self) -> EfIfCycPpW<'_, EfIfCyc1Spec> {
+        EfIfCycPpW::new(self, 6)
     }
     #[doc = "Bits 14:19"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_if_cyc_wr_adr(&mut self) -> EF_IF_CYC_WR_ADR_W<14> {
-        EF_IF_CYC_WR_ADR_W::new(self)
+    pub fn ef_if_cyc_wr_adr(&mut self) -> EfIfCycWrAdrW<'_, EfIfCyc1Spec> {
+        EfIfCycWrAdrW::new(self, 14)
     }
     #[doc = "Bits 20:25"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_if_cyc_ps_cs(&mut self) -> EF_IF_CYC_PS_CS_W<20> {
-        EF_IF_CYC_PS_CS_W::new(self)
+    pub fn ef_if_cyc_ps_cs(&mut self) -> EfIfCycPsCsW<'_, EfIfCyc1Spec> {
+        EfIfCycPsCsW::new(self, 20)
     }
     #[doc = "Bits 26:31"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_if_cyc_pd_cs_h(&mut self) -> EF_IF_CYC_PD_CS_H_W<26> {
-        EF_IF_CYC_PD_CS_H_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn ef_if_cyc_pd_cs_h(&mut self) -> EfIfCycPdCsHW<'_, EfIfCyc1Spec> {
+        EfIfCycPdCsHW::new(self, 26)
     }
 }
-#[doc = "ef_if_cyc_1.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ef_if_cyc_1](index.html) module"]
-pub struct EF_IF_CYC_1_SPEC;
-impl crate::RegisterSpec for EF_IF_CYC_1_SPEC {
+#[doc = "ef_if_cyc_1.\n\nYou can [`read`](crate::Reg::read) this register and get [`ef_if_cyc_1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ef_if_cyc_1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct EfIfCyc1Spec;
+impl crate::RegisterSpec for EfIfCyc1Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ef_if_cyc_1::R](R) reader structure"]
-impl crate::Readable for EF_IF_CYC_1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ef_if_cyc_1::W](W) writer structure"]
-impl crate::Writable for EF_IF_CYC_1_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`ef_if_cyc_1::R`](R) reader structure"]
+impl crate::Readable for EfIfCyc1Spec {}
+#[doc = "`write(|w| ..)` method takes [`ef_if_cyc_1::W`](W) writer structure"]
+impl crate::Writable for EfIfCyc1Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets ef_if_cyc_1 to value 0x0020_6609"]
-impl crate::Resettable for EF_IF_CYC_1_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0020_6609;
+impl crate::Resettable for EfIfCyc1Spec {
+    const RESET_VALUE: u32 = 0x0020_6609;
 }

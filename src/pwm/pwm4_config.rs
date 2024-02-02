@@ -1,163 +1,114 @@
 #[doc = "Register `pwm4_config` reader"]
-pub struct R(crate::R<PWM4_CONFIG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PWM4_CONFIG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PWM4_CONFIG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PWM4_CONFIG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<Pwm4ConfigSpec>;
 #[doc = "Register `pwm4_config` writer"]
-pub struct W(crate::W<PWM4_CONFIG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PWM4_CONFIG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PWM4_CONFIG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PWM4_CONFIG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<Pwm4ConfigSpec>;
 #[doc = "Field `reg_clk_sel` reader - "]
-pub type REG_CLK_SEL_R = crate::FieldReader<u8, u8>;
+pub type RegClkSelR = crate::FieldReader;
 #[doc = "Field `reg_clk_sel` writer - "]
-pub type REG_CLK_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PWM4_CONFIG_SPEC, u8, u8, 2, O>;
+pub type RegClkSelW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `pwm_out_inv` reader - "]
-pub type PWM_OUT_INV_R = crate::BitReader<bool>;
+pub type PwmOutInvR = crate::BitReader;
 #[doc = "Field `pwm_out_inv` writer - "]
-pub type PWM_OUT_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWM4_CONFIG_SPEC, bool, O>;
+pub type PwmOutInvW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pwm_stop_mode` reader - "]
-pub type PWM_STOP_MODE_R = crate::BitReader<bool>;
+pub type PwmStopModeR = crate::BitReader;
 #[doc = "Field `pwm_stop_mode` writer - "]
-pub type PWM_STOP_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWM4_CONFIG_SPEC, bool, O>;
+pub type PwmStopModeW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pwm_sw_force_val` reader - "]
-pub type PWM_SW_FORCE_VAL_R = crate::BitReader<bool>;
+pub type PwmSwForceValR = crate::BitReader;
 #[doc = "Field `pwm_sw_force_val` writer - "]
-pub type PWM_SW_FORCE_VAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWM4_CONFIG_SPEC, bool, O>;
+pub type PwmSwForceValW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pwm_sw_mode` reader - "]
-pub type PWM_SW_MODE_R = crate::BitReader<bool>;
+pub type PwmSwModeR = crate::BitReader;
 #[doc = "Field `pwm_sw_mode` writer - "]
-pub type PWM_SW_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWM4_CONFIG_SPEC, bool, O>;
+pub type PwmSwModeW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pwm_stop_en` reader - "]
-pub type PWM_STOP_EN_R = crate::BitReader<bool>;
+pub type PwmStopEnR = crate::BitReader;
 #[doc = "Field `pwm_stop_en` writer - "]
-pub type PWM_STOP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWM4_CONFIG_SPEC, bool, O>;
+pub type PwmStopEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pwm_sts_top` reader - "]
-pub type PWM_STS_TOP_R = crate::BitReader<bool>;
+pub type PwmStsTopR = crate::BitReader;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn reg_clk_sel(&self) -> REG_CLK_SEL_R {
-        REG_CLK_SEL_R::new((self.bits & 3) as u8)
+    pub fn reg_clk_sel(&self) -> RegClkSelR {
+        RegClkSelR::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn pwm_out_inv(&self) -> PWM_OUT_INV_R {
-        PWM_OUT_INV_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn pwm_out_inv(&self) -> PwmOutInvR {
+        PwmOutInvR::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn pwm_stop_mode(&self) -> PWM_STOP_MODE_R {
-        PWM_STOP_MODE_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn pwm_stop_mode(&self) -> PwmStopModeR {
+        PwmStopModeR::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn pwm_sw_force_val(&self) -> PWM_SW_FORCE_VAL_R {
-        PWM_SW_FORCE_VAL_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn pwm_sw_force_val(&self) -> PwmSwForceValR {
+        PwmSwForceValR::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn pwm_sw_mode(&self) -> PWM_SW_MODE_R {
-        PWM_SW_MODE_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn pwm_sw_mode(&self) -> PwmSwModeR {
+        PwmSwModeR::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn pwm_stop_en(&self) -> PWM_STOP_EN_R {
-        PWM_STOP_EN_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn pwm_stop_en(&self) -> PwmStopEnR {
+        PwmStopEnR::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn pwm_sts_top(&self) -> PWM_STS_TOP_R {
-        PWM_STS_TOP_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn pwm_sts_top(&self) -> PwmStsTopR {
+        PwmStsTopR::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    #[must_use]
-    pub fn reg_clk_sel(&mut self) -> REG_CLK_SEL_W<0> {
-        REG_CLK_SEL_W::new(self)
+    pub fn reg_clk_sel(&mut self) -> RegClkSelW<'_, Pwm4ConfigSpec> {
+        RegClkSelW::new(self, 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
-    pub fn pwm_out_inv(&mut self) -> PWM_OUT_INV_W<2> {
-        PWM_OUT_INV_W::new(self)
+    pub fn pwm_out_inv(&mut self) -> PwmOutInvW<'_, Pwm4ConfigSpec> {
+        PwmOutInvW::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
-    pub fn pwm_stop_mode(&mut self) -> PWM_STOP_MODE_W<3> {
-        PWM_STOP_MODE_W::new(self)
+    pub fn pwm_stop_mode(&mut self) -> PwmStopModeW<'_, Pwm4ConfigSpec> {
+        PwmStopModeW::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
-    pub fn pwm_sw_force_val(&mut self) -> PWM_SW_FORCE_VAL_W<4> {
-        PWM_SW_FORCE_VAL_W::new(self)
+    pub fn pwm_sw_force_val(&mut self) -> PwmSwForceValW<'_, Pwm4ConfigSpec> {
+        PwmSwForceValW::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    #[must_use]
-    pub fn pwm_sw_mode(&mut self) -> PWM_SW_MODE_W<5> {
-        PWM_SW_MODE_W::new(self)
+    pub fn pwm_sw_mode(&mut self) -> PwmSwModeW<'_, Pwm4ConfigSpec> {
+        PwmSwModeW::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    #[must_use]
-    pub fn pwm_stop_en(&mut self) -> PWM_STOP_EN_W<6> {
-        PWM_STOP_EN_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn pwm_stop_en(&mut self) -> PwmStopEnW<'_, Pwm4ConfigSpec> {
+        PwmStopEnW::new(self, 6)
     }
 }
-#[doc = "pwm4_config.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pwm4_config](index.html) module"]
-pub struct PWM4_CONFIG_SPEC;
-impl crate::RegisterSpec for PWM4_CONFIG_SPEC {
+#[doc = "pwm4_config.\n\nYou can [`read`](crate::Reg::read) this register and get [`pwm4_config::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pwm4_config::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Pwm4ConfigSpec;
+impl crate::RegisterSpec for Pwm4ConfigSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pwm4_config::R](R) reader structure"]
-impl crate::Readable for PWM4_CONFIG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [pwm4_config::W](W) writer structure"]
-impl crate::Writable for PWM4_CONFIG_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`pwm4_config::R`](R) reader structure"]
+impl crate::Readable for Pwm4ConfigSpec {}
+#[doc = "`write(|w| ..)` method takes [`pwm4_config::W`](W) writer structure"]
+impl crate::Writable for Pwm4ConfigSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets pwm4_config to value 0x08"]
-impl crate::Resettable for PWM4_CONFIG_SPEC {
-    const RESET_VALUE: Self::Ux = 0x08;
+impl crate::Resettable for Pwm4ConfigSpec {
+    const RESET_VALUE: u32 = 0x08;
 }

@@ -1,113 +1,65 @@
 #[doc = "Register `se_gmac_0_ctrl_prot` reader"]
-pub struct R(crate::R<SE_GMAC_0_CTRL_PROT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SE_GMAC_0_CTRL_PROT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SE_GMAC_0_CTRL_PROT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SE_GMAC_0_CTRL_PROT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SeGmac0CtrlProtSpec>;
 #[doc = "Register `se_gmac_0_ctrl_prot` writer"]
-pub struct W(crate::W<SE_GMAC_0_CTRL_PROT_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SE_GMAC_0_CTRL_PROT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SE_GMAC_0_CTRL_PROT_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SE_GMAC_0_CTRL_PROT_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SeGmac0CtrlProtSpec>;
 #[doc = "Field `se_gmac_prot_en` reader - "]
-pub type SE_GMAC_PROT_EN_R = crate::BitReader<bool>;
+pub type SeGmacProtEnR = crate::BitReader;
 #[doc = "Field `se_gmac_prot_en` writer - "]
-pub type SE_GMAC_PROT_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SE_GMAC_0_CTRL_PROT_SPEC, bool, O>;
+pub type SeGmacProtEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `se_gmac_id0_en` reader - "]
-pub type SE_GMAC_ID0_EN_R = crate::BitReader<bool>;
+pub type SeGmacId0EnR = crate::BitReader;
 #[doc = "Field `se_gmac_id0_en` writer - "]
-pub type SE_GMAC_ID0_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SE_GMAC_0_CTRL_PROT_SPEC, bool, O>;
+pub type SeGmacId0EnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `se_gmac_id1_en` reader - "]
-pub type SE_GMAC_ID1_EN_R = crate::BitReader<bool>;
+pub type SeGmacId1EnR = crate::BitReader;
 #[doc = "Field `se_gmac_id1_en` writer - "]
-pub type SE_GMAC_ID1_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SE_GMAC_0_CTRL_PROT_SPEC, bool, O>;
+pub type SeGmacId1EnW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn se_gmac_prot_en(&self) -> SE_GMAC_PROT_EN_R {
-        SE_GMAC_PROT_EN_R::new((self.bits & 1) != 0)
+    pub fn se_gmac_prot_en(&self) -> SeGmacProtEnR {
+        SeGmacProtEnR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn se_gmac_id0_en(&self) -> SE_GMAC_ID0_EN_R {
-        SE_GMAC_ID0_EN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn se_gmac_id0_en(&self) -> SeGmacId0EnR {
+        SeGmacId0EnR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn se_gmac_id1_en(&self) -> SE_GMAC_ID1_EN_R {
-        SE_GMAC_ID1_EN_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn se_gmac_id1_en(&self) -> SeGmacId1EnR {
+        SeGmacId1EnR::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn se_gmac_prot_en(&mut self) -> SE_GMAC_PROT_EN_W<0> {
-        SE_GMAC_PROT_EN_W::new(self)
+    pub fn se_gmac_prot_en(&mut self) -> SeGmacProtEnW<'_, SeGmac0CtrlProtSpec> {
+        SeGmacProtEnW::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn se_gmac_id0_en(&mut self) -> SE_GMAC_ID0_EN_W<1> {
-        SE_GMAC_ID0_EN_W::new(self)
+    pub fn se_gmac_id0_en(&mut self) -> SeGmacId0EnW<'_, SeGmac0CtrlProtSpec> {
+        SeGmacId0EnW::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
-    pub fn se_gmac_id1_en(&mut self) -> SE_GMAC_ID1_EN_W<2> {
-        SE_GMAC_ID1_EN_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn se_gmac_id1_en(&mut self) -> SeGmacId1EnW<'_, SeGmac0CtrlProtSpec> {
+        SeGmacId1EnW::new(self, 2)
     }
 }
-#[doc = "se_gmac_0_ctrl_prot.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [se_gmac_0_ctrl_prot](index.html) module"]
-pub struct SE_GMAC_0_CTRL_PROT_SPEC;
-impl crate::RegisterSpec for SE_GMAC_0_CTRL_PROT_SPEC {
+#[doc = "se_gmac_0_ctrl_prot.\n\nYou can [`read`](crate::Reg::read) this register and get [`se_gmac_0_ctrl_prot::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`se_gmac_0_ctrl_prot::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SeGmac0CtrlProtSpec;
+impl crate::RegisterSpec for SeGmac0CtrlProtSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [se_gmac_0_ctrl_prot::R](R) reader structure"]
-impl crate::Readable for SE_GMAC_0_CTRL_PROT_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [se_gmac_0_ctrl_prot::W](W) writer structure"]
-impl crate::Writable for SE_GMAC_0_CTRL_PROT_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`se_gmac_0_ctrl_prot::R`](R) reader structure"]
+impl crate::Readable for SeGmac0CtrlProtSpec {}
+#[doc = "`write(|w| ..)` method takes [`se_gmac_0_ctrl_prot::W`](W) writer structure"]
+impl crate::Writable for SeGmac0CtrlProtSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets se_gmac_0_ctrl_prot to value 0x07"]
-impl crate::Resettable for SE_GMAC_0_CTRL_PROT_SPEC {
-    const RESET_VALUE: Self::Ux = 0x07;
+impl crate::Resettable for SeGmac0CtrlProtSpec {
+    const RESET_VALUE: u32 = 0x07;
 }

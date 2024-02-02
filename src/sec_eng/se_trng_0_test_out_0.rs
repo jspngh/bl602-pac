@@ -1,37 +1,20 @@
 #[doc = "Register `se_trng_0_test_out_0` reader"]
-pub struct R(crate::R<SE_TRNG_0_TEST_OUT_0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SE_TRNG_0_TEST_OUT_0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SE_TRNG_0_TEST_OUT_0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SE_TRNG_0_TEST_OUT_0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SeTrng0TestOut0Spec>;
 #[doc = "Field `se_trng_0_test_out_0` reader - "]
-pub type SE_TRNG_0_TEST_OUT_0_R = crate::FieldReader<u32, u32>;
+pub type SeTrng0TestOut0R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn se_trng_0_test_out_0(&self) -> SE_TRNG_0_TEST_OUT_0_R {
-        SE_TRNG_0_TEST_OUT_0_R::new(self.bits)
+    pub fn se_trng_0_test_out_0(&self) -> SeTrng0TestOut0R {
+        SeTrng0TestOut0R::new(self.bits)
     }
 }
-#[doc = "se_trng_0_test_out_0.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [se_trng_0_test_out_0](index.html) module"]
-pub struct SE_TRNG_0_TEST_OUT_0_SPEC;
-impl crate::RegisterSpec for SE_TRNG_0_TEST_OUT_0_SPEC {
+#[doc = "se_trng_0_test_out_0.\n\nYou can [`read`](crate::Reg::read) this register and get [`se_trng_0_test_out_0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SeTrng0TestOut0Spec;
+impl crate::RegisterSpec for SeTrng0TestOut0Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [se_trng_0_test_out_0::R](R) reader structure"]
-impl crate::Readable for SE_TRNG_0_TEST_OUT_0_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`se_trng_0_test_out_0::R`](R) reader structure"]
+impl crate::Readable for SeTrng0TestOut0Spec {}
 #[doc = "`reset()` method sets se_trng_0_test_out_0 to value 0"]
-impl crate::Resettable for SE_TRNG_0_TEST_OUT_0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for SeTrng0TestOut0Spec {}

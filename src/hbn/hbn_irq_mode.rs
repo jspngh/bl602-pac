@@ -1,206 +1,149 @@
 #[doc = "Register `HBN_IRQ_MODE` reader"]
-pub struct R(crate::R<HBN_IRQ_MODE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HBN_IRQ_MODE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HBN_IRQ_MODE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HBN_IRQ_MODE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HbnIrqModeSpec>;
 #[doc = "Register `HBN_IRQ_MODE` writer"]
-pub struct W(crate::W<HBN_IRQ_MODE_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<HBN_IRQ_MODE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<HBN_IRQ_MODE_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<HBN_IRQ_MODE_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<HbnIrqModeSpec>;
 #[doc = "Field `hbn_pin_wakeup_mode` reader - "]
-pub type HBN_PIN_WAKEUP_MODE_R = crate::FieldReader<u8, u8>;
+pub type HbnPinWakeupModeR = crate::FieldReader;
 #[doc = "Field `hbn_pin_wakeup_mode` writer - "]
-pub type HBN_PIN_WAKEUP_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HBN_IRQ_MODE_SPEC, u8, u8, 3, O>;
+pub type HbnPinWakeupModeW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `hbn_pin_wakeup_mask` reader - "]
-pub type HBN_PIN_WAKEUP_MASK_R = crate::FieldReader<u8, u8>;
+pub type HbnPinWakeupMaskR = crate::FieldReader;
 #[doc = "Field `hbn_pin_wakeup_mask` writer - "]
-pub type HBN_PIN_WAKEUP_MASK_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HBN_IRQ_MODE_SPEC, u8, u8, 2, O>;
+pub type HbnPinWakeupMaskW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `reg_aon_pad_ie_smt` reader - "]
-pub type REG_AON_PAD_IE_SMT_R = crate::BitReader<bool>;
+pub type RegAonPadIeSmtR = crate::BitReader;
 #[doc = "Field `reg_aon_pad_ie_smt` writer - "]
-pub type REG_AON_PAD_IE_SMT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HBN_IRQ_MODE_SPEC, bool, O>;
+pub type RegAonPadIeSmtW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `reg_en_hw_pu_pd` reader - "]
-pub type REG_EN_HW_PU_PD_R = crate::BitReader<bool>;
+pub type RegEnHwPuPdR = crate::BitReader;
 #[doc = "Field `reg_en_hw_pu_pd` writer - "]
-pub type REG_EN_HW_PU_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, HBN_IRQ_MODE_SPEC, bool, O>;
+pub type RegEnHwPuPdW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `irq_bor_en` reader - "]
-pub type IRQ_BOR_EN_R = crate::BitReader<bool>;
+pub type IrqBorEnR = crate::BitReader;
 #[doc = "Field `irq_bor_en` writer - "]
-pub type IRQ_BOR_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, HBN_IRQ_MODE_SPEC, bool, O>;
+pub type IrqBorEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `irq_acomp0_en` reader - "]
-pub type IRQ_ACOMP0_EN_R = crate::FieldReader<u8, u8>;
+pub type IrqAcomp0EnR = crate::FieldReader;
 #[doc = "Field `irq_acomp0_en` writer - "]
-pub type IRQ_ACOMP0_EN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HBN_IRQ_MODE_SPEC, u8, u8, 2, O>;
+pub type IrqAcomp0EnW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `irq_acomp1_en` reader - "]
-pub type IRQ_ACOMP1_EN_R = crate::FieldReader<u8, u8>;
+pub type IrqAcomp1EnR = crate::FieldReader;
 #[doc = "Field `irq_acomp1_en` writer - "]
-pub type IRQ_ACOMP1_EN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HBN_IRQ_MODE_SPEC, u8, u8, 2, O>;
+pub type IrqAcomp1EnW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `pin_wakeup_sel` reader - "]
-pub type PIN_WAKEUP_SEL_R = crate::FieldReader<u8, u8>;
+pub type PinWakeupSelR = crate::FieldReader;
 #[doc = "Field `pin_wakeup_sel` writer - "]
-pub type PIN_WAKEUP_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HBN_IRQ_MODE_SPEC, u8, u8, 3, O>;
+pub type PinWakeupSelW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `pin_wakeup_en` reader - "]
-pub type PIN_WAKEUP_EN_R = crate::BitReader<bool>;
+pub type PinWakeupEnR = crate::BitReader;
 #[doc = "Field `pin_wakeup_en` writer - "]
-pub type PIN_WAKEUP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, HBN_IRQ_MODE_SPEC, bool, O>;
+pub type PinWakeupEnW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
-    pub fn hbn_pin_wakeup_mode(&self) -> HBN_PIN_WAKEUP_MODE_R {
-        HBN_PIN_WAKEUP_MODE_R::new((self.bits & 7) as u8)
+    pub fn hbn_pin_wakeup_mode(&self) -> HbnPinWakeupModeR {
+        HbnPinWakeupModeR::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 3:4"]
     #[inline(always)]
-    pub fn hbn_pin_wakeup_mask(&self) -> HBN_PIN_WAKEUP_MASK_R {
-        HBN_PIN_WAKEUP_MASK_R::new(((self.bits >> 3) & 3) as u8)
+    pub fn hbn_pin_wakeup_mask(&self) -> HbnPinWakeupMaskR {
+        HbnPinWakeupMaskR::new(((self.bits >> 3) & 3) as u8)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn reg_aon_pad_ie_smt(&self) -> REG_AON_PAD_IE_SMT_R {
-        REG_AON_PAD_IE_SMT_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn reg_aon_pad_ie_smt(&self) -> RegAonPadIeSmtR {
+        RegAonPadIeSmtR::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn reg_en_hw_pu_pd(&self) -> REG_EN_HW_PU_PD_R {
-        REG_EN_HW_PU_PD_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn reg_en_hw_pu_pd(&self) -> RegEnHwPuPdR {
+        RegEnHwPuPdR::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    pub fn irq_bor_en(&self) -> IRQ_BOR_EN_R {
-        IRQ_BOR_EN_R::new(((self.bits >> 18) & 1) != 0)
+    pub fn irq_bor_en(&self) -> IrqBorEnR {
+        IrqBorEnR::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bits 20:21"]
     #[inline(always)]
-    pub fn irq_acomp0_en(&self) -> IRQ_ACOMP0_EN_R {
-        IRQ_ACOMP0_EN_R::new(((self.bits >> 20) & 3) as u8)
+    pub fn irq_acomp0_en(&self) -> IrqAcomp0EnR {
+        IrqAcomp0EnR::new(((self.bits >> 20) & 3) as u8)
     }
     #[doc = "Bits 22:23"]
     #[inline(always)]
-    pub fn irq_acomp1_en(&self) -> IRQ_ACOMP1_EN_R {
-        IRQ_ACOMP1_EN_R::new(((self.bits >> 22) & 3) as u8)
+    pub fn irq_acomp1_en(&self) -> IrqAcomp1EnR {
+        IrqAcomp1EnR::new(((self.bits >> 22) & 3) as u8)
     }
     #[doc = "Bits 24:26"]
     #[inline(always)]
-    pub fn pin_wakeup_sel(&self) -> PIN_WAKEUP_SEL_R {
-        PIN_WAKEUP_SEL_R::new(((self.bits >> 24) & 7) as u8)
+    pub fn pin_wakeup_sel(&self) -> PinWakeupSelR {
+        PinWakeupSelR::new(((self.bits >> 24) & 7) as u8)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    pub fn pin_wakeup_en(&self) -> PIN_WAKEUP_EN_R {
-        PIN_WAKEUP_EN_R::new(((self.bits >> 27) & 1) != 0)
+    pub fn pin_wakeup_en(&self) -> PinWakeupEnR {
+        PinWakeupEnR::new(((self.bits >> 27) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
-    #[must_use]
-    pub fn hbn_pin_wakeup_mode(&mut self) -> HBN_PIN_WAKEUP_MODE_W<0> {
-        HBN_PIN_WAKEUP_MODE_W::new(self)
+    pub fn hbn_pin_wakeup_mode(&mut self) -> HbnPinWakeupModeW<'_, HbnIrqModeSpec> {
+        HbnPinWakeupModeW::new(self, 0)
     }
     #[doc = "Bits 3:4"]
     #[inline(always)]
-    #[must_use]
-    pub fn hbn_pin_wakeup_mask(&mut self) -> HBN_PIN_WAKEUP_MASK_W<3> {
-        HBN_PIN_WAKEUP_MASK_W::new(self)
+    pub fn hbn_pin_wakeup_mask(&mut self) -> HbnPinWakeupMaskW<'_, HbnIrqModeSpec> {
+        HbnPinWakeupMaskW::new(self, 3)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
-    pub fn reg_aon_pad_ie_smt(&mut self) -> REG_AON_PAD_IE_SMT_W<8> {
-        REG_AON_PAD_IE_SMT_W::new(self)
+    pub fn reg_aon_pad_ie_smt(&mut self) -> RegAonPadIeSmtW<'_, HbnIrqModeSpec> {
+        RegAonPadIeSmtW::new(self, 8)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    #[must_use]
-    pub fn reg_en_hw_pu_pd(&mut self) -> REG_EN_HW_PU_PD_W<16> {
-        REG_EN_HW_PU_PD_W::new(self)
+    pub fn reg_en_hw_pu_pd(&mut self) -> RegEnHwPuPdW<'_, HbnIrqModeSpec> {
+        RegEnHwPuPdW::new(self, 16)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    #[must_use]
-    pub fn irq_bor_en(&mut self) -> IRQ_BOR_EN_W<18> {
-        IRQ_BOR_EN_W::new(self)
+    pub fn irq_bor_en(&mut self) -> IrqBorEnW<'_, HbnIrqModeSpec> {
+        IrqBorEnW::new(self, 18)
     }
     #[doc = "Bits 20:21"]
     #[inline(always)]
-    #[must_use]
-    pub fn irq_acomp0_en(&mut self) -> IRQ_ACOMP0_EN_W<20> {
-        IRQ_ACOMP0_EN_W::new(self)
+    pub fn irq_acomp0_en(&mut self) -> IrqAcomp0EnW<'_, HbnIrqModeSpec> {
+        IrqAcomp0EnW::new(self, 20)
     }
     #[doc = "Bits 22:23"]
     #[inline(always)]
-    #[must_use]
-    pub fn irq_acomp1_en(&mut self) -> IRQ_ACOMP1_EN_W<22> {
-        IRQ_ACOMP1_EN_W::new(self)
+    pub fn irq_acomp1_en(&mut self) -> IrqAcomp1EnW<'_, HbnIrqModeSpec> {
+        IrqAcomp1EnW::new(self, 22)
     }
     #[doc = "Bits 24:26"]
     #[inline(always)]
-    #[must_use]
-    pub fn pin_wakeup_sel(&mut self) -> PIN_WAKEUP_SEL_W<24> {
-        PIN_WAKEUP_SEL_W::new(self)
+    pub fn pin_wakeup_sel(&mut self) -> PinWakeupSelW<'_, HbnIrqModeSpec> {
+        PinWakeupSelW::new(self, 24)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    #[must_use]
-    pub fn pin_wakeup_en(&mut self) -> PIN_WAKEUP_EN_W<27> {
-        PIN_WAKEUP_EN_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn pin_wakeup_en(&mut self) -> PinWakeupEnW<'_, HbnIrqModeSpec> {
+        PinWakeupEnW::new(self, 27)
     }
 }
-#[doc = "HBN_IRQ_MODE.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hbn_irq_mode](index.html) module"]
-pub struct HBN_IRQ_MODE_SPEC;
-impl crate::RegisterSpec for HBN_IRQ_MODE_SPEC {
+#[doc = "HBN_IRQ_MODE.\n\nYou can [`read`](crate::Reg::read) this register and get [`hbn_irq_mode::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hbn_irq_mode::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct HbnIrqModeSpec;
+impl crate::RegisterSpec for HbnIrqModeSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hbn_irq_mode::R](R) reader structure"]
-impl crate::Readable for HBN_IRQ_MODE_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [hbn_irq_mode::W](W) writer structure"]
-impl crate::Writable for HBN_IRQ_MODE_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`hbn_irq_mode::R`](R) reader structure"]
+impl crate::Readable for HbnIrqModeSpec {}
+#[doc = "`write(|w| ..)` method takes [`hbn_irq_mode::W`](W) writer structure"]
+impl crate::Writable for HbnIrqModeSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets HBN_IRQ_MODE to value 0x0301_0105"]
-impl crate::Resettable for HBN_IRQ_MODE_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0301_0105;
+impl crate::Resettable for HbnIrqModeSpec {
+    const RESET_VALUE: u32 = 0x0301_0105;
 }

@@ -1,185 +1,135 @@
 #[doc = "Register `uart_int_en` reader"]
-pub struct R(crate::R<UART_INT_EN_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<UART_INT_EN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<UART_INT_EN_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<UART_INT_EN_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<UartIntEnSpec>;
 #[doc = "Register `uart_int_en` writer"]
-pub struct W(crate::W<UART_INT_EN_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<UART_INT_EN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<UART_INT_EN_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<UART_INT_EN_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<UartIntEnSpec>;
 #[doc = "Field `cr_utx_end_en` reader - "]
-pub type CR_UTX_END_EN_R = crate::BitReader<bool>;
+pub type CrUtxEndEnR = crate::BitReader;
 #[doc = "Field `cr_utx_end_en` writer - "]
-pub type CR_UTX_END_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_INT_EN_SPEC, bool, O>;
+pub type CrUtxEndEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_urx_end_en` reader - "]
-pub type CR_URX_END_EN_R = crate::BitReader<bool>;
+pub type CrUrxEndEnR = crate::BitReader;
 #[doc = "Field `cr_urx_end_en` writer - "]
-pub type CR_URX_END_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_INT_EN_SPEC, bool, O>;
+pub type CrUrxEndEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_utx_fifo_en` reader - "]
-pub type CR_UTX_FIFO_EN_R = crate::BitReader<bool>;
+pub type CrUtxFifoEnR = crate::BitReader;
 #[doc = "Field `cr_utx_fifo_en` writer - "]
-pub type CR_UTX_FIFO_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_INT_EN_SPEC, bool, O>;
+pub type CrUtxFifoEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_urx_fifo_en` reader - "]
-pub type CR_URX_FIFO_EN_R = crate::BitReader<bool>;
+pub type CrUrxFifoEnR = crate::BitReader;
 #[doc = "Field `cr_urx_fifo_en` writer - "]
-pub type CR_URX_FIFO_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_INT_EN_SPEC, bool, O>;
+pub type CrUrxFifoEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_urx_rto_en` reader - "]
-pub type CR_URX_RTO_EN_R = crate::BitReader<bool>;
+pub type CrUrxRtoEnR = crate::BitReader;
 #[doc = "Field `cr_urx_rto_en` writer - "]
-pub type CR_URX_RTO_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_INT_EN_SPEC, bool, O>;
+pub type CrUrxRtoEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_urx_pce_en` reader - "]
-pub type CR_URX_PCE_EN_R = crate::BitReader<bool>;
+pub type CrUrxPceEnR = crate::BitReader;
 #[doc = "Field `cr_urx_pce_en` writer - "]
-pub type CR_URX_PCE_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_INT_EN_SPEC, bool, O>;
+pub type CrUrxPceEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_utx_fer_en` reader - "]
-pub type CR_UTX_FER_EN_R = crate::BitReader<bool>;
+pub type CrUtxFerEnR = crate::BitReader;
 #[doc = "Field `cr_utx_fer_en` writer - "]
-pub type CR_UTX_FER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_INT_EN_SPEC, bool, O>;
+pub type CrUtxFerEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_urx_fer_en` reader - "]
-pub type CR_URX_FER_EN_R = crate::BitReader<bool>;
+pub type CrUrxFerEnR = crate::BitReader;
 #[doc = "Field `cr_urx_fer_en` writer - "]
-pub type CR_URX_FER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_INT_EN_SPEC, bool, O>;
+pub type CrUrxFerEnW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn cr_utx_end_en(&self) -> CR_UTX_END_EN_R {
-        CR_UTX_END_EN_R::new((self.bits & 1) != 0)
+    pub fn cr_utx_end_en(&self) -> CrUtxEndEnR {
+        CrUtxEndEnR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn cr_urx_end_en(&self) -> CR_URX_END_EN_R {
-        CR_URX_END_EN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn cr_urx_end_en(&self) -> CrUrxEndEnR {
+        CrUrxEndEnR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn cr_utx_fifo_en(&self) -> CR_UTX_FIFO_EN_R {
-        CR_UTX_FIFO_EN_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn cr_utx_fifo_en(&self) -> CrUtxFifoEnR {
+        CrUtxFifoEnR::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn cr_urx_fifo_en(&self) -> CR_URX_FIFO_EN_R {
-        CR_URX_FIFO_EN_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn cr_urx_fifo_en(&self) -> CrUrxFifoEnR {
+        CrUrxFifoEnR::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn cr_urx_rto_en(&self) -> CR_URX_RTO_EN_R {
-        CR_URX_RTO_EN_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn cr_urx_rto_en(&self) -> CrUrxRtoEnR {
+        CrUrxRtoEnR::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn cr_urx_pce_en(&self) -> CR_URX_PCE_EN_R {
-        CR_URX_PCE_EN_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn cr_urx_pce_en(&self) -> CrUrxPceEnR {
+        CrUrxPceEnR::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn cr_utx_fer_en(&self) -> CR_UTX_FER_EN_R {
-        CR_UTX_FER_EN_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn cr_utx_fer_en(&self) -> CrUtxFerEnR {
+        CrUtxFerEnR::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn cr_urx_fer_en(&self) -> CR_URX_FER_EN_R {
-        CR_URX_FER_EN_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn cr_urx_fer_en(&self) -> CrUrxFerEnR {
+        CrUrxFerEnR::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_utx_end_en(&mut self) -> CR_UTX_END_EN_W<0> {
-        CR_UTX_END_EN_W::new(self)
+    pub fn cr_utx_end_en(&mut self) -> CrUtxEndEnW<'_, UartIntEnSpec> {
+        CrUtxEndEnW::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_urx_end_en(&mut self) -> CR_URX_END_EN_W<1> {
-        CR_URX_END_EN_W::new(self)
+    pub fn cr_urx_end_en(&mut self) -> CrUrxEndEnW<'_, UartIntEnSpec> {
+        CrUrxEndEnW::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_utx_fifo_en(&mut self) -> CR_UTX_FIFO_EN_W<2> {
-        CR_UTX_FIFO_EN_W::new(self)
+    pub fn cr_utx_fifo_en(&mut self) -> CrUtxFifoEnW<'_, UartIntEnSpec> {
+        CrUtxFifoEnW::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_urx_fifo_en(&mut self) -> CR_URX_FIFO_EN_W<3> {
-        CR_URX_FIFO_EN_W::new(self)
+    pub fn cr_urx_fifo_en(&mut self) -> CrUrxFifoEnW<'_, UartIntEnSpec> {
+        CrUrxFifoEnW::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_urx_rto_en(&mut self) -> CR_URX_RTO_EN_W<4> {
-        CR_URX_RTO_EN_W::new(self)
+    pub fn cr_urx_rto_en(&mut self) -> CrUrxRtoEnW<'_, UartIntEnSpec> {
+        CrUrxRtoEnW::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_urx_pce_en(&mut self) -> CR_URX_PCE_EN_W<5> {
-        CR_URX_PCE_EN_W::new(self)
+    pub fn cr_urx_pce_en(&mut self) -> CrUrxPceEnW<'_, UartIntEnSpec> {
+        CrUrxPceEnW::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_utx_fer_en(&mut self) -> CR_UTX_FER_EN_W<6> {
-        CR_UTX_FER_EN_W::new(self)
+    pub fn cr_utx_fer_en(&mut self) -> CrUtxFerEnW<'_, UartIntEnSpec> {
+        CrUtxFerEnW::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_urx_fer_en(&mut self) -> CR_URX_FER_EN_W<7> {
-        CR_URX_FER_EN_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn cr_urx_fer_en(&mut self) -> CrUrxFerEnW<'_, UartIntEnSpec> {
+        CrUrxFerEnW::new(self, 7)
     }
 }
-#[doc = "UART interrupt enable\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uart_int_en](index.html) module"]
-pub struct UART_INT_EN_SPEC;
-impl crate::RegisterSpec for UART_INT_EN_SPEC {
+#[doc = "UART interrupt enable\n\nYou can [`read`](crate::Reg::read) this register and get [`uart_int_en::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart_int_en::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct UartIntEnSpec;
+impl crate::RegisterSpec for UartIntEnSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [uart_int_en::R](R) reader structure"]
-impl crate::Readable for UART_INT_EN_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [uart_int_en::W](W) writer structure"]
-impl crate::Writable for UART_INT_EN_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`uart_int_en::R`](R) reader structure"]
+impl crate::Readable for UartIntEnSpec {}
+#[doc = "`write(|w| ..)` method takes [`uart_int_en::W`](W) writer structure"]
+impl crate::Writable for UartIntEnSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets uart_int_en to value 0xff"]
-impl crate::Resettable for UART_INT_EN_SPEC {
-    const RESET_VALUE: Self::Ux = 0xff;
+impl crate::Resettable for UartIntEnSpec {
+    const RESET_VALUE: u32 = 0xff;
 }

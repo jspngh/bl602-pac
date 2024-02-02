@@ -1,81 +1,35 @@
 #[doc = "Register `pwm4_period` reader"]
-pub struct R(crate::R<PWM4_PERIOD_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PWM4_PERIOD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PWM4_PERIOD_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PWM4_PERIOD_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<Pwm4PeriodSpec>;
 #[doc = "Register `pwm4_period` writer"]
-pub struct W(crate::W<PWM4_PERIOD_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PWM4_PERIOD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PWM4_PERIOD_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PWM4_PERIOD_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<Pwm4PeriodSpec>;
 #[doc = "Field `pwm_period` reader - "]
-pub type PWM_PERIOD_R = crate::FieldReader<u16, u16>;
+pub type PwmPeriodR = crate::FieldReader<u16>;
 #[doc = "Field `pwm_period` writer - "]
-pub type PWM_PERIOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PWM4_PERIOD_SPEC, u16, u16, 16, O>;
+pub type PwmPeriodW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn pwm_period(&self) -> PWM_PERIOD_R {
-        PWM_PERIOD_R::new((self.bits & 0xffff) as u16)
+    pub fn pwm_period(&self) -> PwmPeriodR {
+        PwmPeriodR::new((self.bits & 0xffff) as u16)
     }
 }
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    #[must_use]
-    pub fn pwm_period(&mut self) -> PWM_PERIOD_W<0> {
-        PWM_PERIOD_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn pwm_period(&mut self) -> PwmPeriodW<'_, Pwm4PeriodSpec> {
+        PwmPeriodW::new(self, 0)
     }
 }
-#[doc = "pwm4_period.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pwm4_period](index.html) module"]
-pub struct PWM4_PERIOD_SPEC;
-impl crate::RegisterSpec for PWM4_PERIOD_SPEC {
+#[doc = "pwm4_period.\n\nYou can [`read`](crate::Reg::read) this register and get [`pwm4_period::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pwm4_period::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Pwm4PeriodSpec;
+impl crate::RegisterSpec for Pwm4PeriodSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pwm4_period::R](R) reader structure"]
-impl crate::Readable for PWM4_PERIOD_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [pwm4_period::W](W) writer structure"]
-impl crate::Writable for PWM4_PERIOD_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`pwm4_period::R`](R) reader structure"]
+impl crate::Readable for Pwm4PeriodSpec {}
+#[doc = "`write(|w| ..)` method takes [`pwm4_period::W`](W) writer structure"]
+impl crate::Writable for Pwm4PeriodSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets pwm4_period to value 0"]
-impl crate::Resettable for PWM4_PERIOD_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for Pwm4PeriodSpec {}

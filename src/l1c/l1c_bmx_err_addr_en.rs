@@ -1,111 +1,63 @@
 #[doc = "Register `l1c_bmx_err_addr_en` reader"]
-pub struct R(crate::R<L1C_BMX_ERR_ADDR_EN_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<L1C_BMX_ERR_ADDR_EN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<L1C_BMX_ERR_ADDR_EN_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<L1C_BMX_ERR_ADDR_EN_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<L1cBmxErrAddrEnSpec>;
 #[doc = "Register `l1c_bmx_err_addr_en` writer"]
-pub struct W(crate::W<L1C_BMX_ERR_ADDR_EN_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<L1C_BMX_ERR_ADDR_EN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<L1C_BMX_ERR_ADDR_EN_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<L1C_BMX_ERR_ADDR_EN_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<L1cBmxErrAddrEnSpec>;
 #[doc = "Field `l1c_bmx_err_addr_dis` reader - "]
-pub type L1C_BMX_ERR_ADDR_DIS_R = crate::BitReader<bool>;
+pub type L1cBmxErrAddrDisR = crate::BitReader;
 #[doc = "Field `l1c_bmx_err_addr_dis` writer - "]
-pub type L1C_BMX_ERR_ADDR_DIS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L1C_BMX_ERR_ADDR_EN_SPEC, bool, O>;
+pub type L1cBmxErrAddrDisW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `l1c_bmx_err_dec` reader - "]
-pub type L1C_BMX_ERR_DEC_R = crate::BitReader<bool>;
+pub type L1cBmxErrDecR = crate::BitReader;
 #[doc = "Field `l1c_bmx_err_tz` reader - "]
-pub type L1C_BMX_ERR_TZ_R = crate::BitReader<bool>;
+pub type L1cBmxErrTzR = crate::BitReader;
 #[doc = "Field `l1c_hsel_option` reader - "]
-pub type L1C_HSEL_OPTION_R = crate::FieldReader<u8, u8>;
+pub type L1cHselOptionR = crate::FieldReader;
 #[doc = "Field `l1c_hsel_option` writer - "]
-pub type L1C_HSEL_OPTION_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, L1C_BMX_ERR_ADDR_EN_SPEC, u8, u8, 4, O>;
+pub type L1cHselOptionW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn l1c_bmx_err_addr_dis(&self) -> L1C_BMX_ERR_ADDR_DIS_R {
-        L1C_BMX_ERR_ADDR_DIS_R::new((self.bits & 1) != 0)
+    pub fn l1c_bmx_err_addr_dis(&self) -> L1cBmxErrAddrDisR {
+        L1cBmxErrAddrDisR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn l1c_bmx_err_dec(&self) -> L1C_BMX_ERR_DEC_R {
-        L1C_BMX_ERR_DEC_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn l1c_bmx_err_dec(&self) -> L1cBmxErrDecR {
+        L1cBmxErrDecR::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn l1c_bmx_err_tz(&self) -> L1C_BMX_ERR_TZ_R {
-        L1C_BMX_ERR_TZ_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn l1c_bmx_err_tz(&self) -> L1cBmxErrTzR {
+        L1cBmxErrTzR::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bits 16:19"]
     #[inline(always)]
-    pub fn l1c_hsel_option(&self) -> L1C_HSEL_OPTION_R {
-        L1C_HSEL_OPTION_R::new(((self.bits >> 16) & 0x0f) as u8)
+    pub fn l1c_hsel_option(&self) -> L1cHselOptionR {
+        L1cHselOptionR::new(((self.bits >> 16) & 0x0f) as u8)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn l1c_bmx_err_addr_dis(&mut self) -> L1C_BMX_ERR_ADDR_DIS_W<0> {
-        L1C_BMX_ERR_ADDR_DIS_W::new(self)
+    pub fn l1c_bmx_err_addr_dis(&mut self) -> L1cBmxErrAddrDisW<'_, L1cBmxErrAddrEnSpec> {
+        L1cBmxErrAddrDisW::new(self, 0)
     }
     #[doc = "Bits 16:19"]
     #[inline(always)]
-    #[must_use]
-    pub fn l1c_hsel_option(&mut self) -> L1C_HSEL_OPTION_W<16> {
-        L1C_HSEL_OPTION_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn l1c_hsel_option(&mut self) -> L1cHselOptionW<'_, L1cBmxErrAddrEnSpec> {
+        L1cHselOptionW::new(self, 16)
     }
 }
-#[doc = "l1c_bmx_err_addr_en.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l1c_bmx_err_addr_en](index.html) module"]
-pub struct L1C_BMX_ERR_ADDR_EN_SPEC;
-impl crate::RegisterSpec for L1C_BMX_ERR_ADDR_EN_SPEC {
+#[doc = "l1c_bmx_err_addr_en.\n\nYou can [`read`](crate::Reg::read) this register and get [`l1c_bmx_err_addr_en::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`l1c_bmx_err_addr_en::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct L1cBmxErrAddrEnSpec;
+impl crate::RegisterSpec for L1cBmxErrAddrEnSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [l1c_bmx_err_addr_en::R](R) reader structure"]
-impl crate::Readable for L1C_BMX_ERR_ADDR_EN_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [l1c_bmx_err_addr_en::W](W) writer structure"]
-impl crate::Writable for L1C_BMX_ERR_ADDR_EN_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`l1c_bmx_err_addr_en::R`](R) reader structure"]
+impl crate::Readable for L1cBmxErrAddrEnSpec {}
+#[doc = "`write(|w| ..)` method takes [`l1c_bmx_err_addr_en::W`](W) writer structure"]
+impl crate::Writable for L1cBmxErrAddrEnSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets l1c_bmx_err_addr_en to value 0"]
-impl crate::Resettable for L1C_BMX_ERR_ADDR_EN_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for L1cBmxErrAddrEnSpec {}

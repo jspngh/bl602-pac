@@ -1,72 +1,27 @@
 #[doc = "Register `DMA_EnbldChns` reader"]
-pub struct R(crate::R<DMA_ENBLD_CHNS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DMA_ENBLD_CHNS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DMA_ENBLD_CHNS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DMA_ENBLD_CHNS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DmaEnbldChnsSpec>;
 #[doc = "Register `DMA_EnbldChns` writer"]
-pub struct W(crate::W<DMA_ENBLD_CHNS_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DMA_ENBLD_CHNS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DMA_ENBLD_CHNS_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DMA_ENBLD_CHNS_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DmaEnbldChnsSpec>;
 #[doc = "Field `EnabledChannels` reader - "]
-pub type ENABLED_CHANNELS_R = crate::FieldReader<u8, u8>;
+pub type EnabledChannelsR = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn enabled_channels(&self) -> ENABLED_CHANNELS_R {
-        ENABLED_CHANNELS_R::new((self.bits & 0xff) as u8)
+    pub fn enabled_channels(&self) -> EnabledChannelsR {
+        EnabledChannelsR::new((self.bits & 0xff) as u8)
     }
 }
-impl W {
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
-    }
-}
-#[doc = "DMA_EnbldChns.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_enbld_chns](index.html) module"]
-pub struct DMA_ENBLD_CHNS_SPEC;
-impl crate::RegisterSpec for DMA_ENBLD_CHNS_SPEC {
+impl W {}
+#[doc = "DMA_EnbldChns.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_enbld_chns::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_enbld_chns::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DmaEnbldChnsSpec;
+impl crate::RegisterSpec for DmaEnbldChnsSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_enbld_chns::R](R) reader structure"]
-impl crate::Readable for DMA_ENBLD_CHNS_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dma_enbld_chns::W](W) writer structure"]
-impl crate::Writable for DMA_ENBLD_CHNS_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`dma_enbld_chns::R`](R) reader structure"]
+impl crate::Readable for DmaEnbldChnsSpec {}
+#[doc = "`write(|w| ..)` method takes [`dma_enbld_chns::W`](W) writer structure"]
+impl crate::Writable for DmaEnbldChnsSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets DMA_EnbldChns to value 0"]
-impl crate::Resettable for DMA_ENBLD_CHNS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for DmaEnbldChnsSpec {}

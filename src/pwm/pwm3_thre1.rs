@@ -1,81 +1,35 @@
 #[doc = "Register `pwm3_thre1` reader"]
-pub struct R(crate::R<PWM3_THRE1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PWM3_THRE1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PWM3_THRE1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PWM3_THRE1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<Pwm3Thre1Spec>;
 #[doc = "Register `pwm3_thre1` writer"]
-pub struct W(crate::W<PWM3_THRE1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PWM3_THRE1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PWM3_THRE1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PWM3_THRE1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<Pwm3Thre1Spec>;
 #[doc = "Field `pwm_thre1` reader - "]
-pub type PWM_THRE1_R = crate::FieldReader<u16, u16>;
+pub type PwmThre1R = crate::FieldReader<u16>;
 #[doc = "Field `pwm_thre1` writer - "]
-pub type PWM_THRE1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PWM3_THRE1_SPEC, u16, u16, 16, O>;
+pub type PwmThre1W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn pwm_thre1(&self) -> PWM_THRE1_R {
-        PWM_THRE1_R::new((self.bits & 0xffff) as u16)
+    pub fn pwm_thre1(&self) -> PwmThre1R {
+        PwmThre1R::new((self.bits & 0xffff) as u16)
     }
 }
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    #[must_use]
-    pub fn pwm_thre1(&mut self) -> PWM_THRE1_W<0> {
-        PWM_THRE1_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn pwm_thre1(&mut self) -> PwmThre1W<'_, Pwm3Thre1Spec> {
+        PwmThre1W::new(self, 0)
     }
 }
-#[doc = "pwm3_thre1.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pwm3_thre1](index.html) module"]
-pub struct PWM3_THRE1_SPEC;
-impl crate::RegisterSpec for PWM3_THRE1_SPEC {
+#[doc = "pwm3_thre1.\n\nYou can [`read`](crate::Reg::read) this register and get [`pwm3_thre1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pwm3_thre1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Pwm3Thre1Spec;
+impl crate::RegisterSpec for Pwm3Thre1Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pwm3_thre1::R](R) reader structure"]
-impl crate::Readable for PWM3_THRE1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [pwm3_thre1::W](W) writer structure"]
-impl crate::Writable for PWM3_THRE1_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`pwm3_thre1::R`](R) reader structure"]
+impl crate::Readable for Pwm3Thre1Spec {}
+#[doc = "`write(|w| ..)` method takes [`pwm3_thre1::W`](W) writer structure"]
+impl crate::Writable for Pwm3Thre1Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets pwm3_thre1 to value 0"]
-impl crate::Resettable for PWM3_THRE1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for Pwm3Thre1Spec {}

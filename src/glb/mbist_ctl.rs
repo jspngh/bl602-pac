@@ -1,155 +1,105 @@
 #[doc = "Register `MBIST_CTL` reader"]
-pub struct R(crate::R<MBIST_CTL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<MBIST_CTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<MBIST_CTL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<MBIST_CTL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<MbistCtlSpec>;
 #[doc = "Register `MBIST_CTL` writer"]
-pub struct W(crate::W<MBIST_CTL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<MBIST_CTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<MBIST_CTL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<MBIST_CTL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<MbistCtlSpec>;
 #[doc = "Field `irom_mbist_mode` reader - "]
-pub type IROM_MBIST_MODE_R = crate::BitReader<bool>;
+pub type IromMbistModeR = crate::BitReader;
 #[doc = "Field `irom_mbist_mode` writer - "]
-pub type IROM_MBIST_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MBIST_CTL_SPEC, bool, O>;
+pub type IromMbistModeW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `hsram_mbist_mode` reader - "]
-pub type HSRAM_MBIST_MODE_R = crate::BitReader<bool>;
+pub type HsramMbistModeR = crate::BitReader;
 #[doc = "Field `hsram_mbist_mode` writer - "]
-pub type HSRAM_MBIST_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MBIST_CTL_SPEC, bool, O>;
+pub type HsramMbistModeW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `tag_mbist_mode` reader - "]
-pub type TAG_MBIST_MODE_R = crate::BitReader<bool>;
+pub type TagMbistModeR = crate::BitReader;
 #[doc = "Field `tag_mbist_mode` writer - "]
-pub type TAG_MBIST_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MBIST_CTL_SPEC, bool, O>;
+pub type TagMbistModeW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ocram_mbist_mode` reader - "]
-pub type OCRAM_MBIST_MODE_R = crate::BitReader<bool>;
+pub type OcramMbistModeR = crate::BitReader;
 #[doc = "Field `ocram_mbist_mode` writer - "]
-pub type OCRAM_MBIST_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MBIST_CTL_SPEC, bool, O>;
+pub type OcramMbistModeW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `wifi_mbist_mode` reader - "]
-pub type WIFI_MBIST_MODE_R = crate::BitReader<bool>;
+pub type WifiMbistModeR = crate::BitReader;
 #[doc = "Field `wifi_mbist_mode` writer - "]
-pub type WIFI_MBIST_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MBIST_CTL_SPEC, bool, O>;
+pub type WifiMbistModeW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `reg_mbist_rst_n` reader - "]
-pub type REG_MBIST_RST_N_R = crate::BitReader<bool>;
+pub type RegMbistRstNR = crate::BitReader;
 #[doc = "Field `reg_mbist_rst_n` writer - "]
-pub type REG_MBIST_RST_N_W<'a, const O: u8> = crate::BitWriter<'a, u32, MBIST_CTL_SPEC, bool, O>;
+pub type RegMbistRstNW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn irom_mbist_mode(&self) -> IROM_MBIST_MODE_R {
-        IROM_MBIST_MODE_R::new((self.bits & 1) != 0)
+    pub fn irom_mbist_mode(&self) -> IromMbistModeR {
+        IromMbistModeR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn hsram_mbist_mode(&self) -> HSRAM_MBIST_MODE_R {
-        HSRAM_MBIST_MODE_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn hsram_mbist_mode(&self) -> HsramMbistModeR {
+        HsramMbistModeR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn tag_mbist_mode(&self) -> TAG_MBIST_MODE_R {
-        TAG_MBIST_MODE_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn tag_mbist_mode(&self) -> TagMbistModeR {
+        TagMbistModeR::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn ocram_mbist_mode(&self) -> OCRAM_MBIST_MODE_R {
-        OCRAM_MBIST_MODE_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn ocram_mbist_mode(&self) -> OcramMbistModeR {
+        OcramMbistModeR::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn wifi_mbist_mode(&self) -> WIFI_MBIST_MODE_R {
-        WIFI_MBIST_MODE_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn wifi_mbist_mode(&self) -> WifiMbistModeR {
+        WifiMbistModeR::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    pub fn reg_mbist_rst_n(&self) -> REG_MBIST_RST_N_R {
-        REG_MBIST_RST_N_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn reg_mbist_rst_n(&self) -> RegMbistRstNR {
+        RegMbistRstNR::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn irom_mbist_mode(&mut self) -> IROM_MBIST_MODE_W<0> {
-        IROM_MBIST_MODE_W::new(self)
+    pub fn irom_mbist_mode(&mut self) -> IromMbistModeW<'_, MbistCtlSpec> {
+        IromMbistModeW::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn hsram_mbist_mode(&mut self) -> HSRAM_MBIST_MODE_W<1> {
-        HSRAM_MBIST_MODE_W::new(self)
+    pub fn hsram_mbist_mode(&mut self) -> HsramMbistModeW<'_, MbistCtlSpec> {
+        HsramMbistModeW::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
-    pub fn tag_mbist_mode(&mut self) -> TAG_MBIST_MODE_W<2> {
-        TAG_MBIST_MODE_W::new(self)
+    pub fn tag_mbist_mode(&mut self) -> TagMbistModeW<'_, MbistCtlSpec> {
+        TagMbistModeW::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
-    pub fn ocram_mbist_mode(&mut self) -> OCRAM_MBIST_MODE_W<3> {
-        OCRAM_MBIST_MODE_W::new(self)
+    pub fn ocram_mbist_mode(&mut self) -> OcramMbistModeW<'_, MbistCtlSpec> {
+        OcramMbistModeW::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
-    pub fn wifi_mbist_mode(&mut self) -> WIFI_MBIST_MODE_W<4> {
-        WIFI_MBIST_MODE_W::new(self)
+    pub fn wifi_mbist_mode(&mut self) -> WifiMbistModeW<'_, MbistCtlSpec> {
+        WifiMbistModeW::new(self, 4)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
-    pub fn reg_mbist_rst_n(&mut self) -> REG_MBIST_RST_N_W<31> {
-        REG_MBIST_RST_N_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn reg_mbist_rst_n(&mut self) -> RegMbistRstNW<'_, MbistCtlSpec> {
+        RegMbistRstNW::new(self, 31)
     }
 }
-#[doc = "MBIST_CTL.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mbist_ctl](index.html) module"]
-pub struct MBIST_CTL_SPEC;
-impl crate::RegisterSpec for MBIST_CTL_SPEC {
+#[doc = "MBIST_CTL.\n\nYou can [`read`](crate::Reg::read) this register and get [`mbist_ctl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mbist_ctl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct MbistCtlSpec;
+impl crate::RegisterSpec for MbistCtlSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [mbist_ctl::R](R) reader structure"]
-impl crate::Readable for MBIST_CTL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [mbist_ctl::W](W) writer structure"]
-impl crate::Writable for MBIST_CTL_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`mbist_ctl::R`](R) reader structure"]
+impl crate::Readable for MbistCtlSpec {}
+#[doc = "`write(|w| ..)` method takes [`mbist_ctl::W`](W) writer structure"]
+impl crate::Writable for MbistCtlSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets MBIST_CTL to value 0"]
-impl crate::Resettable for MBIST_CTL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for MbistCtlSpec {}

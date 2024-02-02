@@ -1,193 +1,135 @@
 #[doc = "Register `irtx_pw` reader"]
-pub struct R(crate::R<IRTX_PW_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IRTX_PW_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IRTX_PW_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IRTX_PW_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IrtxPwSpec>;
 #[doc = "Register `irtx_pw` writer"]
-pub struct W(crate::W<IRTX_PW_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IRTX_PW_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IRTX_PW_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IRTX_PW_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IrtxPwSpec>;
 #[doc = "Field `cr_irtx_logic0_ph0_w` reader - "]
-pub type CR_IRTX_LOGIC0_PH0_W_R = crate::FieldReader<u8, u8>;
+pub type CrIrtxLogic0Ph0WR = crate::FieldReader;
 #[doc = "Field `cr_irtx_logic0_ph0_w` writer - "]
-pub type CR_IRTX_LOGIC0_PH0_W_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IRTX_PW_SPEC, u8, u8, 4, O>;
+pub type CrIrtxLogic0Ph0WW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `cr_irtx_logic0_ph1_w` reader - "]
-pub type CR_IRTX_LOGIC0_PH1_W_R = crate::FieldReader<u8, u8>;
+pub type CrIrtxLogic0Ph1WR = crate::FieldReader;
 #[doc = "Field `cr_irtx_logic0_ph1_w` writer - "]
-pub type CR_IRTX_LOGIC0_PH1_W_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IRTX_PW_SPEC, u8, u8, 4, O>;
+pub type CrIrtxLogic0Ph1WW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `cr_irtx_logic1_ph0_w` reader - "]
-pub type CR_IRTX_LOGIC1_PH0_W_R = crate::FieldReader<u8, u8>;
+pub type CrIrtxLogic1Ph0WR = crate::FieldReader;
 #[doc = "Field `cr_irtx_logic1_ph0_w` writer - "]
-pub type CR_IRTX_LOGIC1_PH0_W_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IRTX_PW_SPEC, u8, u8, 4, O>;
+pub type CrIrtxLogic1Ph0WW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `cr_irtx_logic1_ph1_w` reader - "]
-pub type CR_IRTX_LOGIC1_PH1_W_R = crate::FieldReader<u8, u8>;
+pub type CrIrtxLogic1Ph1WR = crate::FieldReader;
 #[doc = "Field `cr_irtx_logic1_ph1_w` writer - "]
-pub type CR_IRTX_LOGIC1_PH1_W_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IRTX_PW_SPEC, u8, u8, 4, O>;
+pub type CrIrtxLogic1Ph1WW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `cr_irtx_head_ph0_w` reader - "]
-pub type CR_IRTX_HEAD_PH0_W_R = crate::FieldReader<u8, u8>;
+pub type CrIrtxHeadPh0WR = crate::FieldReader;
 #[doc = "Field `cr_irtx_head_ph0_w` writer - "]
-pub type CR_IRTX_HEAD_PH0_W_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IRTX_PW_SPEC, u8, u8, 4, O>;
+pub type CrIrtxHeadPh0WW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `cr_irtx_head_ph1_w` reader - "]
-pub type CR_IRTX_HEAD_PH1_W_R = crate::FieldReader<u8, u8>;
+pub type CrIrtxHeadPh1WR = crate::FieldReader;
 #[doc = "Field `cr_irtx_head_ph1_w` writer - "]
-pub type CR_IRTX_HEAD_PH1_W_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IRTX_PW_SPEC, u8, u8, 4, O>;
+pub type CrIrtxHeadPh1WW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `cr_irtx_tail_ph0_w` reader - "]
-pub type CR_IRTX_TAIL_PH0_W_R = crate::FieldReader<u8, u8>;
+pub type CrIrtxTailPh0WR = crate::FieldReader;
 #[doc = "Field `cr_irtx_tail_ph0_w` writer - "]
-pub type CR_IRTX_TAIL_PH0_W_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IRTX_PW_SPEC, u8, u8, 4, O>;
+pub type CrIrtxTailPh0WW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `cr_irtx_tail_ph1_w` reader - "]
-pub type CR_IRTX_TAIL_PH1_W_R = crate::FieldReader<u8, u8>;
+pub type CrIrtxTailPh1WR = crate::FieldReader;
 #[doc = "Field `cr_irtx_tail_ph1_w` writer - "]
-pub type CR_IRTX_TAIL_PH1_W_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IRTX_PW_SPEC, u8, u8, 4, O>;
+pub type CrIrtxTailPh1WW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3"]
     #[inline(always)]
-    pub fn cr_irtx_logic0_ph0_w(&self) -> CR_IRTX_LOGIC0_PH0_W_R {
-        CR_IRTX_LOGIC0_PH0_W_R::new((self.bits & 0x0f) as u8)
+    pub fn cr_irtx_logic0_ph0_w(&self) -> CrIrtxLogic0Ph0WR {
+        CrIrtxLogic0Ph0WR::new((self.bits & 0x0f) as u8)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
-    pub fn cr_irtx_logic0_ph1_w(&self) -> CR_IRTX_LOGIC0_PH1_W_R {
-        CR_IRTX_LOGIC0_PH1_W_R::new(((self.bits >> 4) & 0x0f) as u8)
+    pub fn cr_irtx_logic0_ph1_w(&self) -> CrIrtxLogic0Ph1WR {
+        CrIrtxLogic0Ph1WR::new(((self.bits >> 4) & 0x0f) as u8)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
-    pub fn cr_irtx_logic1_ph0_w(&self) -> CR_IRTX_LOGIC1_PH0_W_R {
-        CR_IRTX_LOGIC1_PH0_W_R::new(((self.bits >> 8) & 0x0f) as u8)
+    pub fn cr_irtx_logic1_ph0_w(&self) -> CrIrtxLogic1Ph0WR {
+        CrIrtxLogic1Ph0WR::new(((self.bits >> 8) & 0x0f) as u8)
     }
     #[doc = "Bits 12:15"]
     #[inline(always)]
-    pub fn cr_irtx_logic1_ph1_w(&self) -> CR_IRTX_LOGIC1_PH1_W_R {
-        CR_IRTX_LOGIC1_PH1_W_R::new(((self.bits >> 12) & 0x0f) as u8)
+    pub fn cr_irtx_logic1_ph1_w(&self) -> CrIrtxLogic1Ph1WR {
+        CrIrtxLogic1Ph1WR::new(((self.bits >> 12) & 0x0f) as u8)
     }
     #[doc = "Bits 16:19"]
     #[inline(always)]
-    pub fn cr_irtx_head_ph0_w(&self) -> CR_IRTX_HEAD_PH0_W_R {
-        CR_IRTX_HEAD_PH0_W_R::new(((self.bits >> 16) & 0x0f) as u8)
+    pub fn cr_irtx_head_ph0_w(&self) -> CrIrtxHeadPh0WR {
+        CrIrtxHeadPh0WR::new(((self.bits >> 16) & 0x0f) as u8)
     }
     #[doc = "Bits 20:23"]
     #[inline(always)]
-    pub fn cr_irtx_head_ph1_w(&self) -> CR_IRTX_HEAD_PH1_W_R {
-        CR_IRTX_HEAD_PH1_W_R::new(((self.bits >> 20) & 0x0f) as u8)
+    pub fn cr_irtx_head_ph1_w(&self) -> CrIrtxHeadPh1WR {
+        CrIrtxHeadPh1WR::new(((self.bits >> 20) & 0x0f) as u8)
     }
     #[doc = "Bits 24:27"]
     #[inline(always)]
-    pub fn cr_irtx_tail_ph0_w(&self) -> CR_IRTX_TAIL_PH0_W_R {
-        CR_IRTX_TAIL_PH0_W_R::new(((self.bits >> 24) & 0x0f) as u8)
+    pub fn cr_irtx_tail_ph0_w(&self) -> CrIrtxTailPh0WR {
+        CrIrtxTailPh0WR::new(((self.bits >> 24) & 0x0f) as u8)
     }
     #[doc = "Bits 28:31"]
     #[inline(always)]
-    pub fn cr_irtx_tail_ph1_w(&self) -> CR_IRTX_TAIL_PH1_W_R {
-        CR_IRTX_TAIL_PH1_W_R::new(((self.bits >> 28) & 0x0f) as u8)
+    pub fn cr_irtx_tail_ph1_w(&self) -> CrIrtxTailPh1WR {
+        CrIrtxTailPh1WR::new(((self.bits >> 28) & 0x0f) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irtx_logic0_ph0_w(&mut self) -> CR_IRTX_LOGIC0_PH0_W_W<0> {
-        CR_IRTX_LOGIC0_PH0_W_W::new(self)
+    pub fn cr_irtx_logic0_ph0_w(&mut self) -> CrIrtxLogic0Ph0WW<'_, IrtxPwSpec> {
+        CrIrtxLogic0Ph0WW::new(self, 0)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irtx_logic0_ph1_w(&mut self) -> CR_IRTX_LOGIC0_PH1_W_W<4> {
-        CR_IRTX_LOGIC0_PH1_W_W::new(self)
+    pub fn cr_irtx_logic0_ph1_w(&mut self) -> CrIrtxLogic0Ph1WW<'_, IrtxPwSpec> {
+        CrIrtxLogic0Ph1WW::new(self, 4)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irtx_logic1_ph0_w(&mut self) -> CR_IRTX_LOGIC1_PH0_W_W<8> {
-        CR_IRTX_LOGIC1_PH0_W_W::new(self)
+    pub fn cr_irtx_logic1_ph0_w(&mut self) -> CrIrtxLogic1Ph0WW<'_, IrtxPwSpec> {
+        CrIrtxLogic1Ph0WW::new(self, 8)
     }
     #[doc = "Bits 12:15"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irtx_logic1_ph1_w(&mut self) -> CR_IRTX_LOGIC1_PH1_W_W<12> {
-        CR_IRTX_LOGIC1_PH1_W_W::new(self)
+    pub fn cr_irtx_logic1_ph1_w(&mut self) -> CrIrtxLogic1Ph1WW<'_, IrtxPwSpec> {
+        CrIrtxLogic1Ph1WW::new(self, 12)
     }
     #[doc = "Bits 16:19"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irtx_head_ph0_w(&mut self) -> CR_IRTX_HEAD_PH0_W_W<16> {
-        CR_IRTX_HEAD_PH0_W_W::new(self)
+    pub fn cr_irtx_head_ph0_w(&mut self) -> CrIrtxHeadPh0WW<'_, IrtxPwSpec> {
+        CrIrtxHeadPh0WW::new(self, 16)
     }
     #[doc = "Bits 20:23"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irtx_head_ph1_w(&mut self) -> CR_IRTX_HEAD_PH1_W_W<20> {
-        CR_IRTX_HEAD_PH1_W_W::new(self)
+    pub fn cr_irtx_head_ph1_w(&mut self) -> CrIrtxHeadPh1WW<'_, IrtxPwSpec> {
+        CrIrtxHeadPh1WW::new(self, 20)
     }
     #[doc = "Bits 24:27"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irtx_tail_ph0_w(&mut self) -> CR_IRTX_TAIL_PH0_W_W<24> {
-        CR_IRTX_TAIL_PH0_W_W::new(self)
+    pub fn cr_irtx_tail_ph0_w(&mut self) -> CrIrtxTailPh0WW<'_, IrtxPwSpec> {
+        CrIrtxTailPh0WW::new(self, 24)
     }
     #[doc = "Bits 28:31"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irtx_tail_ph1_w(&mut self) -> CR_IRTX_TAIL_PH1_W_W<28> {
-        CR_IRTX_TAIL_PH1_W_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn cr_irtx_tail_ph1_w(&mut self) -> CrIrtxTailPh1WW<'_, IrtxPwSpec> {
+        CrIrtxTailPh1WW::new(self, 28)
     }
 }
-#[doc = "irtx_pw.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [irtx_pw](index.html) module"]
-pub struct IRTX_PW_SPEC;
-impl crate::RegisterSpec for IRTX_PW_SPEC {
+#[doc = "irtx_pw.\n\nYou can [`read`](crate::Reg::read) this register and get [`irtx_pw::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`irtx_pw::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IrtxPwSpec;
+impl crate::RegisterSpec for IrtxPwSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [irtx_pw::R](R) reader structure"]
-impl crate::Readable for IRTX_PW_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [irtx_pw::W](W) writer structure"]
-impl crate::Writable for IRTX_PW_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`irtx_pw::R`](R) reader structure"]
+impl crate::Readable for IrtxPwSpec {}
+#[doc = "`write(|w| ..)` method takes [`irtx_pw::W`](W) writer structure"]
+impl crate::Writable for IrtxPwSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets irtx_pw to value 0x007f_2000"]
-impl crate::Resettable for IRTX_PW_SPEC {
-    const RESET_VALUE: Self::Ux = 0x007f_2000;
+impl crate::Resettable for IrtxPwSpec {
+    const RESET_VALUE: u32 = 0x007f_2000;
 }

@@ -1,336 +1,273 @@
 #[doc = "Register `rfcal_ctrlen` reader"]
-pub struct R(crate::R<RFCAL_CTRLEN_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RFCAL_CTRLEN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RFCAL_CTRLEN_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RFCAL_CTRLEN_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RfcalCtrlenSpec>;
 #[doc = "Register `rfcal_ctrlen` writer"]
-pub struct W(crate::W<RFCAL_CTRLEN_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<RFCAL_CTRLEN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<RFCAL_CTRLEN_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<RFCAL_CTRLEN_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<RfcalCtrlenSpec>;
 #[doc = "Field `rcal_en_resv` reader - "]
-pub type RCAL_EN_RESV_R = crate::BitReader<bool>;
+pub type RcalEnResvR = crate::BitReader;
 #[doc = "Field `rcal_en_resv` writer - "]
-pub type RCAL_EN_RESV_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFCAL_CTRLEN_SPEC, bool, O>;
+pub type RcalEnResvW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `adc_oscal_en` reader - "]
-pub type ADC_OSCAL_EN_R = crate::BitReader<bool>;
+pub type AdcOscalEnR = crate::BitReader;
 #[doc = "Field `adc_oscal_en` writer - "]
-pub type ADC_OSCAL_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFCAL_CTRLEN_SPEC, bool, O>;
+pub type AdcOscalEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `dl_rfcal_table_en` reader - "]
-pub type DL_RFCAL_TABLE_EN_R = crate::BitReader<bool>;
+pub type DlRfcalTableEnR = crate::BitReader;
 #[doc = "Field `dl_rfcal_table_en` writer - "]
-pub type DL_RFCAL_TABLE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RFCAL_CTRLEN_SPEC, bool, O>;
+pub type DlRfcalTableEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `fcal_en` reader - "]
-pub type FCAL_EN_R = crate::BitReader<bool>;
+pub type FcalEnR = crate::BitReader;
 #[doc = "Field `fcal_en` writer - "]
-pub type FCAL_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFCAL_CTRLEN_SPEC, bool, O>;
+pub type FcalEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `acal_en` reader - "]
-pub type ACAL_EN_R = crate::BitReader<bool>;
+pub type AcalEnR = crate::BitReader;
 #[doc = "Field `acal_en` writer - "]
-pub type ACAL_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFCAL_CTRLEN_SPEC, bool, O>;
+pub type AcalEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `fcal_inc_en` reader - "]
-pub type FCAL_INC_EN_R = crate::BitReader<bool>;
+pub type FcalIncEnR = crate::BitReader;
 #[doc = "Field `fcal_inc_en` writer - "]
-pub type FCAL_INC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFCAL_CTRLEN_SPEC, bool, O>;
+pub type FcalIncEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `acal_inc_en` reader - "]
-pub type ACAL_INC_EN_R = crate::BitReader<bool>;
+pub type AcalIncEnR = crate::BitReader;
 #[doc = "Field `acal_inc_en` writer - "]
-pub type ACAL_INC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFCAL_CTRLEN_SPEC, bool, O>;
+pub type AcalIncEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `roscal_inc_en` reader - "]
-pub type ROSCAL_INC_EN_R = crate::BitReader<bool>;
+pub type RoscalIncEnR = crate::BitReader;
 #[doc = "Field `roscal_inc_en` writer - "]
-pub type ROSCAL_INC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFCAL_CTRLEN_SPEC, bool, O>;
+pub type RoscalIncEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clkpll_cal_en` reader - "]
-pub type CLKPLL_CAL_EN_R = crate::BitReader<bool>;
+pub type ClkpllCalEnR = crate::BitReader;
 #[doc = "Field `clkpll_cal_en` writer - "]
-pub type CLKPLL_CAL_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFCAL_CTRLEN_SPEC, bool, O>;
+pub type ClkpllCalEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `roscal_en` reader - "]
-pub type ROSCAL_EN_R = crate::BitReader<bool>;
+pub type RoscalEnR = crate::BitReader;
 #[doc = "Field `roscal_en` writer - "]
-pub type ROSCAL_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFCAL_CTRLEN_SPEC, bool, O>;
+pub type RoscalEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `toscal_en` reader - "]
-pub type TOSCAL_EN_R = crate::BitReader<bool>;
+pub type ToscalEnR = crate::BitReader;
 #[doc = "Field `toscal_en` writer - "]
-pub type TOSCAL_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFCAL_CTRLEN_SPEC, bool, O>;
+pub type ToscalEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `rccal_en` reader - "]
-pub type RCCAL_EN_R = crate::BitReader<bool>;
+pub type RccalEnR = crate::BitReader;
 #[doc = "Field `rccal_en` writer - "]
-pub type RCCAL_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFCAL_CTRLEN_SPEC, bool, O>;
+pub type RccalEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `lo_leakcal_en` reader - "]
-pub type LO_LEAKCAL_EN_R = crate::BitReader<bool>;
+pub type LoLeakcalEnR = crate::BitReader;
 #[doc = "Field `lo_leakcal_en` writer - "]
-pub type LO_LEAKCAL_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFCAL_CTRLEN_SPEC, bool, O>;
+pub type LoLeakcalEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `tiqcal_en` reader - "]
-pub type TIQCAL_EN_R = crate::BitReader<bool>;
+pub type TiqcalEnR = crate::BitReader;
 #[doc = "Field `tiqcal_en` writer - "]
-pub type TIQCAL_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFCAL_CTRLEN_SPEC, bool, O>;
+pub type TiqcalEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `riqcal_en` reader - "]
-pub type RIQCAL_EN_R = crate::BitReader<bool>;
+pub type RiqcalEnR = crate::BitReader;
 #[doc = "Field `riqcal_en` writer - "]
-pub type RIQCAL_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFCAL_CTRLEN_SPEC, bool, O>;
+pub type RiqcalEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pwdet_cal_en` reader - "]
-pub type PWDET_CAL_EN_R = crate::BitReader<bool>;
+pub type PwdetCalEnR = crate::BitReader;
 #[doc = "Field `pwdet_cal_en` writer - "]
-pub type PWDET_CAL_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFCAL_CTRLEN_SPEC, bool, O>;
+pub type PwdetCalEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `tsencal_en` reader - "]
-pub type TSENCAL_EN_R = crate::BitReader<bool>;
+pub type TsencalEnR = crate::BitReader;
 #[doc = "Field `tsencal_en` writer - "]
-pub type TSENCAL_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFCAL_CTRLEN_SPEC, bool, O>;
+pub type TsencalEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `dpd_en` reader - "]
-pub type DPD_EN_R = crate::BitReader<bool>;
+pub type DpdEnR = crate::BitReader;
 #[doc = "Field `dpd_en` writer - "]
-pub type DPD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RFCAL_CTRLEN_SPEC, bool, O>;
+pub type DpdEnW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn rcal_en_resv(&self) -> RCAL_EN_RESV_R {
-        RCAL_EN_RESV_R::new((self.bits & 1) != 0)
+    pub fn rcal_en_resv(&self) -> RcalEnResvR {
+        RcalEnResvR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn adc_oscal_en(&self) -> ADC_OSCAL_EN_R {
-        ADC_OSCAL_EN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn adc_oscal_en(&self) -> AdcOscalEnR {
+        AdcOscalEnR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn dl_rfcal_table_en(&self) -> DL_RFCAL_TABLE_EN_R {
-        DL_RFCAL_TABLE_EN_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn dl_rfcal_table_en(&self) -> DlRfcalTableEnR {
+        DlRfcalTableEnR::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn fcal_en(&self) -> FCAL_EN_R {
-        FCAL_EN_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn fcal_en(&self) -> FcalEnR {
+        FcalEnR::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn acal_en(&self) -> ACAL_EN_R {
-        ACAL_EN_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn acal_en(&self) -> AcalEnR {
+        AcalEnR::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn fcal_inc_en(&self) -> FCAL_INC_EN_R {
-        FCAL_INC_EN_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn fcal_inc_en(&self) -> FcalIncEnR {
+        FcalIncEnR::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn acal_inc_en(&self) -> ACAL_INC_EN_R {
-        ACAL_INC_EN_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn acal_inc_en(&self) -> AcalIncEnR {
+        AcalIncEnR::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn roscal_inc_en(&self) -> ROSCAL_INC_EN_R {
-        ROSCAL_INC_EN_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn roscal_inc_en(&self) -> RoscalIncEnR {
+        RoscalIncEnR::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn clkpll_cal_en(&self) -> CLKPLL_CAL_EN_R {
-        CLKPLL_CAL_EN_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn clkpll_cal_en(&self) -> ClkpllCalEnR {
+        ClkpllCalEnR::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn roscal_en(&self) -> ROSCAL_EN_R {
-        ROSCAL_EN_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn roscal_en(&self) -> RoscalEnR {
+        RoscalEnR::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    pub fn toscal_en(&self) -> TOSCAL_EN_R {
-        TOSCAL_EN_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn toscal_en(&self) -> ToscalEnR {
+        ToscalEnR::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn rccal_en(&self) -> RCCAL_EN_R {
-        RCCAL_EN_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn rccal_en(&self) -> RccalEnR {
+        RccalEnR::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn lo_leakcal_en(&self) -> LO_LEAKCAL_EN_R {
-        LO_LEAKCAL_EN_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn lo_leakcal_en(&self) -> LoLeakcalEnR {
+        LoLeakcalEnR::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn tiqcal_en(&self) -> TIQCAL_EN_R {
-        TIQCAL_EN_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn tiqcal_en(&self) -> TiqcalEnR {
+        TiqcalEnR::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    pub fn riqcal_en(&self) -> RIQCAL_EN_R {
-        RIQCAL_EN_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn riqcal_en(&self) -> RiqcalEnR {
+        RiqcalEnR::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    pub fn pwdet_cal_en(&self) -> PWDET_CAL_EN_R {
-        PWDET_CAL_EN_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn pwdet_cal_en(&self) -> PwdetCalEnR {
+        PwdetCalEnR::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn tsencal_en(&self) -> TSENCAL_EN_R {
-        TSENCAL_EN_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn tsencal_en(&self) -> TsencalEnR {
+        TsencalEnR::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    pub fn dpd_en(&self) -> DPD_EN_R {
-        DPD_EN_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn dpd_en(&self) -> DpdEnR {
+        DpdEnR::new(((self.bits >> 17) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn rcal_en_resv(&mut self) -> RCAL_EN_RESV_W<0> {
-        RCAL_EN_RESV_W::new(self)
+    pub fn rcal_en_resv(&mut self) -> RcalEnResvW<'_, RfcalCtrlenSpec> {
+        RcalEnResvW::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn adc_oscal_en(&mut self) -> ADC_OSCAL_EN_W<1> {
-        ADC_OSCAL_EN_W::new(self)
+    pub fn adc_oscal_en(&mut self) -> AdcOscalEnW<'_, RfcalCtrlenSpec> {
+        AdcOscalEnW::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
-    pub fn dl_rfcal_table_en(&mut self) -> DL_RFCAL_TABLE_EN_W<2> {
-        DL_RFCAL_TABLE_EN_W::new(self)
+    pub fn dl_rfcal_table_en(&mut self) -> DlRfcalTableEnW<'_, RfcalCtrlenSpec> {
+        DlRfcalTableEnW::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
-    pub fn fcal_en(&mut self) -> FCAL_EN_W<3> {
-        FCAL_EN_W::new(self)
+    pub fn fcal_en(&mut self) -> FcalEnW<'_, RfcalCtrlenSpec> {
+        FcalEnW::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
-    pub fn acal_en(&mut self) -> ACAL_EN_W<4> {
-        ACAL_EN_W::new(self)
+    pub fn acal_en(&mut self) -> AcalEnW<'_, RfcalCtrlenSpec> {
+        AcalEnW::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    #[must_use]
-    pub fn fcal_inc_en(&mut self) -> FCAL_INC_EN_W<5> {
-        FCAL_INC_EN_W::new(self)
+    pub fn fcal_inc_en(&mut self) -> FcalIncEnW<'_, RfcalCtrlenSpec> {
+        FcalIncEnW::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    #[must_use]
-    pub fn acal_inc_en(&mut self) -> ACAL_INC_EN_W<6> {
-        ACAL_INC_EN_W::new(self)
+    pub fn acal_inc_en(&mut self) -> AcalIncEnW<'_, RfcalCtrlenSpec> {
+        AcalIncEnW::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
-    pub fn roscal_inc_en(&mut self) -> ROSCAL_INC_EN_W<7> {
-        ROSCAL_INC_EN_W::new(self)
+    pub fn roscal_inc_en(&mut self) -> RoscalIncEnW<'_, RfcalCtrlenSpec> {
+        RoscalIncEnW::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
-    pub fn clkpll_cal_en(&mut self) -> CLKPLL_CAL_EN_W<8> {
-        CLKPLL_CAL_EN_W::new(self)
+    pub fn clkpll_cal_en(&mut self) -> ClkpllCalEnW<'_, RfcalCtrlenSpec> {
+        ClkpllCalEnW::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
-    pub fn roscal_en(&mut self) -> ROSCAL_EN_W<9> {
-        ROSCAL_EN_W::new(self)
+    pub fn roscal_en(&mut self) -> RoscalEnW<'_, RfcalCtrlenSpec> {
+        RoscalEnW::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
-    pub fn toscal_en(&mut self) -> TOSCAL_EN_W<10> {
-        TOSCAL_EN_W::new(self)
+    pub fn toscal_en(&mut self) -> ToscalEnW<'_, RfcalCtrlenSpec> {
+        ToscalEnW::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    #[must_use]
-    pub fn rccal_en(&mut self) -> RCCAL_EN_W<11> {
-        RCCAL_EN_W::new(self)
+    pub fn rccal_en(&mut self) -> RccalEnW<'_, RfcalCtrlenSpec> {
+        RccalEnW::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    #[must_use]
-    pub fn lo_leakcal_en(&mut self) -> LO_LEAKCAL_EN_W<12> {
-        LO_LEAKCAL_EN_W::new(self)
+    pub fn lo_leakcal_en(&mut self) -> LoLeakcalEnW<'_, RfcalCtrlenSpec> {
+        LoLeakcalEnW::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    #[must_use]
-    pub fn tiqcal_en(&mut self) -> TIQCAL_EN_W<13> {
-        TIQCAL_EN_W::new(self)
+    pub fn tiqcal_en(&mut self) -> TiqcalEnW<'_, RfcalCtrlenSpec> {
+        TiqcalEnW::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    #[must_use]
-    pub fn riqcal_en(&mut self) -> RIQCAL_EN_W<14> {
-        RIQCAL_EN_W::new(self)
+    pub fn riqcal_en(&mut self) -> RiqcalEnW<'_, RfcalCtrlenSpec> {
+        RiqcalEnW::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    #[must_use]
-    pub fn pwdet_cal_en(&mut self) -> PWDET_CAL_EN_W<15> {
-        PWDET_CAL_EN_W::new(self)
+    pub fn pwdet_cal_en(&mut self) -> PwdetCalEnW<'_, RfcalCtrlenSpec> {
+        PwdetCalEnW::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    #[must_use]
-    pub fn tsencal_en(&mut self) -> TSENCAL_EN_W<16> {
-        TSENCAL_EN_W::new(self)
+    pub fn tsencal_en(&mut self) -> TsencalEnW<'_, RfcalCtrlenSpec> {
+        TsencalEnW::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    #[must_use]
-    pub fn dpd_en(&mut self) -> DPD_EN_W<17> {
-        DPD_EN_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn dpd_en(&mut self) -> DpdEnW<'_, RfcalCtrlenSpec> {
+        DpdEnW::new(self, 17)
     }
 }
-#[doc = "Calibration mode register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rfcal_ctrlen](index.html) module"]
-pub struct RFCAL_CTRLEN_SPEC;
-impl crate::RegisterSpec for RFCAL_CTRLEN_SPEC {
+#[doc = "Calibration mode register\n\nYou can [`read`](crate::Reg::read) this register and get [`rfcal_ctrlen::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rfcal_ctrlen::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RfcalCtrlenSpec;
+impl crate::RegisterSpec for RfcalCtrlenSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rfcal_ctrlen::R](R) reader structure"]
-impl crate::Readable for RFCAL_CTRLEN_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [rfcal_ctrlen::W](W) writer structure"]
-impl crate::Writable for RFCAL_CTRLEN_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`rfcal_ctrlen::R`](R) reader structure"]
+impl crate::Readable for RfcalCtrlenSpec {}
+#[doc = "`write(|w| ..)` method takes [`rfcal_ctrlen::W`](W) writer structure"]
+impl crate::Writable for RfcalCtrlenSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets rfcal_ctrlen to value 0"]
-impl crate::Resettable for RFCAL_CTRLEN_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for RfcalCtrlenSpec {}

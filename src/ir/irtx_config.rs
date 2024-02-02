@@ -1,250 +1,191 @@
 #[doc = "Register `irtx_config` reader"]
-pub struct R(crate::R<IRTX_CONFIG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IRTX_CONFIG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IRTX_CONFIG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IRTX_CONFIG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IrtxConfigSpec>;
 #[doc = "Register `irtx_config` writer"]
-pub struct W(crate::W<IRTX_CONFIG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IRTX_CONFIG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IRTX_CONFIG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IRTX_CONFIG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IrtxConfigSpec>;
 #[doc = "Field `cr_irtx_en` reader - "]
-pub type CR_IRTX_EN_R = crate::BitReader<bool>;
+pub type CrIrtxEnR = crate::BitReader;
 #[doc = "Field `cr_irtx_en` writer - "]
-pub type CR_IRTX_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRTX_CONFIG_SPEC, bool, O>;
+pub type CrIrtxEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_irtx_out_inv` reader - "]
-pub type CR_IRTX_OUT_INV_R = crate::BitReader<bool>;
+pub type CrIrtxOutInvR = crate::BitReader;
 #[doc = "Field `cr_irtx_out_inv` writer - "]
-pub type CR_IRTX_OUT_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRTX_CONFIG_SPEC, bool, O>;
+pub type CrIrtxOutInvW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_irtx_mod_en` reader - "]
-pub type CR_IRTX_MOD_EN_R = crate::BitReader<bool>;
+pub type CrIrtxModEnR = crate::BitReader;
 #[doc = "Field `cr_irtx_mod_en` writer - "]
-pub type CR_IRTX_MOD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRTX_CONFIG_SPEC, bool, O>;
+pub type CrIrtxModEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_irtx_swm_en` reader - "]
-pub type CR_IRTX_SWM_EN_R = crate::BitReader<bool>;
+pub type CrIrtxSwmEnR = crate::BitReader;
 #[doc = "Field `cr_irtx_swm_en` writer - "]
-pub type CR_IRTX_SWM_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRTX_CONFIG_SPEC, bool, O>;
+pub type CrIrtxSwmEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_irtx_data_en` reader - "]
-pub type CR_IRTX_DATA_EN_R = crate::BitReader<bool>;
+pub type CrIrtxDataEnR = crate::BitReader;
 #[doc = "Field `cr_irtx_data_en` writer - "]
-pub type CR_IRTX_DATA_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRTX_CONFIG_SPEC, bool, O>;
+pub type CrIrtxDataEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_irtx_logic0_hl_inv` reader - "]
-pub type CR_IRTX_LOGIC0_HL_INV_R = crate::BitReader<bool>;
+pub type CrIrtxLogic0HlInvR = crate::BitReader;
 #[doc = "Field `cr_irtx_logic0_hl_inv` writer - "]
-pub type CR_IRTX_LOGIC0_HL_INV_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IRTX_CONFIG_SPEC, bool, O>;
+pub type CrIrtxLogic0HlInvW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_irtx_logic1_hl_inv` reader - "]
-pub type CR_IRTX_LOGIC1_HL_INV_R = crate::BitReader<bool>;
+pub type CrIrtxLogic1HlInvR = crate::BitReader;
 #[doc = "Field `cr_irtx_logic1_hl_inv` writer - "]
-pub type CR_IRTX_LOGIC1_HL_INV_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IRTX_CONFIG_SPEC, bool, O>;
+pub type CrIrtxLogic1HlInvW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_irtx_head_en` reader - "]
-pub type CR_IRTX_HEAD_EN_R = crate::BitReader<bool>;
+pub type CrIrtxHeadEnR = crate::BitReader;
 #[doc = "Field `cr_irtx_head_en` writer - "]
-pub type CR_IRTX_HEAD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRTX_CONFIG_SPEC, bool, O>;
+pub type CrIrtxHeadEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_irtx_head_hl_inv` reader - "]
-pub type CR_IRTX_HEAD_HL_INV_R = crate::BitReader<bool>;
+pub type CrIrtxHeadHlInvR = crate::BitReader;
 #[doc = "Field `cr_irtx_head_hl_inv` writer - "]
-pub type CR_IRTX_HEAD_HL_INV_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IRTX_CONFIG_SPEC, bool, O>;
+pub type CrIrtxHeadHlInvW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_irtx_tail_en` reader - "]
-pub type CR_IRTX_TAIL_EN_R = crate::BitReader<bool>;
+pub type CrIrtxTailEnR = crate::BitReader;
 #[doc = "Field `cr_irtx_tail_en` writer - "]
-pub type CR_IRTX_TAIL_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRTX_CONFIG_SPEC, bool, O>;
+pub type CrIrtxTailEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_irtx_tail_hl_inv` reader - "]
-pub type CR_IRTX_TAIL_HL_INV_R = crate::BitReader<bool>;
+pub type CrIrtxTailHlInvR = crate::BitReader;
 #[doc = "Field `cr_irtx_tail_hl_inv` writer - "]
-pub type CR_IRTX_TAIL_HL_INV_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IRTX_CONFIG_SPEC, bool, O>;
+pub type CrIrtxTailHlInvW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_irtx_data_num` reader - "]
-pub type CR_IRTX_DATA_NUM_R = crate::FieldReader<u8, u8>;
+pub type CrIrtxDataNumR = crate::FieldReader;
 #[doc = "Field `cr_irtx_data_num` writer - "]
-pub type CR_IRTX_DATA_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IRTX_CONFIG_SPEC, u8, u8, 6, O>;
+pub type CrIrtxDataNumW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn cr_irtx_en(&self) -> CR_IRTX_EN_R {
-        CR_IRTX_EN_R::new((self.bits & 1) != 0)
+    pub fn cr_irtx_en(&self) -> CrIrtxEnR {
+        CrIrtxEnR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn cr_irtx_out_inv(&self) -> CR_IRTX_OUT_INV_R {
-        CR_IRTX_OUT_INV_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn cr_irtx_out_inv(&self) -> CrIrtxOutInvR {
+        CrIrtxOutInvR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn cr_irtx_mod_en(&self) -> CR_IRTX_MOD_EN_R {
-        CR_IRTX_MOD_EN_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn cr_irtx_mod_en(&self) -> CrIrtxModEnR {
+        CrIrtxModEnR::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn cr_irtx_swm_en(&self) -> CR_IRTX_SWM_EN_R {
-        CR_IRTX_SWM_EN_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn cr_irtx_swm_en(&self) -> CrIrtxSwmEnR {
+        CrIrtxSwmEnR::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn cr_irtx_data_en(&self) -> CR_IRTX_DATA_EN_R {
-        CR_IRTX_DATA_EN_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn cr_irtx_data_en(&self) -> CrIrtxDataEnR {
+        CrIrtxDataEnR::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn cr_irtx_logic0_hl_inv(&self) -> CR_IRTX_LOGIC0_HL_INV_R {
-        CR_IRTX_LOGIC0_HL_INV_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn cr_irtx_logic0_hl_inv(&self) -> CrIrtxLogic0HlInvR {
+        CrIrtxLogic0HlInvR::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn cr_irtx_logic1_hl_inv(&self) -> CR_IRTX_LOGIC1_HL_INV_R {
-        CR_IRTX_LOGIC1_HL_INV_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn cr_irtx_logic1_hl_inv(&self) -> CrIrtxLogic1HlInvR {
+        CrIrtxLogic1HlInvR::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn cr_irtx_head_en(&self) -> CR_IRTX_HEAD_EN_R {
-        CR_IRTX_HEAD_EN_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn cr_irtx_head_en(&self) -> CrIrtxHeadEnR {
+        CrIrtxHeadEnR::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn cr_irtx_head_hl_inv(&self) -> CR_IRTX_HEAD_HL_INV_R {
-        CR_IRTX_HEAD_HL_INV_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn cr_irtx_head_hl_inv(&self) -> CrIrtxHeadHlInvR {
+        CrIrtxHeadHlInvR::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    pub fn cr_irtx_tail_en(&self) -> CR_IRTX_TAIL_EN_R {
-        CR_IRTX_TAIL_EN_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn cr_irtx_tail_en(&self) -> CrIrtxTailEnR {
+        CrIrtxTailEnR::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn cr_irtx_tail_hl_inv(&self) -> CR_IRTX_TAIL_HL_INV_R {
-        CR_IRTX_TAIL_HL_INV_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn cr_irtx_tail_hl_inv(&self) -> CrIrtxTailHlInvR {
+        CrIrtxTailHlInvR::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bits 12:17"]
     #[inline(always)]
-    pub fn cr_irtx_data_num(&self) -> CR_IRTX_DATA_NUM_R {
-        CR_IRTX_DATA_NUM_R::new(((self.bits >> 12) & 0x3f) as u8)
+    pub fn cr_irtx_data_num(&self) -> CrIrtxDataNumR {
+        CrIrtxDataNumR::new(((self.bits >> 12) & 0x3f) as u8)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irtx_en(&mut self) -> CR_IRTX_EN_W<0> {
-        CR_IRTX_EN_W::new(self)
+    pub fn cr_irtx_en(&mut self) -> CrIrtxEnW<'_, IrtxConfigSpec> {
+        CrIrtxEnW::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irtx_out_inv(&mut self) -> CR_IRTX_OUT_INV_W<1> {
-        CR_IRTX_OUT_INV_W::new(self)
+    pub fn cr_irtx_out_inv(&mut self) -> CrIrtxOutInvW<'_, IrtxConfigSpec> {
+        CrIrtxOutInvW::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irtx_mod_en(&mut self) -> CR_IRTX_MOD_EN_W<2> {
-        CR_IRTX_MOD_EN_W::new(self)
+    pub fn cr_irtx_mod_en(&mut self) -> CrIrtxModEnW<'_, IrtxConfigSpec> {
+        CrIrtxModEnW::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irtx_swm_en(&mut self) -> CR_IRTX_SWM_EN_W<3> {
-        CR_IRTX_SWM_EN_W::new(self)
+    pub fn cr_irtx_swm_en(&mut self) -> CrIrtxSwmEnW<'_, IrtxConfigSpec> {
+        CrIrtxSwmEnW::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irtx_data_en(&mut self) -> CR_IRTX_DATA_EN_W<4> {
-        CR_IRTX_DATA_EN_W::new(self)
+    pub fn cr_irtx_data_en(&mut self) -> CrIrtxDataEnW<'_, IrtxConfigSpec> {
+        CrIrtxDataEnW::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irtx_logic0_hl_inv(&mut self) -> CR_IRTX_LOGIC0_HL_INV_W<5> {
-        CR_IRTX_LOGIC0_HL_INV_W::new(self)
+    pub fn cr_irtx_logic0_hl_inv(&mut self) -> CrIrtxLogic0HlInvW<'_, IrtxConfigSpec> {
+        CrIrtxLogic0HlInvW::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irtx_logic1_hl_inv(&mut self) -> CR_IRTX_LOGIC1_HL_INV_W<6> {
-        CR_IRTX_LOGIC1_HL_INV_W::new(self)
+    pub fn cr_irtx_logic1_hl_inv(&mut self) -> CrIrtxLogic1HlInvW<'_, IrtxConfigSpec> {
+        CrIrtxLogic1HlInvW::new(self, 6)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irtx_head_en(&mut self) -> CR_IRTX_HEAD_EN_W<8> {
-        CR_IRTX_HEAD_EN_W::new(self)
+    pub fn cr_irtx_head_en(&mut self) -> CrIrtxHeadEnW<'_, IrtxConfigSpec> {
+        CrIrtxHeadEnW::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irtx_head_hl_inv(&mut self) -> CR_IRTX_HEAD_HL_INV_W<9> {
-        CR_IRTX_HEAD_HL_INV_W::new(self)
+    pub fn cr_irtx_head_hl_inv(&mut self) -> CrIrtxHeadHlInvW<'_, IrtxConfigSpec> {
+        CrIrtxHeadHlInvW::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irtx_tail_en(&mut self) -> CR_IRTX_TAIL_EN_W<10> {
-        CR_IRTX_TAIL_EN_W::new(self)
+    pub fn cr_irtx_tail_en(&mut self) -> CrIrtxTailEnW<'_, IrtxConfigSpec> {
+        CrIrtxTailEnW::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irtx_tail_hl_inv(&mut self) -> CR_IRTX_TAIL_HL_INV_W<11> {
-        CR_IRTX_TAIL_HL_INV_W::new(self)
+    pub fn cr_irtx_tail_hl_inv(&mut self) -> CrIrtxTailHlInvW<'_, IrtxConfigSpec> {
+        CrIrtxTailHlInvW::new(self, 11)
     }
     #[doc = "Bits 12:17"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irtx_data_num(&mut self) -> CR_IRTX_DATA_NUM_W<12> {
-        CR_IRTX_DATA_NUM_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn cr_irtx_data_num(&mut self) -> CrIrtxDataNumW<'_, IrtxConfigSpec> {
+        CrIrtxDataNumW::new(self, 12)
     }
 }
-#[doc = "irtx_config.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [irtx_config](index.html) module"]
-pub struct IRTX_CONFIG_SPEC;
-impl crate::RegisterSpec for IRTX_CONFIG_SPEC {
+#[doc = "irtx_config.\n\nYou can [`read`](crate::Reg::read) this register and get [`irtx_config::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`irtx_config::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IrtxConfigSpec;
+impl crate::RegisterSpec for IrtxConfigSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [irtx_config::R](R) reader structure"]
-impl crate::Readable for IRTX_CONFIG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [irtx_config::W](W) writer structure"]
-impl crate::Writable for IRTX_CONFIG_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`irtx_config::R`](R) reader structure"]
+impl crate::Readable for IrtxConfigSpec {}
+#[doc = "`write(|w| ..)` method takes [`irtx_config::W`](W) writer structure"]
+impl crate::Writable for IrtxConfigSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets irtx_config to value 0x0001_f510"]
-impl crate::Resettable for IRTX_CONFIG_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0001_f510;
+impl crate::Resettable for IrtxConfigSpec {
+    const RESET_VALUE: u32 = 0x0001_f510;
 }

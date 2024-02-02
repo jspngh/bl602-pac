@@ -1,95 +1,51 @@
 #[doc = "Register `aon_misc` reader"]
-pub struct R(crate::R<AON_MISC_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<AON_MISC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<AON_MISC_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<AON_MISC_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<AonMiscSpec>;
 #[doc = "Register `aon_misc` writer"]
-pub struct W(crate::W<AON_MISC_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<AON_MISC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<AON_MISC_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<AON_MISC_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<AonMiscSpec>;
 #[doc = "Field `sw_soc_en_aon` reader - "]
-pub type SW_SOC_EN_AON_R = crate::BitReader<bool>;
+pub type SwSocEnAonR = crate::BitReader;
 #[doc = "Field `sw_soc_en_aon` writer - "]
-pub type SW_SOC_EN_AON_W<'a, const O: u8> = crate::BitWriter<'a, u32, AON_MISC_SPEC, bool, O>;
+pub type SwSocEnAonW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `sw_wb_en_aon` reader - "]
-pub type SW_WB_EN_AON_R = crate::BitReader<bool>;
+pub type SwWbEnAonR = crate::BitReader;
 #[doc = "Field `sw_wb_en_aon` writer - "]
-pub type SW_WB_EN_AON_W<'a, const O: u8> = crate::BitWriter<'a, u32, AON_MISC_SPEC, bool, O>;
+pub type SwWbEnAonW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn sw_soc_en_aon(&self) -> SW_SOC_EN_AON_R {
-        SW_SOC_EN_AON_R::new((self.bits & 1) != 0)
+    pub fn sw_soc_en_aon(&self) -> SwSocEnAonR {
+        SwSocEnAonR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn sw_wb_en_aon(&self) -> SW_WB_EN_AON_R {
-        SW_WB_EN_AON_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn sw_wb_en_aon(&self) -> SwWbEnAonR {
+        SwWbEnAonR::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn sw_soc_en_aon(&mut self) -> SW_SOC_EN_AON_W<0> {
-        SW_SOC_EN_AON_W::new(self)
+    pub fn sw_soc_en_aon(&mut self) -> SwSocEnAonW<'_, AonMiscSpec> {
+        SwSocEnAonW::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn sw_wb_en_aon(&mut self) -> SW_WB_EN_AON_W<1> {
-        SW_WB_EN_AON_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn sw_wb_en_aon(&mut self) -> SwWbEnAonW<'_, AonMiscSpec> {
+        SwWbEnAonW::new(self, 1)
     }
 }
-#[doc = "aon_misc.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [aon_misc](index.html) module"]
-pub struct AON_MISC_SPEC;
-impl crate::RegisterSpec for AON_MISC_SPEC {
+#[doc = "aon_misc.\n\nYou can [`read`](crate::Reg::read) this register and get [`aon_misc::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`aon_misc::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct AonMiscSpec;
+impl crate::RegisterSpec for AonMiscSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [aon_misc::R](R) reader structure"]
-impl crate::Readable for AON_MISC_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [aon_misc::W](W) writer structure"]
-impl crate::Writable for AON_MISC_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`aon_misc::R`](R) reader structure"]
+impl crate::Readable for AonMiscSpec {}
+#[doc = "`write(|w| ..)` method takes [`aon_misc::W`](W) writer structure"]
+impl crate::Writable for AonMiscSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets aon_misc to value 0x03"]
-impl crate::Resettable for AON_MISC_SPEC {
-    const RESET_VALUE: Self::Ux = 0x03;
+impl crate::Resettable for AonMiscSpec {
+    const RESET_VALUE: u32 = 0x03;
 }

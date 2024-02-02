@@ -1,142 +1,93 @@
 #[doc = "Register `irrx_config` reader"]
-pub struct R(crate::R<IRRX_CONFIG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IRRX_CONFIG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IRRX_CONFIG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IRRX_CONFIG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IrrxConfigSpec>;
 #[doc = "Register `irrx_config` writer"]
-pub struct W(crate::W<IRRX_CONFIG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IRRX_CONFIG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IRRX_CONFIG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IRRX_CONFIG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IrrxConfigSpec>;
 #[doc = "Field `cr_irrx_en` reader - "]
-pub type CR_IRRX_EN_R = crate::BitReader<bool>;
+pub type CrIrrxEnR = crate::BitReader;
 #[doc = "Field `cr_irrx_en` writer - "]
-pub type CR_IRRX_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRRX_CONFIG_SPEC, bool, O>;
+pub type CrIrrxEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_irrx_in_inv` reader - "]
-pub type CR_IRRX_IN_INV_R = crate::BitReader<bool>;
+pub type CrIrrxInInvR = crate::BitReader;
 #[doc = "Field `cr_irrx_in_inv` writer - "]
-pub type CR_IRRX_IN_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRRX_CONFIG_SPEC, bool, O>;
+pub type CrIrrxInInvW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_irrx_mode` reader - "]
-pub type CR_IRRX_MODE_R = crate::FieldReader<u8, u8>;
+pub type CrIrrxModeR = crate::FieldReader;
 #[doc = "Field `cr_irrx_mode` writer - "]
-pub type CR_IRRX_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IRRX_CONFIG_SPEC, u8, u8, 2, O>;
+pub type CrIrrxModeW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `cr_irrx_deg_en` reader - "]
-pub type CR_IRRX_DEG_EN_R = crate::BitReader<bool>;
+pub type CrIrrxDegEnR = crate::BitReader;
 #[doc = "Field `cr_irrx_deg_en` writer - "]
-pub type CR_IRRX_DEG_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRRX_CONFIG_SPEC, bool, O>;
+pub type CrIrrxDegEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_irrx_deg_cnt` reader - "]
-pub type CR_IRRX_DEG_CNT_R = crate::FieldReader<u8, u8>;
+pub type CrIrrxDegCntR = crate::FieldReader;
 #[doc = "Field `cr_irrx_deg_cnt` writer - "]
-pub type CR_IRRX_DEG_CNT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IRRX_CONFIG_SPEC, u8, u8, 4, O>;
+pub type CrIrrxDegCntW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn cr_irrx_en(&self) -> CR_IRRX_EN_R {
-        CR_IRRX_EN_R::new((self.bits & 1) != 0)
+    pub fn cr_irrx_en(&self) -> CrIrrxEnR {
+        CrIrrxEnR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn cr_irrx_in_inv(&self) -> CR_IRRX_IN_INV_R {
-        CR_IRRX_IN_INV_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn cr_irrx_in_inv(&self) -> CrIrrxInInvR {
+        CrIrrxInInvR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
-    pub fn cr_irrx_mode(&self) -> CR_IRRX_MODE_R {
-        CR_IRRX_MODE_R::new(((self.bits >> 2) & 3) as u8)
+    pub fn cr_irrx_mode(&self) -> CrIrrxModeR {
+        CrIrrxModeR::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn cr_irrx_deg_en(&self) -> CR_IRRX_DEG_EN_R {
-        CR_IRRX_DEG_EN_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn cr_irrx_deg_en(&self) -> CrIrrxDegEnR {
+        CrIrrxDegEnR::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
-    pub fn cr_irrx_deg_cnt(&self) -> CR_IRRX_DEG_CNT_R {
-        CR_IRRX_DEG_CNT_R::new(((self.bits >> 8) & 0x0f) as u8)
+    pub fn cr_irrx_deg_cnt(&self) -> CrIrrxDegCntR {
+        CrIrrxDegCntR::new(((self.bits >> 8) & 0x0f) as u8)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irrx_en(&mut self) -> CR_IRRX_EN_W<0> {
-        CR_IRRX_EN_W::new(self)
+    pub fn cr_irrx_en(&mut self) -> CrIrrxEnW<'_, IrrxConfigSpec> {
+        CrIrrxEnW::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irrx_in_inv(&mut self) -> CR_IRRX_IN_INV_W<1> {
-        CR_IRRX_IN_INV_W::new(self)
+    pub fn cr_irrx_in_inv(&mut self) -> CrIrrxInInvW<'_, IrrxConfigSpec> {
+        CrIrrxInInvW::new(self, 1)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irrx_mode(&mut self) -> CR_IRRX_MODE_W<2> {
-        CR_IRRX_MODE_W::new(self)
+    pub fn cr_irrx_mode(&mut self) -> CrIrrxModeW<'_, IrrxConfigSpec> {
+        CrIrrxModeW::new(self, 2)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irrx_deg_en(&mut self) -> CR_IRRX_DEG_EN_W<4> {
-        CR_IRRX_DEG_EN_W::new(self)
+    pub fn cr_irrx_deg_en(&mut self) -> CrIrrxDegEnW<'_, IrrxConfigSpec> {
+        CrIrrxDegEnW::new(self, 4)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_irrx_deg_cnt(&mut self) -> CR_IRRX_DEG_CNT_W<8> {
-        CR_IRRX_DEG_CNT_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn cr_irrx_deg_cnt(&mut self) -> CrIrrxDegCntW<'_, IrrxConfigSpec> {
+        CrIrrxDegCntW::new(self, 8)
     }
 }
-#[doc = "irrx_config.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [irrx_config](index.html) module"]
-pub struct IRRX_CONFIG_SPEC;
-impl crate::RegisterSpec for IRRX_CONFIG_SPEC {
+#[doc = "irrx_config.\n\nYou can [`read`](crate::Reg::read) this register and get [`irrx_config::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`irrx_config::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IrrxConfigSpec;
+impl crate::RegisterSpec for IrrxConfigSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [irrx_config::R](R) reader structure"]
-impl crate::Readable for IRRX_CONFIG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [irrx_config::W](W) writer structure"]
-impl crate::Writable for IRRX_CONFIG_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`irrx_config::R`](R) reader structure"]
+impl crate::Readable for IrrxConfigSpec {}
+#[doc = "`write(|w| ..)` method takes [`irrx_config::W`](W) writer structure"]
+impl crate::Writable for IrrxConfigSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets irrx_config to value 0x02"]
-impl crate::Resettable for IRRX_CONFIG_SPEC {
-    const RESET_VALUE: Self::Ux = 0x02;
+impl crate::Resettable for IrrxConfigSpec {
+    const RESET_VALUE: u32 = 0x02;
 }

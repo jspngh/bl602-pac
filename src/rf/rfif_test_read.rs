@@ -1,81 +1,35 @@
 #[doc = "Register `rfif_test_read` reader"]
-pub struct R(crate::R<RFIF_TEST_READ_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RFIF_TEST_READ_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RFIF_TEST_READ_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RFIF_TEST_READ_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RfifTestReadSpec>;
 #[doc = "Register `rfif_test_read` writer"]
-pub struct W(crate::W<RFIF_TEST_READ_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<RFIF_TEST_READ_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<RFIF_TEST_READ_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<RFIF_TEST_READ_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<RfifTestReadSpec>;
 #[doc = "Field `test_read` reader - "]
-pub type TEST_READ_R = crate::FieldReader<u32, u32>;
+pub type TestReadR = crate::FieldReader<u32>;
 #[doc = "Field `test_read` writer - "]
-pub type TEST_READ_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RFIF_TEST_READ_SPEC, u32, u32, 32, O>;
+pub type TestReadW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn test_read(&self) -> TEST_READ_R {
-        TEST_READ_R::new(self.bits)
+    pub fn test_read(&self) -> TestReadR {
+        TestReadR::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
-    pub fn test_read(&mut self) -> TEST_READ_W<0> {
-        TEST_READ_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn test_read(&mut self) -> TestReadW<'_, RfifTestReadSpec> {
+        TestReadW::new(self, 0)
     }
 }
-#[doc = "rfif_test_read.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rfif_test_read](index.html) module"]
-pub struct RFIF_TEST_READ_SPEC;
-impl crate::RegisterSpec for RFIF_TEST_READ_SPEC {
+#[doc = "rfif_test_read.\n\nYou can [`read`](crate::Reg::read) this register and get [`rfif_test_read::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rfif_test_read::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RfifTestReadSpec;
+impl crate::RegisterSpec for RfifTestReadSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rfif_test_read::R](R) reader structure"]
-impl crate::Readable for RFIF_TEST_READ_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [rfif_test_read::W](W) writer structure"]
-impl crate::Writable for RFIF_TEST_READ_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`rfif_test_read::R`](R) reader structure"]
+impl crate::Readable for RfifTestReadSpec {}
+#[doc = "`write(|w| ..)` method takes [`rfif_test_read::W`](W) writer structure"]
+impl crate::Writable for RfifTestReadSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets rfif_test_read to value 0"]
-impl crate::Resettable for RFIF_TEST_READ_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for RfifTestReadSpec {}

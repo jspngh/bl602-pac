@@ -1,370 +1,301 @@
 #[doc = "Register `ef_cfg_0` reader"]
-pub struct R(crate::R<EF_CFG_0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<EF_CFG_0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<EF_CFG_0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<EF_CFG_0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<EfCfg0Spec>;
 #[doc = "Register `ef_cfg_0` writer"]
-pub struct W(crate::W<EF_CFG_0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<EF_CFG_0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<EF_CFG_0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<EF_CFG_0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<EfCfg0Spec>;
 #[doc = "Field `ef_sf_aes_mode` reader - "]
-pub type EF_SF_AES_MODE_R = crate::FieldReader<u8, u8>;
+pub type EfSfAesModeR = crate::FieldReader;
 #[doc = "Field `ef_sf_aes_mode` writer - "]
-pub type EF_SF_AES_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, EF_CFG_0_SPEC, u8, u8, 2, O>;
+pub type EfSfAesModeW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ef_sboot_sign_mode` reader - "]
-pub type EF_SBOOT_SIGN_MODE_R = crate::FieldReader<u8, u8>;
+pub type EfSbootSignModeR = crate::FieldReader;
 #[doc = "Field `ef_sboot_sign_mode` writer - "]
-pub type EF_SBOOT_SIGN_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, EF_CFG_0_SPEC, u8, u8, 2, O>;
+pub type EfSbootSignModeW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ef_sboot_en` reader - "]
-pub type EF_SBOOT_EN_R = crate::FieldReader<u8, u8>;
+pub type EfSbootEnR = crate::FieldReader;
 #[doc = "Field `ef_sboot_en` writer - "]
-pub type EF_SBOOT_EN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, EF_CFG_0_SPEC, u8, u8, 2, O>;
+pub type EfSbootEnW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ef_cpu1_enc_en` reader - "]
-pub type EF_CPU1_ENC_EN_R = crate::BitReader<bool>;
+pub type EfCpu1EncEnR = crate::BitReader;
 #[doc = "Field `ef_cpu1_enc_en` writer - "]
-pub type EF_CPU1_ENC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EF_CFG_0_SPEC, bool, O>;
+pub type EfCpu1EncEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ef_cpu0_enc_en` reader - "]
-pub type EF_CPU0_ENC_EN_R = crate::BitReader<bool>;
+pub type EfCpu0EncEnR = crate::BitReader;
 #[doc = "Field `ef_cpu0_enc_en` writer - "]
-pub type EF_CPU0_ENC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EF_CFG_0_SPEC, bool, O>;
+pub type EfCpu0EncEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ef_boot_sel` reader - "]
-pub type EF_BOOT_SEL_R = crate::FieldReader<u8, u8>;
+pub type EfBootSelR = crate::FieldReader;
 #[doc = "Field `ef_boot_sel` writer - "]
-pub type EF_BOOT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, EF_CFG_0_SPEC, u8, u8, 4, O>;
+pub type EfBootSelW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `ef_sw_usage_1` reader - "]
-pub type EF_SW_USAGE_1_R = crate::FieldReader<u8, u8>;
+pub type EfSwUsage1R = crate::FieldReader;
 #[doc = "Field `ef_sw_usage_1` writer - "]
-pub type EF_SW_USAGE_1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, EF_CFG_0_SPEC, u8, u8, 2, O>;
+pub type EfSwUsage1W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ef_sdu_dis` reader - "]
-pub type EF_SDU_DIS_R = crate::BitReader<bool>;
+pub type EfSduDisR = crate::BitReader;
 #[doc = "Field `ef_sdu_dis` writer - "]
-pub type EF_SDU_DIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, EF_CFG_0_SPEC, bool, O>;
+pub type EfSduDisW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ef_ble_dis` reader - "]
-pub type EF_BLE_DIS_R = crate::BitReader<bool>;
+pub type EfBleDisR = crate::BitReader;
 #[doc = "Field `ef_ble_dis` writer - "]
-pub type EF_BLE_DIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, EF_CFG_0_SPEC, bool, O>;
+pub type EfBleDisW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ef_wifi_dis` reader - "]
-pub type EF_WIFI_DIS_R = crate::BitReader<bool>;
+pub type EfWifiDisR = crate::BitReader;
 #[doc = "Field `ef_wifi_dis` writer - "]
-pub type EF_WIFI_DIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, EF_CFG_0_SPEC, bool, O>;
+pub type EfWifiDisW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ef_0_key_enc_en` reader - "]
-pub type EF_0_KEY_ENC_EN_R = crate::BitReader<bool>;
+pub type Ef0KeyEncEnR = crate::BitReader;
 #[doc = "Field `ef_0_key_enc_en` writer - "]
-pub type EF_0_KEY_ENC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EF_CFG_0_SPEC, bool, O>;
+pub type Ef0KeyEncEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ef_cam_dis` reader - "]
-pub type EF_CAM_DIS_R = crate::BitReader<bool>;
+pub type EfCamDisR = crate::BitReader;
 #[doc = "Field `ef_cam_dis` writer - "]
-pub type EF_CAM_DIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, EF_CFG_0_SPEC, bool, O>;
+pub type EfCamDisW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ef_sf_dis` reader - "]
-pub type EF_SF_DIS_R = crate::BitReader<bool>;
+pub type EfSfDisR = crate::BitReader;
 #[doc = "Field `ef_sf_dis` writer - "]
-pub type EF_SF_DIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, EF_CFG_0_SPEC, bool, O>;
+pub type EfSfDisW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ef_cpu1_dis` reader - "]
-pub type EF_CPU1_DIS_R = crate::BitReader<bool>;
+pub type EfCpu1DisR = crate::BitReader;
 #[doc = "Field `ef_cpu1_dis` writer - "]
-pub type EF_CPU1_DIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, EF_CFG_0_SPEC, bool, O>;
+pub type EfCpu1DisW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ef_cpu_rst_dbg_dis` reader - "]
-pub type EF_CPU_RST_DBG_DIS_R = crate::BitReader<bool>;
+pub type EfCpuRstDbgDisR = crate::BitReader;
 #[doc = "Field `ef_cpu_rst_dbg_dis` writer - "]
-pub type EF_CPU_RST_DBG_DIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, EF_CFG_0_SPEC, bool, O>;
+pub type EfCpuRstDbgDisW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ef_se_dbg_dis` reader - "]
-pub type EF_SE_DBG_DIS_R = crate::BitReader<bool>;
+pub type EfSeDbgDisR = crate::BitReader;
 #[doc = "Field `ef_se_dbg_dis` writer - "]
-pub type EF_SE_DBG_DIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, EF_CFG_0_SPEC, bool, O>;
+pub type EfSeDbgDisW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ef_efuse_dbg_dis` reader - "]
-pub type EF_EFUSE_DBG_DIS_R = crate::BitReader<bool>;
+pub type EfEfuseDbgDisR = crate::BitReader;
 #[doc = "Field `ef_efuse_dbg_dis` writer - "]
-pub type EF_EFUSE_DBG_DIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, EF_CFG_0_SPEC, bool, O>;
+pub type EfEfuseDbgDisW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ef_dbg_jtag_1_dis` reader - "]
-pub type EF_DBG_JTAG_1_DIS_R = crate::FieldReader<u8, u8>;
+pub type EfDbgJtag1DisR = crate::FieldReader;
 #[doc = "Field `ef_dbg_jtag_1_dis` writer - "]
-pub type EF_DBG_JTAG_1_DIS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, EF_CFG_0_SPEC, u8, u8, 2, O>;
+pub type EfDbgJtag1DisW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ef_dbg_jtag_0_dis` reader - "]
-pub type EF_DBG_JTAG_0_DIS_R = crate::FieldReader<u8, u8>;
+pub type EfDbgJtag0DisR = crate::FieldReader;
 #[doc = "Field `ef_dbg_jtag_0_dis` writer - "]
-pub type EF_DBG_JTAG_0_DIS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, EF_CFG_0_SPEC, u8, u8, 2, O>;
+pub type EfDbgJtag0DisW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ef_dbg_mode` reader - "]
-pub type EF_DBG_MODE_R = crate::FieldReader<u8, u8>;
+pub type EfDbgModeR = crate::FieldReader;
 #[doc = "Field `ef_dbg_mode` writer - "]
-pub type EF_DBG_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, EF_CFG_0_SPEC, u8, u8, 4, O>;
+pub type EfDbgModeW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn ef_sf_aes_mode(&self) -> EF_SF_AES_MODE_R {
-        EF_SF_AES_MODE_R::new((self.bits & 3) as u8)
+    pub fn ef_sf_aes_mode(&self) -> EfSfAesModeR {
+        EfSfAesModeR::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
-    pub fn ef_sboot_sign_mode(&self) -> EF_SBOOT_SIGN_MODE_R {
-        EF_SBOOT_SIGN_MODE_R::new(((self.bits >> 2) & 3) as u8)
+    pub fn ef_sboot_sign_mode(&self) -> EfSbootSignModeR {
+        EfSbootSignModeR::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
-    pub fn ef_sboot_en(&self) -> EF_SBOOT_EN_R {
-        EF_SBOOT_EN_R::new(((self.bits >> 4) & 3) as u8)
+    pub fn ef_sboot_en(&self) -> EfSbootEnR {
+        EfSbootEnR::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn ef_cpu1_enc_en(&self) -> EF_CPU1_ENC_EN_R {
-        EF_CPU1_ENC_EN_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn ef_cpu1_enc_en(&self) -> EfCpu1EncEnR {
+        EfCpu1EncEnR::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn ef_cpu0_enc_en(&self) -> EF_CPU0_ENC_EN_R {
-        EF_CPU0_ENC_EN_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn ef_cpu0_enc_en(&self) -> EfCpu0EncEnR {
+        EfCpu0EncEnR::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
-    pub fn ef_boot_sel(&self) -> EF_BOOT_SEL_R {
-        EF_BOOT_SEL_R::new(((self.bits >> 8) & 0x0f) as u8)
+    pub fn ef_boot_sel(&self) -> EfBootSelR {
+        EfBootSelR::new(((self.bits >> 8) & 0x0f) as u8)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
-    pub fn ef_sw_usage_1(&self) -> EF_SW_USAGE_1_R {
-        EF_SW_USAGE_1_R::new(((self.bits >> 12) & 3) as u8)
+    pub fn ef_sw_usage_1(&self) -> EfSwUsage1R {
+        EfSwUsage1R::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    pub fn ef_sdu_dis(&self) -> EF_SDU_DIS_R {
-        EF_SDU_DIS_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn ef_sdu_dis(&self) -> EfSduDisR {
+        EfSduDisR::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    pub fn ef_ble_dis(&self) -> EF_BLE_DIS_R {
-        EF_BLE_DIS_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn ef_ble_dis(&self) -> EfBleDisR {
+        EfBleDisR::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn ef_wifi_dis(&self) -> EF_WIFI_DIS_R {
-        EF_WIFI_DIS_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn ef_wifi_dis(&self) -> EfWifiDisR {
+        EfWifiDisR::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    pub fn ef_0_key_enc_en(&self) -> EF_0_KEY_ENC_EN_R {
-        EF_0_KEY_ENC_EN_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn ef_0_key_enc_en(&self) -> Ef0KeyEncEnR {
+        Ef0KeyEncEnR::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    pub fn ef_cam_dis(&self) -> EF_CAM_DIS_R {
-        EF_CAM_DIS_R::new(((self.bits >> 18) & 1) != 0)
+    pub fn ef_cam_dis(&self) -> EfCamDisR {
+        EfCamDisR::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
-    pub fn ef_sf_dis(&self) -> EF_SF_DIS_R {
-        EF_SF_DIS_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn ef_sf_dis(&self) -> EfSfDisR {
+        EfSfDisR::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    pub fn ef_cpu1_dis(&self) -> EF_CPU1_DIS_R {
-        EF_CPU1_DIS_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn ef_cpu1_dis(&self) -> EfCpu1DisR {
+        EfCpu1DisR::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
-    pub fn ef_cpu_rst_dbg_dis(&self) -> EF_CPU_RST_DBG_DIS_R {
-        EF_CPU_RST_DBG_DIS_R::new(((self.bits >> 21) & 1) != 0)
+    pub fn ef_cpu_rst_dbg_dis(&self) -> EfCpuRstDbgDisR {
+        EfCpuRstDbgDisR::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
-    pub fn ef_se_dbg_dis(&self) -> EF_SE_DBG_DIS_R {
-        EF_SE_DBG_DIS_R::new(((self.bits >> 22) & 1) != 0)
+    pub fn ef_se_dbg_dis(&self) -> EfSeDbgDisR {
+        EfSeDbgDisR::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
-    pub fn ef_efuse_dbg_dis(&self) -> EF_EFUSE_DBG_DIS_R {
-        EF_EFUSE_DBG_DIS_R::new(((self.bits >> 23) & 1) != 0)
+    pub fn ef_efuse_dbg_dis(&self) -> EfEfuseDbgDisR {
+        EfEfuseDbgDisR::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bits 24:25"]
     #[inline(always)]
-    pub fn ef_dbg_jtag_1_dis(&self) -> EF_DBG_JTAG_1_DIS_R {
-        EF_DBG_JTAG_1_DIS_R::new(((self.bits >> 24) & 3) as u8)
+    pub fn ef_dbg_jtag_1_dis(&self) -> EfDbgJtag1DisR {
+        EfDbgJtag1DisR::new(((self.bits >> 24) & 3) as u8)
     }
     #[doc = "Bits 26:27"]
     #[inline(always)]
-    pub fn ef_dbg_jtag_0_dis(&self) -> EF_DBG_JTAG_0_DIS_R {
-        EF_DBG_JTAG_0_DIS_R::new(((self.bits >> 26) & 3) as u8)
+    pub fn ef_dbg_jtag_0_dis(&self) -> EfDbgJtag0DisR {
+        EfDbgJtag0DisR::new(((self.bits >> 26) & 3) as u8)
     }
     #[doc = "Bits 28:31"]
     #[inline(always)]
-    pub fn ef_dbg_mode(&self) -> EF_DBG_MODE_R {
-        EF_DBG_MODE_R::new(((self.bits >> 28) & 0x0f) as u8)
+    pub fn ef_dbg_mode(&self) -> EfDbgModeR {
+        EfDbgModeR::new(((self.bits >> 28) & 0x0f) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_sf_aes_mode(&mut self) -> EF_SF_AES_MODE_W<0> {
-        EF_SF_AES_MODE_W::new(self)
+    pub fn ef_sf_aes_mode(&mut self) -> EfSfAesModeW<'_, EfCfg0Spec> {
+        EfSfAesModeW::new(self, 0)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_sboot_sign_mode(&mut self) -> EF_SBOOT_SIGN_MODE_W<2> {
-        EF_SBOOT_SIGN_MODE_W::new(self)
+    pub fn ef_sboot_sign_mode(&mut self) -> EfSbootSignModeW<'_, EfCfg0Spec> {
+        EfSbootSignModeW::new(self, 2)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_sboot_en(&mut self) -> EF_SBOOT_EN_W<4> {
-        EF_SBOOT_EN_W::new(self)
+    pub fn ef_sboot_en(&mut self) -> EfSbootEnW<'_, EfCfg0Spec> {
+        EfSbootEnW::new(self, 4)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_cpu1_enc_en(&mut self) -> EF_CPU1_ENC_EN_W<6> {
-        EF_CPU1_ENC_EN_W::new(self)
+    pub fn ef_cpu1_enc_en(&mut self) -> EfCpu1EncEnW<'_, EfCfg0Spec> {
+        EfCpu1EncEnW::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_cpu0_enc_en(&mut self) -> EF_CPU0_ENC_EN_W<7> {
-        EF_CPU0_ENC_EN_W::new(self)
+    pub fn ef_cpu0_enc_en(&mut self) -> EfCpu0EncEnW<'_, EfCfg0Spec> {
+        EfCpu0EncEnW::new(self, 7)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_boot_sel(&mut self) -> EF_BOOT_SEL_W<8> {
-        EF_BOOT_SEL_W::new(self)
+    pub fn ef_boot_sel(&mut self) -> EfBootSelW<'_, EfCfg0Spec> {
+        EfBootSelW::new(self, 8)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_sw_usage_1(&mut self) -> EF_SW_USAGE_1_W<12> {
-        EF_SW_USAGE_1_W::new(self)
+    pub fn ef_sw_usage_1(&mut self) -> EfSwUsage1W<'_, EfCfg0Spec> {
+        EfSwUsage1W::new(self, 12)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_sdu_dis(&mut self) -> EF_SDU_DIS_W<14> {
-        EF_SDU_DIS_W::new(self)
+    pub fn ef_sdu_dis(&mut self) -> EfSduDisW<'_, EfCfg0Spec> {
+        EfSduDisW::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_ble_dis(&mut self) -> EF_BLE_DIS_W<15> {
-        EF_BLE_DIS_W::new(self)
+    pub fn ef_ble_dis(&mut self) -> EfBleDisW<'_, EfCfg0Spec> {
+        EfBleDisW::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_wifi_dis(&mut self) -> EF_WIFI_DIS_W<16> {
-        EF_WIFI_DIS_W::new(self)
+    pub fn ef_wifi_dis(&mut self) -> EfWifiDisW<'_, EfCfg0Spec> {
+        EfWifiDisW::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_0_key_enc_en(&mut self) -> EF_0_KEY_ENC_EN_W<17> {
-        EF_0_KEY_ENC_EN_W::new(self)
+    pub fn ef_0_key_enc_en(&mut self) -> Ef0KeyEncEnW<'_, EfCfg0Spec> {
+        Ef0KeyEncEnW::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_cam_dis(&mut self) -> EF_CAM_DIS_W<18> {
-        EF_CAM_DIS_W::new(self)
+    pub fn ef_cam_dis(&mut self) -> EfCamDisW<'_, EfCfg0Spec> {
+        EfCamDisW::new(self, 18)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_sf_dis(&mut self) -> EF_SF_DIS_W<19> {
-        EF_SF_DIS_W::new(self)
+    pub fn ef_sf_dis(&mut self) -> EfSfDisW<'_, EfCfg0Spec> {
+        EfSfDisW::new(self, 19)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_cpu1_dis(&mut self) -> EF_CPU1_DIS_W<20> {
-        EF_CPU1_DIS_W::new(self)
+    pub fn ef_cpu1_dis(&mut self) -> EfCpu1DisW<'_, EfCfg0Spec> {
+        EfCpu1DisW::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_cpu_rst_dbg_dis(&mut self) -> EF_CPU_RST_DBG_DIS_W<21> {
-        EF_CPU_RST_DBG_DIS_W::new(self)
+    pub fn ef_cpu_rst_dbg_dis(&mut self) -> EfCpuRstDbgDisW<'_, EfCfg0Spec> {
+        EfCpuRstDbgDisW::new(self, 21)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_se_dbg_dis(&mut self) -> EF_SE_DBG_DIS_W<22> {
-        EF_SE_DBG_DIS_W::new(self)
+    pub fn ef_se_dbg_dis(&mut self) -> EfSeDbgDisW<'_, EfCfg0Spec> {
+        EfSeDbgDisW::new(self, 22)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_efuse_dbg_dis(&mut self) -> EF_EFUSE_DBG_DIS_W<23> {
-        EF_EFUSE_DBG_DIS_W::new(self)
+    pub fn ef_efuse_dbg_dis(&mut self) -> EfEfuseDbgDisW<'_, EfCfg0Spec> {
+        EfEfuseDbgDisW::new(self, 23)
     }
     #[doc = "Bits 24:25"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_dbg_jtag_1_dis(&mut self) -> EF_DBG_JTAG_1_DIS_W<24> {
-        EF_DBG_JTAG_1_DIS_W::new(self)
+    pub fn ef_dbg_jtag_1_dis(&mut self) -> EfDbgJtag1DisW<'_, EfCfg0Spec> {
+        EfDbgJtag1DisW::new(self, 24)
     }
     #[doc = "Bits 26:27"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_dbg_jtag_0_dis(&mut self) -> EF_DBG_JTAG_0_DIS_W<26> {
-        EF_DBG_JTAG_0_DIS_W::new(self)
+    pub fn ef_dbg_jtag_0_dis(&mut self) -> EfDbgJtag0DisW<'_, EfCfg0Spec> {
+        EfDbgJtag0DisW::new(self, 26)
     }
     #[doc = "Bits 28:31"]
     #[inline(always)]
-    #[must_use]
-    pub fn ef_dbg_mode(&mut self) -> EF_DBG_MODE_W<28> {
-        EF_DBG_MODE_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn ef_dbg_mode(&mut self) -> EfDbgModeW<'_, EfCfg0Spec> {
+        EfDbgModeW::new(self, 28)
     }
 }
-#[doc = "ef_cfg_0.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ef_cfg_0](index.html) module"]
-pub struct EF_CFG_0_SPEC;
-impl crate::RegisterSpec for EF_CFG_0_SPEC {
+#[doc = "ef_cfg_0.\n\nYou can [`read`](crate::Reg::read) this register and get [`ef_cfg_0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ef_cfg_0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct EfCfg0Spec;
+impl crate::RegisterSpec for EfCfg0Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ef_cfg_0::R](R) reader structure"]
-impl crate::Readable for EF_CFG_0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ef_cfg_0::W](W) writer structure"]
-impl crate::Writable for EF_CFG_0_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`ef_cfg_0::R`](R) reader structure"]
+impl crate::Readable for EfCfg0Spec {}
+#[doc = "`write(|w| ..)` method takes [`ef_cfg_0::W`](W) writer structure"]
+impl crate::Writable for EfCfg0Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets ef_cfg_0 to value 0"]
-impl crate::Resettable for EF_CFG_0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for EfCfg0Spec {}

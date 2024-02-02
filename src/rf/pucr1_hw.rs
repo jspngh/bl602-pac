@@ -1,395 +1,329 @@
 #[doc = "Register `pucr1_hw` reader"]
-pub struct R(crate::R<PUCR1_HW_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PUCR1_HW_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PUCR1_HW_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PUCR1_HW_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<Pucr1HwSpec>;
 #[doc = "Register `pucr1_hw` writer"]
-pub struct W(crate::W<PUCR1_HW_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PUCR1_HW_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PUCR1_HW_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PUCR1_HW_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<Pucr1HwSpec>;
 #[doc = "Field `pu_sfreg_hw` reader - "]
-pub type PU_SFREG_HW_R = crate::BitReader<bool>;
+pub type PuSfregHwR = crate::BitReader;
 #[doc = "Field `pu_sfreg_hw` writer - "]
-pub type PU_SFREG_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PUCR1_HW_SPEC, bool, O>;
+pub type PuSfregHwW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pu_lna_hw` reader - "]
-pub type PU_LNA_HW_R = crate::BitReader<bool>;
+pub type PuLnaHwR = crate::BitReader;
 #[doc = "Field `pu_lna_hw` writer - "]
-pub type PU_LNA_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PUCR1_HW_SPEC, bool, O>;
+pub type PuLnaHwW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pu_rmxgm_hw` reader - "]
-pub type PU_RMXGM_HW_R = crate::BitReader<bool>;
+pub type PuRmxgmHwR = crate::BitReader;
 #[doc = "Field `pu_rmxgm_hw` writer - "]
-pub type PU_RMXGM_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PUCR1_HW_SPEC, bool, O>;
+pub type PuRmxgmHwW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pu_rmx_hw` reader - "]
-pub type PU_RMX_HW_R = crate::BitReader<bool>;
+pub type PuRmxHwR = crate::BitReader;
 #[doc = "Field `pu_rmx_hw` writer - "]
-pub type PU_RMX_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PUCR1_HW_SPEC, bool, O>;
+pub type PuRmxHwW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pu_rbb_hw` reader - "]
-pub type PU_RBB_HW_R = crate::BitReader<bool>;
+pub type PuRbbHwR = crate::BitReader;
 #[doc = "Field `pu_rbb_hw` writer - "]
-pub type PU_RBB_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PUCR1_HW_SPEC, bool, O>;
+pub type PuRbbHwW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pu_adda_ldo_hw` reader - "]
-pub type PU_ADDA_LDO_HW_R = crate::BitReader<bool>;
+pub type PuAddaLdoHwR = crate::BitReader;
 #[doc = "Field `pu_adda_ldo_hw` writer - "]
-pub type PU_ADDA_LDO_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PUCR1_HW_SPEC, bool, O>;
+pub type PuAddaLdoHwW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `adc_clk_en_hw` reader - "]
-pub type ADC_CLK_EN_HW_R = crate::BitReader<bool>;
+pub type AdcClkEnHwR = crate::BitReader;
 #[doc = "Field `adc_clk_en_hw` writer - "]
-pub type ADC_CLK_EN_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PUCR1_HW_SPEC, bool, O>;
+pub type AdcClkEnHwW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pu_adc_hw` reader - "]
-pub type PU_ADC_HW_R = crate::BitReader<bool>;
+pub type PuAdcHwR = crate::BitReader;
 #[doc = "Field `pu_adc_hw` writer - "]
-pub type PU_ADC_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PUCR1_HW_SPEC, bool, O>;
+pub type PuAdcHwW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pu_pa_hw` reader - "]
-pub type PU_PA_HW_R = crate::BitReader<bool>;
+pub type PuPaHwR = crate::BitReader;
 #[doc = "Field `pu_pa_hw` writer - "]
-pub type PU_PA_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PUCR1_HW_SPEC, bool, O>;
+pub type PuPaHwW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pu_tmx_hw` reader - "]
-pub type PU_TMX_HW_R = crate::BitReader<bool>;
+pub type PuTmxHwR = crate::BitReader;
 #[doc = "Field `pu_tmx_hw` writer - "]
-pub type PU_TMX_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PUCR1_HW_SPEC, bool, O>;
+pub type PuTmxHwW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pu_tbb_hw` reader - "]
-pub type PU_TBB_HW_R = crate::BitReader<bool>;
+pub type PuTbbHwR = crate::BitReader;
 #[doc = "Field `pu_tbb_hw` writer - "]
-pub type PU_TBB_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PUCR1_HW_SPEC, bool, O>;
+pub type PuTbbHwW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pu_dac_hw` reader - "]
-pub type PU_DAC_HW_R = crate::BitReader<bool>;
+pub type PuDacHwR = crate::BitReader;
 #[doc = "Field `pu_dac_hw` writer - "]
-pub type PU_DAC_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PUCR1_HW_SPEC, bool, O>;
+pub type PuDacHwW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pu_vco_hw` reader - "]
-pub type PU_VCO_HW_R = crate::BitReader<bool>;
+pub type PuVcoHwR = crate::BitReader;
 #[doc = "Field `pu_vco_hw` writer - "]
-pub type PU_VCO_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PUCR1_HW_SPEC, bool, O>;
+pub type PuVcoHwW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pu_fbdv_hw` reader - "]
-pub type PU_FBDV_HW_R = crate::BitReader<bool>;
+pub type PuFbdvHwR = crate::BitReader;
 #[doc = "Field `pu_fbdv_hw` writer - "]
-pub type PU_FBDV_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PUCR1_HW_SPEC, bool, O>;
+pub type PuFbdvHwW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pu_pfd_hw` reader - "]
-pub type PU_PFD_HW_R = crate::BitReader<bool>;
+pub type PuPfdHwR = crate::BitReader;
 #[doc = "Field `pu_pfd_hw` writer - "]
-pub type PU_PFD_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PUCR1_HW_SPEC, bool, O>;
+pub type PuPfdHwW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pu_osmx_hw` reader - "]
-pub type PU_OSMX_HW_R = crate::BitReader<bool>;
+pub type PuOsmxHwR = crate::BitReader;
 #[doc = "Field `pu_osmx_hw` writer - "]
-pub type PU_OSMX_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PUCR1_HW_SPEC, bool, O>;
+pub type PuOsmxHwW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pu_rxbuf_hw` reader - "]
-pub type PU_RXBUF_HW_R = crate::BitReader<bool>;
+pub type PuRxbufHwR = crate::BitReader;
 #[doc = "Field `pu_rxbuf_hw` writer - "]
-pub type PU_RXBUF_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PUCR1_HW_SPEC, bool, O>;
+pub type PuRxbufHwW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pu_txbuf_hw` reader - "]
-pub type PU_TXBUF_HW_R = crate::BitReader<bool>;
+pub type PuTxbufHwR = crate::BitReader;
 #[doc = "Field `pu_txbuf_hw` writer - "]
-pub type PU_TXBUF_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PUCR1_HW_SPEC, bool, O>;
+pub type PuTxbufHwW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `trsw_en_hw` reader - "]
-pub type TRSW_EN_HW_R = crate::BitReader<bool>;
+pub type TrswEnHwR = crate::BitReader;
 #[doc = "Field `trsw_en_hw` writer - "]
-pub type TRSW_EN_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PUCR1_HW_SPEC, bool, O>;
+pub type TrswEnHwW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pu_pkdet_hw` reader - "]
-pub type PU_PKDET_HW_R = crate::BitReader<bool>;
+pub type PuPkdetHwR = crate::BitReader;
 #[doc = "Field `pu_pkdet_hw` writer - "]
-pub type PU_PKDET_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PUCR1_HW_SPEC, bool, O>;
+pub type PuPkdetHwW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pu_rosdac_hw` reader - "]
-pub type PU_ROSDAC_HW_R = crate::BitReader<bool>;
+pub type PuRosdacHwR = crate::BitReader;
 #[doc = "Field `pu_rosdac_hw` writer - "]
-pub type PU_ROSDAC_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PUCR1_HW_SPEC, bool, O>;
+pub type PuRosdacHwW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pu_tosdac_hw` reader - "]
-pub type PU_TOSDAC_HW_R = crate::BitReader<bool>;
+pub type PuTosdacHwR = crate::BitReader;
 #[doc = "Field `pu_tosdac_hw` writer - "]
-pub type PU_TOSDAC_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, PUCR1_HW_SPEC, bool, O>;
+pub type PuTosdacHwW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn pu_sfreg_hw(&self) -> PU_SFREG_HW_R {
-        PU_SFREG_HW_R::new((self.bits & 1) != 0)
+    pub fn pu_sfreg_hw(&self) -> PuSfregHwR {
+        PuSfregHwR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn pu_lna_hw(&self) -> PU_LNA_HW_R {
-        PU_LNA_HW_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn pu_lna_hw(&self) -> PuLnaHwR {
+        PuLnaHwR::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn pu_rmxgm_hw(&self) -> PU_RMXGM_HW_R {
-        PU_RMXGM_HW_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn pu_rmxgm_hw(&self) -> PuRmxgmHwR {
+        PuRmxgmHwR::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    pub fn pu_rmx_hw(&self) -> PU_RMX_HW_R {
-        PU_RMX_HW_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn pu_rmx_hw(&self) -> PuRmxHwR {
+        PuRmxHwR::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn pu_rbb_hw(&self) -> PU_RBB_HW_R {
-        PU_RBB_HW_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn pu_rbb_hw(&self) -> PuRbbHwR {
+        PuRbbHwR::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn pu_adda_ldo_hw(&self) -> PU_ADDA_LDO_HW_R {
-        PU_ADDA_LDO_HW_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn pu_adda_ldo_hw(&self) -> PuAddaLdoHwR {
+        PuAddaLdoHwR::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn adc_clk_en_hw(&self) -> ADC_CLK_EN_HW_R {
-        ADC_CLK_EN_HW_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn adc_clk_en_hw(&self) -> AdcClkEnHwR {
+        AdcClkEnHwR::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    pub fn pu_adc_hw(&self) -> PU_ADC_HW_R {
-        PU_ADC_HW_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn pu_adc_hw(&self) -> PuAdcHwR {
+        PuAdcHwR::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn pu_pa_hw(&self) -> PU_PA_HW_R {
-        PU_PA_HW_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn pu_pa_hw(&self) -> PuPaHwR {
+        PuPaHwR::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    pub fn pu_tmx_hw(&self) -> PU_TMX_HW_R {
-        PU_TMX_HW_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn pu_tmx_hw(&self) -> PuTmxHwR {
+        PuTmxHwR::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    pub fn pu_tbb_hw(&self) -> PU_TBB_HW_R {
-        PU_TBB_HW_R::new(((self.bits >> 18) & 1) != 0)
+    pub fn pu_tbb_hw(&self) -> PuTbbHwR {
+        PuTbbHwR::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
-    pub fn pu_dac_hw(&self) -> PU_DAC_HW_R {
-        PU_DAC_HW_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn pu_dac_hw(&self) -> PuDacHwR {
+        PuDacHwR::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    pub fn pu_vco_hw(&self) -> PU_VCO_HW_R {
-        PU_VCO_HW_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn pu_vco_hw(&self) -> PuVcoHwR {
+        PuVcoHwR::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
-    pub fn pu_fbdv_hw(&self) -> PU_FBDV_HW_R {
-        PU_FBDV_HW_R::new(((self.bits >> 21) & 1) != 0)
+    pub fn pu_fbdv_hw(&self) -> PuFbdvHwR {
+        PuFbdvHwR::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
-    pub fn pu_pfd_hw(&self) -> PU_PFD_HW_R {
-        PU_PFD_HW_R::new(((self.bits >> 22) & 1) != 0)
+    pub fn pu_pfd_hw(&self) -> PuPfdHwR {
+        PuPfdHwR::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
-    pub fn pu_osmx_hw(&self) -> PU_OSMX_HW_R {
-        PU_OSMX_HW_R::new(((self.bits >> 23) & 1) != 0)
+    pub fn pu_osmx_hw(&self) -> PuOsmxHwR {
+        PuOsmxHwR::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    pub fn pu_rxbuf_hw(&self) -> PU_RXBUF_HW_R {
-        PU_RXBUF_HW_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn pu_rxbuf_hw(&self) -> PuRxbufHwR {
+        PuRxbufHwR::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
-    pub fn pu_txbuf_hw(&self) -> PU_TXBUF_HW_R {
-        PU_TXBUF_HW_R::new(((self.bits >> 25) & 1) != 0)
+    pub fn pu_txbuf_hw(&self) -> PuTxbufHwR {
+        PuTxbufHwR::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    pub fn trsw_en_hw(&self) -> TRSW_EN_HW_R {
-        TRSW_EN_HW_R::new(((self.bits >> 26) & 1) != 0)
+    pub fn trsw_en_hw(&self) -> TrswEnHwR {
+        TrswEnHwR::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    pub fn pu_pkdet_hw(&self) -> PU_PKDET_HW_R {
-        PU_PKDET_HW_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn pu_pkdet_hw(&self) -> PuPkdetHwR {
+        PuPkdetHwR::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    pub fn pu_rosdac_hw(&self) -> PU_ROSDAC_HW_R {
-        PU_ROSDAC_HW_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn pu_rosdac_hw(&self) -> PuRosdacHwR {
+        PuRosdacHwR::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    pub fn pu_tosdac_hw(&self) -> PU_TOSDAC_HW_R {
-        PU_TOSDAC_HW_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn pu_tosdac_hw(&self) -> PuTosdacHwR {
+        PuTosdacHwR::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu_sfreg_hw(&mut self) -> PU_SFREG_HW_W<0> {
-        PU_SFREG_HW_W::new(self)
+    pub fn pu_sfreg_hw(&mut self) -> PuSfregHwW<'_, Pucr1HwSpec> {
+        PuSfregHwW::new(self, 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu_lna_hw(&mut self) -> PU_LNA_HW_W<8> {
-        PU_LNA_HW_W::new(self)
+    pub fn pu_lna_hw(&mut self) -> PuLnaHwW<'_, Pucr1HwSpec> {
+        PuLnaHwW::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu_rmxgm_hw(&mut self) -> PU_RMXGM_HW_W<9> {
-        PU_RMXGM_HW_W::new(self)
+    pub fn pu_rmxgm_hw(&mut self) -> PuRmxgmHwW<'_, Pucr1HwSpec> {
+        PuRmxgmHwW::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu_rmx_hw(&mut self) -> PU_RMX_HW_W<10> {
-        PU_RMX_HW_W::new(self)
+    pub fn pu_rmx_hw(&mut self) -> PuRmxHwW<'_, Pucr1HwSpec> {
+        PuRmxHwW::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu_rbb_hw(&mut self) -> PU_RBB_HW_W<11> {
-        PU_RBB_HW_W::new(self)
+    pub fn pu_rbb_hw(&mut self) -> PuRbbHwW<'_, Pucr1HwSpec> {
+        PuRbbHwW::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu_adda_ldo_hw(&mut self) -> PU_ADDA_LDO_HW_W<12> {
-        PU_ADDA_LDO_HW_W::new(self)
+    pub fn pu_adda_ldo_hw(&mut self) -> PuAddaLdoHwW<'_, Pucr1HwSpec> {
+        PuAddaLdoHwW::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    #[must_use]
-    pub fn adc_clk_en_hw(&mut self) -> ADC_CLK_EN_HW_W<13> {
-        ADC_CLK_EN_HW_W::new(self)
+    pub fn adc_clk_en_hw(&mut self) -> AdcClkEnHwW<'_, Pucr1HwSpec> {
+        AdcClkEnHwW::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu_adc_hw(&mut self) -> PU_ADC_HW_W<14> {
-        PU_ADC_HW_W::new(self)
+    pub fn pu_adc_hw(&mut self) -> PuAdcHwW<'_, Pucr1HwSpec> {
+        PuAdcHwW::new(self, 14)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu_pa_hw(&mut self) -> PU_PA_HW_W<16> {
-        PU_PA_HW_W::new(self)
+    pub fn pu_pa_hw(&mut self) -> PuPaHwW<'_, Pucr1HwSpec> {
+        PuPaHwW::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu_tmx_hw(&mut self) -> PU_TMX_HW_W<17> {
-        PU_TMX_HW_W::new(self)
+    pub fn pu_tmx_hw(&mut self) -> PuTmxHwW<'_, Pucr1HwSpec> {
+        PuTmxHwW::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu_tbb_hw(&mut self) -> PU_TBB_HW_W<18> {
-        PU_TBB_HW_W::new(self)
+    pub fn pu_tbb_hw(&mut self) -> PuTbbHwW<'_, Pucr1HwSpec> {
+        PuTbbHwW::new(self, 18)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu_dac_hw(&mut self) -> PU_DAC_HW_W<19> {
-        PU_DAC_HW_W::new(self)
+    pub fn pu_dac_hw(&mut self) -> PuDacHwW<'_, Pucr1HwSpec> {
+        PuDacHwW::new(self, 19)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu_vco_hw(&mut self) -> PU_VCO_HW_W<20> {
-        PU_VCO_HW_W::new(self)
+    pub fn pu_vco_hw(&mut self) -> PuVcoHwW<'_, Pucr1HwSpec> {
+        PuVcoHwW::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu_fbdv_hw(&mut self) -> PU_FBDV_HW_W<21> {
-        PU_FBDV_HW_W::new(self)
+    pub fn pu_fbdv_hw(&mut self) -> PuFbdvHwW<'_, Pucr1HwSpec> {
+        PuFbdvHwW::new(self, 21)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu_pfd_hw(&mut self) -> PU_PFD_HW_W<22> {
-        PU_PFD_HW_W::new(self)
+    pub fn pu_pfd_hw(&mut self) -> PuPfdHwW<'_, Pucr1HwSpec> {
+        PuPfdHwW::new(self, 22)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu_osmx_hw(&mut self) -> PU_OSMX_HW_W<23> {
-        PU_OSMX_HW_W::new(self)
+    pub fn pu_osmx_hw(&mut self) -> PuOsmxHwW<'_, Pucr1HwSpec> {
+        PuOsmxHwW::new(self, 23)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu_rxbuf_hw(&mut self) -> PU_RXBUF_HW_W<24> {
-        PU_RXBUF_HW_W::new(self)
+    pub fn pu_rxbuf_hw(&mut self) -> PuRxbufHwW<'_, Pucr1HwSpec> {
+        PuRxbufHwW::new(self, 24)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu_txbuf_hw(&mut self) -> PU_TXBUF_HW_W<25> {
-        PU_TXBUF_HW_W::new(self)
+    pub fn pu_txbuf_hw(&mut self) -> PuTxbufHwW<'_, Pucr1HwSpec> {
+        PuTxbufHwW::new(self, 25)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    #[must_use]
-    pub fn trsw_en_hw(&mut self) -> TRSW_EN_HW_W<26> {
-        TRSW_EN_HW_W::new(self)
+    pub fn trsw_en_hw(&mut self) -> TrswEnHwW<'_, Pucr1HwSpec> {
+        TrswEnHwW::new(self, 26)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu_pkdet_hw(&mut self) -> PU_PKDET_HW_W<28> {
-        PU_PKDET_HW_W::new(self)
+    pub fn pu_pkdet_hw(&mut self) -> PuPkdetHwW<'_, Pucr1HwSpec> {
+        PuPkdetHwW::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu_rosdac_hw(&mut self) -> PU_ROSDAC_HW_W<29> {
-        PU_ROSDAC_HW_W::new(self)
+    pub fn pu_rosdac_hw(&mut self) -> PuRosdacHwW<'_, Pucr1HwSpec> {
+        PuRosdacHwW::new(self, 29)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu_tosdac_hw(&mut self) -> PU_TOSDAC_HW_W<31> {
-        PU_TOSDAC_HW_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn pu_tosdac_hw(&mut self) -> PuTosdacHwW<'_, Pucr1HwSpec> {
+        PuTosdacHwW::new(self, 31)
     }
 }
-#[doc = "read only from hardware logic\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pucr1_hw](index.html) module"]
-pub struct PUCR1_HW_SPEC;
-impl crate::RegisterSpec for PUCR1_HW_SPEC {
+#[doc = "read only from hardware logic\n\nYou can [`read`](crate::Reg::read) this register and get [`pucr1_hw::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pucr1_hw::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Pucr1HwSpec;
+impl crate::RegisterSpec for Pucr1HwSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pucr1_hw::R](R) reader structure"]
-impl crate::Readable for PUCR1_HW_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [pucr1_hw::W](W) writer structure"]
-impl crate::Writable for PUCR1_HW_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`pucr1_hw::R`](R) reader structure"]
+impl crate::Readable for Pucr1HwSpec {}
+#[doc = "`write(|w| ..)` method takes [`pucr1_hw::W`](W) writer structure"]
+impl crate::Writable for Pucr1HwSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets pucr1_hw to value 0"]
-impl crate::Resettable for PUCR1_HW_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for Pucr1HwSpec {}

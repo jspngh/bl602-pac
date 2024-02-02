@@ -1,161 +1,107 @@
 #[doc = "Register `gpadc_reg_scn_pos2` reader"]
-pub struct R(crate::R<GPADC_REG_SCN_POS2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GPADC_REG_SCN_POS2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GPADC_REG_SCN_POS2_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GPADC_REG_SCN_POS2_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GpadcRegScnPos2Spec>;
 #[doc = "Register `gpadc_reg_scn_pos2` writer"]
-pub struct W(crate::W<GPADC_REG_SCN_POS2_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GPADC_REG_SCN_POS2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GPADC_REG_SCN_POS2_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GPADC_REG_SCN_POS2_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GpadcRegScnPos2Spec>;
 #[doc = "Field `gpadc_scan_pos_6` reader - "]
-pub type GPADC_SCAN_POS_6_R = crate::FieldReader<u8, u8>;
+pub type GpadcScanPos6R = crate::FieldReader;
 #[doc = "Field `gpadc_scan_pos_6` writer - "]
-pub type GPADC_SCAN_POS_6_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPADC_REG_SCN_POS2_SPEC, u8, u8, 5, O>;
+pub type GpadcScanPos6W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `gpadc_scan_pos_7` reader - "]
-pub type GPADC_SCAN_POS_7_R = crate::FieldReader<u8, u8>;
+pub type GpadcScanPos7R = crate::FieldReader;
 #[doc = "Field `gpadc_scan_pos_7` writer - "]
-pub type GPADC_SCAN_POS_7_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPADC_REG_SCN_POS2_SPEC, u8, u8, 5, O>;
+pub type GpadcScanPos7W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `gpadc_scan_pos_8` reader - "]
-pub type GPADC_SCAN_POS_8_R = crate::FieldReader<u8, u8>;
+pub type GpadcScanPos8R = crate::FieldReader;
 #[doc = "Field `gpadc_scan_pos_8` writer - "]
-pub type GPADC_SCAN_POS_8_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPADC_REG_SCN_POS2_SPEC, u8, u8, 5, O>;
+pub type GpadcScanPos8W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `gpadc_scan_pos_9` reader - "]
-pub type GPADC_SCAN_POS_9_R = crate::FieldReader<u8, u8>;
+pub type GpadcScanPos9R = crate::FieldReader;
 #[doc = "Field `gpadc_scan_pos_9` writer - "]
-pub type GPADC_SCAN_POS_9_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPADC_REG_SCN_POS2_SPEC, u8, u8, 5, O>;
+pub type GpadcScanPos9W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `gpadc_scan_pos_10` reader - "]
-pub type GPADC_SCAN_POS_10_R = crate::FieldReader<u8, u8>;
+pub type GpadcScanPos10R = crate::FieldReader;
 #[doc = "Field `gpadc_scan_pos_10` writer - "]
-pub type GPADC_SCAN_POS_10_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPADC_REG_SCN_POS2_SPEC, u8, u8, 5, O>;
+pub type GpadcScanPos10W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `gpadc_scan_pos_11` reader - "]
-pub type GPADC_SCAN_POS_11_R = crate::FieldReader<u8, u8>;
+pub type GpadcScanPos11R = crate::FieldReader;
 #[doc = "Field `gpadc_scan_pos_11` writer - "]
-pub type GPADC_SCAN_POS_11_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPADC_REG_SCN_POS2_SPEC, u8, u8, 5, O>;
+pub type GpadcScanPos11W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    pub fn gpadc_scan_pos_6(&self) -> GPADC_SCAN_POS_6_R {
-        GPADC_SCAN_POS_6_R::new((self.bits & 0x1f) as u8)
+    pub fn gpadc_scan_pos_6(&self) -> GpadcScanPos6R {
+        GpadcScanPos6R::new((self.bits & 0x1f) as u8)
     }
     #[doc = "Bits 5:9"]
     #[inline(always)]
-    pub fn gpadc_scan_pos_7(&self) -> GPADC_SCAN_POS_7_R {
-        GPADC_SCAN_POS_7_R::new(((self.bits >> 5) & 0x1f) as u8)
+    pub fn gpadc_scan_pos_7(&self) -> GpadcScanPos7R {
+        GpadcScanPos7R::new(((self.bits >> 5) & 0x1f) as u8)
     }
     #[doc = "Bits 10:14"]
     #[inline(always)]
-    pub fn gpadc_scan_pos_8(&self) -> GPADC_SCAN_POS_8_R {
-        GPADC_SCAN_POS_8_R::new(((self.bits >> 10) & 0x1f) as u8)
+    pub fn gpadc_scan_pos_8(&self) -> GpadcScanPos8R {
+        GpadcScanPos8R::new(((self.bits >> 10) & 0x1f) as u8)
     }
     #[doc = "Bits 15:19"]
     #[inline(always)]
-    pub fn gpadc_scan_pos_9(&self) -> GPADC_SCAN_POS_9_R {
-        GPADC_SCAN_POS_9_R::new(((self.bits >> 15) & 0x1f) as u8)
+    pub fn gpadc_scan_pos_9(&self) -> GpadcScanPos9R {
+        GpadcScanPos9R::new(((self.bits >> 15) & 0x1f) as u8)
     }
     #[doc = "Bits 20:24"]
     #[inline(always)]
-    pub fn gpadc_scan_pos_10(&self) -> GPADC_SCAN_POS_10_R {
-        GPADC_SCAN_POS_10_R::new(((self.bits >> 20) & 0x1f) as u8)
+    pub fn gpadc_scan_pos_10(&self) -> GpadcScanPos10R {
+        GpadcScanPos10R::new(((self.bits >> 20) & 0x1f) as u8)
     }
     #[doc = "Bits 25:29"]
     #[inline(always)]
-    pub fn gpadc_scan_pos_11(&self) -> GPADC_SCAN_POS_11_R {
-        GPADC_SCAN_POS_11_R::new(((self.bits >> 25) & 0x1f) as u8)
+    pub fn gpadc_scan_pos_11(&self) -> GpadcScanPos11R {
+        GpadcScanPos11R::new(((self.bits >> 25) & 0x1f) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_scan_pos_6(&mut self) -> GPADC_SCAN_POS_6_W<0> {
-        GPADC_SCAN_POS_6_W::new(self)
+    pub fn gpadc_scan_pos_6(&mut self) -> GpadcScanPos6W<'_, GpadcRegScnPos2Spec> {
+        GpadcScanPos6W::new(self, 0)
     }
     #[doc = "Bits 5:9"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_scan_pos_7(&mut self) -> GPADC_SCAN_POS_7_W<5> {
-        GPADC_SCAN_POS_7_W::new(self)
+    pub fn gpadc_scan_pos_7(&mut self) -> GpadcScanPos7W<'_, GpadcRegScnPos2Spec> {
+        GpadcScanPos7W::new(self, 5)
     }
     #[doc = "Bits 10:14"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_scan_pos_8(&mut self) -> GPADC_SCAN_POS_8_W<10> {
-        GPADC_SCAN_POS_8_W::new(self)
+    pub fn gpadc_scan_pos_8(&mut self) -> GpadcScanPos8W<'_, GpadcRegScnPos2Spec> {
+        GpadcScanPos8W::new(self, 10)
     }
     #[doc = "Bits 15:19"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_scan_pos_9(&mut self) -> GPADC_SCAN_POS_9_W<15> {
-        GPADC_SCAN_POS_9_W::new(self)
+    pub fn gpadc_scan_pos_9(&mut self) -> GpadcScanPos9W<'_, GpadcRegScnPos2Spec> {
+        GpadcScanPos9W::new(self, 15)
     }
     #[doc = "Bits 20:24"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_scan_pos_10(&mut self) -> GPADC_SCAN_POS_10_W<20> {
-        GPADC_SCAN_POS_10_W::new(self)
+    pub fn gpadc_scan_pos_10(&mut self) -> GpadcScanPos10W<'_, GpadcRegScnPos2Spec> {
+        GpadcScanPos10W::new(self, 20)
     }
     #[doc = "Bits 25:29"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpadc_scan_pos_11(&mut self) -> GPADC_SCAN_POS_11_W<25> {
-        GPADC_SCAN_POS_11_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn gpadc_scan_pos_11(&mut self) -> GpadcScanPos11W<'_, GpadcRegScnPos2Spec> {
+        GpadcScanPos11W::new(self, 25)
     }
 }
-#[doc = "adc converation sequence 2\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpadc_reg_scn_pos2](index.html) module"]
-pub struct GPADC_REG_SCN_POS2_SPEC;
-impl crate::RegisterSpec for GPADC_REG_SCN_POS2_SPEC {
+#[doc = "adc converation sequence 2\n\nYou can [`read`](crate::Reg::read) this register and get [`gpadc_reg_scn_pos2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpadc_reg_scn_pos2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct GpadcRegScnPos2Spec;
+impl crate::RegisterSpec for GpadcRegScnPos2Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gpadc_reg_scn_pos2::R](R) reader structure"]
-impl crate::Readable for GPADC_REG_SCN_POS2_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gpadc_reg_scn_pos2::W](W) writer structure"]
-impl crate::Writable for GPADC_REG_SCN_POS2_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`gpadc_reg_scn_pos2::R`](R) reader structure"]
+impl crate::Readable for GpadcRegScnPos2Spec {}
+#[doc = "`write(|w| ..)` method takes [`gpadc_reg_scn_pos2::W`](W) writer structure"]
+impl crate::Writable for GpadcRegScnPos2Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets gpadc_reg_scn_pos2 to value 0x1ef7_bdef"]
-impl crate::Resettable for GPADC_REG_SCN_POS2_SPEC {
-    const RESET_VALUE: Self::Ux = 0x1ef7_bdef;
+impl crate::Resettable for GpadcRegScnPos2Spec {
+    const RESET_VALUE: u32 = 0x1ef7_bdef;
 }

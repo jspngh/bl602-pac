@@ -1,190 +1,135 @@
 #[doc = "Register `PDS_CTL3` reader"]
-pub struct R(crate::R<PDS_CTL3_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PDS_CTL3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PDS_CTL3_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PDS_CTL3_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PdsCtl3Spec>;
 #[doc = "Register `PDS_CTL3` writer"]
-pub struct W(crate::W<PDS_CTL3_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PDS_CTL3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PDS_CTL3_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PDS_CTL3_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<PdsCtl3Spec>;
 #[doc = "Field `cr_pds_force_misc_pwr_off` reader - "]
-pub type CR_PDS_FORCE_MISC_PWR_OFF_R = crate::BitReader<bool>;
+pub type CrPdsForceMiscPwrOffR = crate::BitReader;
 #[doc = "Field `cr_pds_force_misc_pwr_off` writer - "]
-pub type CR_PDS_FORCE_MISC_PWR_OFF_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PDS_CTL3_SPEC, bool, O>;
+pub type CrPdsForceMiscPwrOffW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_pds_force_misc_iso_en` reader - "]
-pub type CR_PDS_FORCE_MISC_ISO_EN_R = crate::BitReader<bool>;
+pub type CrPdsForceMiscIsoEnR = crate::BitReader;
 #[doc = "Field `cr_pds_force_misc_iso_en` writer - "]
-pub type CR_PDS_FORCE_MISC_ISO_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PDS_CTL3_SPEC, bool, O>;
+pub type CrPdsForceMiscIsoEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_pds_force_misc_pds_rst` reader - "]
-pub type CR_PDS_FORCE_MISC_PDS_RST_R = crate::BitReader<bool>;
+pub type CrPdsForceMiscPdsRstR = crate::BitReader;
 #[doc = "Field `cr_pds_force_misc_pds_rst` writer - "]
-pub type CR_PDS_FORCE_MISC_PDS_RST_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PDS_CTL3_SPEC, bool, O>;
+pub type CrPdsForceMiscPdsRstW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_pds_force_misc_mem_stby` reader - "]
-pub type CR_PDS_FORCE_MISC_MEM_STBY_R = crate::BitReader<bool>;
+pub type CrPdsForceMiscMemStbyR = crate::BitReader;
 #[doc = "Field `cr_pds_force_misc_mem_stby` writer - "]
-pub type CR_PDS_FORCE_MISC_MEM_STBY_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PDS_CTL3_SPEC, bool, O>;
+pub type CrPdsForceMiscMemStbyW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_pds_force_misc_gate_clk` reader - "]
-pub type CR_PDS_FORCE_MISC_GATE_CLK_R = crate::BitReader<bool>;
+pub type CrPdsForceMiscGateClkR = crate::BitReader;
 #[doc = "Field `cr_pds_force_misc_gate_clk` writer - "]
-pub type CR_PDS_FORCE_MISC_GATE_CLK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PDS_CTL3_SPEC, bool, O>;
+pub type CrPdsForceMiscGateClkW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_pds_np_iso_en` reader - "]
-pub type CR_PDS_NP_ISO_EN_R = crate::BitReader<bool>;
+pub type CrPdsNpIsoEnR = crate::BitReader;
 #[doc = "Field `cr_pds_np_iso_en` writer - "]
-pub type CR_PDS_NP_ISO_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PDS_CTL3_SPEC, bool, O>;
+pub type CrPdsNpIsoEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_pds_wb_iso_en` reader - "]
-pub type CR_PDS_WB_ISO_EN_R = crate::BitReader<bool>;
+pub type CrPdsWbIsoEnR = crate::BitReader;
 #[doc = "Field `cr_pds_wb_iso_en` writer - "]
-pub type CR_PDS_WB_ISO_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PDS_CTL3_SPEC, bool, O>;
+pub type CrPdsWbIsoEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `cr_pds_misc_iso_en` reader - "]
-pub type CR_PDS_MISC_ISO_EN_R = crate::BitReader<bool>;
+pub type CrPdsMiscIsoEnR = crate::BitReader;
 #[doc = "Field `cr_pds_misc_iso_en` writer - "]
-pub type CR_PDS_MISC_ISO_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PDS_CTL3_SPEC, bool, O>;
+pub type CrPdsMiscIsoEnW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn cr_pds_force_misc_pwr_off(&self) -> CR_PDS_FORCE_MISC_PWR_OFF_R {
-        CR_PDS_FORCE_MISC_PWR_OFF_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn cr_pds_force_misc_pwr_off(&self) -> CrPdsForceMiscPwrOffR {
+        CrPdsForceMiscPwrOffR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn cr_pds_force_misc_iso_en(&self) -> CR_PDS_FORCE_MISC_ISO_EN_R {
-        CR_PDS_FORCE_MISC_ISO_EN_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn cr_pds_force_misc_iso_en(&self) -> CrPdsForceMiscIsoEnR {
+        CrPdsForceMiscIsoEnR::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn cr_pds_force_misc_pds_rst(&self) -> CR_PDS_FORCE_MISC_PDS_RST_R {
-        CR_PDS_FORCE_MISC_PDS_RST_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn cr_pds_force_misc_pds_rst(&self) -> CrPdsForceMiscPdsRstR {
+        CrPdsForceMiscPdsRstR::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    pub fn cr_pds_force_misc_mem_stby(&self) -> CR_PDS_FORCE_MISC_MEM_STBY_R {
-        CR_PDS_FORCE_MISC_MEM_STBY_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn cr_pds_force_misc_mem_stby(&self) -> CrPdsForceMiscMemStbyR {
+        CrPdsForceMiscMemStbyR::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn cr_pds_force_misc_gate_clk(&self) -> CR_PDS_FORCE_MISC_GATE_CLK_R {
-        CR_PDS_FORCE_MISC_GATE_CLK_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn cr_pds_force_misc_gate_clk(&self) -> CrPdsForceMiscGateClkR {
+        CrPdsForceMiscGateClkR::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    pub fn cr_pds_np_iso_en(&self) -> CR_PDS_NP_ISO_EN_R {
-        CR_PDS_NP_ISO_EN_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn cr_pds_np_iso_en(&self) -> CrPdsNpIsoEnR {
+        CrPdsNpIsoEnR::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    pub fn cr_pds_wb_iso_en(&self) -> CR_PDS_WB_ISO_EN_R {
-        CR_PDS_WB_ISO_EN_R::new(((self.bits >> 27) & 1) != 0)
+    pub fn cr_pds_wb_iso_en(&self) -> CrPdsWbIsoEnR {
+        CrPdsWbIsoEnR::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    pub fn cr_pds_misc_iso_en(&self) -> CR_PDS_MISC_ISO_EN_R {
-        CR_PDS_MISC_ISO_EN_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn cr_pds_misc_iso_en(&self) -> CrPdsMiscIsoEnR {
+        CrPdsMiscIsoEnR::new(((self.bits >> 30) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_pds_force_misc_pwr_off(&mut self) -> CR_PDS_FORCE_MISC_PWR_OFF_W<1> {
-        CR_PDS_FORCE_MISC_PWR_OFF_W::new(self)
+    pub fn cr_pds_force_misc_pwr_off(&mut self) -> CrPdsForceMiscPwrOffW<'_, PdsCtl3Spec> {
+        CrPdsForceMiscPwrOffW::new(self, 1)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_pds_force_misc_iso_en(&mut self) -> CR_PDS_FORCE_MISC_ISO_EN_W<4> {
-        CR_PDS_FORCE_MISC_ISO_EN_W::new(self)
+    pub fn cr_pds_force_misc_iso_en(&mut self) -> CrPdsForceMiscIsoEnW<'_, PdsCtl3Spec> {
+        CrPdsForceMiscIsoEnW::new(self, 4)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_pds_force_misc_pds_rst(&mut self) -> CR_PDS_FORCE_MISC_PDS_RST_W<7> {
-        CR_PDS_FORCE_MISC_PDS_RST_W::new(self)
+    pub fn cr_pds_force_misc_pds_rst(&mut self) -> CrPdsForceMiscPdsRstW<'_, PdsCtl3Spec> {
+        CrPdsForceMiscPdsRstW::new(self, 7)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_pds_force_misc_mem_stby(&mut self) -> CR_PDS_FORCE_MISC_MEM_STBY_W<10> {
-        CR_PDS_FORCE_MISC_MEM_STBY_W::new(self)
+    pub fn cr_pds_force_misc_mem_stby(&mut self) -> CrPdsForceMiscMemStbyW<'_, PdsCtl3Spec> {
+        CrPdsForceMiscMemStbyW::new(self, 10)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_pds_force_misc_gate_clk(&mut self) -> CR_PDS_FORCE_MISC_GATE_CLK_W<13> {
-        CR_PDS_FORCE_MISC_GATE_CLK_W::new(self)
+    pub fn cr_pds_force_misc_gate_clk(&mut self) -> CrPdsForceMiscGateClkW<'_, PdsCtl3Spec> {
+        CrPdsForceMiscGateClkW::new(self, 13)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_pds_np_iso_en(&mut self) -> CR_PDS_NP_ISO_EN_W<24> {
-        CR_PDS_NP_ISO_EN_W::new(self)
+    pub fn cr_pds_np_iso_en(&mut self) -> CrPdsNpIsoEnW<'_, PdsCtl3Spec> {
+        CrPdsNpIsoEnW::new(self, 24)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_pds_wb_iso_en(&mut self) -> CR_PDS_WB_ISO_EN_W<27> {
-        CR_PDS_WB_ISO_EN_W::new(self)
+    pub fn cr_pds_wb_iso_en(&mut self) -> CrPdsWbIsoEnW<'_, PdsCtl3Spec> {
+        CrPdsWbIsoEnW::new(self, 27)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_pds_misc_iso_en(&mut self) -> CR_PDS_MISC_ISO_EN_W<30> {
-        CR_PDS_MISC_ISO_EN_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn cr_pds_misc_iso_en(&mut self) -> CrPdsMiscIsoEnW<'_, PdsCtl3Spec> {
+        CrPdsMiscIsoEnW::new(self, 30)
     }
 }
-#[doc = "PDS_CTL3.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pds_ctl3](index.html) module"]
-pub struct PDS_CTL3_SPEC;
-impl crate::RegisterSpec for PDS_CTL3_SPEC {
+#[doc = "PDS_CTL3.\n\nYou can [`read`](crate::Reg::read) this register and get [`pds_ctl3::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pds_ctl3::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct PdsCtl3Spec;
+impl crate::RegisterSpec for PdsCtl3Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pds_ctl3::R](R) reader structure"]
-impl crate::Readable for PDS_CTL3_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [pds_ctl3::W](W) writer structure"]
-impl crate::Writable for PDS_CTL3_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`pds_ctl3::R`](R) reader structure"]
+impl crate::Readable for PdsCtl3Spec {}
+#[doc = "`write(|w| ..)` method takes [`pds_ctl3::W`](W) writer structure"]
+impl crate::Writable for PdsCtl3Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets PDS_CTL3 to value 0x4900_0000"]
-impl crate::Resettable for PDS_CTL3_SPEC {
-    const RESET_VALUE: Self::Ux = 0x4900_0000;
+impl crate::Resettable for PdsCtl3Spec {
+    const RESET_VALUE: u32 = 0x4900_0000;
 }

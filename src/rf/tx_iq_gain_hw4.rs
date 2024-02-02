@@ -1,97 +1,49 @@
 #[doc = "Register `tx_iq_gain_hw4` reader"]
-pub struct R(crate::R<TX_IQ_GAIN_HW4_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TX_IQ_GAIN_HW4_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TX_IQ_GAIN_HW4_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TX_IQ_GAIN_HW4_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TxIqGainHw4Spec>;
 #[doc = "Register `tx_iq_gain_hw4` writer"]
-pub struct W(crate::W<TX_IQ_GAIN_HW4_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TX_IQ_GAIN_HW4_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TX_IQ_GAIN_HW4_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TX_IQ_GAIN_HW4_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<TxIqGainHw4Spec>;
 #[doc = "Field `tx_iq_phase_comp_gc4` reader - "]
-pub type TX_IQ_PHASE_COMP_GC4_R = crate::FieldReader<u16, u16>;
+pub type TxIqPhaseCompGc4R = crate::FieldReader<u16>;
 #[doc = "Field `tx_iq_phase_comp_gc4` writer - "]
-pub type TX_IQ_PHASE_COMP_GC4_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TX_IQ_GAIN_HW4_SPEC, u16, u16, 10, O>;
+pub type TxIqPhaseCompGc4W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `tx_iq_gain_comp_gc4` reader - "]
-pub type TX_IQ_GAIN_COMP_GC4_R = crate::FieldReader<u16, u16>;
+pub type TxIqGainCompGc4R = crate::FieldReader<u16>;
 #[doc = "Field `tx_iq_gain_comp_gc4` writer - "]
-pub type TX_IQ_GAIN_COMP_GC4_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TX_IQ_GAIN_HW4_SPEC, u16, u16, 11, O>;
+pub type TxIqGainCompGc4W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 impl R {
     #[doc = "Bits 0:9"]
     #[inline(always)]
-    pub fn tx_iq_phase_comp_gc4(&self) -> TX_IQ_PHASE_COMP_GC4_R {
-        TX_IQ_PHASE_COMP_GC4_R::new((self.bits & 0x03ff) as u16)
+    pub fn tx_iq_phase_comp_gc4(&self) -> TxIqPhaseCompGc4R {
+        TxIqPhaseCompGc4R::new((self.bits & 0x03ff) as u16)
     }
     #[doc = "Bits 16:26"]
     #[inline(always)]
-    pub fn tx_iq_gain_comp_gc4(&self) -> TX_IQ_GAIN_COMP_GC4_R {
-        TX_IQ_GAIN_COMP_GC4_R::new(((self.bits >> 16) & 0x07ff) as u16)
+    pub fn tx_iq_gain_comp_gc4(&self) -> TxIqGainCompGc4R {
+        TxIqGainCompGc4R::new(((self.bits >> 16) & 0x07ff) as u16)
     }
 }
 impl W {
     #[doc = "Bits 0:9"]
     #[inline(always)]
-    #[must_use]
-    pub fn tx_iq_phase_comp_gc4(&mut self) -> TX_IQ_PHASE_COMP_GC4_W<0> {
-        TX_IQ_PHASE_COMP_GC4_W::new(self)
+    pub fn tx_iq_phase_comp_gc4(&mut self) -> TxIqPhaseCompGc4W<'_, TxIqGainHw4Spec> {
+        TxIqPhaseCompGc4W::new(self, 0)
     }
     #[doc = "Bits 16:26"]
     #[inline(always)]
-    #[must_use]
-    pub fn tx_iq_gain_comp_gc4(&mut self) -> TX_IQ_GAIN_COMP_GC4_W<16> {
-        TX_IQ_GAIN_COMP_GC4_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn tx_iq_gain_comp_gc4(&mut self) -> TxIqGainCompGc4W<'_, TxIqGainHw4Spec> {
+        TxIqGainCompGc4W::new(self, 16)
     }
 }
-#[doc = "tx_iq_gain_hw4.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tx_iq_gain_hw4](index.html) module"]
-pub struct TX_IQ_GAIN_HW4_SPEC;
-impl crate::RegisterSpec for TX_IQ_GAIN_HW4_SPEC {
+#[doc = "tx_iq_gain_hw4.\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_iq_gain_hw4::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_iq_gain_hw4::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TxIqGainHw4Spec;
+impl crate::RegisterSpec for TxIqGainHw4Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tx_iq_gain_hw4::R](R) reader structure"]
-impl crate::Readable for TX_IQ_GAIN_HW4_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [tx_iq_gain_hw4::W](W) writer structure"]
-impl crate::Writable for TX_IQ_GAIN_HW4_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`tx_iq_gain_hw4::R`](R) reader structure"]
+impl crate::Readable for TxIqGainHw4Spec {}
+#[doc = "`write(|w| ..)` method takes [`tx_iq_gain_hw4::W`](W) writer structure"]
+impl crate::Writable for TxIqGainHw4Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets tx_iq_gain_hw4 to value 0"]
-impl crate::Resettable for TX_IQ_GAIN_HW4_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for TxIqGainHw4Spec {}

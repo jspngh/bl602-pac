@@ -1,286 +1,217 @@
 #[doc = "Register `se_aes_0_ctrl` reader"]
-pub struct R(crate::R<SE_AES_0_CTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SE_AES_0_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SE_AES_0_CTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SE_AES_0_CTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SeAes0CtrlSpec>;
 #[doc = "Register `se_aes_0_ctrl` writer"]
-pub struct W(crate::W<SE_AES_0_CTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SE_AES_0_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SE_AES_0_CTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SE_AES_0_CTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SeAes0CtrlSpec>;
 #[doc = "Field `se_aes_0_busy` reader - "]
-pub type SE_AES_0_BUSY_R = crate::BitReader<bool>;
+pub type SeAes0BusyR = crate::BitReader;
 #[doc = "Field `se_aes_0_trig_1t` reader - "]
-pub type SE_AES_0_TRIG_1T_R = crate::BitReader<bool>;
+pub type SeAes0Trig1tR = crate::BitReader;
 #[doc = "Field `se_aes_0_trig_1t` writer - "]
-pub type SE_AES_0_TRIG_1T_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SE_AES_0_CTRL_SPEC, bool, O>;
+pub type SeAes0Trig1tW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `se_aes_0_en` reader - "]
-pub type SE_AES_0_EN_R = crate::BitReader<bool>;
+pub type SeAes0EnR = crate::BitReader;
 #[doc = "Field `se_aes_0_en` writer - "]
-pub type SE_AES_0_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SE_AES_0_CTRL_SPEC, bool, O>;
+pub type SeAes0EnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `se_aes_0_mode` reader - "]
-pub type SE_AES_0_MODE_R = crate::FieldReader<u8, u8>;
+pub type SeAes0ModeR = crate::FieldReader;
 #[doc = "Field `se_aes_0_mode` writer - "]
-pub type SE_AES_0_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SE_AES_0_CTRL_SPEC, u8, u8, 2, O>;
+pub type SeAes0ModeW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `se_aes_0_dec_en` reader - "]
-pub type SE_AES_0_DEC_EN_R = crate::BitReader<bool>;
+pub type SeAes0DecEnR = crate::BitReader;
 #[doc = "Field `se_aes_0_dec_en` writer - "]
-pub type SE_AES_0_DEC_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SE_AES_0_CTRL_SPEC, bool, O>;
+pub type SeAes0DecEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `se_aes_0_dec_key_sel` reader - "]
-pub type SE_AES_0_DEC_KEY_SEL_R = crate::BitReader<bool>;
+pub type SeAes0DecKeySelR = crate::BitReader;
 #[doc = "Field `se_aes_0_dec_key_sel` writer - "]
-pub type SE_AES_0_DEC_KEY_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SE_AES_0_CTRL_SPEC, bool, O>;
+pub type SeAes0DecKeySelW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `se_aes_0_hw_key_en` reader - "]
-pub type SE_AES_0_HW_KEY_EN_R = crate::BitReader<bool>;
+pub type SeAes0HwKeyEnR = crate::BitReader;
 #[doc = "Field `se_aes_0_hw_key_en` writer - "]
-pub type SE_AES_0_HW_KEY_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SE_AES_0_CTRL_SPEC, bool, O>;
+pub type SeAes0HwKeyEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `se_aes_0_int` reader - "]
-pub type SE_AES_0_INT_R = crate::BitReader<bool>;
+pub type SeAes0IntR = crate::BitReader;
 #[doc = "Field `se_aes_0_int_clr_1t` reader - "]
-pub type SE_AES_0_INT_CLR_1T_R = crate::BitReader<bool>;
+pub type SeAes0IntClr1tR = crate::BitReader;
 #[doc = "Field `se_aes_0_int_clr_1t` writer - "]
-pub type SE_AES_0_INT_CLR_1T_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SE_AES_0_CTRL_SPEC, bool, O>;
+pub type SeAes0IntClr1tW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `se_aes_0_int_set_1t` reader - "]
-pub type SE_AES_0_INT_SET_1T_R = crate::BitReader<bool>;
+pub type SeAes0IntSet1tR = crate::BitReader;
 #[doc = "Field `se_aes_0_int_set_1t` writer - "]
-pub type SE_AES_0_INT_SET_1T_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SE_AES_0_CTRL_SPEC, bool, O>;
+pub type SeAes0IntSet1tW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `se_aes_0_int_mask` reader - "]
-pub type SE_AES_0_INT_MASK_R = crate::BitReader<bool>;
+pub type SeAes0IntMaskR = crate::BitReader;
 #[doc = "Field `se_aes_0_int_mask` writer - "]
-pub type SE_AES_0_INT_MASK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SE_AES_0_CTRL_SPEC, bool, O>;
+pub type SeAes0IntMaskW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `se_aes_0_block_mode` reader - "]
-pub type SE_AES_0_BLOCK_MODE_R = crate::FieldReader<u8, u8>;
+pub type SeAes0BlockModeR = crate::FieldReader;
 #[doc = "Field `se_aes_0_block_mode` writer - "]
-pub type SE_AES_0_BLOCK_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SE_AES_0_CTRL_SPEC, u8, u8, 2, O>;
+pub type SeAes0BlockModeW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `se_aes_0_iv_sel` reader - "]
-pub type SE_AES_0_IV_SEL_R = crate::BitReader<bool>;
+pub type SeAes0IvSelR = crate::BitReader;
 #[doc = "Field `se_aes_0_iv_sel` writer - "]
-pub type SE_AES_0_IV_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SE_AES_0_CTRL_SPEC, bool, O>;
+pub type SeAes0IvSelW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `se_aes_0_link_mode` reader - "]
-pub type SE_AES_0_LINK_MODE_R = crate::BitReader<bool>;
+pub type SeAes0LinkModeR = crate::BitReader;
 #[doc = "Field `se_aes_0_link_mode` writer - "]
-pub type SE_AES_0_LINK_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SE_AES_0_CTRL_SPEC, bool, O>;
+pub type SeAes0LinkModeW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `se_aes_0_msg_len` reader - "]
-pub type SE_AES_0_MSG_LEN_R = crate::FieldReader<u16, u16>;
+pub type SeAes0MsgLenR = crate::FieldReader<u16>;
 #[doc = "Field `se_aes_0_msg_len` writer - "]
-pub type SE_AES_0_MSG_LEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SE_AES_0_CTRL_SPEC, u16, u16, 16, O>;
+pub type SeAes0MsgLenW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn se_aes_0_busy(&self) -> SE_AES_0_BUSY_R {
-        SE_AES_0_BUSY_R::new((self.bits & 1) != 0)
+    pub fn se_aes_0_busy(&self) -> SeAes0BusyR {
+        SeAes0BusyR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn se_aes_0_trig_1t(&self) -> SE_AES_0_TRIG_1T_R {
-        SE_AES_0_TRIG_1T_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn se_aes_0_trig_1t(&self) -> SeAes0Trig1tR {
+        SeAes0Trig1tR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn se_aes_0_en(&self) -> SE_AES_0_EN_R {
-        SE_AES_0_EN_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn se_aes_0_en(&self) -> SeAes0EnR {
+        SeAes0EnR::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bits 3:4"]
     #[inline(always)]
-    pub fn se_aes_0_mode(&self) -> SE_AES_0_MODE_R {
-        SE_AES_0_MODE_R::new(((self.bits >> 3) & 3) as u8)
+    pub fn se_aes_0_mode(&self) -> SeAes0ModeR {
+        SeAes0ModeR::new(((self.bits >> 3) & 3) as u8)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn se_aes_0_dec_en(&self) -> SE_AES_0_DEC_EN_R {
-        SE_AES_0_DEC_EN_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn se_aes_0_dec_en(&self) -> SeAes0DecEnR {
+        SeAes0DecEnR::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn se_aes_0_dec_key_sel(&self) -> SE_AES_0_DEC_KEY_SEL_R {
-        SE_AES_0_DEC_KEY_SEL_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn se_aes_0_dec_key_sel(&self) -> SeAes0DecKeySelR {
+        SeAes0DecKeySelR::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn se_aes_0_hw_key_en(&self) -> SE_AES_0_HW_KEY_EN_R {
-        SE_AES_0_HW_KEY_EN_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn se_aes_0_hw_key_en(&self) -> SeAes0HwKeyEnR {
+        SeAes0HwKeyEnR::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn se_aes_0_int(&self) -> SE_AES_0_INT_R {
-        SE_AES_0_INT_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn se_aes_0_int(&self) -> SeAes0IntR {
+        SeAes0IntR::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn se_aes_0_int_clr_1t(&self) -> SE_AES_0_INT_CLR_1T_R {
-        SE_AES_0_INT_CLR_1T_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn se_aes_0_int_clr_1t(&self) -> SeAes0IntClr1tR {
+        SeAes0IntClr1tR::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    pub fn se_aes_0_int_set_1t(&self) -> SE_AES_0_INT_SET_1T_R {
-        SE_AES_0_INT_SET_1T_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn se_aes_0_int_set_1t(&self) -> SeAes0IntSet1tR {
+        SeAes0IntSet1tR::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn se_aes_0_int_mask(&self) -> SE_AES_0_INT_MASK_R {
-        SE_AES_0_INT_MASK_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn se_aes_0_int_mask(&self) -> SeAes0IntMaskR {
+        SeAes0IntMaskR::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
-    pub fn se_aes_0_block_mode(&self) -> SE_AES_0_BLOCK_MODE_R {
-        SE_AES_0_BLOCK_MODE_R::new(((self.bits >> 12) & 3) as u8)
+    pub fn se_aes_0_block_mode(&self) -> SeAes0BlockModeR {
+        SeAes0BlockModeR::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    pub fn se_aes_0_iv_sel(&self) -> SE_AES_0_IV_SEL_R {
-        SE_AES_0_IV_SEL_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn se_aes_0_iv_sel(&self) -> SeAes0IvSelR {
+        SeAes0IvSelR::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    pub fn se_aes_0_link_mode(&self) -> SE_AES_0_LINK_MODE_R {
-        SE_AES_0_LINK_MODE_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn se_aes_0_link_mode(&self) -> SeAes0LinkModeR {
+        SeAes0LinkModeR::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
-    pub fn se_aes_0_msg_len(&self) -> SE_AES_0_MSG_LEN_R {
-        SE_AES_0_MSG_LEN_R::new(((self.bits >> 16) & 0xffff) as u16)
+    pub fn se_aes_0_msg_len(&self) -> SeAes0MsgLenR {
+        SeAes0MsgLenR::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
 impl W {
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn se_aes_0_trig_1t(&mut self) -> SE_AES_0_TRIG_1T_W<1> {
-        SE_AES_0_TRIG_1T_W::new(self)
+    pub fn se_aes_0_trig_1t(&mut self) -> SeAes0Trig1tW<'_, SeAes0CtrlSpec> {
+        SeAes0Trig1tW::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
-    pub fn se_aes_0_en(&mut self) -> SE_AES_0_EN_W<2> {
-        SE_AES_0_EN_W::new(self)
+    pub fn se_aes_0_en(&mut self) -> SeAes0EnW<'_, SeAes0CtrlSpec> {
+        SeAes0EnW::new(self, 2)
     }
     #[doc = "Bits 3:4"]
     #[inline(always)]
-    #[must_use]
-    pub fn se_aes_0_mode(&mut self) -> SE_AES_0_MODE_W<3> {
-        SE_AES_0_MODE_W::new(self)
+    pub fn se_aes_0_mode(&mut self) -> SeAes0ModeW<'_, SeAes0CtrlSpec> {
+        SeAes0ModeW::new(self, 3)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    #[must_use]
-    pub fn se_aes_0_dec_en(&mut self) -> SE_AES_0_DEC_EN_W<5> {
-        SE_AES_0_DEC_EN_W::new(self)
+    pub fn se_aes_0_dec_en(&mut self) -> SeAes0DecEnW<'_, SeAes0CtrlSpec> {
+        SeAes0DecEnW::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    #[must_use]
-    pub fn se_aes_0_dec_key_sel(&mut self) -> SE_AES_0_DEC_KEY_SEL_W<6> {
-        SE_AES_0_DEC_KEY_SEL_W::new(self)
+    pub fn se_aes_0_dec_key_sel(&mut self) -> SeAes0DecKeySelW<'_, SeAes0CtrlSpec> {
+        SeAes0DecKeySelW::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
-    pub fn se_aes_0_hw_key_en(&mut self) -> SE_AES_0_HW_KEY_EN_W<7> {
-        SE_AES_0_HW_KEY_EN_W::new(self)
+    pub fn se_aes_0_hw_key_en(&mut self) -> SeAes0HwKeyEnW<'_, SeAes0CtrlSpec> {
+        SeAes0HwKeyEnW::new(self, 7)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
-    pub fn se_aes_0_int_clr_1t(&mut self) -> SE_AES_0_INT_CLR_1T_W<9> {
-        SE_AES_0_INT_CLR_1T_W::new(self)
+    pub fn se_aes_0_int_clr_1t(&mut self) -> SeAes0IntClr1tW<'_, SeAes0CtrlSpec> {
+        SeAes0IntClr1tW::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
-    pub fn se_aes_0_int_set_1t(&mut self) -> SE_AES_0_INT_SET_1T_W<10> {
-        SE_AES_0_INT_SET_1T_W::new(self)
+    pub fn se_aes_0_int_set_1t(&mut self) -> SeAes0IntSet1tW<'_, SeAes0CtrlSpec> {
+        SeAes0IntSet1tW::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    #[must_use]
-    pub fn se_aes_0_int_mask(&mut self) -> SE_AES_0_INT_MASK_W<11> {
-        SE_AES_0_INT_MASK_W::new(self)
+    pub fn se_aes_0_int_mask(&mut self) -> SeAes0IntMaskW<'_, SeAes0CtrlSpec> {
+        SeAes0IntMaskW::new(self, 11)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
-    #[must_use]
-    pub fn se_aes_0_block_mode(&mut self) -> SE_AES_0_BLOCK_MODE_W<12> {
-        SE_AES_0_BLOCK_MODE_W::new(self)
+    pub fn se_aes_0_block_mode(&mut self) -> SeAes0BlockModeW<'_, SeAes0CtrlSpec> {
+        SeAes0BlockModeW::new(self, 12)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    #[must_use]
-    pub fn se_aes_0_iv_sel(&mut self) -> SE_AES_0_IV_SEL_W<14> {
-        SE_AES_0_IV_SEL_W::new(self)
+    pub fn se_aes_0_iv_sel(&mut self) -> SeAes0IvSelW<'_, SeAes0CtrlSpec> {
+        SeAes0IvSelW::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    #[must_use]
-    pub fn se_aes_0_link_mode(&mut self) -> SE_AES_0_LINK_MODE_W<15> {
-        SE_AES_0_LINK_MODE_W::new(self)
+    pub fn se_aes_0_link_mode(&mut self) -> SeAes0LinkModeW<'_, SeAes0CtrlSpec> {
+        SeAes0LinkModeW::new(self, 15)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
-    #[must_use]
-    pub fn se_aes_0_msg_len(&mut self) -> SE_AES_0_MSG_LEN_W<16> {
-        SE_AES_0_MSG_LEN_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn se_aes_0_msg_len(&mut self) -> SeAes0MsgLenW<'_, SeAes0CtrlSpec> {
+        SeAes0MsgLenW::new(self, 16)
     }
 }
-#[doc = "se_aes_0_ctrl.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [se_aes_0_ctrl](index.html) module"]
-pub struct SE_AES_0_CTRL_SPEC;
-impl crate::RegisterSpec for SE_AES_0_CTRL_SPEC {
+#[doc = "se_aes_0_ctrl.\n\nYou can [`read`](crate::Reg::read) this register and get [`se_aes_0_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`se_aes_0_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SeAes0CtrlSpec;
+impl crate::RegisterSpec for SeAes0CtrlSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [se_aes_0_ctrl::R](R) reader structure"]
-impl crate::Readable for SE_AES_0_CTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [se_aes_0_ctrl::W](W) writer structure"]
-impl crate::Writable for SE_AES_0_CTRL_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`se_aes_0_ctrl::R`](R) reader structure"]
+impl crate::Readable for SeAes0CtrlSpec {}
+#[doc = "`write(|w| ..)` method takes [`se_aes_0_ctrl::W`](W) writer structure"]
+impl crate::Writable for SeAes0CtrlSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets se_aes_0_ctrl to value 0"]
-impl crate::Resettable for SE_AES_0_CTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for SeAes0CtrlSpec {}

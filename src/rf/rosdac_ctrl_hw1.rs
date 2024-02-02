@@ -1,129 +1,77 @@
 #[doc = "Register `rosdac_ctrl_hw1` reader"]
-pub struct R(crate::R<ROSDAC_CTRL_HW1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<ROSDAC_CTRL_HW1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<ROSDAC_CTRL_HW1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<ROSDAC_CTRL_HW1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RosdacCtrlHw1Spec>;
 #[doc = "Register `rosdac_ctrl_hw1` writer"]
-pub struct W(crate::W<ROSDAC_CTRL_HW1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<ROSDAC_CTRL_HW1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<ROSDAC_CTRL_HW1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<ROSDAC_CTRL_HW1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<RosdacCtrlHw1Spec>;
 #[doc = "Field `rosdac_i_gc0` reader - "]
-pub type ROSDAC_I_GC0_R = crate::FieldReader<u8, u8>;
+pub type RosdacIGc0R = crate::FieldReader;
 #[doc = "Field `rosdac_i_gc0` writer - "]
-pub type ROSDAC_I_GC0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ROSDAC_CTRL_HW1_SPEC, u8, u8, 6, O>;
+pub type RosdacIGc0W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `rosdac_q_gc0` reader - "]
-pub type ROSDAC_Q_GC0_R = crate::FieldReader<u8, u8>;
+pub type RosdacQGc0R = crate::FieldReader;
 #[doc = "Field `rosdac_q_gc0` writer - "]
-pub type ROSDAC_Q_GC0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ROSDAC_CTRL_HW1_SPEC, u8, u8, 6, O>;
+pub type RosdacQGc0W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `rosdac_i_gc1` reader - "]
-pub type ROSDAC_I_GC1_R = crate::FieldReader<u8, u8>;
+pub type RosdacIGc1R = crate::FieldReader;
 #[doc = "Field `rosdac_i_gc1` writer - "]
-pub type ROSDAC_I_GC1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ROSDAC_CTRL_HW1_SPEC, u8, u8, 6, O>;
+pub type RosdacIGc1W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `rosdac_q_gc1` reader - "]
-pub type ROSDAC_Q_GC1_R = crate::FieldReader<u8, u8>;
+pub type RosdacQGc1R = crate::FieldReader;
 #[doc = "Field `rosdac_q_gc1` writer - "]
-pub type ROSDAC_Q_GC1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ROSDAC_CTRL_HW1_SPEC, u8, u8, 6, O>;
+pub type RosdacQGc1W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    pub fn rosdac_i_gc0(&self) -> ROSDAC_I_GC0_R {
-        ROSDAC_I_GC0_R::new((self.bits & 0x3f) as u8)
+    pub fn rosdac_i_gc0(&self) -> RosdacIGc0R {
+        RosdacIGc0R::new((self.bits & 0x3f) as u8)
     }
     #[doc = "Bits 8:13"]
     #[inline(always)]
-    pub fn rosdac_q_gc0(&self) -> ROSDAC_Q_GC0_R {
-        ROSDAC_Q_GC0_R::new(((self.bits >> 8) & 0x3f) as u8)
+    pub fn rosdac_q_gc0(&self) -> RosdacQGc0R {
+        RosdacQGc0R::new(((self.bits >> 8) & 0x3f) as u8)
     }
     #[doc = "Bits 16:21"]
     #[inline(always)]
-    pub fn rosdac_i_gc1(&self) -> ROSDAC_I_GC1_R {
-        ROSDAC_I_GC1_R::new(((self.bits >> 16) & 0x3f) as u8)
+    pub fn rosdac_i_gc1(&self) -> RosdacIGc1R {
+        RosdacIGc1R::new(((self.bits >> 16) & 0x3f) as u8)
     }
     #[doc = "Bits 24:29"]
     #[inline(always)]
-    pub fn rosdac_q_gc1(&self) -> ROSDAC_Q_GC1_R {
-        ROSDAC_Q_GC1_R::new(((self.bits >> 24) & 0x3f) as u8)
+    pub fn rosdac_q_gc1(&self) -> RosdacQGc1R {
+        RosdacQGc1R::new(((self.bits >> 24) & 0x3f) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    #[must_use]
-    pub fn rosdac_i_gc0(&mut self) -> ROSDAC_I_GC0_W<0> {
-        ROSDAC_I_GC0_W::new(self)
+    pub fn rosdac_i_gc0(&mut self) -> RosdacIGc0W<'_, RosdacCtrlHw1Spec> {
+        RosdacIGc0W::new(self, 0)
     }
     #[doc = "Bits 8:13"]
     #[inline(always)]
-    #[must_use]
-    pub fn rosdac_q_gc0(&mut self) -> ROSDAC_Q_GC0_W<8> {
-        ROSDAC_Q_GC0_W::new(self)
+    pub fn rosdac_q_gc0(&mut self) -> RosdacQGc0W<'_, RosdacCtrlHw1Spec> {
+        RosdacQGc0W::new(self, 8)
     }
     #[doc = "Bits 16:21"]
     #[inline(always)]
-    #[must_use]
-    pub fn rosdac_i_gc1(&mut self) -> ROSDAC_I_GC1_W<16> {
-        ROSDAC_I_GC1_W::new(self)
+    pub fn rosdac_i_gc1(&mut self) -> RosdacIGc1W<'_, RosdacCtrlHw1Spec> {
+        RosdacIGc1W::new(self, 16)
     }
     #[doc = "Bits 24:29"]
     #[inline(always)]
-    #[must_use]
-    pub fn rosdac_q_gc1(&mut self) -> ROSDAC_Q_GC1_W<24> {
-        ROSDAC_Q_GC1_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn rosdac_q_gc1(&mut self) -> RosdacQGc1W<'_, RosdacCtrlHw1Spec> {
+        RosdacQGc1W::new(self, 24)
     }
 }
-#[doc = "rosdac_ctrl_hw1.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rosdac_ctrl_hw1](index.html) module"]
-pub struct ROSDAC_CTRL_HW1_SPEC;
-impl crate::RegisterSpec for ROSDAC_CTRL_HW1_SPEC {
+#[doc = "rosdac_ctrl_hw1.\n\nYou can [`read`](crate::Reg::read) this register and get [`rosdac_ctrl_hw1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rosdac_ctrl_hw1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RosdacCtrlHw1Spec;
+impl crate::RegisterSpec for RosdacCtrlHw1Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rosdac_ctrl_hw1::R](R) reader structure"]
-impl crate::Readable for ROSDAC_CTRL_HW1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [rosdac_ctrl_hw1::W](W) writer structure"]
-impl crate::Writable for ROSDAC_CTRL_HW1_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`rosdac_ctrl_hw1::R`](R) reader structure"]
+impl crate::Readable for RosdacCtrlHw1Spec {}
+#[doc = "`write(|w| ..)` method takes [`rosdac_ctrl_hw1::W`](W) writer structure"]
+impl crate::Writable for RosdacCtrlHw1Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets rosdac_ctrl_hw1 to value 0"]
-impl crate::Resettable for ROSDAC_CTRL_HW1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for RosdacCtrlHw1Spec {}

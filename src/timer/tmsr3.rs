@@ -1,51 +1,34 @@
 #[doc = "Register `TMSR3` reader"]
-pub struct R(crate::R<TMSR3_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TMSR3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TMSR3_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TMSR3_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<Tmsr3Spec>;
 #[doc = "Field `tmsr_0` reader - "]
-pub type TMSR_0_R = crate::BitReader<bool>;
+pub type Tmsr0R = crate::BitReader;
 #[doc = "Field `tmsr_1` reader - "]
-pub type TMSR_1_R = crate::BitReader<bool>;
+pub type Tmsr1R = crate::BitReader;
 #[doc = "Field `tmsr_2` reader - "]
-pub type TMSR_2_R = crate::BitReader<bool>;
+pub type Tmsr2R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn tmsr_0(&self) -> TMSR_0_R {
-        TMSR_0_R::new((self.bits & 1) != 0)
+    pub fn tmsr_0(&self) -> Tmsr0R {
+        Tmsr0R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn tmsr_1(&self) -> TMSR_1_R {
-        TMSR_1_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn tmsr_1(&self) -> Tmsr1R {
+        Tmsr1R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn tmsr_2(&self) -> TMSR_2_R {
-        TMSR_2_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn tmsr_2(&self) -> Tmsr2R {
+        Tmsr2R::new(((self.bits >> 2) & 1) != 0)
     }
 }
-#[doc = "TMSR3.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tmsr3](index.html) module"]
-pub struct TMSR3_SPEC;
-impl crate::RegisterSpec for TMSR3_SPEC {
+#[doc = "TMSR3.\n\nYou can [`read`](crate::Reg::read) this register and get [`tmsr3::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Tmsr3Spec;
+impl crate::RegisterSpec for Tmsr3Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tmsr3::R](R) reader structure"]
-impl crate::Readable for TMSR3_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`tmsr3::R`](R) reader structure"]
+impl crate::Readable for Tmsr3Spec {}
 #[doc = "`reset()` method sets TMSR3 to value 0"]
-impl crate::Resettable for TMSR3_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for Tmsr3Spec {}

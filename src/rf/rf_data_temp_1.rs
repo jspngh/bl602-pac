@@ -1,81 +1,35 @@
 #[doc = "Register `rf_data_temp_1` reader"]
-pub struct R(crate::R<RF_DATA_TEMP_1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RF_DATA_TEMP_1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RF_DATA_TEMP_1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RF_DATA_TEMP_1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RfDataTemp1Spec>;
 #[doc = "Register `rf_data_temp_1` writer"]
-pub struct W(crate::W<RF_DATA_TEMP_1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<RF_DATA_TEMP_1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<RF_DATA_TEMP_1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<RF_DATA_TEMP_1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<RfDataTemp1Spec>;
 #[doc = "Field `rf_data_temp_1` reader - "]
-pub type RF_DATA_TEMP_1_R = crate::FieldReader<u32, u32>;
+pub type RfDataTemp1R = crate::FieldReader<u32>;
 #[doc = "Field `rf_data_temp_1` writer - "]
-pub type RF_DATA_TEMP_1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RF_DATA_TEMP_1_SPEC, u32, u32, 32, O>;
+pub type RfDataTemp1W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn rf_data_temp_1(&self) -> RF_DATA_TEMP_1_R {
-        RF_DATA_TEMP_1_R::new(self.bits)
+    pub fn rf_data_temp_1(&self) -> RfDataTemp1R {
+        RfDataTemp1R::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
-    pub fn rf_data_temp_1(&mut self) -> RF_DATA_TEMP_1_W<0> {
-        RF_DATA_TEMP_1_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn rf_data_temp_1(&mut self) -> RfDataTemp1W<'_, RfDataTemp1Spec> {
+        RfDataTemp1W::new(self, 0)
     }
 }
-#[doc = "rf_data_temp_1.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rf_data_temp_1](index.html) module"]
-pub struct RF_DATA_TEMP_1_SPEC;
-impl crate::RegisterSpec for RF_DATA_TEMP_1_SPEC {
+#[doc = "rf_data_temp_1.\n\nYou can [`read`](crate::Reg::read) this register and get [`rf_data_temp_1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rf_data_temp_1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RfDataTemp1Spec;
+impl crate::RegisterSpec for RfDataTemp1Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rf_data_temp_1::R](R) reader structure"]
-impl crate::Readable for RF_DATA_TEMP_1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [rf_data_temp_1::W](W) writer structure"]
-impl crate::Writable for RF_DATA_TEMP_1_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`rf_data_temp_1::R`](R) reader structure"]
+impl crate::Readable for RfDataTemp1Spec {}
+#[doc = "`write(|w| ..)` method takes [`rf_data_temp_1::W`](W) writer structure"]
+impl crate::Writable for RfDataTemp1Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets rf_data_temp_1 to value 0"]
-impl crate::Resettable for RF_DATA_TEMP_1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for RfDataTemp1Spec {}

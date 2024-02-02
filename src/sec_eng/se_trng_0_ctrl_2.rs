@@ -1,81 +1,37 @@
 #[doc = "Register `se_trng_0_ctrl_2` reader"]
-pub struct R(crate::R<SE_TRNG_0_CTRL_2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SE_TRNG_0_CTRL_2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SE_TRNG_0_CTRL_2_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SE_TRNG_0_CTRL_2_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SeTrng0Ctrl2Spec>;
 #[doc = "Register `se_trng_0_ctrl_2` writer"]
-pub struct W(crate::W<SE_TRNG_0_CTRL_2_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SE_TRNG_0_CTRL_2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SE_TRNG_0_CTRL_2_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SE_TRNG_0_CTRL_2_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SeTrng0Ctrl2Spec>;
 #[doc = "Field `se_trng_0_reseed_n_msb` reader - "]
-pub type SE_TRNG_0_RESEED_N_MSB_R = crate::FieldReader<u16, u16>;
+pub type SeTrng0ReseedNMsbR = crate::FieldReader<u16>;
 #[doc = "Field `se_trng_0_reseed_n_msb` writer - "]
-pub type SE_TRNG_0_RESEED_N_MSB_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SE_TRNG_0_CTRL_2_SPEC, u16, u16, 16, O>;
+pub type SeTrng0ReseedNMsbW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn se_trng_0_reseed_n_msb(&self) -> SE_TRNG_0_RESEED_N_MSB_R {
-        SE_TRNG_0_RESEED_N_MSB_R::new((self.bits & 0xffff) as u16)
+    pub fn se_trng_0_reseed_n_msb(&self) -> SeTrng0ReseedNMsbR {
+        SeTrng0ReseedNMsbR::new((self.bits & 0xffff) as u16)
     }
 }
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    #[must_use]
-    pub fn se_trng_0_reseed_n_msb(&mut self) -> SE_TRNG_0_RESEED_N_MSB_W<0> {
-        SE_TRNG_0_RESEED_N_MSB_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn se_trng_0_reseed_n_msb(&mut self) -> SeTrng0ReseedNMsbW<'_, SeTrng0Ctrl2Spec> {
+        SeTrng0ReseedNMsbW::new(self, 0)
     }
 }
-#[doc = "se_trng_0_ctrl_2.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [se_trng_0_ctrl_2](index.html) module"]
-pub struct SE_TRNG_0_CTRL_2_SPEC;
-impl crate::RegisterSpec for SE_TRNG_0_CTRL_2_SPEC {
+#[doc = "se_trng_0_ctrl_2.\n\nYou can [`read`](crate::Reg::read) this register and get [`se_trng_0_ctrl_2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`se_trng_0_ctrl_2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SeTrng0Ctrl2Spec;
+impl crate::RegisterSpec for SeTrng0Ctrl2Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [se_trng_0_ctrl_2::R](R) reader structure"]
-impl crate::Readable for SE_TRNG_0_CTRL_2_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [se_trng_0_ctrl_2::W](W) writer structure"]
-impl crate::Writable for SE_TRNG_0_CTRL_2_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`se_trng_0_ctrl_2::R`](R) reader structure"]
+impl crate::Readable for SeTrng0Ctrl2Spec {}
+#[doc = "`write(|w| ..)` method takes [`se_trng_0_ctrl_2::W`](W) writer structure"]
+impl crate::Writable for SeTrng0Ctrl2Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets se_trng_0_ctrl_2 to value 0xff"]
-impl crate::Resettable for SE_TRNG_0_CTRL_2_SPEC {
-    const RESET_VALUE: Self::Ux = 0xff;
+impl crate::Resettable for SeTrng0Ctrl2Spec {
+    const RESET_VALUE: u32 = 0xff;
 }

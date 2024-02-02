@@ -1,63 +1,23 @@
 #[doc = "Register `saradc_resv` reader"]
-pub struct R(crate::R<SARADC_RESV_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SARADC_RESV_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SARADC_RESV_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SARADC_RESV_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SaradcResvSpec>;
 #[doc = "Register `saradc_resv` writer"]
-pub struct W(crate::W<SARADC_RESV_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SARADC_RESV_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+pub type W = crate::W<SaradcResvSpec>;
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        write!(f, "{}", self.bits())
     }
 }
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SARADC_RESV_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SARADC_RESV_SPEC>) -> Self {
-        W(writer)
-    }
-}
-impl W {
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
-    }
-}
-#[doc = "SARADC Control Registers\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [saradc_resv](index.html) module"]
-pub struct SARADC_RESV_SPEC;
-impl crate::RegisterSpec for SARADC_RESV_SPEC {
+impl W {}
+#[doc = "SARADC Control Registers\n\nYou can [`read`](crate::Reg::read) this register and get [`saradc_resv::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`saradc_resv::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SaradcResvSpec;
+impl crate::RegisterSpec for SaradcResvSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [saradc_resv::R](R) reader structure"]
-impl crate::Readable for SARADC_RESV_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [saradc_resv::W](W) writer structure"]
-impl crate::Writable for SARADC_RESV_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`saradc_resv::R`](R) reader structure"]
+impl crate::Readable for SaradcResvSpec {}
+#[doc = "`write(|w| ..)` method takes [`saradc_resv::W`](W) writer structure"]
+impl crate::Writable for SaradcResvSpec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets saradc_resv to value 0"]
-impl crate::Resettable for SARADC_RESV_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for SaradcResvSpec {}

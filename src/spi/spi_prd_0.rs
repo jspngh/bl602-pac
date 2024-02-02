@@ -1,129 +1,79 @@
 #[doc = "Register `spi_prd_0` reader"]
-pub struct R(crate::R<SPI_PRD_0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SPI_PRD_0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SPI_PRD_0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SPI_PRD_0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SpiPrd0Spec>;
 #[doc = "Register `spi_prd_0` writer"]
-pub struct W(crate::W<SPI_PRD_0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SPI_PRD_0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SPI_PRD_0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SPI_PRD_0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SpiPrd0Spec>;
 #[doc = "Field `cr_spi_prd_s` reader - "]
-pub type CR_SPI_PRD_S_R = crate::FieldReader<u8, u8>;
+pub type CrSpiPrdSR = crate::FieldReader;
 #[doc = "Field `cr_spi_prd_s` writer - "]
-pub type CR_SPI_PRD_S_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_PRD_0_SPEC, u8, u8, 8, O>;
+pub type CrSpiPrdSW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `cr_spi_prd_p` reader - "]
-pub type CR_SPI_PRD_P_R = crate::FieldReader<u8, u8>;
+pub type CrSpiPrdPR = crate::FieldReader;
 #[doc = "Field `cr_spi_prd_p` writer - "]
-pub type CR_SPI_PRD_P_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_PRD_0_SPEC, u8, u8, 8, O>;
+pub type CrSpiPrdPW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `cr_spi_prd_d_ph_0` reader - "]
-pub type CR_SPI_PRD_D_PH_0_R = crate::FieldReader<u8, u8>;
+pub type CrSpiPrdDPh0R = crate::FieldReader;
 #[doc = "Field `cr_spi_prd_d_ph_0` writer - "]
-pub type CR_SPI_PRD_D_PH_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_PRD_0_SPEC, u8, u8, 8, O>;
+pub type CrSpiPrdDPh0W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `cr_spi_prd_d_ph_1` reader - "]
-pub type CR_SPI_PRD_D_PH_1_R = crate::FieldReader<u8, u8>;
+pub type CrSpiPrdDPh1R = crate::FieldReader;
 #[doc = "Field `cr_spi_prd_d_ph_1` writer - "]
-pub type CR_SPI_PRD_D_PH_1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_PRD_0_SPEC, u8, u8, 8, O>;
+pub type CrSpiPrdDPh1W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn cr_spi_prd_s(&self) -> CR_SPI_PRD_S_R {
-        CR_SPI_PRD_S_R::new((self.bits & 0xff) as u8)
+    pub fn cr_spi_prd_s(&self) -> CrSpiPrdSR {
+        CrSpiPrdSR::new((self.bits & 0xff) as u8)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
-    pub fn cr_spi_prd_p(&self) -> CR_SPI_PRD_P_R {
-        CR_SPI_PRD_P_R::new(((self.bits >> 8) & 0xff) as u8)
+    pub fn cr_spi_prd_p(&self) -> CrSpiPrdPR {
+        CrSpiPrdPR::new(((self.bits >> 8) & 0xff) as u8)
     }
     #[doc = "Bits 16:23"]
     #[inline(always)]
-    pub fn cr_spi_prd_d_ph_0(&self) -> CR_SPI_PRD_D_PH_0_R {
-        CR_SPI_PRD_D_PH_0_R::new(((self.bits >> 16) & 0xff) as u8)
+    pub fn cr_spi_prd_d_ph_0(&self) -> CrSpiPrdDPh0R {
+        CrSpiPrdDPh0R::new(((self.bits >> 16) & 0xff) as u8)
     }
     #[doc = "Bits 24:31"]
     #[inline(always)]
-    pub fn cr_spi_prd_d_ph_1(&self) -> CR_SPI_PRD_D_PH_1_R {
-        CR_SPI_PRD_D_PH_1_R::new(((self.bits >> 24) & 0xff) as u8)
+    pub fn cr_spi_prd_d_ph_1(&self) -> CrSpiPrdDPh1R {
+        CrSpiPrdDPh1R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_spi_prd_s(&mut self) -> CR_SPI_PRD_S_W<0> {
-        CR_SPI_PRD_S_W::new(self)
+    pub fn cr_spi_prd_s(&mut self) -> CrSpiPrdSW<'_, SpiPrd0Spec> {
+        CrSpiPrdSW::new(self, 0)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_spi_prd_p(&mut self) -> CR_SPI_PRD_P_W<8> {
-        CR_SPI_PRD_P_W::new(self)
+    pub fn cr_spi_prd_p(&mut self) -> CrSpiPrdPW<'_, SpiPrd0Spec> {
+        CrSpiPrdPW::new(self, 8)
     }
     #[doc = "Bits 16:23"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_spi_prd_d_ph_0(&mut self) -> CR_SPI_PRD_D_PH_0_W<16> {
-        CR_SPI_PRD_D_PH_0_W::new(self)
+    pub fn cr_spi_prd_d_ph_0(&mut self) -> CrSpiPrdDPh0W<'_, SpiPrd0Spec> {
+        CrSpiPrdDPh0W::new(self, 16)
     }
     #[doc = "Bits 24:31"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_spi_prd_d_ph_1(&mut self) -> CR_SPI_PRD_D_PH_1_W<24> {
-        CR_SPI_PRD_D_PH_1_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn cr_spi_prd_d_ph_1(&mut self) -> CrSpiPrdDPh1W<'_, SpiPrd0Spec> {
+        CrSpiPrdDPh1W::new(self, 24)
     }
 }
-#[doc = "spi_prd_0.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_prd_0](index.html) module"]
-pub struct SPI_PRD_0_SPEC;
-impl crate::RegisterSpec for SPI_PRD_0_SPEC {
+#[doc = "spi_prd_0.\n\nYou can [`read`](crate::Reg::read) this register and get [`spi_prd_0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi_prd_0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SpiPrd0Spec;
+impl crate::RegisterSpec for SpiPrd0Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [spi_prd_0::R](R) reader structure"]
-impl crate::Readable for SPI_PRD_0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [spi_prd_0::W](W) writer structure"]
-impl crate::Writable for SPI_PRD_0_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`spi_prd_0::R`](R) reader structure"]
+impl crate::Readable for SpiPrd0Spec {}
+#[doc = "`write(|w| ..)` method takes [`spi_prd_0::W`](W) writer structure"]
+impl crate::Writable for SpiPrd0Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets spi_prd_0 to value 0x0f0f_0f0f"]
-impl crate::Resettable for SPI_PRD_0_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0f0f_0f0f;
+impl crate::Resettable for SpiPrd0Spec {
+    const RESET_VALUE: u32 = 0x0f0f_0f0f;
 }

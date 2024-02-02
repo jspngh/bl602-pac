@@ -1,113 +1,63 @@
 #[doc = "Register `sf_if_io_dly_2` reader"]
-pub struct R(crate::R<SF_IF_IO_DLY_2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SF_IF_IO_DLY_2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SF_IF_IO_DLY_2_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SF_IF_IO_DLY_2_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SfIfIoDly2Spec>;
 #[doc = "Register `sf_if_io_dly_2` writer"]
-pub struct W(crate::W<SF_IF_IO_DLY_2_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SF_IF_IO_DLY_2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SF_IF_IO_DLY_2_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SF_IF_IO_DLY_2_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SfIfIoDly2Spec>;
 #[doc = "Field `sf_io_1_oe_dly_sel` reader - "]
-pub type SF_IO_1_OE_DLY_SEL_R = crate::FieldReader<u8, u8>;
+pub type SfIo1OeDlySelR = crate::FieldReader;
 #[doc = "Field `sf_io_1_oe_dly_sel` writer - "]
-pub type SF_IO_1_OE_DLY_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SF_IF_IO_DLY_2_SPEC, u8, u8, 2, O>;
+pub type SfIo1OeDlySelW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `sf_io_1_di_dly_sel` reader - "]
-pub type SF_IO_1_DI_DLY_SEL_R = crate::FieldReader<u8, u8>;
+pub type SfIo1DiDlySelR = crate::FieldReader;
 #[doc = "Field `sf_io_1_di_dly_sel` writer - "]
-pub type SF_IO_1_DI_DLY_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SF_IF_IO_DLY_2_SPEC, u8, u8, 2, O>;
+pub type SfIo1DiDlySelW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `sf_io_1_do_dly_sel` reader - "]
-pub type SF_IO_1_DO_DLY_SEL_R = crate::FieldReader<u8, u8>;
+pub type SfIo1DoDlySelR = crate::FieldReader;
 #[doc = "Field `sf_io_1_do_dly_sel` writer - "]
-pub type SF_IO_1_DO_DLY_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SF_IF_IO_DLY_2_SPEC, u8, u8, 2, O>;
+pub type SfIo1DoDlySelW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn sf_io_1_oe_dly_sel(&self) -> SF_IO_1_OE_DLY_SEL_R {
-        SF_IO_1_OE_DLY_SEL_R::new((self.bits & 3) as u8)
+    pub fn sf_io_1_oe_dly_sel(&self) -> SfIo1OeDlySelR {
+        SfIo1OeDlySelR::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
-    pub fn sf_io_1_di_dly_sel(&self) -> SF_IO_1_DI_DLY_SEL_R {
-        SF_IO_1_DI_DLY_SEL_R::new(((self.bits >> 8) & 3) as u8)
+    pub fn sf_io_1_di_dly_sel(&self) -> SfIo1DiDlySelR {
+        SfIo1DiDlySelR::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
-    pub fn sf_io_1_do_dly_sel(&self) -> SF_IO_1_DO_DLY_SEL_R {
-        SF_IO_1_DO_DLY_SEL_R::new(((self.bits >> 16) & 3) as u8)
+    pub fn sf_io_1_do_dly_sel(&self) -> SfIo1DoDlySelR {
+        SfIo1DoDlySelR::new(((self.bits >> 16) & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    #[must_use]
-    pub fn sf_io_1_oe_dly_sel(&mut self) -> SF_IO_1_OE_DLY_SEL_W<0> {
-        SF_IO_1_OE_DLY_SEL_W::new(self)
+    pub fn sf_io_1_oe_dly_sel(&mut self) -> SfIo1OeDlySelW<'_, SfIfIoDly2Spec> {
+        SfIo1OeDlySelW::new(self, 0)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
-    #[must_use]
-    pub fn sf_io_1_di_dly_sel(&mut self) -> SF_IO_1_DI_DLY_SEL_W<8> {
-        SF_IO_1_DI_DLY_SEL_W::new(self)
+    pub fn sf_io_1_di_dly_sel(&mut self) -> SfIo1DiDlySelW<'_, SfIfIoDly2Spec> {
+        SfIo1DiDlySelW::new(self, 8)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
-    #[must_use]
-    pub fn sf_io_1_do_dly_sel(&mut self) -> SF_IO_1_DO_DLY_SEL_W<16> {
-        SF_IO_1_DO_DLY_SEL_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn sf_io_1_do_dly_sel(&mut self) -> SfIo1DoDlySelW<'_, SfIfIoDly2Spec> {
+        SfIo1DoDlySelW::new(self, 16)
     }
 }
-#[doc = "sf_if_io_dly_2.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sf_if_io_dly_2](index.html) module"]
-pub struct SF_IF_IO_DLY_2_SPEC;
-impl crate::RegisterSpec for SF_IF_IO_DLY_2_SPEC {
+#[doc = "sf_if_io_dly_2.\n\nYou can [`read`](crate::Reg::read) this register and get [`sf_if_io_dly_2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sf_if_io_dly_2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SfIfIoDly2Spec;
+impl crate::RegisterSpec for SfIfIoDly2Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sf_if_io_dly_2::R](R) reader structure"]
-impl crate::Readable for SF_IF_IO_DLY_2_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [sf_if_io_dly_2::W](W) writer structure"]
-impl crate::Writable for SF_IF_IO_DLY_2_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`sf_if_io_dly_2::R`](R) reader structure"]
+impl crate::Readable for SfIfIoDly2Spec {}
+#[doc = "`write(|w| ..)` method takes [`sf_if_io_dly_2::W`](W) writer structure"]
+impl crate::Writable for SfIfIoDly2Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets sf_if_io_dly_2 to value 0"]
-impl crate::Resettable for SF_IF_IO_DLY_2_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for SfIfIoDly2Spec {}

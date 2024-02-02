@@ -1,81 +1,37 @@
 #[doc = "Register `PDS_TIME1` reader"]
-pub struct R(crate::R<PDS_TIME1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PDS_TIME1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PDS_TIME1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PDS_TIME1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PdsTime1Spec>;
 #[doc = "Register `PDS_TIME1` writer"]
-pub struct W(crate::W<PDS_TIME1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PDS_TIME1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PDS_TIME1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PDS_TIME1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<PdsTime1Spec>;
 #[doc = "Field `cr_sleep_duration` reader - "]
-pub type CR_SLEEP_DURATION_R = crate::FieldReader<u32, u32>;
+pub type CrSleepDurationR = crate::FieldReader<u32>;
 #[doc = "Field `cr_sleep_duration` writer - "]
-pub type CR_SLEEP_DURATION_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PDS_TIME1_SPEC, u32, u32, 32, O>;
+pub type CrSleepDurationW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn cr_sleep_duration(&self) -> CR_SLEEP_DURATION_R {
-        CR_SLEEP_DURATION_R::new(self.bits)
+    pub fn cr_sleep_duration(&self) -> CrSleepDurationR {
+        CrSleepDurationR::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr_sleep_duration(&mut self) -> CR_SLEEP_DURATION_W<0> {
-        CR_SLEEP_DURATION_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn cr_sleep_duration(&mut self) -> CrSleepDurationW<'_, PdsTime1Spec> {
+        CrSleepDurationW::new(self, 0)
     }
 }
-#[doc = "PDS_TIME1.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pds_time1](index.html) module"]
-pub struct PDS_TIME1_SPEC;
-impl crate::RegisterSpec for PDS_TIME1_SPEC {
+#[doc = "PDS_TIME1.\n\nYou can [`read`](crate::Reg::read) this register and get [`pds_time1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pds_time1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct PdsTime1Spec;
+impl crate::RegisterSpec for PdsTime1Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pds_time1::R](R) reader structure"]
-impl crate::Readable for PDS_TIME1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [pds_time1::W](W) writer structure"]
-impl crate::Writable for PDS_TIME1_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`pds_time1::R`](R) reader structure"]
+impl crate::Readable for PdsTime1Spec {}
+#[doc = "`write(|w| ..)` method takes [`pds_time1::W`](W) writer structure"]
+impl crate::Writable for PdsTime1Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets PDS_TIME1 to value 0x0ca8"]
-impl crate::Resettable for PDS_TIME1_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0ca8;
+impl crate::Resettable for PdsTime1Spec {
+    const RESET_VALUE: u32 = 0x0ca8;
 }

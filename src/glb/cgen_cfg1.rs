@@ -1,95 +1,51 @@
 #[doc = "Register `cgen_cfg1` reader"]
-pub struct R(crate::R<CGEN_CFG1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CGEN_CFG1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CGEN_CFG1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CGEN_CFG1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CgenCfg1Spec>;
 #[doc = "Register `cgen_cfg1` writer"]
-pub struct W(crate::W<CGEN_CFG1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CGEN_CFG1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CGEN_CFG1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CGEN_CFG1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CgenCfg1Spec>;
 #[doc = "Field `cgen_s1` reader - "]
-pub type CGEN_S1_R = crate::FieldReader<u16, u16>;
+pub type CgenS1R = crate::FieldReader<u16>;
 #[doc = "Field `cgen_s1` writer - "]
-pub type CGEN_S1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CGEN_CFG1_SPEC, u16, u16, 16, O>;
+pub type CgenS1W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `cgen_s1a` reader - "]
-pub type CGEN_S1A_R = crate::FieldReader<u8, u8>;
+pub type CgenS1aR = crate::FieldReader;
 #[doc = "Field `cgen_s1a` writer - "]
-pub type CGEN_S1A_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CGEN_CFG1_SPEC, u8, u8, 8, O>;
+pub type CgenS1aW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn cgen_s1(&self) -> CGEN_S1_R {
-        CGEN_S1_R::new((self.bits & 0xffff) as u16)
+    pub fn cgen_s1(&self) -> CgenS1R {
+        CgenS1R::new((self.bits & 0xffff) as u16)
     }
     #[doc = "Bits 16:23"]
     #[inline(always)]
-    pub fn cgen_s1a(&self) -> CGEN_S1A_R {
-        CGEN_S1A_R::new(((self.bits >> 16) & 0xff) as u8)
+    pub fn cgen_s1a(&self) -> CgenS1aR {
+        CgenS1aR::new(((self.bits >> 16) & 0xff) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    #[must_use]
-    pub fn cgen_s1(&mut self) -> CGEN_S1_W<0> {
-        CGEN_S1_W::new(self)
+    pub fn cgen_s1(&mut self) -> CgenS1W<'_, CgenCfg1Spec> {
+        CgenS1W::new(self, 0)
     }
     #[doc = "Bits 16:23"]
     #[inline(always)]
-    #[must_use]
-    pub fn cgen_s1a(&mut self) -> CGEN_S1A_W<16> {
-        CGEN_S1A_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn cgen_s1a(&mut self) -> CgenS1aW<'_, CgenCfg1Spec> {
+        CgenS1aW::new(self, 16)
     }
 }
-#[doc = "cgen_cfg1.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cgen_cfg1](index.html) module"]
-pub struct CGEN_CFG1_SPEC;
-impl crate::RegisterSpec for CGEN_CFG1_SPEC {
+#[doc = "cgen_cfg1.\n\nYou can [`read`](crate::Reg::read) this register and get [`cgen_cfg1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cgen_cfg1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CgenCfg1Spec;
+impl crate::RegisterSpec for CgenCfg1Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cgen_cfg1::R](R) reader structure"]
-impl crate::Readable for CGEN_CFG1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [cgen_cfg1::W](W) writer structure"]
-impl crate::Writable for CGEN_CFG1_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`cgen_cfg1::R`](R) reader structure"]
+impl crate::Readable for CgenCfg1Spec {}
+#[doc = "`write(|w| ..)` method takes [`cgen_cfg1::W`](W) writer structure"]
+impl crate::Writable for CgenCfg1Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets cgen_cfg1 to value 0x00ff_ffff"]
-impl crate::Resettable for CGEN_CFG1_SPEC {
-    const RESET_VALUE: Self::Ux = 0x00ff_ffff;
+impl crate::Resettable for CgenCfg1Spec {
+    const RESET_VALUE: u32 = 0x00ff_ffff;
 }

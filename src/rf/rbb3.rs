@@ -1,230 +1,175 @@
 #[doc = "Register `rbb3` reader"]
-pub struct R(crate::R<RBB3_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RBB3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RBB3_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RBB3_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<Rbb3Spec>;
 #[doc = "Register `rbb3` writer"]
-pub struct W(crate::W<RBB3_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<RBB3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<RBB3_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<RBB3_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<Rbb3Spec>;
 #[doc = "Field `rbb_bt_mode_hw` reader - "]
-pub type RBB_BT_MODE_HW_R = crate::BitReader<bool>;
+pub type RbbBtModeHwR = crate::BitReader;
 #[doc = "Field `rbb_bt_mode_hw` writer - "]
-pub type RBB_BT_MODE_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, RBB3_SPEC, bool, O>;
+pub type RbbBtModeHwW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `rbb_bt_mode` reader - "]
-pub type RBB_BT_MODE_R = crate::BitReader<bool>;
+pub type RbbBtModeR = crate::BitReader;
 #[doc = "Field `rbb_bt_mode` writer - "]
-pub type RBB_BT_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, RBB3_SPEC, bool, O>;
+pub type RbbBtModeW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `rbb_bt_fif_tune` reader - "]
-pub type RBB_BT_FIF_TUNE_R = crate::FieldReader<u8, u8>;
+pub type RbbBtFifTuneR = crate::FieldReader;
 #[doc = "Field `rbb_bt_fif_tune` writer - "]
-pub type RBB_BT_FIF_TUNE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RBB3_SPEC, u8, u8, 2, O>;
+pub type RbbBtFifTuneW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `rbb_deq` reader - "]
-pub type RBB_DEQ_R = crate::FieldReader<u8, u8>;
+pub type RbbDeqR = crate::FieldReader;
 #[doc = "Field `rbb_deq` writer - "]
-pub type RBB_DEQ_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RBB3_SPEC, u8, u8, 2, O>;
+pub type RbbDeqW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `rbb_bm_op` reader - "]
-pub type RBB_BM_OP_R = crate::FieldReader<u8, u8>;
+pub type RbbBmOpR = crate::FieldReader;
 #[doc = "Field `rbb_bm_op` writer - "]
-pub type RBB_BM_OP_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RBB3_SPEC, u8, u8, 3, O>;
+pub type RbbBmOpW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `rbb_vcm` reader - "]
-pub type RBB_VCM_R = crate::FieldReader<u8, u8>;
+pub type RbbVcmR = crate::FieldReader;
 #[doc = "Field `rbb_vcm` writer - "]
-pub type RBB_VCM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RBB3_SPEC, u8, u8, 2, O>;
+pub type RbbVcmW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `rbb_bq_iqbias_short` reader - "]
-pub type RBB_BQ_IQBIAS_SHORT_R = crate::BitReader<bool>;
+pub type RbbBqIqbiasShortR = crate::BitReader;
 #[doc = "Field `rbb_bq_iqbias_short` writer - "]
-pub type RBB_BQ_IQBIAS_SHORT_W<'a, const O: u8> = crate::BitWriter<'a, u32, RBB3_SPEC, bool, O>;
+pub type RbbBqIqbiasShortW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `rbb_tia_iqbias_short` reader - "]
-pub type RBB_TIA_IQBIAS_SHORT_R = crate::BitReader<bool>;
+pub type RbbTiaIqbiasShortR = crate::BitReader;
 #[doc = "Field `rbb_tia_iqbias_short` writer - "]
-pub type RBB_TIA_IQBIAS_SHORT_W<'a, const O: u8> = crate::BitWriter<'a, u32, RBB3_SPEC, bool, O>;
+pub type RbbTiaIqbiasShortW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `rbb_bw` reader - "]
-pub type RBB_BW_R = crate::FieldReader<u8, u8>;
+pub type RbbBwR = crate::FieldReader;
 #[doc = "Field `rbb_bw` writer - "]
-pub type RBB_BW_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RBB3_SPEC, u8, u8, 2, O>;
+pub type RbbBwW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `rxiqcal_en` reader - "]
-pub type RXIQCAL_EN_R = crate::BitReader<bool>;
+pub type RxiqcalEnR = crate::BitReader;
 #[doc = "Field `rxiqcal_en` writer - "]
-pub type RXIQCAL_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RBB3_SPEC, bool, O>;
+pub type RxiqcalEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pwr_det_en` reader - "]
-pub type PWR_DET_EN_R = crate::BitReader<bool>;
+pub type PwrDetEnR = crate::BitReader;
 #[doc = "Field `pwr_det_en` writer - "]
-pub type PWR_DET_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RBB3_SPEC, bool, O>;
+pub type PwrDetEnW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn rbb_bt_mode_hw(&self) -> RBB_BT_MODE_HW_R {
-        RBB_BT_MODE_HW_R::new((self.bits & 1) != 0)
+    pub fn rbb_bt_mode_hw(&self) -> RbbBtModeHwR {
+        RbbBtModeHwR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn rbb_bt_mode(&self) -> RBB_BT_MODE_R {
-        RBB_BT_MODE_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn rbb_bt_mode(&self) -> RbbBtModeR {
+        RbbBtModeR::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bits 5:6"]
     #[inline(always)]
-    pub fn rbb_bt_fif_tune(&self) -> RBB_BT_FIF_TUNE_R {
-        RBB_BT_FIF_TUNE_R::new(((self.bits >> 5) & 3) as u8)
+    pub fn rbb_bt_fif_tune(&self) -> RbbBtFifTuneR {
+        RbbBtFifTuneR::new(((self.bits >> 5) & 3) as u8)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
-    pub fn rbb_deq(&self) -> RBB_DEQ_R {
-        RBB_DEQ_R::new(((self.bits >> 8) & 3) as u8)
+    pub fn rbb_deq(&self) -> RbbDeqR {
+        RbbDeqR::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 12:14"]
     #[inline(always)]
-    pub fn rbb_bm_op(&self) -> RBB_BM_OP_R {
-        RBB_BM_OP_R::new(((self.bits >> 12) & 7) as u8)
+    pub fn rbb_bm_op(&self) -> RbbBmOpR {
+        RbbBmOpR::new(((self.bits >> 12) & 7) as u8)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
-    pub fn rbb_vcm(&self) -> RBB_VCM_R {
-        RBB_VCM_R::new(((self.bits >> 16) & 3) as u8)
+    pub fn rbb_vcm(&self) -> RbbVcmR {
+        RbbVcmR::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    pub fn rbb_bq_iqbias_short(&self) -> RBB_BQ_IQBIAS_SHORT_R {
-        RBB_BQ_IQBIAS_SHORT_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn rbb_bq_iqbias_short(&self) -> RbbBqIqbiasShortR {
+        RbbBqIqbiasShortR::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
-    pub fn rbb_tia_iqbias_short(&self) -> RBB_TIA_IQBIAS_SHORT_R {
-        RBB_TIA_IQBIAS_SHORT_R::new(((self.bits >> 21) & 1) != 0)
+    pub fn rbb_tia_iqbias_short(&self) -> RbbTiaIqbiasShortR {
+        RbbTiaIqbiasShortR::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bits 24:25"]
     #[inline(always)]
-    pub fn rbb_bw(&self) -> RBB_BW_R {
-        RBB_BW_R::new(((self.bits >> 24) & 3) as u8)
+    pub fn rbb_bw(&self) -> RbbBwR {
+        RbbBwR::new(((self.bits >> 24) & 3) as u8)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    pub fn rxiqcal_en(&self) -> RXIQCAL_EN_R {
-        RXIQCAL_EN_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn rxiqcal_en(&self) -> RxiqcalEnR {
+        RxiqcalEnR::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    pub fn pwr_det_en(&self) -> PWR_DET_EN_R {
-        PWR_DET_EN_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn pwr_det_en(&self) -> PwrDetEnR {
+        PwrDetEnR::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn rbb_bt_mode_hw(&mut self) -> RBB_BT_MODE_HW_W<0> {
-        RBB_BT_MODE_HW_W::new(self)
+    pub fn rbb_bt_mode_hw(&mut self) -> RbbBtModeHwW<'_, Rbb3Spec> {
+        RbbBtModeHwW::new(self, 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
-    pub fn rbb_bt_mode(&mut self) -> RBB_BT_MODE_W<4> {
-        RBB_BT_MODE_W::new(self)
+    pub fn rbb_bt_mode(&mut self) -> RbbBtModeW<'_, Rbb3Spec> {
+        RbbBtModeW::new(self, 4)
     }
     #[doc = "Bits 5:6"]
     #[inline(always)]
-    #[must_use]
-    pub fn rbb_bt_fif_tune(&mut self) -> RBB_BT_FIF_TUNE_W<5> {
-        RBB_BT_FIF_TUNE_W::new(self)
+    pub fn rbb_bt_fif_tune(&mut self) -> RbbBtFifTuneW<'_, Rbb3Spec> {
+        RbbBtFifTuneW::new(self, 5)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
-    #[must_use]
-    pub fn rbb_deq(&mut self) -> RBB_DEQ_W<8> {
-        RBB_DEQ_W::new(self)
+    pub fn rbb_deq(&mut self) -> RbbDeqW<'_, Rbb3Spec> {
+        RbbDeqW::new(self, 8)
     }
     #[doc = "Bits 12:14"]
     #[inline(always)]
-    #[must_use]
-    pub fn rbb_bm_op(&mut self) -> RBB_BM_OP_W<12> {
-        RBB_BM_OP_W::new(self)
+    pub fn rbb_bm_op(&mut self) -> RbbBmOpW<'_, Rbb3Spec> {
+        RbbBmOpW::new(self, 12)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
-    #[must_use]
-    pub fn rbb_vcm(&mut self) -> RBB_VCM_W<16> {
-        RBB_VCM_W::new(self)
+    pub fn rbb_vcm(&mut self) -> RbbVcmW<'_, Rbb3Spec> {
+        RbbVcmW::new(self, 16)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    #[must_use]
-    pub fn rbb_bq_iqbias_short(&mut self) -> RBB_BQ_IQBIAS_SHORT_W<20> {
-        RBB_BQ_IQBIAS_SHORT_W::new(self)
+    pub fn rbb_bq_iqbias_short(&mut self) -> RbbBqIqbiasShortW<'_, Rbb3Spec> {
+        RbbBqIqbiasShortW::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
-    #[must_use]
-    pub fn rbb_tia_iqbias_short(&mut self) -> RBB_TIA_IQBIAS_SHORT_W<21> {
-        RBB_TIA_IQBIAS_SHORT_W::new(self)
+    pub fn rbb_tia_iqbias_short(&mut self) -> RbbTiaIqbiasShortW<'_, Rbb3Spec> {
+        RbbTiaIqbiasShortW::new(self, 21)
     }
     #[doc = "Bits 24:25"]
     #[inline(always)]
-    #[must_use]
-    pub fn rbb_bw(&mut self) -> RBB_BW_W<24> {
-        RBB_BW_W::new(self)
+    pub fn rbb_bw(&mut self) -> RbbBwW<'_, Rbb3Spec> {
+        RbbBwW::new(self, 24)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxiqcal_en(&mut self) -> RXIQCAL_EN_W<28> {
-        RXIQCAL_EN_W::new(self)
+    pub fn rxiqcal_en(&mut self) -> RxiqcalEnW<'_, Rbb3Spec> {
+        RxiqcalEnW::new(self, 28)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
-    pub fn pwr_det_en(&mut self) -> PWR_DET_EN_W<31> {
-        PWR_DET_EN_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn pwr_det_en(&mut self) -> PwrDetEnW<'_, Rbb3Spec> {
+        PwrDetEnW::new(self, 31)
     }
 }
-#[doc = "rbb3.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rbb3](index.html) module"]
-pub struct RBB3_SPEC;
-impl crate::RegisterSpec for RBB3_SPEC {
+#[doc = "rbb3.\n\nYou can [`read`](crate::Reg::read) this register and get [`rbb3::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rbb3::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Rbb3Spec;
+impl crate::RegisterSpec for Rbb3Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rbb3::R](R) reader structure"]
-impl crate::Readable for RBB3_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [rbb3::W](W) writer structure"]
-impl crate::Writable for RBB3_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`rbb3::R`](R) reader structure"]
+impl crate::Readable for Rbb3Spec {}
+#[doc = "`write(|w| ..)` method takes [`rbb3::W`](W) writer structure"]
+impl crate::Writable for Rbb3Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets rbb3 to value 0"]
-impl crate::Resettable for RBB3_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for Rbb3Spec {}

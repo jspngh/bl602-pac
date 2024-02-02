@@ -1,65 +1,50 @@
 #[doc = "Register `sf_ctrl_prot_en_rd` reader"]
-pub struct R(crate::R<SF_CTRL_PROT_EN_RD_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SF_CTRL_PROT_EN_RD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SF_CTRL_PROT_EN_RD_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SF_CTRL_PROT_EN_RD_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SfCtrlProtEnRdSpec>;
 #[doc = "Field `sf_ctrl_prot_en_rd` reader - "]
-pub type SF_CTRL_PROT_EN_RD_R = crate::BitReader<bool>;
+pub type SfCtrlProtEnRdR = crate::BitReader;
 #[doc = "Field `sf_ctrl_id0_en_rd` reader - "]
-pub type SF_CTRL_ID0_EN_RD_R = crate::BitReader<bool>;
+pub type SfCtrlId0EnRdR = crate::BitReader;
 #[doc = "Field `sf_ctrl_id1_en_rd` reader - "]
-pub type SF_CTRL_ID1_EN_RD_R = crate::BitReader<bool>;
+pub type SfCtrlId1EnRdR = crate::BitReader;
 #[doc = "Field `sf_if_0_trig_wr_lock` reader - "]
-pub type SF_IF_0_TRIG_WR_LOCK_R = crate::BitReader<bool>;
+pub type SfIf0TrigWrLockR = crate::BitReader;
 #[doc = "Field `sf_dbg_dis` reader - "]
-pub type SF_DBG_DIS_R = crate::BitReader<bool>;
+pub type SfDbgDisR = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn sf_ctrl_prot_en_rd(&self) -> SF_CTRL_PROT_EN_RD_R {
-        SF_CTRL_PROT_EN_RD_R::new((self.bits & 1) != 0)
+    pub fn sf_ctrl_prot_en_rd(&self) -> SfCtrlProtEnRdR {
+        SfCtrlProtEnRdR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn sf_ctrl_id0_en_rd(&self) -> SF_CTRL_ID0_EN_RD_R {
-        SF_CTRL_ID0_EN_RD_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn sf_ctrl_id0_en_rd(&self) -> SfCtrlId0EnRdR {
+        SfCtrlId0EnRdR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn sf_ctrl_id1_en_rd(&self) -> SF_CTRL_ID1_EN_RD_R {
-        SF_CTRL_ID1_EN_RD_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn sf_ctrl_id1_en_rd(&self) -> SfCtrlId1EnRdR {
+        SfCtrlId1EnRdR::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    pub fn sf_if_0_trig_wr_lock(&self) -> SF_IF_0_TRIG_WR_LOCK_R {
-        SF_IF_0_TRIG_WR_LOCK_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn sf_if_0_trig_wr_lock(&self) -> SfIf0TrigWrLockR {
+        SfIf0TrigWrLockR::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    pub fn sf_dbg_dis(&self) -> SF_DBG_DIS_R {
-        SF_DBG_DIS_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn sf_dbg_dis(&self) -> SfDbgDisR {
+        SfDbgDisR::new(((self.bits >> 31) & 1) != 0)
     }
 }
-#[doc = "sf_ctrl_prot_en_rd.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sf_ctrl_prot_en_rd](index.html) module"]
-pub struct SF_CTRL_PROT_EN_RD_SPEC;
-impl crate::RegisterSpec for SF_CTRL_PROT_EN_RD_SPEC {
+#[doc = "sf_ctrl_prot_en_rd.\n\nYou can [`read`](crate::Reg::read) this register and get [`sf_ctrl_prot_en_rd::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SfCtrlProtEnRdSpec;
+impl crate::RegisterSpec for SfCtrlProtEnRdSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sf_ctrl_prot_en_rd::R](R) reader structure"]
-impl crate::Readable for SF_CTRL_PROT_EN_RD_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`sf_ctrl_prot_en_rd::R`](R) reader structure"]
+impl crate::Readable for SfCtrlProtEnRdSpec {}
 #[doc = "`reset()` method sets sf_ctrl_prot_en_rd to value 0x07"]
-impl crate::Resettable for SF_CTRL_PROT_EN_RD_SPEC {
-    const RESET_VALUE: Self::Ux = 0x07;
+impl crate::Resettable for SfCtrlProtEnRdSpec {
+    const RESET_VALUE: u32 = 0x07;
 }

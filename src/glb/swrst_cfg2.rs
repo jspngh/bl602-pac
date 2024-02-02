@@ -1,144 +1,91 @@
 #[doc = "Register `swrst_cfg2` reader"]
-pub struct R(crate::R<SWRST_CFG2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SWRST_CFG2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SWRST_CFG2_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SWRST_CFG2_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SwrstCfg2Spec>;
 #[doc = "Register `swrst_cfg2` writer"]
-pub struct W(crate::W<SWRST_CFG2_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SWRST_CFG2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SWRST_CFG2_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SWRST_CFG2_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SwrstCfg2Spec>;
 #[doc = "Field `reg_ctrl_pwron_rst` reader - "]
-pub type REG_CTRL_PWRON_RST_R = crate::BitReader<bool>;
+pub type RegCtrlPwronRstR = crate::BitReader;
 #[doc = "Field `reg_ctrl_pwron_rst` writer - "]
-pub type REG_CTRL_PWRON_RST_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SWRST_CFG2_SPEC, bool, O>;
+pub type RegCtrlPwronRstW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `reg_ctrl_cpu_reset` reader - "]
-pub type REG_CTRL_CPU_RESET_R = crate::BitReader<bool>;
+pub type RegCtrlCpuResetR = crate::BitReader;
 #[doc = "Field `reg_ctrl_cpu_reset` writer - "]
-pub type REG_CTRL_CPU_RESET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SWRST_CFG2_SPEC, bool, O>;
+pub type RegCtrlCpuResetW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `reg_ctrl_sys_reset` reader - "]
-pub type REG_CTRL_SYS_RESET_R = crate::BitReader<bool>;
+pub type RegCtrlSysResetR = crate::BitReader;
 #[doc = "Field `reg_ctrl_sys_reset` writer - "]
-pub type REG_CTRL_SYS_RESET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SWRST_CFG2_SPEC, bool, O>;
+pub type RegCtrlSysResetW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `reg_ctrl_reset_dummy` reader - "]
-pub type REG_CTRL_RESET_DUMMY_R = crate::FieldReader<u8, u8>;
+pub type RegCtrlResetDummyR = crate::FieldReader;
 #[doc = "Field `reg_ctrl_reset_dummy` writer - "]
-pub type REG_CTRL_RESET_DUMMY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SWRST_CFG2_SPEC, u8, u8, 4, O>;
+pub type RegCtrlResetDummyW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `pka_clk_sel` reader - "]
-pub type PKA_CLK_SEL_R = crate::BitReader<bool>;
+pub type PkaClkSelR = crate::BitReader;
 #[doc = "Field `pka_clk_sel` writer - "]
-pub type PKA_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWRST_CFG2_SPEC, bool, O>;
+pub type PkaClkSelW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn reg_ctrl_pwron_rst(&self) -> REG_CTRL_PWRON_RST_R {
-        REG_CTRL_PWRON_RST_R::new((self.bits & 1) != 0)
+    pub fn reg_ctrl_pwron_rst(&self) -> RegCtrlPwronRstR {
+        RegCtrlPwronRstR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn reg_ctrl_cpu_reset(&self) -> REG_CTRL_CPU_RESET_R {
-        REG_CTRL_CPU_RESET_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn reg_ctrl_cpu_reset(&self) -> RegCtrlCpuResetR {
+        RegCtrlCpuResetR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn reg_ctrl_sys_reset(&self) -> REG_CTRL_SYS_RESET_R {
-        REG_CTRL_SYS_RESET_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn reg_ctrl_sys_reset(&self) -> RegCtrlSysResetR {
+        RegCtrlSysResetR::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
-    pub fn reg_ctrl_reset_dummy(&self) -> REG_CTRL_RESET_DUMMY_R {
-        REG_CTRL_RESET_DUMMY_R::new(((self.bits >> 4) & 0x0f) as u8)
+    pub fn reg_ctrl_reset_dummy(&self) -> RegCtrlResetDummyR {
+        RegCtrlResetDummyR::new(((self.bits >> 4) & 0x0f) as u8)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    pub fn pka_clk_sel(&self) -> PKA_CLK_SEL_R {
-        PKA_CLK_SEL_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn pka_clk_sel(&self) -> PkaClkSelR {
+        PkaClkSelR::new(((self.bits >> 24) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn reg_ctrl_pwron_rst(&mut self) -> REG_CTRL_PWRON_RST_W<0> {
-        REG_CTRL_PWRON_RST_W::new(self)
+    pub fn reg_ctrl_pwron_rst(&mut self) -> RegCtrlPwronRstW<'_, SwrstCfg2Spec> {
+        RegCtrlPwronRstW::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn reg_ctrl_cpu_reset(&mut self) -> REG_CTRL_CPU_RESET_W<1> {
-        REG_CTRL_CPU_RESET_W::new(self)
+    pub fn reg_ctrl_cpu_reset(&mut self) -> RegCtrlCpuResetW<'_, SwrstCfg2Spec> {
+        RegCtrlCpuResetW::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
-    pub fn reg_ctrl_sys_reset(&mut self) -> REG_CTRL_SYS_RESET_W<2> {
-        REG_CTRL_SYS_RESET_W::new(self)
+    pub fn reg_ctrl_sys_reset(&mut self) -> RegCtrlSysResetW<'_, SwrstCfg2Spec> {
+        RegCtrlSysResetW::new(self, 2)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
-    #[must_use]
-    pub fn reg_ctrl_reset_dummy(&mut self) -> REG_CTRL_RESET_DUMMY_W<4> {
-        REG_CTRL_RESET_DUMMY_W::new(self)
+    pub fn reg_ctrl_reset_dummy(&mut self) -> RegCtrlResetDummyW<'_, SwrstCfg2Spec> {
+        RegCtrlResetDummyW::new(self, 4)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    #[must_use]
-    pub fn pka_clk_sel(&mut self) -> PKA_CLK_SEL_W<24> {
-        PKA_CLK_SEL_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn pka_clk_sel(&mut self) -> PkaClkSelW<'_, SwrstCfg2Spec> {
+        PkaClkSelW::new(self, 24)
     }
 }
-#[doc = "swrst_cfg2.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [swrst_cfg2](index.html) module"]
-pub struct SWRST_CFG2_SPEC;
-impl crate::RegisterSpec for SWRST_CFG2_SPEC {
+#[doc = "swrst_cfg2.\n\nYou can [`read`](crate::Reg::read) this register and get [`swrst_cfg2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`swrst_cfg2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SwrstCfg2Spec;
+impl crate::RegisterSpec for SwrstCfg2Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [swrst_cfg2::R](R) reader structure"]
-impl crate::Readable for SWRST_CFG2_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [swrst_cfg2::W](W) writer structure"]
-impl crate::Writable for SWRST_CFG2_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`swrst_cfg2::R`](R) reader structure"]
+impl crate::Readable for SwrstCfg2Spec {}
+#[doc = "`write(|w| ..)` method takes [`swrst_cfg2::W`](W) writer structure"]
+impl crate::Writable for SwrstCfg2Spec {
+    type Safety = crate::Unsafe;
 }
 #[doc = "`reset()` method sets swrst_cfg2 to value 0"]
-impl crate::Resettable for SWRST_CFG2_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
-}
+impl crate::Resettable for SwrstCfg2Spec {}
